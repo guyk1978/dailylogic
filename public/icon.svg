@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="DailyLogic">
+  <title>DailyLogic</title>
+  <rect width="512" height="512" fill="#ffffff"/>
+  <g transform="translate(88 88)">
+    <rect width="336" height="336" rx="76" fill="#ffffff" stroke="#e2e8f0" stroke-width="8"/>
+    <path d="M168 32v272M32 168h272" stroke="#e2e8f0" stroke-width="8" stroke-linecap="round"/>
+    <rect x="176" y="40" width="120" height="120" rx="28" fill="#3b82f6"/>
+    <rect x="40" y="176" width="120" height="120" rx="28" fill="#eff6ff"/>
+    <rect x="176" y="176" width="120" height="120" rx="28" fill="#ffffff" stroke="#e2e8f0" stroke-width="6"/>
+    <path d="M64 96h72M64 120h56" stroke="#cbd5e1" stroke-width="10" stroke-linecap="round"/>
+    <path d="M204 228h64M204 252h64" stroke="#94a3b8" stroke-width="8" stroke-linecap="round"/>
+    <circle cx="236" cy="108" r="10" fill="#ffffff"/>
+  </g>
+</svg>

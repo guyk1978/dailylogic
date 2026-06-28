@@ -7,6 +7,7 @@ import {
   getCategoryIconBg,
 } from "@/components/dashboard/category-illustrations";
 import { useTranslatedCategories, useTranslatedTool } from "@/hooks/use-translated-tools";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { ICON_STROKE_WIDTH, getToolIcon } from "@/lib/tool-icons";
 import { toolCardHover, toolIconHover } from "@/lib/motion-presets";
 import type { ToolMeta } from "@/lib/tools-registry";
@@ -19,13 +20,14 @@ interface ToolLinkCardProps {
 export function ToolLinkCard({ meta, href }: ToolLinkCardProps) {
   const translated = useTranslatedTool(meta.slug);
   const categories = useTranslatedCategories();
+  const lp = useLocalizedPath();
   const display = translated ?? meta;
   const categoryLabel = categories[meta.category].label;
 
   const Icon = getToolIcon(meta.slug);
   const iconColor = getCategoryAccent(meta.category);
   const iconBg = getCategoryIconBg(meta.category);
-  const linkHref = href ?? `/tool/${meta.slug}`;
+  const linkHref = href ?? lp(`/tool/${meta.slug}`);
 
   return (
     <motion.div

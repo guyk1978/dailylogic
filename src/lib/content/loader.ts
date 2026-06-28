@@ -13,7 +13,7 @@ import type {
   ToolLandingJson,
   ToolLandingPageData,
 } from "@/lib/content/types";
-import { defaultLocale, type AppLocale } from "@/lib/i18n/settings";
+import { defaultLocale, locales, type AppLocale } from "@/lib/i18n/settings";
 
 const contentRoot = path.join(process.cwd(), "content");
 
@@ -27,13 +27,42 @@ function getLocaleToolsDir(locale: AppLocale = defaultLocale) {
   return path.join(contentRoot, locale, "tools");
 }
 
-function getArticlesDir() {
-  return path.join(contentRoot, "articles");
+/** All supported app locales — article MDX falls back to English per file when missing. */
+export const articleLocales: readonly AppLocale[] = locales;
+
+function getArticlesDir(locale: AppLocale = defaultLocale) {
+  return path.join(contentRoot, "articles", locale);
 }
 
-function getMdxFilePath(kind: ContentKind, slug: string) {
+function resolveArticleLocale(locale: AppLocale): AppLocale {
+  const dir = getArticlesDir(locale);
+  if (fs.existsSync(dir)) return locale;
+  return defaultLocale;
+}
+
+function getArticleMdxPath(slug: string, locale: AppLocale = defaultLocale) {
+  const resolvedLocale = resolveArticleLocale(locale);
+  const candidates =
+    resolvedLocale === defaultLocale
+      ? [path.join(getArticlesDir(resolvedLocale), `${slug}.mdx`)]
+      : [
+          path.join(getArticlesDir(resolvedLocale), `${slug}.mdx`),
+          path.join(getArticlesDir(defaultLocale), `${slug}.mdx`),
+        ];
+
+  return candidates.find((filePath) => fs.existsSync(filePath)) ?? null;
+}
+
+function getMdxFilePath(
+  kind: ContentKind,
+  slug: string,
+  locale: AppLocale = defaultLocale,
+) {
   if (kind === "articles") {
-    return path.join(getArticlesDir(), `${slug}.mdx`);
+    return (
+      getArticleMdxPath(slug, locale) ??
+      path.join(getArticlesDir(defaultLocale), `${slug}.mdx`)
+    );
   }
   return path.join(getLegacyToolsDir(), `${slug}.mdx`);
 }
@@ -65,7 +94,7 @@ export function getContentSlugs(kind: ContentKind): string[] {
     return [...slugs];
   }
 
-  const dir = getArticlesDir();
+  const dir = getArticlesDir(defaultLocale);
   if (!fs.existsSync(dir)) return [];
 
   return fs
@@ -74,9 +103,16 @@ export function getContentSlugs(kind: ContentKind): string[] {
     .map((file) => file.replace(/\.mdx$/, ""));
 }
 
-function readFrontmatter<T>(kind: ContentKind, slug: string): T | null {
-  const filePath = getMdxFilePath(kind, slug);
-  if (!fs.existsSync(filePath)) return null;
+function readFrontmatter<T>(
+  kind: ContentKind,
+  slug: string,
+  locale: AppLocale = defaultLocale,
+): T | null {
+  const filePath =
+    kind === "articles"
+      ? getArticleMdxPath(slug, locale)
+      : getMdxFilePath(kind, slug, locale);
+  if (!filePath) return null;
 
   const source = fs.readFileSync(filePath, "utf8");
   const { data } = matter(source);
@@ -123,10 +159,16 @@ export function getAllToolLandingMeta(): ContentMeta[] {
   });
 }
 
-export function getAllArticleMeta(): ContentMeta[] {
+export function getAllArticleMeta(locale: AppLocale = defaultLocale): ContentMeta[] {
+  const resolvedLocale = resolveArticleLocale(locale);
+
   return getContentSlugs("articles")
     .flatMap((slug) => {
-      const data = readFrontmatter<ArticleFrontmatter>("articles", slug);
+      const data = readFrontmatter<ArticleFrontmatter>(
+        "articles",
+        slug,
+        resolvedLocale,
+      );
       if (!data) return [];
 
       return [
@@ -180,9 +222,10 @@ export async function getToolLandingPage(
 
 export async function getArticlePage(
   slug: string,
+  locale: AppLocale = defaultLocale,
 ): Promise<ArticlePageData | null> {
-  const filePath = getMdxFilePath("articles", slug);
-  if (!fs.existsSync(filePath)) return null;
+  const filePath = getArticleMdxPath(slug, locale);
+  if (!filePath) return null;
 
   const source = fs.readFileSync(filePath, "utf8");
   const { content, frontmatter } = await compileMDX<ArticleFrontmatter>({
@@ -194,8 +237,15 @@ export async function getArticlePage(
   return { slug, frontmatter, content };
 }
 
-export function getArticleMetaBySlug(slug: string): ContentMeta | null {
-  const data = readFrontmatter<ArticleFrontmatter>("articles", slug);
+export function getArticleMetaBySlug(
+  slug: string,
+  locale: AppLocale = defaultLocale,
+): ContentMeta | null {
+  const data = readFrontmatter<ArticleFrontmatter>(
+    "articles",
+    slug,
+    resolveArticleLocale(locale),
+  );
   if (!data) return null;
 
   return {

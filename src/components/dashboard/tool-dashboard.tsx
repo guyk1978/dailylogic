@@ -4,7 +4,8 @@ import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Heart } from "lucide-react";
 import { useMemo, useState, type ReactNode } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import {
   CategoryIllustration,
   getCategoryAccent,
@@ -56,6 +57,7 @@ function ToolCard({
   onToggleFavorite,
 }: ToolCardProps) {
   const { t } = useTranslation("common");
+  const lp = useLocalizedPath();
   const Icon = getToolIcon(meta.slug);
   const iconColor = getCategoryAccent(meta.category);
   const iconBg = getCategoryIconBg(meta.category);
@@ -96,7 +98,7 @@ function ToolCard({
         variants={toolCardHover}
       >
         <Link
-          href={`/tool/${meta.slug}`}
+          href={lp(`/tool/${meta.slug}`)}
           prefetch
           className="group flex h-full flex-col rounded-2xl bg-white p-6 pe-14 ring-1 ring-slate-100/80 transition-colors duration-300 hover:ring-blue-100"
         >

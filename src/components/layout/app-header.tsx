@@ -3,20 +3,24 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
+import { stripLocalePrefix } from "@/lib/i18n/paths";
 
 export function AppHeader() {
   const pathname = usePathname();
-  const isHome = pathname === "/";
+  const path = stripLocalePrefix(pathname);
+  const isHome = path === "/";
   const { t } = useTranslation("common");
+  const lp = useLocalizedPath();
 
   return (
     <header className="sticky top-0 z-50 border-b border-slate-100/80 bg-white/90 shadow-sm backdrop-blur-md">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-4">
         <motion.div whileTap={{ scale: 0.97 }}>
           <Link
-            href="/"
+            href={lp("/")}
             prefetch
             className="group flex min-w-0 items-center gap-3 transition duration-200 hover:opacity-90"
           >
@@ -37,9 +41,9 @@ export function AppHeader() {
         <div className="flex shrink-0 items-center gap-2 sm:gap-3">
           <nav className="hidden items-center gap-1 sm:flex" aria-label="Main">
             <Link
-              href="/tools"
+              href={lp("/tools")}
               className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
-                pathname.startsWith("/tools")
+                path.startsWith("/tools")
                   ? "text-blue-600"
                   : "text-slate-600 hover:text-slate-900"
               }`}
@@ -47,9 +51,9 @@ export function AppHeader() {
               {t("content.toolsNav")}
             </Link>
             <Link
-              href="/blog"
+              href={lp("/blog")}
               className={`rounded-lg px-3 py-2 text-sm font-medium transition ${
-                pathname.startsWith("/blog")
+                path.startsWith("/blog")
                   ? "text-blue-600"
                   : "text-slate-600 hover:text-slate-900"
               }`}
@@ -63,7 +67,7 @@ export function AppHeader() {
           {!isHome && (
             <motion.div whileTap={{ scale: 0.97 }}>
               <Link
-                href="/"
+                href={lp("/")}
                 prefetch
                 className="rounded-xl bg-blue-50 px-4 py-2.5 text-sm font-medium text-blue-600 transition duration-200 hover:bg-blue-100 hover:text-blue-700"
               >

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Generates locale JSON files from public/locales/en/common.json
+ * Generates locale JSON files from locales/en/common.json
  * using Google Cloud Translation API (v2).
  *
  * Usage:
@@ -24,7 +24,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.resolve(__dirname, "..");
 const config = require(path.join(root, "next-i18next.config.js"));
 
-const masterPath = path.join(root, "public/locales/en/common.json");
+const masterPath = path.join(root, "locales/en/common.json");
 const dryRun = process.argv.includes("--dry-run");
 const localeArg = process.argv.find((arg) => arg.startsWith("--locale="));
 const singleLocale = localeArg?.split("=")[1];
@@ -131,7 +131,7 @@ async function main() {
       continue;
     }
 
-    const outDir = path.join(root, "public/locales", locale);
+    const outDir = path.join(root, "locales", locale);
     await fs.mkdir(outDir, { recursive: true });
     const outPath = path.join(outDir, "common.json");
     await fs.writeFile(outPath, `${JSON.stringify(translated, null, 2)}\n`, "utf8");

@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import type { ReactElement } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
 import { ArticleCard } from "@/components/content/article-card";
 import { Breadcrumbs } from "@/components/content/breadcrumbs";
 import { useLocalizedToolLanding } from "@/hooks/use-localized-tool-landing";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { useTranslatedTool } from "@/hooks/use-translated-tools";
 import type { ContentMeta, ToolLandingFrontmatter } from "@/lib/content/types";
 import { jsonToFrontmatter } from "@/lib/content/landing-utils";
@@ -27,6 +28,7 @@ export function LandingPage({
 }: LandingPageProps) {
   const { t } = useTranslation("common");
   const dir = useLocaleDirection();
+  const lp = useLocalizedPath();
   const localizedJson = useLocalizedToolLanding(slug);
   const resolvedToolSlug = localizedJson?.toolSlug ?? mdxFrontmatter?.toolSlug;
   const translatedTool = useTranslatedTool(
@@ -51,8 +53,8 @@ export function LandingPage({
     <div className="mx-auto max-w-5xl px-6 py-10 sm:py-14" dir={dir}>
       <Breadcrumbs
         items={[
-          { label: t("content.home"), href: "/" },
-          { label: t("content.toolsNav"), href: "/tools" },
+          { label: t("content.home"), href: lp("/") },
+          { label: t("content.toolsNav"), href: lp("/tools") },
           { label: frontmatter.title },
         ]}
       />
@@ -68,10 +70,10 @@ export function LandingPage({
         )}
         {tool && (
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link href={`/tool/${tool.meta.slug}`} className="btn-primary">
+            <Link href={lp(`/tool/${tool.meta.slug}`)} className="btn-primary">
               {t("landing.openTool", { toolName })}
             </Link>
-            <Link href="/" className="btn-secondary">
+            <Link href={lp("/tools")} className="btn-secondary">
               {t("landing.browseAllTools")}
             </Link>
           </div>
@@ -156,7 +158,7 @@ export function LandingPage({
             {t("landing.readyDescription", { toolName })}
           </p>
           <Link
-            href={`/tool/${tool.meta.slug}`}
+            href={lp(`/tool/${tool.meta.slug}`)}
             className="btn-primary mt-6 inline-flex"
           >
             {t("landing.launchTool", { toolName })}

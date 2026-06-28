@@ -6,6 +6,7 @@ import { initI18n, i18n } from "@/lib/i18n/client";
 import {
   isAppLocale,
   localeLabels,
+  LOCALE_COOKIE_KEY,
   LOCALE_STORAGE_KEY,
   type AppLocale,
 } from "@/lib/i18n/settings";
@@ -21,10 +22,31 @@ function applyDocumentLocale(lng: string) {
   document.body.lang = lng;
 }
 
-export function I18nProvider({ children }: { children: ReactNode }) {
-  useEffect(() => {
-    applyDocumentLocale(i18n.language);
+function persistLocale(locale: AppLocale) {
+  try {
+    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    document.cookie = `${LOCALE_COOKIE_KEY}=${locale};path=/;max-age=31536000;samesite=lax`;
+  } catch {
+    // Ignore persistence errors.
+  }
+}
 
+export function I18nProvider({
+  children,
+  locale,
+}: {
+  children: ReactNode;
+  locale: AppLocale;
+}) {
+  useEffect(() => {
+    persistLocale(locale);
+    applyDocumentLocale(locale);
+    if (i18n.language !== locale) {
+      void i18n.changeLanguage(locale);
+    }
+  }, [locale]);
+
+  useEffect(() => {
     const handler = (lng: string) => {
       applyDocumentLocale(lng);
     };
@@ -38,14 +60,12 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
 }
 
-/** Manual language selection — always persisted and takes precedence over auto-detection. */
+/** Sync i18n + persistence when navigating via URL locale change. */
 export function setAppLocale(locale: AppLocale) {
-  try {
-    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
-  } catch {
-    // Ignore write errors.
-  }
-
+  persistLocale(locale);
   applyDocumentLocale(locale);
   void i18n.changeLanguage(locale);
 }
+
+/** Access the translation function from react-i18next in client components. */
+export { useTranslation } from "react-i18next";

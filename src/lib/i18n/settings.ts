@@ -3,6 +3,7 @@ export const locales = ["en", "he", "es"] as const;
 export type AppLocale = (typeof locales)[number];
 
 export const LOCALE_STORAGE_KEY = "dailylogic:locale";
+export const LOCALE_COOKIE_KEY = "dailylogic:locale";
 
 export const localeLabels: Record<
   AppLocale,

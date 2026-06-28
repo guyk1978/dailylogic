@@ -2,9 +2,10 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
 import { ArticleCard } from "@/components/content/article-card";
 import { useAppLocale, useLocaleDirection } from "@/hooks/use-locale-direction";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { getAllLocalizedToolLandingMeta } from "@/lib/content/tool-landing-registry";
 import type { ContentMeta } from "@/lib/content/types";
 
@@ -16,6 +17,7 @@ export function ToolsIndexContent({ articles }: ToolsIndexContentProps) {
   const { t } = useTranslation("common");
   const locale = useAppLocale();
   const dir = useLocaleDirection();
+  const lp = useLocalizedPath();
 
   const toolPages = useMemo(
     () => getAllLocalizedToolLandingMeta(locale),
@@ -38,7 +40,7 @@ export function ToolsIndexContent({ articles }: ToolsIndexContentProps) {
         {toolPages.map((tool) => (
           <li key={tool.slug}>
             <Link
-              href={`/tools/${tool.slug}`}
+              href={lp(`/tools/${tool.slug}`)}
               prefetch
               className="group flex h-full flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-100/80 transition duration-300 hover:ring-blue-100 hover:shadow-soft"
             >
@@ -72,7 +74,7 @@ export function ToolsIndexContent({ articles }: ToolsIndexContentProps) {
             ))}
           </ul>
           <div className="mt-8">
-            <Link href="/blog" className="btn-secondary">
+            <Link href={lp("/blog")} className="btn-secondary">
               {t("landing.viewAllArticles")}
             </Link>
           </div>

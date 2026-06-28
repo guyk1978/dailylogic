@@ -5,13 +5,18 @@ import {
   getContentSlugs,
   getToolLandingPage,
 } from "@/lib/content/loader";
+import { getRouteLocale } from "@/lib/i18n/server";
+import { locales } from "@/lib/i18n/settings";
 
 interface ToolLandingRouteProps {
-  params: Promise<{ slug: string }>;
+  params: Promise<{ locale: string; slug: string }>;
 }
 
 export async function generateStaticParams() {
-  return getContentSlugs("tools").map((slug) => ({ slug }));
+  const slugs = getContentSlugs("tools");
+  return locales.flatMap((locale) =>
+    slugs.map((slug) => ({ locale, slug })),
+  );
 }
 
 export async function generateMetadata({ params }: ToolLandingRouteProps) {
@@ -27,12 +32,15 @@ export async function generateMetadata({ params }: ToolLandingRouteProps) {
 
 export default async function ToolLandingRoute({ params }: ToolLandingRouteProps) {
   const { slug } = await params;
+  const locale = await getRouteLocale(params);
   const page = await getToolLandingPage(slug);
   if (!page) notFound();
 
-  const relatedArticles = (page.frontmatter.relatedArticles ?? [])
-    .map((articleSlug) => getArticleMetaBySlug(articleSlug))
-    .filter((article) => article !== null);
+  const relatedSlugs = page.frontmatter.relatedArticles ?? [];
+  const relatedArticles = relatedSlugs.flatMap((articleSlug) => {
+    const meta = getArticleMetaBySlug(articleSlug, locale);
+    return meta ? [meta] : [];
+  });
 
   return (
     <LandingPage

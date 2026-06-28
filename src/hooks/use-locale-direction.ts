@@ -1,5 +1,6 @@
 "use client";
 
+import { useParams } from "next/navigation";
 import { useTranslation } from "react-i18next";
 import {
   defaultLocale,
@@ -9,7 +10,14 @@ import {
 } from "@/lib/i18n/settings";
 
 export function useAppLocale(): AppLocale {
+  const params = useParams();
   const { i18n } = useTranslation();
+
+  const paramLocale = params?.locale;
+  if (typeof paramLocale === "string" && isAppLocale(paramLocale)) {
+    return paramLocale;
+  }
+
   return isAppLocale(i18n.language) ? i18n.language : defaultLocale;
 }
 

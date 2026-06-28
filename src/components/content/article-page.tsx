@@ -2,12 +2,13 @@
 
 import Link from "next/link";
 import type { ReactElement } from "react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
 import { ArticleCard } from "@/components/content/article-card";
 import { Breadcrumbs } from "@/components/content/breadcrumbs";
 import { MdxArticleContent } from "@/components/content/mdx-article-content";
 import { ToolLinkCard } from "@/components/content/tool-link-card";
 import { useLocaleDirection, useLocaleTag } from "@/hooks/use-locale-direction";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import type { ArticleFrontmatter, ContentMeta } from "@/lib/content/types";
 import { getToolBySlug } from "@/lib/tools-registry";
 
@@ -27,6 +28,7 @@ export function ArticlePage({
   const { t } = useTranslation("common");
   const dir = useLocaleDirection();
   const localeTag = useLocaleTag();
+  const lp = useLocalizedPath();
 
   const formattedDate = new Date(frontmatter.publishedAt).toLocaleDateString(
     localeTag,
@@ -42,8 +44,8 @@ export function ArticlePage({
       <div className="mx-auto max-w-3xl">
         <Breadcrumbs
           items={[
-            { label: t("content.home"), href: "/" },
-            { label: t("content.blog"), href: "/blog" },
+            { label: t("content.home"), href: lp("/") },
+            { label: t("content.blog"), href: lp("/blog") },
             { label: frontmatter.title },
           ]}
         />
@@ -107,7 +109,7 @@ export function ArticlePage({
       )}
 
       <div className="mx-auto mt-14 max-w-3xl text-center">
-        <Link href="/blog" className="btn-secondary">
+        <Link href={lp("/blog")} className="btn-secondary">
           {t("content.backToArticles")}
         </Link>
       </div>

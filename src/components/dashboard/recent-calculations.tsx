@@ -3,9 +3,9 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Trash2 } from "lucide-react";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import {
-  buildRestoreUrl,
   formatHistoryDate,
   getEntryDisplayName,
   type CalculationHistoryEntry,
@@ -64,6 +64,7 @@ function RecentCalculationItem({
   onDelete: (id: string) => void;
 }) {
   const { t } = useTranslation("common");
+  const lp = useLocalizedPath();
   const Icon = getToolIcon(entry.toolSlug);
   const displayName = getEntryDisplayName(entry);
 
@@ -76,7 +77,7 @@ function RecentCalculationItem({
         transition={{ type: "spring", stiffness: 420, damping: 28 }}
       >
         <Link
-          href={buildRestoreUrl(entry.toolSlug, entry.id)}
+          href={lp(`/tool/${entry.toolSlug}?restore=${entry.id}`)}
           prefetch
           className="group flex min-w-0 flex-1 items-center gap-3 rounded-xl px-2 py-2 transition-colors duration-200 hover:bg-slate-50"
         >

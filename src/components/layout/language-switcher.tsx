@@ -1,20 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname, useRouter } from "next/navigation";
 import { ChevronDown, Globe } from "lucide-react";
-import { useTranslation } from "react-i18next";
-import { setAppLocale } from "@/lib/i18n/provider";
+import { setAppLocale, useTranslation } from "@/lib/i18n/provider";
+import { switchLocalePath } from "@/lib/i18n/paths";
 import {
   localeLabels,
   locales,
-  type AppLocale,
 } from "@/lib/i18n/settings";
+import { useAppLocale } from "@/hooks/use-locale-direction";
 
 export function LanguageSwitcher() {
-  const { i18n, t } = useTranslation("common");
+  const { t } = useTranslation("common");
+  const router = useRouter();
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-  const current = i18n.language as AppLocale;
+  const current = useAppLocale();
   const currentMeta = localeLabels[current] ?? localeLabels.en;
 
   useEffect(() => {
@@ -64,6 +67,7 @@ export function LanguageSwitcher() {
                   }`}
                   onClick={() => {
                     setAppLocale(locale);
+                    router.push(switchLocalePath(pathname, locale));
                     setOpen(false);
                   }}
                 >

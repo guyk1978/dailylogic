@@ -1,8 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslation } from "react-i18next";
+import { useTranslation } from "@/lib/i18n/provider";
 import { useLocaleTag } from "@/hooks/use-locale-direction";
+import { useLocalizedPath } from "@/hooks/use-localized-path";
 import type { ContentMeta } from "@/lib/content/types";
 
 interface ArticleCardProps {
@@ -12,6 +13,7 @@ interface ArticleCardProps {
 export function ArticleCard({ article }: ArticleCardProps) {
   const { t } = useTranslation("common");
   const localeTag = useLocaleTag();
+  const lp = useLocalizedPath();
 
   const date = article.publishedAt
     ? new Date(article.publishedAt).toLocaleDateString(localeTag, {
@@ -23,7 +25,7 @@ export function ArticleCard({ article }: ArticleCardProps) {
 
   return (
     <Link
-      href={`/blog/${article.slug}`}
+      href={lp(`/blog/${article.slug}`)}
       prefetch
       className="group flex h-full flex-col rounded-2xl bg-white p-6 ring-1 ring-slate-100/80 transition duration-300 hover:ring-blue-100 hover:shadow-soft"
     >

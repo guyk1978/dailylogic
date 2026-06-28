@@ -122,5 +122,12 @@
     "fromBlogCaption": "מהבלוג",
     "fromBlogTitle": "מדריכים מעשיים ומקרי שימוש",
     "viewAllArticles": "צפו בכל המאמרים"
+  },
+  "consent": {
+    "caption": "פרטיות",
+    "title": "עוגיות ואנליטיקה",
+    "description": "DailyLogic משתמש בעוגיות ובאנליטיקה (Google Analytics) כדי להבין כיצד מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. הקלט שלכם בכלים תמיד נשאר בדפדפן. אנא אשרו כדי להמשיך להשתמש באתר.",
+    "accept": "אישור",
+    "deny": "דחייה"
   }
 }

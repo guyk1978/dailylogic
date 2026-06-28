@@ -122,5 +122,12 @@
     "fromBlogCaption": "Del blog",
     "fromBlogTitle": "Guías prácticas y casos de uso",
     "viewAllArticles": "Ver todos los artículos"
+  },
+  "consent": {
+    "caption": "Privacidad",
+    "title": "Cookies y analítica",
+    "description": "DailyLogic utiliza cookies y analítica (Google Analytics) para entender cómo los visitantes usan el sitio y para apoyar la publicidad a través de Google AdSense. Tus datos en las herramientas siempre permanecen en tu navegador. Acepta para continuar usando el sitio.",
+    "accept": "Aceptar",
+    "deny": "Rechazar"
   }
 }

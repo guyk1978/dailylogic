@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { CookieConsentGate } from "@/components/consent/cookie-consent-gate";
 import { ServiceWorkerRegister } from "@/components/pwa/service-worker-register";
 import { getLocaleBootstrapScript } from "@/lib/i18n/locale-bootstrap";
 import "./globals.css";
@@ -60,7 +61,7 @@ export default function RootLayout({
         suppressHydrationWarning
       >
         <ServiceWorkerRegister />
-        {children}
+        <CookieConsentGate>{children}</CookieConsentGate>
       </body>
     </html>
   );

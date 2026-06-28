@@ -1,0 +1,32 @@
+{
+  "title": "Delegate or Do: The Decision Matrix",
+  "subtitle": "Stop guessing if you should hire help. Make rational decisions based on your time, money, and risk tolerance.",
+  "heroDescription": "We often waste hours trying to save a few dollars. Delegate or Do helps you quantify whether you should handle a task yourself or call in a professional.",
+  "toolSlug": "time-value",
+  "relatedArticles": ["the-hidden-cost-of-diy"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Calculate Opportunity Cost",
+      "description": "See the true cost of your time versus the professional's rate."
+    },
+    {
+      "title": "Risk Assessment",
+      "description": "Factor in the cost of potential mistakes when doing it yourself."
+    },
+    {
+      "title": "Clear Recommendation",
+      "description": "Get an objective data-backed decision: Delegate or Do."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this tool free?",
+      "answer": "Yes, DailyLogic tools are 100% free and run locally in your browser."
+    },
+    {
+      "question": "Should I always delegate if it's cheaper?",
+      "answer": "Not necessarily. Sometimes DIY helps you learn a skill. This tool focuses on financial and time efficiency."
+    }
+  ]
+}

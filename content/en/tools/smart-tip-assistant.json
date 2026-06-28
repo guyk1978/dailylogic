@@ -1,0 +1,32 @@
+{
+  "title": "Smart Tip Assistant: Calculate with Confidence",
+  "subtitle": "Stop guessing. Get fair, context-aware tip suggestions based on service quality and local standards.",
+  "heroDescription": "Tipping shouldn't be a source of stress. Whether you're at a restaurant or ordering a delivery, our smart assistant helps you calculate the perfect tip based on your actual experience.",
+  "toolSlug": "tip-split",
+  "relatedArticles": ["tipping-etiquette-in-the-modern-age"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Service-Based Logic",
+      "description": "Adjust your tip based on wait times, staff attitude, and overall experience."
+    },
+    {
+      "title": "Fairness First",
+      "description": "Get recommendations that respect local norms while reflecting your personal satisfaction."
+    },
+    {
+      "title": "Instant Results",
+      "description": "One-click calculation that includes the bill split for your entire party."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why use an assistant for tips?",
+      "answer": "It removes the mental math and awkwardness, ensuring you're fair to service workers without overpaying."
+    },
+    {
+      "question": "Does this work in any country?",
+      "answer": "The logic is designed to be adaptable, helping you calculate based on the standard percentages for your specific location."
+    }
+  ]
+}

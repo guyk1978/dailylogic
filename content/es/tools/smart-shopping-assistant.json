@@ -1,0 +1,32 @@
+{
+  "title": "Asistente de compras: compara precios como un experto",
+  "subtitle": "No mires solo la etiqueta. Calcula el precio por unidad y toma decisiones de compra más inteligentes al instante.",
+  "heroDescription": "¿Te sientes engañado con distintos tamaños de paquete? Nuestro asistente compara por precio unitario para que sepas qué producto ofrece el mejor valor.",
+  "toolSlug": "unit-compare",
+  "relatedArticles": ["unit-price-shopping-tips"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Precisión por unidad",
+      "description": "Deja de adivinar — compara costo por gramo, litro o unidad lado a lado."
+    },
+    {
+      "title": "Comparación multi-marca",
+      "description": "Añade varios productos y descubre qué marca ofrece la mejor oferta."
+    },
+    {
+      "title": "Lista de compras integrada",
+      "description": "Una vez decidido, guarda tus artículos en una lista limpia y organizada."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué importa el precio por unidad?",
+      "answer": "Los fabricantes cambian tamaños para ocultar subidas. Comparar por unidad revela el costo real."
+    },
+    {
+      "question": "¿Puedo comparar distintos tipos de empaque?",
+      "answer": "Sí, la herramienta convierte y compara unidades diferentes fácilmente."
+    }
+  ]
+}

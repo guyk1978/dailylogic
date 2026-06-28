@@ -1,0 +1,32 @@
+{
+  "title": "Asistente de propinas: calcula con confianza",
+  "subtitle": "Deja de adivinar. Obtén sugerencias justas según la calidad del servicio y las normas locales.",
+  "heroDescription": "Dar propina no debería ser estresante. Ya sea en un restaurante o con un delivery, nuestro asistente calcula la propina perfecta según tu experiencia real.",
+  "toolSlug": "tip-split",
+  "relatedArticles": ["tipping-etiquette-in-the-modern-age"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Lógica basada en el servicio",
+      "description": "Ajusta la propina según tiempos de espera, actitud del personal y experiencia general."
+    },
+    {
+      "title": "Justicia primero",
+      "description": "Recomendaciones que respetan normas locales y reflejan tu satisfacción personal."
+    },
+    {
+      "title": "Resultados instantáneos",
+      "description": "Cálculo con un clic que incluye la división de la cuenta para todo el grupo."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Por qué usar un asistente para propinas?",
+      "answer": "Elimina el cálculo mental y la incomodidad, asegurando justicia sin pagar de más."
+    },
+    {
+      "question": "¿Funciona en cualquier país?",
+      "answer": "La lógica es adaptable y ayuda a calcular según los porcentajes estándar de tu ubicación."
+    }
+  ]
+}

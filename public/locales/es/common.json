@@ -1,0 +1,126 @@
+{
+  "app": {
+    "name": "DailyLogic",
+    "tagline": "Herramientas para el hogar",
+    "heroCaption": "Herramientas para el hogar",
+    "heroDescription": "Herramientas prácticas para presupuesto, cocina, compras y decisiones diarias — todo funciona localmente en tu navegador.",
+    "footer": "Todas las herramientas funcionan localmente en tu navegador.",
+    "metaDescription": "Herramientas enfocadas para la vida, el hogar y las finanzas — todo en tu navegador."
+  },
+  "header": {
+    "backHome": "Volver al inicio"
+  },
+  "language": {
+    "label": "Idioma",
+    "en": "English",
+    "he": "Hebrew",
+    "es": "Español"
+  },
+  "dashboard": {
+    "searchLabel": "Buscar herramientas",
+    "searchPlaceholder": "Buscar por nombre, categoría o etiqueta…",
+    "noToolsTitle": "No se encontraron herramientas",
+    "noToolsHint": "Prueba otro nombre o categoría.",
+    "favoritesTitle": "Tus favoritos",
+    "favoritesDescription": "Acceso rápido a las herramientas que más usas",
+    "results_one": "{{count}} resultado",
+    "results_other": "{{count}} resultados",
+    "addFavorite": "Añadir {{name}} a favoritos",
+    "removeFavorite": "Quitar {{name}} de favoritos",
+    "loading": "Cargando…"
+  },
+  "recent": {
+    "title": "Cálculos recientes",
+    "description": "Continúa donde lo dejaste",
+    "clearAll": "Borrar todo",
+    "delete": "Eliminar {{name}}"
+  },
+  "categories": {
+    "finance": {
+      "label": "Finanzas personales",
+      "description": "Presupuesto, facturas y decisiones de dinero"
+    },
+    "kitchen": {
+      "label": "Hogar y cocina",
+      "description": "Ayudas para cocinar y planificar comidas"
+    },
+    "shopping": {
+      "label": "Compras inteligentes",
+      "description": "Compara precios y compra mejor"
+    }
+  },
+  "tools": {
+    "budget-simple": {
+      "name": "Planificador de presupuesto",
+      "description": "Plan mensual estratégico con análisis de brechas y decisiones guiadas."
+    },
+    "time-value": {
+      "name": "Delegar o hacer",
+      "description": "Matriz de decisión: DIY vs contratar un profesional."
+    },
+    "tip-split": {
+      "name": "Asistente de propinas",
+      "description": "Sugerencias de propina según contexto y división de cuenta."
+    },
+    "recipe-adjuster": {
+      "name": "Escalador de recetas",
+      "description": "Escala tus recetas al instante."
+    },
+    "unit-compare": {
+      "name": "Asistente de compras",
+      "description": "Compara precio por unidad y crea tu lista de compras."
+    }
+  },
+  "save": {
+    "optionalLabel": "Opcional: guardar este cálculo",
+    "namePlaceholder": "Ponle un nombre a este cálculo…",
+    "saveButton": "Guardar",
+    "saved": "¡Guardado!"
+  },
+  "notFound": {
+    "title": "Herramienta no encontrada",
+    "description": "Esta herramienta no existe en el registro.",
+    "browseTools": "Ver herramientas"
+  },
+  "toolLoading": "Cargando herramienta…",
+  "content": {
+    "home": "Inicio",
+    "blog": "Blog",
+    "toolsNav": "Herramientas",
+    "relatedToolsCaption": "Herramientas relacionadas",
+    "relatedToolsTitle": "Pon estas ideas en práctica",
+    "relatedToolsDescription": "Herramientas gratuitas en el navegador que complementan esta guía.",
+    "keepReadingCaption": "Sigue leyendo",
+    "relatedArticlesTitle": "Artículos relacionados",
+    "backToArticles": "← Volver a todos los artículos",
+    "readArticle": "Leer artículo →",
+    "blogCaption": "Blog DailyLogic",
+    "blogTitle": "Ideas para decisiones cotidianas más inteligentes",
+    "blogDescription": "Guías breves y prácticas — con enlaces a las herramientas gratuitas para aplicarlas.",
+    "noArticlesTitle": "Aún no hay artículos",
+    "noArticlesHint": "Vuelve pronto."
+  },
+  "landing": {
+    "breadcrumbLabel": "Ruta de navegación",
+    "toolGuide": "Guía de herramienta",
+    "whyUseCaption": "Por qué usar esta herramienta",
+    "whyUseTitle": "Toma decisiones con claridad",
+    "faqCaption": "Preguntas frecuentes",
+    "faqTitle": "Preguntas comunes",
+    "useCasesCaption": "Casos de uso",
+    "useCasesTitle": "Saca el máximo provecho de esta herramienta",
+    "useCasesDescription": "Guías prácticas y escenarios cotidianos que combinan con {{title}}.",
+    "readyTitle": "¿Listo para probarlo?",
+    "readyDescription": "Entra directamente a {{toolName}} — tus datos se quedan en el navegador.",
+    "openTool": "Abrir {{toolName}}",
+    "browseAllTools": "Ver todas las herramientas",
+    "launchTool": "Iniciar {{toolName}}",
+    "toolsIndexCaption": "Guías de herramientas",
+    "toolsIndexTitle": "Explora las herramientas DailyLogic",
+    "toolsIndexDescription": "Guías claras para cada herramienta — qué hace, cuándo usarla y cómo empezar.",
+    "viewGuide": "Ver guía →",
+    "fromBlogCaption": "Del blog",
+    "fromBlogTitle": "Guías prácticas y casos de uso",
+    "viewAllArticles": "Ver todos los artículos"
+  }
+}

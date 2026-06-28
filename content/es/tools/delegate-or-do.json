@@ -1,0 +1,32 @@
+{
+  "title": "Delegar o hacer: la matriz de decisión",
+  "subtitle": "Deja de adivinar si contratar ayuda. Toma decisiones racionales según tu tiempo, dinero y tolerancia al riesgo.",
+  "heroDescription": "A menudo perdemos horas intentando ahorrar unos pocos dólares. Delegar o hacer te ayuda a cuantificar si debes hacer una tarea tú mismo o llamar a un profesional.",
+  "toolSlug": "time-value",
+  "relatedArticles": ["the-hidden-cost-of-diy"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Calcula el costo de oportunidad",
+      "description": "Ve el costo real de tu tiempo frente a la tarifa del profesional."
+    },
+    {
+      "title": "Evaluación de riesgos",
+      "description": "Incluye el costo de posibles errores al hacerlo tú mismo."
+    },
+    {
+      "title": "Recomendación clara",
+      "description": "Obtén una decisión objetiva basada en datos: delegar o hacer."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Esta herramienta es gratuita?",
+      "answer": "Sí, las herramientas DailyLogic son 100% gratuitas y funcionan localmente en tu navegador."
+    },
+    {
+      "question": "¿Siempre debo delegar si es más barato?",
+      "answer": "No necesariamente. A veces el DIY te ayuda a aprender. Esta herramienta se centra en eficiencia financiera y de tiempo."
+    }
+  ]
+}

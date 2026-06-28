@@ -1,0 +1,32 @@
+{
+  "title": "Smart Shopping Assistant: Compare Prices Like a Pro",
+  "subtitle": "Don't just look at the price tag. Calculate the unit price and make smarter shopping decisions instantly.",
+  "heroDescription": "Ever feel tricked by different package sizes? Our assistant helps you compare items by unit price so you know exactly which product gives you the best value for your money.",
+  "toolSlug": "unit-compare",
+  "relatedArticles": ["unit-price-shopping-tips"],
+  "publishedAt": "2026-06-28",
+  "benefits": [
+    {
+      "title": "Unit Price Accuracy",
+      "description": "Stop guessing—compare cost per gram, liter, or unit side-by-side."
+    },
+    {
+      "title": "Multi-Brand Comparison",
+      "description": "Add multiple products to see which brand truly offers the best deal."
+    },
+    {
+      "title": "Shopping List Integration",
+      "description": "Once you've decided, save your items to a clean, organized list."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Why is unit price important?",
+      "answer": "Manufacturers often change package sizes to hide price increases. Comparing by unit price exposes the real cost."
+    },
+    {
+      "question": "Can I compare different package types?",
+      "answer": "Yes, the tool allows you to convert and compare different units easily."
+    }
+  ]
+}

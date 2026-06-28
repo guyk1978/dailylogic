@@ -1,0 +1,126 @@
+{
+  "app": {
+    "name": "DailyLogic",
+    "tagline": "Life & Home Tools",
+    "heroCaption": "Life & Home Tools",
+    "heroDescription": "Practical tools for budgeting, cooking, shopping, and everyday decisions — everything runs locally in your browser.",
+    "footer": "All tools run locally in your browser.",
+    "metaDescription": "Focused tools for life, home, and personal management — all in your browser."
+  },
+  "header": {
+    "backHome": "Back to Home"
+  },
+  "language": {
+    "label": "Language",
+    "en": "English",
+    "he": "Hebrew",
+    "es": "Spanish"
+  },
+  "dashboard": {
+    "searchLabel": "Search tools",
+    "searchPlaceholder": "Search by name, category, or tag…",
+    "noToolsTitle": "No tools found",
+    "noToolsHint": "Try a different name or category.",
+    "favoritesTitle": "Your Favorites",
+    "favoritesDescription": "Quick access to the tools you use most",
+    "results_one": "{{count}} result",
+    "results_other": "{{count}} results",
+    "addFavorite": "Add {{name}} to favorites",
+    "removeFavorite": "Remove {{name}} from favorites",
+    "loading": "Loading…"
+  },
+  "recent": {
+    "title": "Recent Calculations",
+    "description": "Pick up where you left off",
+    "clearAll": "Clear all",
+    "delete": "Delete {{name}}"
+  },
+  "categories": {
+    "finance": {
+      "label": "Personal Finance",
+      "description": "Budget, bills, and money decisions"
+    },
+    "kitchen": {
+      "label": "Home & Kitchen",
+      "description": "Cooking and meal planning helpers"
+    },
+    "shopping": {
+      "label": "Smart Shopping",
+      "description": "Compare prices and shop smarter"
+    }
+  },
+  "tools": {
+    "budget-simple": {
+      "name": "Budget Planner",
+      "description": "Strategic monthly plan with gap analysis and user-driven trade-offs."
+    },
+    "time-value": {
+      "name": "Delegate or Do",
+      "description": "Decision matrix for DIY vs hiring a professional."
+    },
+    "tip-split": {
+      "name": "Smart Tip Assistant",
+      "description": "Context-aware tip suggestions and bill splitting."
+    },
+    "recipe-adjuster": {
+      "name": "Recipe Scaler",
+      "description": "Scale your recipes up or down instantly."
+    },
+    "unit-compare": {
+      "name": "Smart Shopping Assistant",
+      "description": "Compare multiple brands by unit price and build your shopping list."
+    }
+  },
+  "save": {
+    "optionalLabel": "Optional: Save this calculation",
+    "namePlaceholder": "Give this calculation a name…",
+    "saveButton": "Save",
+    "saved": "Saved!"
+  },
+  "notFound": {
+    "title": "Tool not found",
+    "description": "This tool doesn't exist in the registry.",
+    "browseTools": "Browse Tools"
+  },
+  "toolLoading": "Loading tool…",
+  "content": {
+    "home": "Home",
+    "blog": "Blog",
+    "toolsNav": "Tools",
+    "relatedToolsCaption": "Related Tools",
+    "relatedToolsTitle": "Put these ideas into practice",
+    "relatedToolsDescription": "Free, browser-based tools that complement this guide.",
+    "keepReadingCaption": "Keep Reading",
+    "relatedArticlesTitle": "Related articles",
+    "backToArticles": "← Back to all articles",
+    "readArticle": "Read article →",
+    "blogCaption": "DailyLogic Blog",
+    "blogTitle": "Ideas for smarter everyday decisions",
+    "blogDescription": "Short, actionable guides — with links to the free tools that help you put them into practice.",
+    "noArticlesTitle": "No articles yet",
+    "noArticlesHint": "Check back soon."
+  },
+  "landing": {
+    "breadcrumbLabel": "Breadcrumb",
+    "toolGuide": "Tool Guide",
+    "whyUseCaption": "Why use this tool",
+    "whyUseTitle": "Make decisions with clarity",
+    "faqCaption": "FAQ",
+    "faqTitle": "Common questions",
+    "useCasesCaption": "Use Cases",
+    "useCasesTitle": "Learn how to get the most from this tool",
+    "useCasesDescription": "Practical guides and everyday scenarios that pair well with {{title}}.",
+    "readyTitle": "Ready to try it yourself?",
+    "readyDescription": "Jump straight into the live {{toolName}} — your inputs stay in your browser.",
+    "openTool": "Open {{toolName}}",
+    "browseAllTools": "Browse all tools",
+    "launchTool": "Launch {{toolName}}",
+    "toolsIndexCaption": "Tool Guides",
+    "toolsIndexTitle": "Explore DailyLogic Tools",
+    "toolsIndexDescription": "Clear, focused guides for each tool — what it does, when to use it, and how to get started.",
+    "viewGuide": "View guide →",
+    "fromBlogCaption": "From the Blog",
+    "fromBlogTitle": "Practical guides & use cases",
+    "viewAllArticles": "View all articles"
+  }
+}

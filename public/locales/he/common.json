@@ -1,0 +1,126 @@
+{
+  "app": {
+    "name": "DailyLogic",
+    "tagline": "כלים לבית ולחיים",
+    "heroCaption": "כלים לבית ולחיים",
+    "heroDescription": "כלים מעשיים לתקציב, בישול, קניות והחלטות יומיומיות — הכל רץ מקומית בדפדפן שלך.",
+    "footer": "כל הכלים רצים מקומית בדפדפן שלך.",
+    "metaDescription": "כלים ממוקדים לניהול הבית, החיים והכסף — הכל בדפדפן."
+  },
+  "header": {
+    "backHome": "חזרה לדף הבית"
+  },
+  "language": {
+    "label": "שפה",
+    "en": "English",
+    "he": "עברית",
+    "es": "Español"
+  },
+  "dashboard": {
+    "searchLabel": "חיפוש כלים",
+    "searchPlaceholder": "חפש לפי שם, קטגוריה או תג…",
+    "noToolsTitle": "לא נמצאו כלים",
+    "noToolsHint": "נסה שם או קטגוריה אחרים.",
+    "favoritesTitle": "המועדפים שלך",
+    "favoritesDescription": "גישה מהירה לכלים שאתה משתמש בהם הכי הרבה",
+    "results_one": "תוצאה {{count}}",
+    "results_other": "{{count}} תוצאות",
+    "addFavorite": "הוסף {{name}} למועדפים",
+    "removeFavorite": "הסר {{name}} מהמועדפים",
+    "loading": "טוען…"
+  },
+  "recent": {
+    "title": "חישובים אחרונים",
+    "description": "המשך מאיפה שהפסקת",
+    "clearAll": "נקה הכל",
+    "delete": "מחק {{name}}"
+  },
+  "categories": {
+    "finance": {
+      "label": "כספים אישיים",
+      "description": "תקציב, חשבונות והחלטות כסף"
+    },
+    "kitchen": {
+      "label": "בית ומטבח",
+      "description": "עזרים לבישול ותכנון ארוחות"
+    },
+    "shopping": {
+      "label": "קניות חכמות",
+      "description": "השוואת מחירים וקניות חכמות"
+    }
+  },
+  "tools": {
+    "budget-simple": {
+      "name": "מתכנן תקציב",
+      "description": "תכנון חודשי אסטרטגי עם ניתוח פערים והחלטות מונחות משתמש."
+    },
+    "time-value": {
+      "name": "לעשות או להעביר",
+      "description": "מטריצת החלטה: DIY מול שכירת מקצוען."
+    },
+    "tip-split": {
+      "name": "עוזר טיפ חכם",
+      "description": "המלצות טיפ לפי הקשר וחלוקת חשבון."
+    },
+    "recipe-adjuster": {
+      "name": "מדרג מתכונים",
+      "description": "הגדל או הקטן מתכונים במהירות."
+    },
+    "unit-compare": {
+      "name": "עוזר קניות חכם",
+      "description": "השווה מחיר ליחידה ובנה רשימת קניות."
+    }
+  },
+  "save": {
+    "optionalLabel": "אופציונלי: שמור חישוב זה",
+    "namePlaceholder": "תן שם לחישוב…",
+    "saveButton": "שמור",
+    "saved": "נשמר!"
+  },
+  "notFound": {
+    "title": "הכלי לא נמצא",
+    "description": "הכלי הזה לא קיים ברשימה.",
+    "browseTools": "עיין בכלים"
+  },
+  "toolLoading": "טוען כלי…",
+  "content": {
+    "home": "דף הבית",
+    "blog": "בלוג",
+    "toolsNav": "כלים",
+    "relatedToolsCaption": "כלים קשורים",
+    "relatedToolsTitle": "יישמו את הרעיונות בפועל",
+    "relatedToolsDescription": "כלים חינמיים בדפדפן שמשלימים את המדריך.",
+    "keepReadingCaption": "המשיכו לקרוא",
+    "relatedArticlesTitle": "מאמרים קשורים",
+    "backToArticles": "→ חזרה לכל המאמרים",
+    "readArticle": "קראו את המאמר ←",
+    "blogCaption": "בלוג DailyLogic",
+    "blogTitle": "רעיונות להחלטות יומיומיות חכמות יותר",
+    "blogDescription": "מדריכים קצרים ומעשיים — עם קישורים לכלים החינמיים שיעזרו לכם ליישם.",
+    "noArticlesTitle": "אין מאמרים עדיין",
+    "noArticlesHint": "בדקו שוב בקרוב."
+  },
+  "landing": {
+    "breadcrumbLabel": "ניווט",
+    "toolGuide": "מדריך לכלי",
+    "whyUseCaption": "למה להשתמש בכלי",
+    "whyUseTitle": "קבלו החלטות בבהירות",
+    "faqCaption": "שאלות נפוצות",
+    "faqTitle": "שאלות ותשובות",
+    "useCasesCaption": "מקרי שימוש",
+    "useCasesTitle": "למדו להפיק את המירב מהכלי",
+    "useCasesDescription": "מדריכים מעשיים ותרחישים יומיומיים שמשתלבים עם {{title}}.",
+    "readyTitle": "מוכנים לנסות בעצמכם?",
+    "readyDescription": "קפצו ישר ל-{{toolName}} החי — הקלטים נשארים בדפדפן שלכם.",
+    "openTool": "פתחו {{toolName}}",
+    "browseAllTools": "עיינו בכל הכלים",
+    "launchTool": "הפעילו {{toolName}}",
+    "toolsIndexCaption": "מדריכי כלים",
+    "toolsIndexTitle": "גלו את כלי DailyLogic",
+    "toolsIndexDescription": "מדריכים ברורים וממוקדים לכל כלי — מה הוא עושה, מתי להשתמש, ואיך להתחיל.",
+    "viewGuide": "צפו במדריך ←",
+    "fromBlogCaption": "מהבלוג",
+    "fromBlogTitle": "מדריכים מעשיים ומקרי שימוש",
+    "viewAllArticles": "צפו בכל המאמרים"
+  }
+}

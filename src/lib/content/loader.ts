@@ -5,6 +5,10 @@ import { compileMDX } from "next-mdx-remote/rsc";
 import { getMdxComponents } from "@/lib/content/mdx-components";
 import { jsonToFrontmatter } from "@/lib/content/landing-utils";
 import { getLocalizedToolLandingSlugs } from "@/lib/content/tool-landing-registry";
+import {
+  getAllArticleMetaFromRegistry,
+  getArticleMetaBySlugFromRegistry,
+} from "@/lib/content/article-meta-registry";
 import type {
   ArticleFrontmatter,
   ArticlePageData,
@@ -160,31 +164,7 @@ export function getAllToolLandingMeta(): ContentMeta[] {
 }
 
 export function getAllArticleMeta(locale: AppLocale = defaultLocale): ContentMeta[] {
-  const resolvedLocale = resolveArticleLocale(locale);
-
-  return getContentSlugs("articles")
-    .flatMap((slug) => {
-      const data = readFrontmatter<ArticleFrontmatter>(
-        "articles",
-        slug,
-        resolvedLocale,
-      );
-      if (!data) return [];
-
-      return [
-        {
-          slug,
-          title: data.title,
-          description: data.description,
-          publishedAt: data.publishedAt,
-        },
-      ];
-    })
-    .sort(
-      (a, b) =>
-        new Date(b.publishedAt ?? 0).getTime() -
-        new Date(a.publishedAt ?? 0).getTime(),
-    );
+  return getAllArticleMetaFromRegistry(locale);
 }
 
 export async function getToolLandingPage(
@@ -241,17 +221,5 @@ export function getArticleMetaBySlug(
   slug: string,
   locale: AppLocale = defaultLocale,
 ): ContentMeta | null {
-  const data = readFrontmatter<ArticleFrontmatter>(
-    "articles",
-    slug,
-    resolveArticleLocale(locale),
-  );
-  if (!data) return null;
-
-  return {
-    slug,
-    title: data.title,
-    description: data.description,
-    publishedAt: data.publishedAt,
-  };
+  return getArticleMetaBySlugFromRegistry(slug, locale);
 }

@@ -1,0 +1,98 @@
+{
+  "en": [
+    {
+      "slug": "the-hidden-cost-of-diy",
+      "title": "The Hidden Cost of DIY: Why Your Time Is More Valuable Than You Think",
+      "description": "Why spending 10 hours to save $100 might be the worst financial decision you've made this month.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "tipping-etiquette-in-the-modern-age",
+      "title": "Tipping Etiquette: When, How Much, and Why?",
+      "description": "Navigating the confusing world of service tips with logic, fairness, and grace.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "unit-price-shopping-tips",
+      "title": "Unit Price Shopping Tips That Actually Work",
+      "description": "How to compare products fairly at the store — including promotions, pack sizes, and brand swaps.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "monthly-budget-guide",
+      "title": "A Simple Monthly Budget Guide",
+      "description": "A step-by-step approach to planning one month at a time — with room for real life.",
+      "publishedAt": "2026-02-20T00:00:00.000Z"
+    },
+    {
+      "slug": "how-to-save-money",
+      "title": "How to Save Money on a Tight Budget",
+      "description": "Practical steps to stretch your income without feeling deprived — starting with visibility, not deprivation.",
+      "publishedAt": "2026-02-15T00:00:00.000Z"
+    }
+  ],
+  "he": [
+    {
+      "slug": "the-hidden-cost-of-diy",
+      "title": "העלות הנסתרת של 'עשה זאת בעצמך': למה הזמן שלכם שווה יותר ממה שאתם חושבים",
+      "description": "למה להשקיע 10 שעות כדי לחסוך 100 שקל עשוי להיות ההחלטה הכספית הגרועה ביותר שלכם החודש.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "tipping-etiquette-in-the-modern-age",
+      "title": "אטיקט טיפים: מתי, כמה ולמה?",
+      "description": "ניווט בעולם המבלבל של טיפים בשירות — עם הגיון, הוגנות ונימוס.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "unit-price-shopping-tips",
+      "title": "טיפים לקניות לפי מחיר יחידה שבאמת עובדים",
+      "description": "איך להשוות מוצרים בצורה הוגנת בחנות — כולל מבצעים, גדלי אריזה והחלפת מותגים.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "monthly-budget-guide",
+      "title": "מדריך תקציב חודשי פשוט",
+      "description": "גישה צעד-אחר-צעד לתכנון חודש אחד בכל פעם — עם מקום לחיים האמיתיים.",
+      "publishedAt": "2026-02-20T00:00:00.000Z"
+    },
+    {
+      "slug": "how-to-save-money",
+      "title": "איך לחסוך כסף בתקציב צפוף",
+      "description": "צעדים מעשיים למתיחת ההכנסה בלי להרגיש מקופחים — מתחילים בשקיפות, לא בוויתור.",
+      "publishedAt": "2026-02-15T00:00:00.000Z"
+    }
+  ],
+  "es": [
+    {
+      "slug": "the-hidden-cost-of-diy",
+      "title": "El costo oculto del bricolaje: por qué tu tiempo vale más de lo que crees",
+      "description": "Por qué dedicar 10 horas para ahorrar 100 $ puede ser la peor decisión financiera del mes.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "tipping-etiquette-in-the-modern-age",
+      "title": "Etiqueta de propinas: ¿cuándo, cuánto y por qué?",
+      "description": "Navega el confuso mundo de las propinas con lógica, equidad y buen criterio.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "unit-price-shopping-tips",
+      "title": "Consejos de compra por precio unitario que realmente funcionan",
+      "description": "Cómo comparar productos de forma justa en la tienda — incluyendo promociones, tamaños de paquete y cambios de marca.",
+      "publishedAt": "2026-06-28"
+    },
+    {
+      "slug": "monthly-budget-guide",
+      "title": "Una guía simple de presupuesto mensual",
+      "description": "Un enfoque paso a paso para planificar un mes a la vez — con espacio para la vida real.",
+      "publishedAt": "2026-02-20T00:00:00.000Z"
+    },
+    {
+      "slug": "how-to-save-money",
+      "title": "Cómo ahorrar dinero con un presupuesto ajustado",
+      "description": "Pasos prácticos para estirar tus ingresos sin sentirte privado — empezando por la visibilidad, no por la privación.",
+      "publishedAt": "2026-02-15T00:00:00.000Z"
+    }
+  ]
+}

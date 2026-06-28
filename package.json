@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack -p 3001",
-    "prebuild": "node scripts/check-dev-not-running.js",
+    "prebuild": "node scripts/generate-article-meta.mjs && node scripts/check-dev-not-running.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

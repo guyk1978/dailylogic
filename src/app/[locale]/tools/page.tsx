@@ -1,6 +1,8 @@
 import { ToolsIndexContent } from "@/components/content/tools-index-content";
-import { getAllArticleMeta } from "@/lib/content/loader";
+import { getAllArticleMetaFromRegistry } from "@/lib/content/article-meta-registry";
 import { getRouteLocale } from "@/lib/i18n/server";
+
+export const runtime = "edge";
 
 export const metadata = {
   title: "Tools",
@@ -14,7 +16,7 @@ interface ToolsIndexPageProps {
 
 export default async function ToolsIndexPage({ params }: ToolsIndexPageProps) {
   const locale = await getRouteLocale(params);
-  const articles = getAllArticleMeta(locale).slice(0, 3);
+  const articles = getAllArticleMetaFromRegistry(locale).slice(0, 3);
 
   return <ToolsIndexContent articles={articles} />;
 }

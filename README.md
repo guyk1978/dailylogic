@@ -1,4 +1,4 @@
-# Ratio
+# DailyLogic
 
 A micro-tools platform built with Next.js 15, TypeScript, and Tailwind CSS. Every tool runs entirely in the browser — no server-side processing of user data.
 
@@ -9,7 +9,7 @@ npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3001](http://localhost:3001).
 
 ## Project Structure
 
@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 src/
 ├── app/
 │   ├── page.tsx              # Tool directory (home)
-│   ├── layout.tsx            # Root layout + Playful & Modern theme
+│   ├── layout.tsx            # Root layout
 │   └── tool/[slug]/page.tsx  # Dynamic tool route
 ├── components/
 │   ├── layout/               # Shared layout components
@@ -36,4 +36,4 @@ src/
 
 ## Design
 
-Playful & Modern aesthetic: `bg-slate-50` base, white cards with soft shadows, blue accent, rounded corners, friendly typography.
+Light, airy aesthetic: `bg-slate-50` base, white cards with soft shadows, blue accent, rounded corners, friendly typography.

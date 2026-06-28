@@ -2,6 +2,8 @@ import { InfoPageContent } from "@/components/content/info-page-content";
 import { getRouteLocale } from "@/lib/i18n/server";
 import { getInfoPageMetadata } from "@/lib/seo/info-page-metadata";
 
+export const runtime = "edge";
+
 interface PrivacyPageProps {
   params: Promise<{ locale: string }>;
 }

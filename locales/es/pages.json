@@ -1,0 +1,271 @@
+{
+  "footer": {
+    "navLabel": "Información legal y general",
+    "about": "Acerca de",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "security": "Seguridad y privacidad",
+    "contact": "Contacto",
+    "copyright": "© {{year}} DailyLogic. Todos los derechos reservados."
+  },
+  "about": {
+    "caption": "Acerca de DailyLogic",
+    "title": "Herramientas prácticas para decisiones cotidianas",
+    "description": "DailyLogic te ayuda a tomar decisiones más claras sobre dinero, hogar y vida diaria — con herramientas gratuitas que respetan tu privacidad.",
+    "metaDescription": "Conoce la misión de DailyLogic de ofrecer herramientas gratuitas en el navegador, centradas en la privacidad, para presupuesto, cocina, compras y decisiones diarias.",
+    "sectionOrder": ["mission", "whatWeDo", "values", "localFirst"],
+    "sections": {
+      "mission": {
+        "title": "Nuestra misión",
+        "paragraphs": [
+          "DailyLogic existe para facilitar las decisiones cotidianas. Ya sea que planifiques un presupuesto mensual, escales una receta, compares precios por unidad o decidas si contratar ayuda, creemos que las herramientas útiles deben ser rápidas, honestas y accesibles para todos.",
+          "Nos enfocamos en la claridad, no en la complejidad. Cada herramienta hace bien una sola cosa, con lenguaje sencillo y un diseño que no estorba."
+        ]
+      },
+      "whatWeDo": {
+        "title": "Qué construimos",
+        "paragraphs": [
+          "DailyLogic es una colección de calculadoras y guías gratuitas en el navegador para finanzas personales, tareas del hogar y cocina, y compras inteligentes. Cada herramienta interactiva funciona completamente en tu navegador — sin cuenta, sin muro de registro y sin pagar por las funciones principales.",
+          "Junto a las herramientas publicamos artículos breves que explican cuándo y cómo usarlas, para que pases de leer a actuar en una sola sesión."
+        ]
+      },
+      "values": {
+        "title": "En qué creemos",
+        "paragraphs": [
+          "Usabilidad primero: las interfaces deben ser limpias, legibles y cómodas en cualquier dispositivo.",
+          "Herramientas honestas: mostramos nuestras suposiciones y te dejamos ajustar los datos en lugar de ocultar los cálculos.",
+          "Privacidad por diseño: tus números personales permanecen en tu dispositivo a menos que decidas compartirlos.",
+          "Acceso abierto: DailyLogic es gratuito porque la ayuda práctica no debería depender de una suscripción."
+        ]
+      },
+      "localFirst": {
+        "title": "Diseñado local-first",
+        "paragraphs": [
+          "Arquitectamos DailyLogic para que los cálculos ocurran en tu navegador, no en nuestros servidores. Eso significa respuestas más rápidas, comportamiento compatible con uso sin conexión cuando es posible, y un lugar menos al que deben viajar tus datos financieros o del hogar.",
+          "Lee más sobre cómo protegemos tus datos en nuestra página de Seguridad y privacidad."
+        ]
+      }
+    }
+  },
+  "privacy": {
+    "caption": "Política de privacidad",
+    "title": "Tus datos son tuyos",
+    "description": "DailyLogic está diseñado en torno al procesamiento local en el cliente. Esta política explica qué recopilamos — y, más importante, qué no.",
+    "metaDescription": "Política de privacidad de DailyLogic: procesamiento en el cliente, recopilación mínima de datos y sin venta de información personal.",
+    "sectionOrder": ["overview", "localProcessing", "dataWeCollect", "cookies", "thirdParties", "children", "changes", "contact"],
+    "sections": {
+      "overview": {
+        "title": "Resumen",
+        "paragraphs": [
+          "DailyLogic (dailylogic.app) ofrece herramientas web y artículos gratuitos. Respetamos tu privacidad y buscamos recopilar la menor cantidad de información posible.",
+          "Al usar DailyLogic, aceptas las prácticas descritas en esta política. Si no estás de acuerdo, deja de usar el sitio."
+        ]
+      },
+      "localProcessing": {
+        "title": "Procesamiento local-first",
+        "paragraphs": [
+          "La experiencia principal de DailyLogic — introducir números, ejecutar cálculos y ver resultados — ocurre completamente en tu navegador. No recibimos, almacenamos ni procesamos en nuestros servidores los valores que escribes en nuestras herramientas.",
+          "Funciones opcionales como guardar cálculos recientes o favoritos usan el almacenamiento local del navegador en tu dispositivo. Puedes borrar estos datos en cualquier momento desde la configuración del navegador."
+        ]
+      },
+      "dataWeCollect": {
+        "title": "Información que podemos recopilar",
+        "paragraphs": [
+          "Cuando visitas dailylogic.app, proveedores estándar de hosting y analítica pueden registrar automáticamente datos técnicos como tu dirección IP, tipo de navegador, página de referencia y región aproximada. Esto es habitual para operar y proteger cualquier sitio web.",
+          "Si nos contactas por correo electrónico, recibimos la información que decides enviar (como tu dirección y el contenido del mensaje) para poder responderte.",
+          "No te pedimos crear una cuenta y no recopilamos datos de pago porque DailyLogic es gratuito."
+        ]
+      },
+      "cookies": {
+        "title": "Cookies y almacenamiento local",
+        "paragraphs": [
+          "Podemos usar una cookie para recordar tu idioma preferido y cargar las páginas en el locale que seleccionaste.",
+          "Las preferencias de herramientas y los cálculos guardados pueden almacenarse en el almacenamiento local de tu dispositivo. Estos datos nunca salen de tu navegador a menos que los exportes o compartas tú mismo.",
+          "Puedes desactivar cookies o borrar el almacenamiento local desde la configuración del navegador. Algunas preferencias pueden restablecerse como resultado."
+        ]
+      },
+      "thirdParties": {
+        "title": "Servicios de terceros",
+        "paragraphs": [
+          "DailyLogic se aloja en infraestructura que procesa datos técnicos de solicitudes necesarios para entregar el sitio. No vendemos tu información personal a terceros.",
+          "Nuestras páginas pueden enlazar a sitios externos (por ejemplo, referencias en artículos). Esos sitios tienen sus propias políticas de privacidad, que no controlamos."
+        ]
+      },
+      "children": {
+        "title": "Privacidad de menores",
+        "paragraphs": [
+          "DailyLogic está dirigido a un público general y no está pensado para menores de 13 años. No recopilamos a sabiendas información personal de menores."
+        ]
+      },
+      "changes": {
+        "title": "Cambios en esta política",
+        "paragraphs": [
+          "Podemos actualizar esta Política de privacidad periódicamente. La versión revisada se publicará en esta página con una fecha de vigencia actualizada. El uso continuado del sitio tras los cambios constituye la aceptación de la política actualizada."
+        ]
+      },
+      "contact": {
+        "title": "Preguntas",
+        "paragraphs": [
+          "Si tienes preguntas sobre esta Política de privacidad o sobre cómo DailyLogic maneja los datos, contáctanos usando los datos de nuestra página de Contacto."
+        ]
+      }
+    }
+  },
+  "terms": {
+    "caption": "Términos de servicio",
+    "title": "Términos de uso",
+    "description": "Estos términos rigen tu uso de DailyLogic y sus herramientas web gratuitas. Léelos antes de usar el sitio.",
+    "metaDescription": "Términos de servicio de DailyLogic para el uso de nuestras herramientas gratuitas de vida y hogar en el navegador.",
+    "sectionOrder": ["acceptance", "useOfService", "accounts", "intellectualProperty", "disclaimer", "liability", "changes", "contact"],
+    "sections": {
+      "acceptance": {
+        "title": "Aceptación de los términos",
+        "paragraphs": [
+          "Al acceder o usar dailylogic.app, aceptas estos Términos de servicio y nuestra Política de privacidad. Si no estás de acuerdo, no uses el sitio.",
+          "Estos términos se aplican a todos los visitantes y usuarios de DailyLogic."
+        ]
+      },
+      "useOfService": {
+        "title": "Uso del servicio",
+        "paragraphs": [
+          "DailyLogic ofrece herramientas en línea y contenido informativo gratuitos para uso personal y no comercial, salvo que indiquemos lo contrario.",
+          "Aceptas usar el sitio de forma legal y no hacer un uso indebido, interrumpir o intentar acceder sin autorización a nuestros sistemas o a los datos de otros usuarios.",
+          "Eres responsable de cómo usas los resultados de nuestras herramientas. Los cálculos son ayudas para decidir, no asesoramiento profesional."
+        ]
+      },
+      "accounts": {
+        "title": "No se requiere cuenta",
+        "paragraphs": [
+          "DailyLogic no requiere registro. Las funciones que recuerdan tus preferencias dependen del almacenamiento en tu propio navegador, que tú controlas."
+        ]
+      },
+      "intellectualProperty": {
+        "title": "Propiedad intelectual",
+        "paragraphs": [
+          "El nombre DailyLogic, la marca, el diseño del sitio, las interfaces de las herramientas y el contenido original pertenecen a DailyLogic o a sus licenciantes y están protegidos por las leyes de propiedad intelectual aplicables.",
+          "Puedes enlazar a nuestras páginas y compartir resultados que generes, pero no puedes copiar, extraer ni republicar partes sustanciales del sitio sin permiso."
+        ]
+      },
+      "disclaimer": {
+        "title": "Descargo de responsabilidad",
+        "paragraphs": [
+          "Las herramientas y artículos de DailyLogic se ofrecen solo con fines informativos generales. No constituyen asesoramiento financiero, legal, fiscal, médico u otro profesional.",
+          "Buscamos la precisión, pero no garantizamos que los resultados estén libres de errores o sean adecuados para tu situación específica. Verifica siempre las decisiones importantes de forma independiente o con un profesional cualificado."
+        ]
+      },
+      "liability": {
+        "title": "Limitación de responsabilidad",
+        "paragraphs": [
+          "En la máxima medida permitida por la ley, DailyLogic y sus operadores no son responsables de daños indirectos, incidentales o consecuentes derivados de tu uso del sitio o de la confianza en los resultados de las herramientas.",
+          "El sitio se proporciona \"tal cual\" sin garantías de ningún tipo, expresas o implícitas."
+        ]
+      },
+      "changes": {
+        "title": "Cambios en estos términos",
+        "paragraphs": [
+          "Podemos revisar estos Términos de servicio en cualquier momento. Los términos actualizados se publicarán en esta página. Tu uso continuado de DailyLogic después de que los cambios entren en vigor constituye aceptación."
+        ]
+      },
+      "contact": {
+        "title": "Contacto",
+        "paragraphs": [
+          "Para preguntas sobre estos Términos de servicio, contáctanos a través de nuestra página de Contacto."
+        ]
+      }
+    }
+  },
+  "contact": {
+    "caption": "Contacto",
+    "title": "Ponte en contacto",
+    "description": "Preguntas, comentarios o ideas de colaboración — nos encantaría saber de ti.",
+    "metaDescription": "Contacta con DailyLogic para preguntas, comentarios, consultas de privacidad u oportunidades de colaboración.",
+    "email": "hello@dailylogic.app",
+    "emailLabel": "Envíanos un correo",
+    "sectionOrder": ["intro", "whatToSend", "response"],
+    "sections": {
+      "intro": {
+        "title": "Cómo contactarnos",
+        "paragraphs": [
+          "DailyLogic es un proyecto pequeño y enfocado. Leemos cada mensaje y hacemos lo posible por responder con atención.",
+          "Para una respuesta más rápida, escríbenos directamente a la dirección de abajo."
+        ]
+      },
+      "whatToSend": {
+        "title": "Qué incluir",
+        "paragraphs": [
+          "Comentarios sobre herramientas: indica qué herramienta usaste, qué esperabas y qué ocurrió.",
+          "Informes de errores: incluye navegador, dispositivo y pasos para reproducir el problema si es posible.",
+          "Preguntas de privacidad: menciona la página o función específica sobre la que preguntas.",
+          "No podemos ofrecer asesoramiento financiero, legal o médico personal por correo de soporte."
+        ]
+      },
+      "response": {
+        "title": "Tiempos de respuesta",
+        "paragraphs": [
+          "Normalmente respondemos en unos pocos días laborables. Los asuntos complejos pueden tardar más, pero te avisaremos si necesitamos más tiempo.",
+          "Gracias por ayudarnos a mejorar DailyLogic."
+        ]
+      }
+    }
+  },
+  "security": {
+    "caption": "Seguridad y privacidad",
+    "title": "Local-first por diseño",
+    "description": "Cómo DailyLogic mantiene tus datos en tu dispositivo y minimiza la exposición de información.",
+    "metaDescription": "Descubre cómo la arquitectura local-first de DailyLogic mantiene los cálculos en tu navegador y protege tu privacidad.",
+    "sectionOrder": ["overview", "howItWorks", "whatLeavesDevice", "browserStorage", "hosting", "bestPractices", "questions"],
+    "sections": {
+      "overview": {
+        "title": "La privacidad es una decisión de producto",
+        "paragraphs": [
+          "Muchas aplicaciones web envían cada pulsación de tecla a un servidor. DailyLogic se construyó de otra forma: las herramientas de presupuesto, cocina y compras están diseñadas para ejecutarse en tu navegador.",
+          "Esa elección arquitectónica no es un añadido posterior — es central en cómo protegemos tu información personal."
+        ]
+      },
+      "howItWorks": {
+        "title": "Cómo funciona local-first",
+        "paragraphs": [
+          "Cuando abres una herramienta de DailyLogic, la lógica de cálculo se descarga en tu navegador como parte de la página. Al introducir cantidades, porciones o precios, JavaScript los procesa en tu dispositivo y muestra los resultados al instante.",
+          "Como este procesamiento ocurre en el cliente, DailyLogic no necesita una base de datos con tus presupuestos, recetas o listas de compra para funcionar."
+        ]
+      },
+      "whatLeavesDevice": {
+        "title": "Qué sí sale de tu dispositivo",
+        "paragraphs": [
+          "Como cualquier sitio web, tu navegador realiza solicitudes de red para cargar páginas, estilos y scripts desde nuestro proveedor de hosting. Esas solicitudes pueden incluir metadatos técnicos estándar (como dirección IP y agente de usuario) necesarios para entregar el contenido.",
+          "No transmitimos a los servidores de DailyLogic los números y datos personales que introduces en nuestras calculadoras para procesarlos o almacenarlos.",
+          "Si nos escribes por correo, solo compartes con nosotros la información que incluyes en el mensaje."
+        ]
+      },
+      "browserStorage": {
+        "title": "Almacenamiento del navegador en tu dispositivo",
+        "paragraphs": [
+          "Algunas funciones — como recordar tu idioma, cálculos recientes o herramientas favoritas — guardan pequeñas cantidades de datos en el almacenamiento local del navegador.",
+          "Estos datos permanecen en tu dispositivo hasta que los borres. No se sincronizan con nuestros servidores.",
+          "Puedes eliminarlos en cualquier momento desde la configuración de privacidad o datos del sitio en tu navegador."
+        ]
+      },
+      "hosting": {
+        "title": "Hosting y seguridad",
+        "paragraphs": [
+          "DailyLogic se sirve por HTTPS, que cifra los datos en tránsito entre tu navegador y nuestra infraestructura de hosting.",
+          "Mantenemos actualizadas las dependencias de software y seguimos buenas prácticas de hosting, pero ningún servicio en línea puede garantizar seguridad absoluta. Diseñamos el producto para limitar la exposición de datos sensibles desde el principio."
+        ]
+      },
+      "bestPractices": {
+        "title": "Consejos para mantener la privacidad",
+        "paragraphs": [
+          "Usa DailyLogic en un dispositivo y navegador en los que confíes, especialmente al introducir información financiera.",
+          "Borra los datos del sitio cuando uses un ordenador compartido.",
+          "Recuerda que las capturas de pantalla o exportaciones que crees están bajo tu control — compártelas solo con personas de confianza."
+        ]
+      },
+      "questions": {
+        "title": "Más preguntas",
+        "paragraphs": [
+          "Para detalles legales, consulta nuestra Política de privacidad. Para contactar al equipo directamente, visita la página de Contacto."
+        ]
+      }
+    }
+  }
+}

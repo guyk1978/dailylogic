@@ -1,43 +1,42 @@
 "use client";
 
 import Link from "next/link";
-import type { ReactElement } from "react";
+import { usePathname } from "next/navigation";
 import { useTranslation } from "@/lib/i18n/provider";
 import { ArticleCard } from "@/components/content/article-card";
 import { Breadcrumbs } from "@/components/content/breadcrumbs";
+import { ToolJsonLd } from "@/components/seo/tool-json-ld";
+import { ToolSeoContent } from "@/components/seo/tool-seo-content";
 import { useLocalizedToolLanding } from "@/hooks/use-localized-tool-landing";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { useTranslatedTool } from "@/hooks/use-translated-tools";
-import type { ContentMeta, ToolLandingFrontmatter } from "@/lib/content/types";
+import type { ContentMeta } from "@/lib/content/types";
 import { jsonToFrontmatter } from "@/lib/content/landing-utils";
 import { getToolBySlug, type ToolSlug } from "@/lib/tools-registry";
 
 interface LandingPageProps {
   slug: string;
-  mdxFrontmatter?: ToolLandingFrontmatter | null;
-  mdxContent?: ReactElement | null;
   relatedArticles: ContentMeta[];
 }
 
 export function LandingPage({
   slug,
-  mdxFrontmatter,
-  mdxContent,
   relatedArticles,
 }: LandingPageProps) {
   const { t } = useTranslation("common");
   const dir = useLocaleDirection();
   const lp = useLocalizedPath();
+  const pathname = usePathname();
   const localizedJson = useLocalizedToolLanding(slug);
-  const resolvedToolSlug = localizedJson?.toolSlug ?? mdxFrontmatter?.toolSlug;
+  const resolvedToolSlug = localizedJson?.toolSlug;
   const translatedTool = useTranslatedTool(
     (resolvedToolSlug ?? "budget-simple") as ToolSlug,
   );
 
   const frontmatter = localizedJson
     ? jsonToFrontmatter(localizedJson)
-    : mdxFrontmatter;
+    : null;
 
   if (!frontmatter) return null;
 
@@ -48,9 +47,14 @@ export function LandingPage({
   const subtitle = localizedJson?.subtitle ?? frontmatter.description;
   const benefits = localizedJson?.benefits ?? [];
   const faq = localizedJson?.faq ?? [];
+  const pageUrl =
+    typeof window !== "undefined"
+      ? window.location.origin + pathname
+      : `https://dailylogic.app${pathname}`;
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10 sm:py-14" dir={dir}>
+      {localizedJson && <ToolJsonLd landing={localizedJson} pageUrl={pageUrl} />}
       <Breadcrumbs
         items={[
           { label: t("content.home"), href: lp("/") },
@@ -80,6 +84,10 @@ export function LandingPage({
         )}
       </header>
 
+      {localizedJson?.sections && (
+        <ToolSeoContent sections={localizedJson.sections} />
+      )}
+
       {benefits.length > 0 && (
         <section className="mb-14">
           <div className="mb-8 max-w-2xl">
@@ -102,12 +110,6 @@ export function LandingPage({
             ))}
           </ul>
         </section>
-      )}
-
-      {mdxContent && (
-        <article className="prose-content mb-14 max-w-3xl" dir={dir}>
-          {mdxContent}
-        </article>
       )}
 
       {faq.length > 0 && (

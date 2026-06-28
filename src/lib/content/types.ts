@@ -11,11 +11,21 @@ export interface ToolLandingFaq {
   answer: string;
 }
 
+export interface ToolLandingContentSection {
+  heading: string;
+  paragraphs: string[];
+}
+
 export interface ToolLandingJson {
   title: string;
   subtitle: string;
   heroDescription: string;
   toolSlug: ToolSlug;
+  seoTitle?: string;
+  seoDescription?: string;
+  schemaType?: "WebApplication" | "SoftwareApplication";
+  applicationCategory?: string;
+  sections?: ToolLandingContentSection[];
   relatedArticles?: string[];
   publishedAt?: string;
   benefits: ToolLandingBenefit[];

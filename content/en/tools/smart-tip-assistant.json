@@ -1,10 +1,39 @@
 {
   "title": "Smart Tip Assistant: Calculate with Confidence",
   "subtitle": "Stop guessing. Get fair, context-aware tip suggestions based on service quality and local standards.",
+  "seoTitle": "Smart Tip Calculator & Bill Split Assistant | DailyLogic",
+  "seoDescription": "Calculate fair tips based on service quality, split bills among guests, and tip with confidence. Free tip calculator — no app download needed.",
   "heroDescription": "Tipping shouldn't be a source of stress. Whether you're at a restaurant or ordering a delivery, our smart assistant helps you calculate the perfect tip based on your actual experience.",
   "toolSlug": "tip-split",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
   "relatedArticles": ["tipping-etiquette-in-the-modern-age"],
   "publishedAt": "2026-06-28",
+  "sections": [
+    {
+      "heading": "What the Smart Tip Assistant Does",
+      "paragraphs": [
+        "The Smart Tip Assistant transforms awkward end-of-meal math into a quick, fair decision. Instead of defaulting to a flat percentage regardless of service quality, the tool weighs factors that actually matter: attentiveness, timing, effort under difficult conditions, and the overall value of the experience.",
+        "It also handles bill splitting when dining with friends, family, or colleagues — calculating each person's share including tip so no one overpays or under-tips. Whether you are tipping a server, courier, barista, or stylist, the assistant provides a consistent framework that balances generosity with fairness.",
+        "All calculations run locally in your browser, so your bill amounts stay private. There is no signup, no tracking, and no pressure to tip more than you intend."
+      ]
+    },
+    {
+      "heading": "How to Use the Tip Calculator",
+      "paragraphs": [
+        "Enter the pre-tax or post-tax bill amount depending on your local tipping convention. Rate the service across the suggested dimensions — friendliness, speed, and effort — and the assistant recommends a tip percentage aligned with your inputs.",
+        "For group meals, specify the number of guests to split the total evenly, or adjust individual shares if your party prefers custom splits. Review the suggested tip total before paying, and round up or down based on personal preference.",
+        "Use the tool consistently to build confidence in your tipping habits rather than relying on social pressure or arbitrary rules that do not reflect actual service quality."
+      ]
+    },
+    {
+      "heading": "Why Structured Tipping Matters",
+      "paragraphs": [
+        "Fair tipping supports service workers while protecting your budget from guilt-driven overpayment. A structured approach reduces cognitive load at the table — you decide in seconds instead of debating percentages mentally while the card reader faces you.",
+        "Read DailyLogic's tipping etiquette guide for deeper context on when and how much to tip across different service types, and use this calculator as the practical companion that turns philosophy into numbers."
+      ]
+    }
+  ],
   "benefits": [
     {
       "title": "Service-Based Logic",
@@ -15,8 +44,8 @@
       "description": "Get recommendations that respect local norms while reflecting your personal satisfaction."
     },
     {
-      "title": "Instant Results",
-      "description": "One-click calculation that includes the bill split for your entire party."
+      "title": "Instant Bill Splitting",
+      "description": "Divide the total fairly among your entire party in one step."
     }
   ],
   "faq": [
@@ -26,7 +55,11 @@
     },
     {
       "question": "Does this work in any country?",
-      "answer": "The logic is designed to be adaptable, helping you calculate based on the standard percentages for your specific location."
+      "answer": "The logic is adaptable — adjust base percentages to match local tipping customs."
+    },
+    {
+      "question": "Should I tip on tax?",
+      "answer": "That depends on local convention. The tool lets you calculate on pre-tax or post-tax amounts."
     }
   ]
 }

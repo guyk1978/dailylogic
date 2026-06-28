@@ -1,0 +1,48 @@
+{
+  "title": "Escalador de recetas",
+  "subtitle": "Escala cualquier receta al instante — ajusta porciones, convierte unidades y copia un resultado limpio.",
+  "seoTitle": "Escalador de recetas gratis | Calculadora de porciones | DailyLogic",
+  "seoDescription": "Escala recetas para cualquier número de porciones. Ajusta ingredientes, convierte unidades y copia resultados al instante. Calculadora de cocina gratuita.",
+  "heroDescription": "¿Cocinas para dos en lugar de seis? ¿Medias una receta familiar? Obtén cantidades exactas en segundos.",
+  "toolSlug": "recipe-adjuster",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "publishedAt": "2026-03-01",
+  "sections": [
+    {
+      "heading": "Qué hace el Escalador de recetas",
+      "paragraphs": [
+        "El Escalador de recetas de DailyLogic elimina las matemáticas mentales al cocinar. Cuando una receta es para cuatro y necesitas dos — o doce — recalcular cada ingrediente manualmente invita a errores. Esta herramienta escala todos los ingredientes proporcionalmente según las porciones deseadas.",
+        "Además de multiplicar cantidades, agrupa ingredientes por categoría para mantener la preparación organizada. Ideal para meal prep, reducir porciones o duplicar para invitados.",
+        "Todo se procesa localmente en tu navegador; tus recetas no se suben a ningún servidor.",
+        "Es especialmente útil para recetas familiares transmitidas entre generaciones, manteniendo proporciones fieles aunque cambie el número de comensales."
+      ]
+    },
+    {
+      "heading": "Cómo usar el Escalador de recetas",
+      "paragraphs": [
+        "Introduce ingredientes con cantidades y unidades originales, junto con el número de porciones de la receta. Define las porciones deseadas y la herramienta recalcula cada línea automáticamente.",
+        "Revisa el resultado, ajusta si hace falta y copia el formato listo para la cocina. Usa categorías para separar proteínas, verduras y especias.",
+        "Guarda recetas frecuentes copiando el resultado o usando la función de guardado del panel."
+      ]
+    },
+    {
+      "heading": "Por qué los cocineros usan el escalado",
+      "paragraphs": [
+        "El escalado preciso evita desperdicio y platos fallidos por errores de proporción — especialmente con levadura y sal.",
+        "Es gratis y no requiere instalación: ábrelo en cualquier dispositivo de la cocina y obtén resultados al momento.",
+        "Úsalo antes de compras grandes o cenas con invitados para calcular cantidades exactas y evitar desperdiciar ingredientes caros."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Escalado proporcional", "description": "Cada ingrediente se ajusta con precisión a tus porciones." },
+    { "title": "Salida organizada", "description": "Ingredientes agrupados y copia con un clic." },
+    { "title": "Sin cuenta", "description": "Funciona en el navegador sin descargar apps." }
+  ],
+  "faq": [
+    { "question": "¿Funciona con unidades mixtas?", "answer": "Sí. Introduce cada ingrediente en su unidad original." },
+    { "question": "¿Sirve para repostería?", "answer": "Sí, pero verifica levadura y sal en cambios grandes de porción." },
+    { "question": "¿Se guardan mis recetas en la nube?", "answer": "No. Los cálculos son locales salvo que los guardes en tu dispositivo." }
+  ]
+}

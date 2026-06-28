@@ -1,10 +1,39 @@
 {
   "title": "Delegate or Do: The Decision Matrix",
   "subtitle": "Stop guessing if you should hire help. Make rational decisions based on your time, money, and risk tolerance.",
+  "seoTitle": "Delegate or DIY Calculator — Time vs. Money | DailyLogic",
+  "seoDescription": "Should you do it yourself or hire a pro? Compare your hourly value, task cost, and risk with this free delegate-or-do decision calculator.",
   "heroDescription": "We often waste hours trying to save a few dollars. Delegate or Do helps you quantify whether you should handle a task yourself or call in a professional.",
   "toolSlug": "time-value",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
   "relatedArticles": ["the-hidden-cost-of-diy"],
   "publishedAt": "2026-06-28",
+  "sections": [
+    {
+      "heading": "What the Delegate or Do Calculator Does",
+      "paragraphs": [
+        "The Delegate or Do tool removes emotional bias from everyday outsourcing decisions. When faced with a home repair, administrative task, or weekend project, most people guess — or default to DIY because it feels frugal. This calculator replaces guesswork with a structured comparison of your time value, the professional's cost, and the risk of doing it wrong.",
+        "By quantifying opportunity cost, the tool reveals hidden losses: spending four hours to save thirty dollars is not a win if your effective hourly rate is higher than the savings. It also factors in redo risk — the cost of mistakes, delays, and stress that rarely appear on a receipt but matter to your bottom line and wellbeing.",
+        "The calculator runs entirely in your browser, making it easy to run quick what-if scenarios before committing your weekend or opening your wallet."
+      ]
+    },
+    {
+      "heading": "How to Use the Decision Matrix",
+      "paragraphs": [
+        "Enter your estimated hourly value — annual salary divided by working hours is a common starting point, though you may adjust for personal priorities. Input the professional's quoted price and your best estimate of hours required to complete the task yourself.",
+        "Add a risk factor for tasks where errors are costly — plumbing, electrical work, or tax filing, for example. Review the recommendation: delegate when professional cost is lower than your time-adjusted DIY cost, or when risk outweighs savings.",
+        "Use the tool for recurring decisions too: lawn care, cleaning, grocery delivery, and freelance overflow. Patterns emerge quickly when you apply the same framework consistently."
+      ]
+    },
+    {
+      "heading": "Benefits of Data-Driven Delegation",
+      "paragraphs": [
+        "Clear numbers reduce guilt about hiring help when it truly makes financial sense, and curb false economy when DIY actually costs more. The framework also improves negotiation — you know exactly what your time is worth before accepting low-paying side work or declining paid opportunities to finish chores.",
+        "Combined with DailyLogic budgeting tools, delegate-or-do decisions fit into a broader personal finance strategy where time and money are treated as interchangeable resources with known exchange rates."
+      ]
+    }
+  ],
   "benefits": [
     {
       "title": "Calculate Opportunity Cost",
@@ -27,6 +56,10 @@
     {
       "question": "Should I always delegate if it's cheaper?",
       "answer": "Not necessarily. Sometimes DIY helps you learn a skill. This tool focuses on financial and time efficiency."
+    },
+    {
+      "question": "How do I estimate my hourly value?",
+      "answer": "Divide your after-tax annual income by annual working hours, or use a rate that reflects what your free time is worth to you."
     }
   ]
 }

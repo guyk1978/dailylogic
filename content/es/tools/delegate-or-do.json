@@ -1,32 +1,47 @@
 {
   "title": "Delegar o hacer: la matriz de decisión",
   "subtitle": "Deja de adivinar si contratar ayuda. Toma decisiones racionales según tu tiempo, dinero y tolerancia al riesgo.",
+  "seoTitle": "Calculadora delegar o hacer tú mismo | DailyLogic",
+  "seoDescription": "¿Hacerlo tú o contratar a un profesional? Compara tu valor horario, coste de la tarea y riesgo con esta calculadora gratuita.",
   "heroDescription": "A menudo perdemos horas intentando ahorrar unos pocos dólares. Delegar o hacer te ayuda a cuantificar si debes hacer una tarea tú mismo o llamar a un profesional.",
   "toolSlug": "time-value",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
   "relatedArticles": ["the-hidden-cost-of-diy"],
   "publishedAt": "2026-06-28",
-  "benefits": [
+  "sections": [
     {
-      "title": "Calcula el costo de oportunidad",
-      "description": "Ve el costo real de tu tiempo frente a la tarifa del profesional."
+      "heading": "Qué hace la calculadora Delegar o hacer",
+      "paragraphs": [
+        "La herramienta Delegar o hacer elimina el sesgo emocional de las decisiones de externalización. Ante una reparación, tarea administrativa o proyecto del fin de semana, la mayoría adivina o elige DIY por frugalidad. Esta calculadora sustituye la intuición por una comparación estructurada de tu valor horario, el coste profesional y el riesgo de equivocarte.",
+        "Al cuantificar el coste de oportunidad, revela pérdidas ocultas: cuatro horas para ahorrar treinta dólares no es victoria si tu tarifa horaria efectiva es mayor. También incluye el riesgo de rehacer el trabajo.",
+        "Funciona en el navegador para escenarios rápidos antes de comprometer tu fin de semana o tu bolsillo."
+      ]
     },
     {
-      "title": "Evaluación de riesgos",
-      "description": "Incluye el costo de posibles errores al hacerlo tú mismo."
+      "heading": "Cómo usar la matriz de decisión",
+      "paragraphs": [
+        "Introduce tu valor horario estimado — salario anual entre horas de trabajo o una tarifa que refleje tu tiempo libre. Añade el precio del profesional y las horas que tardarías en hacerlo tú.",
+        "Incluye un factor de riesgo en tareas donde un error es caro. Revisa la recomendación: delega cuando el coste profesional sea menor que tu coste DIY ajustado al tiempo.",
+        "Úsala también para decisiones recurrentes: jardinería, limpieza, entregas y trabajo freelance."
+      ]
     },
     {
-      "title": "Recomendación clara",
-      "description": "Obtén una decisión objetiva basada en datos: delegar o hacer."
+      "heading": "Beneficios de delegar con datos",
+      "paragraphs": [
+        "Los números claros reducen la culpa por contratar ayuda cuando tiene sentido financiero y evitan falsos ahorros cuando DIY cuesta más.",
+        "Combinada con las herramientas de presupuesto de DailyLogic, encaja en una estrategia financiera personal más amplia."
+      ]
     }
   ],
+  "benefits": [
+    { "title": "Coste de oportunidad", "description": "Ve el coste real de tu tiempo frente a la tarifa del profesional." },
+    { "title": "Evaluación de riesgos", "description": "Incluye el coste de posibles errores al hacerlo tú mismo." },
+    { "title": "Recomendación clara", "description": "Decisión objetiva basada en datos: delegar o hacer." }
+  ],
   "faq": [
-    {
-      "question": "¿Esta herramienta es gratuita?",
-      "answer": "Sí, las herramientas DailyLogic son 100% gratuitas y funcionan localmente en tu navegador."
-    },
-    {
-      "question": "¿Siempre debo delegar si es más barato?",
-      "answer": "No necesariamente. A veces el DIY te ayuda a aprender. Esta herramienta se centra en eficiencia financiera y de tiempo."
-    }
+    { "question": "¿Es gratis?", "answer": "Sí, las herramientas DailyLogic son 100 % gratuitas en el navegador." },
+    { "question": "¿Siempre delegar si es más barato?", "answer": "No necesariamente. A veces DIY enseña una habilidad. La herramienta se centra en eficiencia financiera y de tiempo." },
+    { "question": "¿Cómo estimar mi valor horario?", "answer": "Divide tus ingresos netos anuales entre horas de trabajo o usa una tarifa que refleje tu tiempo libre." }
   ]
 }

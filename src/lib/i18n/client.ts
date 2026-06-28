@@ -40,7 +40,7 @@ export function initI18n() {
       default: [defaultLocale],
     },
     defaultNS: "common",
-    ns: ["common"],
+    ns: ["common", "pages"],
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
     returnNull: false,

@@ -326,9 +326,6 @@ export function ToolDashboard() {
         </AnimatePresence>
       )}
 
-      <footer className="mt-20 pt-8 text-center text-xs text-slate-400">
-        {t("app.footer")}
-      </footer>
     </div>
   );
 }

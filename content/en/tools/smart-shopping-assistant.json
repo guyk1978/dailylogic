@@ -1,10 +1,39 @@
 {
   "title": "Smart Shopping Assistant: Compare Prices Like a Pro",
   "subtitle": "Don't just look at the price tag. Calculate the unit price and make smarter shopping decisions instantly.",
+  "seoTitle": "Unit Price Calculator & Shopping Comparison Tool | DailyLogic",
+  "seoDescription": "Compare products by unit price across brands and package sizes. Build a smarter shopping list with this free unit-price calculator for grocery savings.",
   "heroDescription": "Ever feel tricked by different package sizes? Our assistant helps you compare items by unit price so you know exactly which product gives you the best value for your money.",
   "toolSlug": "unit-compare",
+  "schemaType": "WebApplication",
+  "applicationCategory": "ShoppingApplication",
   "relatedArticles": ["unit-price-shopping-tips"],
   "publishedAt": "2026-06-28",
+  "sections": [
+    {
+      "heading": "What the Smart Shopping Assistant Does",
+      "paragraphs": [
+        "The Smart Shopping Assistant cuts through supermarket pricing tricks by comparing products on a level playing field: cost per unit. Manufacturers frequently change package sizes, bundle promotions, and brand positioning to make comparison difficult at a glance. This tool normalizes prices per ounce, gram, liter, or count so the best value is obvious.",
+        "Add multiple products side by side — different brands, sizes, or sale versus regular price — and see which option truly costs less per unit. The assistant also supports building a shopping list as you decide, keeping your trip organized and budget-aware.",
+        "Because it runs in your browser, you can use it on your phone in the aisle without installing an app or creating an account. Your comparisons stay private and instant."
+      ]
+    },
+    {
+      "heading": "How to Compare Unit Prices",
+      "paragraphs": [
+        "Enter each product's total price and package size, including the unit of measure shown on the shelf label. The calculator computes normalized unit cost automatically. Compare results across entries — the lowest unit price is not always the largest package, especially when smaller sizes are on promotion.",
+        "Watch for multi-buy deals that require purchasing more than you need; the tool helps you evaluate whether bulk savings justify storage space and potential waste. Add winning items to your list and revisit comparisons when store promotions change weekly.",
+        "Pair unit-price decisions with your monthly budget from DailyLogic's Budget Planner to see how small per-unit savings compound across a full grocery month."
+      ]
+    },
+    {
+      "heading": "Benefits of Unit-Price Shopping",
+      "paragraphs": [
+        "Shoppers who compare by unit price typically save ten to twenty percent on groceries without changing what they buy — only how they choose package sizes and brands. The habit also reduces impulse purchases driven by flashy discount stickers that mask higher per-unit costs.",
+        "Over time, unit-price thinking builds a reusable mental model for every shopping trip, turning a five-second calculation into lasting savings that supports broader household financial goals."
+      ]
+    }
+  ],
   "benefits": [
     {
       "title": "Unit Price Accuracy",
@@ -16,7 +45,7 @@
     },
     {
       "title": "Shopping List Integration",
-      "description": "Once you've decided, save your items to a clean, organized list."
+      "description": "Save your best-value picks to a clean, organized list."
     }
   ],
   "faq": [
@@ -27,6 +56,10 @@
     {
       "question": "Can I compare different package types?",
       "answer": "Yes, the tool allows you to convert and compare different units easily."
+    },
+    {
+      "question": "Does it work for non-grocery items?",
+      "answer": "Any product with a quantifiable size and price can be compared using the same unit-price method."
     }
   ]
 }

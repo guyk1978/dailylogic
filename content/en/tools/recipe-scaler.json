@@ -1,0 +1,64 @@
+{
+  "title": "Recipe Scaler",
+  "subtitle": "Scale any recipe up or down instantly — adjust servings, convert units, and copy a clean formatted result.",
+  "seoTitle": "Free Recipe Scaler & Serving Size Calculator | DailyLogic",
+  "seoDescription": "Scale recipes for any number of servings. Adjust ingredients proportionally, convert units, and copy results instantly. Free kitchen calculator in your browser.",
+  "heroDescription": "Cooking for two instead of six? Halving a family recipe? Get accurate amounts in seconds.",
+  "toolSlug": "recipe-adjuster",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "publishedAt": "2026-03-01",
+  "sections": [
+    {
+      "heading": "What the Recipe Scaler Does",
+      "paragraphs": [
+        "The DailyLogic Recipe Scaler takes the mental math out of cooking. When a recipe serves four but you need two — or twelve — manually recalculating every ingredient invites errors, especially with fractions and mixed units. This tool scales all ingredients proportionally based on your target serving count, producing a clean, readable list you can follow at the stove.",
+        "Beyond simple multiplication, the scaler supports common cooking measurements and groups ingredients by category so your prep stays organized. Whether you are meal prepping for the week, halving a cookbook recipe for a smaller household, or doubling a batch for guests, you get consistent results without scribbling conversions in the margins.",
+        "Everything processes locally in your browser, so your recipes are never uploaded to a server. That makes it a practical everyday kitchen companion for home cooks who value privacy and speed."
+      ]
+    },
+    {
+      "heading": "How to Use the Recipe Scaler",
+      "paragraphs": [
+        "Enter your ingredients with their original quantities and units, along with the recipe's original serving size. Set your desired number of servings, and the tool recalculates every line automatically. Review the scaled output, adjust individual items if needed, and copy the formatted result to your notes app or print it for the kitchen.",
+        "Use category grouping to separate proteins, produce, dry goods, and seasonings — especially helpful for complex recipes. When converting between unit types, double-check unfamiliar measurements against your measuring tools to ensure accuracy.",
+        "Save frequently used recipes by copying the output or using the dashboard save feature after running a calculation, so you can scale the same dish again without re-entering ingredients."
+      ]
+    },
+    {
+      "heading": "Why Home Cooks Rely on Recipe Scaling",
+      "paragraphs": [
+        "Accurate scaling prevents wasted ingredients and failed dishes caused by proportion mistakes — particularly with leavening agents, salt, and spices where small errors have outsized effects. The scaler removes friction from batch cooking and meal prep, helping you cook once and eat well all week.",
+        "Because it is free and requires no installation, you can open it on any device in the kitchen — phone, tablet, or laptop — and get results immediately. Pair it with DailyLogic budgeting tools to plan grocery costs alongside portion sizes for even smarter household management."
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Proportional Scaling",
+      "description": "Every ingredient adjusts accurately to your target serving count."
+    },
+    {
+      "title": "Organized Output",
+      "description": "Grouped ingredients and one-click copy for easy kitchen use."
+    },
+    {
+      "title": "Works Offline-Friendly",
+      "description": "Runs in your browser with no account or app download required."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Can I scale recipes with mixed units?",
+      "answer": "Yes. Enter each ingredient in its original unit and the tool handles proportional conversion for the new serving size."
+    },
+    {
+      "question": "Does scaling work for baking recipes?",
+      "answer": "Yes, but always verify leavening and salt quantities — some bakers prefer slight manual tweaks for very large batch changes."
+    },
+    {
+      "question": "Is my recipe data stored online?",
+      "answer": "No. Calculations run locally in your browser unless you explicitly save them to your device."
+    }
+  ]
+}

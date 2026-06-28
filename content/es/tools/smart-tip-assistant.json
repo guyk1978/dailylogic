@@ -1,32 +1,49 @@
 {
-  "title": "Asistente de propinas: calcula con confianza",
-  "subtitle": "Deja de adivinar. Obtén sugerencias justas según la calidad del servicio y las normas locales.",
-  "heroDescription": "Dar propina no debería ser estresante. Ya sea en un restaurante o con un delivery, nuestro asistente calcula la propina perfecta según tu experiencia real.",
+  "title": "Asistente de propinas inteligente",
+  "subtitle": "Deja de adivinar. Obtén sugerencias de propina justas según la calidad del servicio y las normas locales.",
+  "seoTitle": "Calculadora de propinas y división de cuenta | DailyLogic",
+  "seoDescription": "Calcula propinas justas según el servicio, divide la cuenta entre comensales y propina con confianza. Calculadora gratuita en el navegador.",
+  "heroDescription": "Las propinas no deberían ser fuente de estrés. En restaurante o con delivery, el asistente calcula la propina según tu experiencia real.",
   "toolSlug": "tip-split",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
   "relatedArticles": ["tipping-etiquette-in-the-modern-age"],
   "publishedAt": "2026-06-28",
-  "benefits": [
+  "sections": [
     {
-      "title": "Lógica basada en el servicio",
-      "description": "Ajusta la propina según tiempos de espera, actitud del personal y experiencia general."
+      "heading": "Qué hace el Asistente de propinas",
+      "paragraphs": [
+        "El Asistente de propinas convierte el cálculo incómodo al final de la comida en una decisión rápida y justa. En lugar de un porcentaje fijo, pondera factores que importan: atención, rapidez, esfuerzo en condiciones difíciles y valor de la experiencia.",
+        "También divide la cuenta entre amigos, familia o compañeros — calculando la parte de cada uno con propina incluida. Todo funciona localmente en el navegador sin registro.",
+        "Sin seguimiento ni presión para propinar más de lo que deseas.",
+        "También sirve para repartidores, peluquería u hotelería — donde quieras agradecer de forma medida y respetuosa."
+      ]
     },
     {
-      "title": "Justicia primero",
-      "description": "Recomendaciones que respetan normas locales y reflejan tu satisfacción personal."
+      "heading": "Cómo usar la calculadora de propinas",
+      "paragraphs": [
+        "Introduce el importe de la cuenta antes o después de impuestos según la costumbre local. Valora el servicio en las dimensiones sugeridas y el asistente recomienda un porcentaje acorde.",
+        "Para comidas en grupo, indica el número de comensales para repartir equitativamente. Revisa el total antes de pagar.",
+        "Úsalo con consistencia para construir confianza en tus hábitos de propina."
+      ]
     },
     {
-      "title": "Resultados instantáneos",
-      "description": "Cálculo con un clic que incluye la división de la cuenta para todo el grupo."
+      "heading": "Por qué importa una propina estructurada",
+      "paragraphs": [
+        "Propinar de forma justa apoya a quienes te atienden protegiendo tu presupuesto del sobrepago por culpa.",
+        "Lee la guía de etiqueta de propinas de DailyLogic y usa esta calculadora como compañera práctica.",
+        "Las propinas consistentes y calculadas fortalecen la relación con quienes te atienden y te dan tranquilidad de haber actuado con equidad."
+      ]
     }
   ],
+  "benefits": [
+    { "title": "Lógica según servicio", "description": "Ajusta la propina según tiempos de espera, actitud y experiencia." },
+    { "title": "Equidad primero", "description": "Recomendaciones que respetan normas locales y tu satisfacción." },
+    { "title": "División instantánea", "description": "Reparte la cuenta entre todo el grupo en un paso." }
+  ],
   "faq": [
-    {
-      "question": "¿Por qué usar un asistente para propinas?",
-      "answer": "Elimina el cálculo mental y la incomodidad, asegurando justicia sin pagar de más."
-    },
-    {
-      "question": "¿Funciona en cualquier país?",
-      "answer": "La lógica es adaptable y ayuda a calcular según los porcentajes estándar de tu ubicación."
-    }
+    { "question": "¿Por qué usar un asistente?", "answer": "Elimina el cálculo mental y asegura equidad sin pagar de más." },
+    { "question": "¿Funciona en cualquier país?", "answer": "La lógica es adaptable — ajusta porcentajes base a las costumbres locales." },
+    { "question": "¿Propina sobre impuestos?", "answer": "Depende de la costumbre. La herramienta permite calcular antes o después." }
   ]
 }

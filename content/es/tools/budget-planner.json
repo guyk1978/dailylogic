@@ -1,0 +1,47 @@
+{
+  "title": "Planificador de presupuesto",
+  "subtitle": "Crea un presupuesto mensual realista con análisis de brechas, colchón de seguridad y compensaciones claras — sin hojas de cálculo abrumadoras.",
+  "seoTitle": "Planificador de presupuesto mensual gratis | DailyLogic",
+  "seoDescription": "Planifica tu presupuesto mensual con análisis de brechas, colchón de seguridad y controles flexibles. Calculadora gratuita en el navegador — sin registro.",
+  "heroDescription": "Ve exactamente a dónde va tu dinero, detecta déficits a tiempo y decide qué ajustar antes de que empiece el mes.",
+  "toolSlug": "budget-simple",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
+  "relatedArticles": ["how-to-save-money", "monthly-budget-guide"],
+  "publishedAt": "2026-03-01",
+  "sections": [
+    {
+      "heading": "Qué hace el Planificador de presupuesto",
+      "paragraphs": [
+        "El Planificador de presupuesto de DailyLogic te ayuda a construir un panorama financiero mensual claro en minutos. En lugar de luchar con hojas de cálculo complejas, introduces ingresos, costos fijos y categorías de gasto flexible en una sola interfaz. La herramienta muestra al instante si tu plan cuadra o tiene déficit.",
+        "A diferencia de apps que requieren vincular el banco o suscripción, esta calculadora funciona íntegramente en tu navegador. Tus cifras permanecen privadas en tu dispositivo, ideal para quien busca planificación simple sin compartir datos sensibles.",
+        "El planificador prioriza el realismo: un colchón de seguridad dedicado evita planificar cada centavo hasta cero y reduce el estrés ante gastos imprevistos."
+      ]
+    },
+    {
+      "heading": "Cómo usar el Planificador de presupuesto",
+      "paragraphs": [
+        "Empieza con tus ingresos mensuales netos. Luego lista costos fijos — alquiler, servicios, seguros, suscripciones y préstamos. Después asigna importes a categorías flexibles como comida, transporte y ocio.",
+        "Añade un colchón de seguridad y trátalo como una factura que te pagas a ti mismo. Si los gastos superan los ingresos, el análisis de brecha muestra el déficit de inmediato.",
+        "Usa los controles deslizantes para explorar compensaciones, guarda el cálculo y revísalo durante el mes."
+      ]
+    },
+    {
+      "heading": "Beneficios clave para el presupuesto diario",
+      "paragraphs": [
+        "El análisis visual de brechas elimina las conjeturas antes de descubiertos o deuda con tarjeta. Los deslizadores permiten experimentar sin empezar de cero.",
+        "Todo funciona localmente: sin cuenta, sin anuncios ni recopilación de datos. Combínalo con las guías de ahorro y compras de DailyLogic."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Análisis de brecha instantáneo", "description": "Ve si los ingresos cubren los gastos y en cuánto." },
+    { "title": "Deslizadores de compensación", "description": "Explora ajustes antes de comprometerte a recortes." },
+    { "title": "Privado en el navegador", "description": "Sin vincular el banco — tus datos quedan en tu dispositivo." }
+  ],
+  "faq": [
+    { "question": "¿Es gratis?", "answer": "Sí. Las herramientas DailyLogic son gratuitas y funcionan en el navegador." },
+    { "question": "¿Necesito cuenta?", "answer": "No. Puedes guardar cálculos en el navegador para acceder después." },
+    { "question": "¿Con qué frecuencia actualizar?", "answer": "Al inicio de cada mes y cuando cambien ingresos o gastos de forma significativa." }
+  ]
+}

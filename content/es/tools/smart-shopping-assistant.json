@@ -1,32 +1,48 @@
 {
-  "title": "Asistente de compras: compara precios como un experto",
-  "subtitle": "No mires solo la etiqueta. Calcula el precio por unidad y toma decisiones de compra más inteligentes al instante.",
-  "heroDescription": "¿Te sientes engañado con distintos tamaños de paquete? Nuestro asistente compara por precio unitario para que sepas qué producto ofrece el mejor valor.",
+  "title": "Asistente de compras inteligente",
+  "subtitle": "No mires solo la etiqueta. Calcula el precio unitario y decide mejor al instante.",
+  "seoTitle": "Calculadora de precio unitario y comparador | DailyLogic",
+  "seoDescription": "Compara productos por precio unitario entre marcas y tamaños. Lista de compras inteligente con calculadora gratuita para ahorrar en el súper.",
+  "heroDescription": "¿Te confunden los tamaños de paquete? El asistente compara por precio unitario para que sepas qué producto ofrece mejor valor.",
   "toolSlug": "unit-compare",
+  "schemaType": "WebApplication",
+  "applicationCategory": "ShoppingApplication",
   "relatedArticles": ["unit-price-shopping-tips"],
   "publishedAt": "2026-06-28",
-  "benefits": [
+  "sections": [
     {
-      "title": "Precisión por unidad",
-      "description": "Deja de adivinar — compara costo por gramo, litro o unidad lado a lado."
+      "heading": "Qué hace el Asistente de compras",
+      "paragraphs": [
+        "El Asistente de compras inteligente atraviesa los trucos de precios del supermercado comparando por coste unitario. Los fabricantes cambian tamaños, promociones y marcas para dificultar la comparación. Esta herramienta normaliza precios por onza, gramo, litro o unidad.",
+        "Añade varios productos lado a lado y ve cuál cuesta menos por unidad. También puedes construir tu lista de compras mientras decides.",
+        "Funciona en el navegador del móvil en el pasillo — sin app ni cuenta."
+      ]
     },
     {
-      "title": "Comparación multi-marca",
-      "description": "Añade varios productos y descubre qué marca ofrece la mejor oferta."
+      "heading": "Cómo comparar precios unitarios",
+      "paragraphs": [
+        "Introduce precio total y tamaño de cada producto con su unidad de medida. El paquete grande no siempre es el más barato por unidad, especialmente con promociones.",
+        "Evalúa ofertas multipack que exigen comprar más de lo necesario. Añade los mejores valores a tu lista y actualiza cuando cambien las promociones.",
+        "Combínalo con el Planificador de presupuesto de DailyLogic para ver cómo los ahorros se acumulan en el mes."
+      ]
     },
     {
-      "title": "Lista de compras integrada",
-      "description": "Una vez decidido, guarda tus artículos en una lista limpia y organizada."
+      "heading": "Beneficios de comprar por precio unitario",
+      "paragraphs": [
+        "Quienes comparan por unidad suelen ahorrar entre un 10 y un 20 % en comestibles sin cambiar qué compran — solo cómo eligen tamaños y marcas.",
+        "Con el tiempo se forma un hábito de ahorro que apoya metas financieras del hogar.",
+        "Comparar por unidad toma segundos en cada visita al súper y se acumula en ahorros significativos a lo largo del año."
+      ]
     }
   ],
+  "benefits": [
+    { "title": "Precisión unitaria", "description": "Compara coste por gramo, litro o unidad lado a lado." },
+    { "title": "Varias marcas", "description": "Añade productos y ve cuál ofrece la mejor oferta." },
+    { "title": "Lista de compras", "description": "Guarda tus mejores elecciones en una lista ordenada." }
+  ],
   "faq": [
-    {
-      "question": "¿Por qué importa el precio por unidad?",
-      "answer": "Los fabricantes cambian tamaños para ocultar subidas. Comparar por unidad revela el costo real."
-    },
-    {
-      "question": "¿Puedo comparar distintos tipos de empaque?",
-      "answer": "Sí, la herramienta convierte y compara unidades diferentes fácilmente."
-    }
+    { "question": "¿Por qué importa el precio unitario?", "answer": "Los fabricantes cambian tamaños para ocultar subidas. Comparar por unidad revela el coste real." },
+    { "question": "¿Unidades diferentes?", "answer": "Sí, la herramienta permite convertir y comparar unidades." },
+    { "question": "¿Solo para comida?", "answer": "Cualquier producto con precio y tamaño medible puede compararse igual." }
   ]
 }

@@ -1,0 +1,77 @@
+{
+  "toolName": "Smart Shopping Assistant",
+  "loading": "Loading shopping assistant…",
+  "cart": {
+    "title": "Your Cart",
+    "itemsInCart": "Items in cart",
+    "cartTotal": "Cart total",
+    "totalSavings": "Total savings",
+    "emptyHint": "Add products from your comparison to start tracking savings."
+  },
+  "compareSetup": {
+    "title": "Compare Setup",
+    "unitType": "Unit type (same for all items)",
+    "unitTypePlaceholder": "e.g. oz, g, ml, each",
+    "unitTypeHint": "Enter quantities in the same unit so prices compare fairly."
+  },
+  "products": {
+    "sectionTitle": "Products to Compare",
+    "addProduct": "+ Add Product",
+    "productName": "Product name",
+    "productNamePlaceholder": "Brand or label",
+    "price": "Price",
+    "quantity": "Quantity",
+    "quantityPlaceholder": "Amount",
+    "remove": "Remove",
+    "removeAriaLabel": "Remove {{name}}",
+    "defaultBrandA": "Brand A",
+    "defaultBrandB": "Brand B",
+    "dynamicBrand": "Brand {{letter}}",
+    "unnamedProduct": "Product {{index}}",
+    "unnamedItem": "Unnamed item",
+    "legacyOptionA": "Option A",
+    "legacyOptionB": "Option B"
+  },
+  "promotions": {
+    "label": "Promotion",
+    "none": "No promotion",
+    "percent": "% off",
+    "dollar": "$ off",
+    "bogo": "Buy 1 Get 1",
+    "discountPercent": "Discount %",
+    "discountAmount": "Discount amount",
+    "percentPlaceholder": "20",
+    "dollarPlaceholder": "1.00",
+    "bogoHint": "Pay for one, get double the quantity — unit price halved.",
+    "percentOff": "{{value}}% off",
+    "dollarOff": "{{amount}} off",
+    "promoBadge": "promo"
+  },
+  "unitPrice": {
+    "defaultUnit": "unit",
+    "perUnit": " per {{unit}}",
+    "unitSuffix": " / {{unit}}"
+  },
+  "actions": {
+    "resetComparison": "Reset Comparison",
+    "addToShoppingList": "Add to Shopping List",
+    "added": "Added!",
+    "clearAll": "Clear all"
+  },
+  "bestValue": {
+    "label": "Best Value",
+    "topPick": "Top pick",
+    "saveUpTo": "Save up to {{amount}} per {{unit}} vs the most expensive option ({{percent}}%)"
+  },
+  "ranking": {
+    "title": "Price Ranking"
+  },
+  "shoppingList": {
+    "title": "Shopping List",
+    "savedLocally": "Saved locally — persists across refresh",
+    "emptyState": "Your list is empty. Pick a winner from the comparison and tap Add to Shopping List.",
+    "savedVsPriciest": "Saved {{amount}} vs priciest option"
+  },
+  "emptyState": "Add at least two products with price and quantity to compare.",
+  "resultSummary": "{{name}} — {{price}}{{unitSuffix}}"
+}

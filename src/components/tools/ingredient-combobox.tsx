@@ -9,6 +9,7 @@ import {
   type IngredientLibraryItem,
 } from "@/lib/ingredients-data";
 import { IngredientIcon } from "@/components/tools/ingredient-icon";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 
 interface IngredientComboboxProps {
   value: string;
@@ -16,6 +17,7 @@ interface IngredientComboboxProps {
 }
 
 export function IngredientCombobox({ value, onChange }: IngredientComboboxProps) {
+  const { t } = useToolTranslation("recipe-adjuster");
   const listboxId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
@@ -64,7 +66,7 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
   return (
     <div ref={containerRef} className="relative">
       <label htmlFor={`${listboxId}-input`} className="label-caption mb-2 block">
-        Ingredient
+        {t("combobox.label")}
       </label>
       <div className="relative">
         {selected && !open ? (
@@ -84,7 +86,7 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
           aria-expanded={open}
           aria-controls={listboxId}
           aria-autocomplete="list"
-          placeholder="Search 200+ ingredients…"
+          placeholder={t("combobox.placeholder")}
           value={query}
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => setOpen(true)}
@@ -106,7 +108,7 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
         >
           {!hasOptions ? (
             <p className="px-4 py-3 text-sm text-slate-500">
-              No ingredients found — try another search
+              {t("combobox.noResults")}
             </p>
           ) : (
             groupedOptions.map((group, groupIndex) => (

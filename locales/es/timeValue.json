@@ -1,0 +1,84 @@
+{
+  "toolName": "Delegar o hacerlo tú",
+  "sections": {
+    "theNumbers": "Los números",
+    "skillRisk": "Habilidad y riesgo"
+  },
+  "form": {
+    "hourlyWage": "Salario por hora",
+    "professionalCost": "Costo profesional",
+    "timeRequired": "Tiempo requerido (horas)",
+    "confidenceQuestion": "¿Qué tan seguro estás de hacerlo tú mismo?",
+    "errorCost": "Costo potencial de error / reparación",
+    "errorCostHint": "¿Cuánto podría costar si algo sale mal?",
+    "qualityRequirement": "Requisito de calidad",
+    "qualityScore": "{{value}}/10",
+    "qualityGoodEnough": "Suficientemente bueno",
+    "qualityProfessionalGrade": "Nivel profesional",
+    "qualityHighWarning": "Exigencia alta — el bricolaje se penaliza a menos que la confianza sea alta.",
+    "currencyPlaceholder": "0.00",
+    "hoursPlaceholder": "0.0"
+  },
+  "confidence": {
+    "low": "Baja — probablemente necesitaría ayuda",
+    "medium": "Media — podría lograrlo con esfuerzo",
+    "high": "Alta — ya lo he hecho antes"
+  },
+  "factorLevel": {
+    "low": "Bajo",
+    "medium": "Medio",
+    "high": "Alto"
+  },
+  "actions": {
+    "evaluate": "Evaluar decisión",
+    "reset": "Restablecer"
+  },
+  "recommendation": {
+    "doYourself": "Hazlo tú",
+    "delegate": "Delegar"
+  },
+  "summaries": {
+    "mathSaysDiyComplexitySuggestsPro": "Las cifras favorecen el bricolaje, pero la puntuación de complejidad sugiere contratar a un profesional.",
+    "diySavesLowConfidenceHighQuality": "El bricolaje ahorra en papel, pero la baja confianza y la alta calidad requerida favorecen a un profesional.",
+    "numbersAndComplexityPointPro": "Tanto los números como la complejidad apuntan a contratar a un profesional.",
+    "numbersAndSkillSupportDiy": "Los números y tu nivel de habilidad respaldan hacerlo tú mismo.",
+    "hiringSmarterChoice": "Contratar a un profesional es la opción financiera más inteligente.",
+    "diyViableWeighQuality": "El bricolaje es viable — valora el nivel de calidad antes de comprometerte.",
+    "leaningProModerateComplexity": "Inclinación hacia un profesional — la complejidad moderada compensa el ahorro del bricolaje."
+  },
+  "results": {
+    "finalRecommendation": "Recomendación final",
+    "calculatedCost": "Costo calculado",
+    "professionalQuote": "Presupuesto profesional",
+    "diyTimeAndRisk": "Tiempo propio + riesgo",
+    "confidenceLevel": "Nivel de confianza",
+    "complexityScore": "Puntuación de complejidad {{score}}/100",
+    "timeSaved": "Tiempo ahorrado",
+    "reclaimedByNotDoingYourself": "Recuperado al no hacerlo tú mismo",
+    "hour_one": "{{count}} hora",
+    "hour_other": "{{count}} horas",
+    "delegateProductivity": "Al delegar esto, recuperas {{hours}}. Si tu tiempo vale {{hourlyRate}}, esta decisión añade {{opportunityCost}} de valor a tu productividad personal.",
+    "nextStep": "Próximo paso",
+    "sinceYouDecidedDelegate": "Como decidiste delegar:",
+    "nextSteps": {
+      "getQuotes": "Obtén 3 presupuestos.",
+      "verifyReferences": "Verifica referencias.",
+      "setDeadline": "Establece una fecha límite clara."
+    },
+    "costBreakdown": "Desglose de costos",
+    "yourTimeOpportunityCost": "Tu tiempo (costo de oportunidad)",
+    "weightedErrorRisk": "Riesgo de error ponderado",
+    "diyEffectiveCost": "Costo efectivo del bricolaje",
+    "professionalCostLabel": "Costo profesional",
+    "pureMathFavors": "Las matemáticas puras favorecen {{recommendation}}.",
+    "finalAdviceNote": "El consejo final pondera calidad, confianza y costos ocultos del bricolaje.",
+    "decisionFactors": "Factores de decisión",
+    "factors": {
+      "confidence": "Confianza",
+      "qualityNeeded": "Calidad necesaria",
+      "priceGap": "Diferencia de precio"
+    }
+  },
+  "emptyState": "Completa los números y la evaluación de habilidades, luego evalúa tu decisión.",
+  "resultSummary": "{{recommendation}} · {{cost}}"
+}

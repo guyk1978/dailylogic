@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from "react";
 import { Check, Copy } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
 import { getIngredientById, INGREDIENTS_LIBRARY } from "@/lib/ingredients-data";
@@ -115,6 +116,7 @@ function IngredientEditor({
   onRemove,
   onSelectIngredient,
 }: IngredientEditorProps) {
+  const { t } = useToolTranslation("recipe-adjuster");
   const meta = RECIPE_CATEGORY_META[ingredient.category];
 
   return (
@@ -125,7 +127,7 @@ function IngredientEditor({
             htmlFor={`cat-${ingredient.id}`}
             className="label-caption mb-2 block"
           >
-            Category
+            {t("ingredients.category")}
           </label>
           <select
             id={`cat-${ingredient.id}`}
@@ -139,7 +141,7 @@ function IngredientEditor({
           >
             {RECIPE_CATEGORY_ORDER.map((key) => (
               <option key={key} value={key}>
-                {RECIPE_CATEGORY_META[key].label}
+                {t(`categories.${key}`)}
               </option>
             ))}
           </select>
@@ -157,9 +159,9 @@ function IngredientEditor({
           className="btn-secondary py-2.5 text-sm"
           onClick={onRemove}
           disabled={!canRemove}
-          aria-label="Remove ingredient"
+          aria-label={t("ingredients.removeAriaLabel")}
         >
-          Remove
+          {t("ingredients.remove")}
         </button>
       </div>
 
@@ -169,7 +171,7 @@ function IngredientEditor({
           <span
             className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ${meta.badge}`}
           >
-            {meta.label}
+            {t(`categories.${ingredient.category}`)}
           </span>
           <span className="truncate text-sm font-medium text-slate-700">
             {ingredient.libraryItem.name}
@@ -183,7 +185,7 @@ function IngredientEditor({
             htmlFor={`amount-${ingredient.id}`}
             className="label-caption mb-2 block"
           >
-            Original amount
+            {t("ingredients.originalAmount")}
           </label>
           <input
             id={`amount-${ingredient.id}`}
@@ -192,7 +194,7 @@ function IngredientEditor({
             step="any"
             inputMode="decimal"
             className="input-field py-3 font-mono text-base"
-            placeholder="0"
+            placeholder={t("ingredients.amountPlaceholder")}
             value={ingredient.amount}
             onChange={(e) => onUpdate({ amount: e.target.value })}
           />
@@ -203,7 +205,7 @@ function IngredientEditor({
             htmlFor={`unit-${ingredient.id}`}
             className="label-caption mb-2 block"
           >
-            Unit
+            {t("ingredients.unit")}
           </label>
           <select
             id={`unit-${ingredient.id}`}
@@ -215,7 +217,7 @@ function IngredientEditor({
           >
             {RECIPE_UNIT_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>
-                {opt.label}
+                {t(`units.${opt.value}`)}
               </option>
             ))}
           </select>
@@ -229,7 +231,7 @@ function IngredientEditor({
         </span>
 
         <div className="rounded-xl bg-violet-50 px-4 py-3 ring-1 ring-violet-200">
-          <p className="label-caption mb-1 text-violet-600">Scaled</p>
+          <p className="label-caption mb-1 text-violet-600">{t("ingredients.scaled")}</p>
           <p className="font-mono text-xl font-bold text-violet-800 sm:text-2xl">
             {ingredient.scaled !== null ? formatAmount(ingredient.scaled) : "—"}
           </p>
@@ -257,6 +259,7 @@ function CompiledScaledRecipe({
   targetYield: string;
   factorLabel: string;
 }) {
+  const { t } = useToolTranslation("recipe-adjuster");
   const [copied, setCopied] = useState(false);
 
   if (groups.length === 0) return null;
@@ -281,10 +284,13 @@ function CompiledScaledRecipe({
       <div className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-700/80 px-5 py-4 sm:px-6">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-violet-300">
-            Compiled scaled recipe
+            {t("compiledRecipe.title")}
           </p>
           <p className="mt-1 text-sm text-slate-400">
-            {targetYield} servings · {factorLabel}
+            {t("compiledRecipe.servingsFactor", {
+              targetYield,
+              factor: factorLabel,
+            })}
           </p>
         </div>
         <button
@@ -295,12 +301,12 @@ function CompiledScaledRecipe({
           {copied ? (
             <>
               <Check className="h-4 w-4 text-emerald-600" aria-hidden />
-              Copied!
+              {t("compiledRecipe.copied")}
             </>
           ) : (
             <>
               <Copy className="h-4 w-4" aria-hidden />
-              Copy full recipe
+              {t("compiledRecipe.copyFullRecipe")}
             </>
           )}
         </button>
@@ -330,6 +336,7 @@ function CompiledScaledRecipe({
 }
 
 export function RecipeAdjuster() {
+  const { t } = useToolTranslation("recipe-adjuster");
   const [saveName, setSaveName] = useState("");
   const [originalYield, setOriginalYield] = useLocalStorage(
     "tool:recipe-adjuster:original-yield",
@@ -430,7 +437,7 @@ export function RecipeAdjuster() {
       } else {
         map.set(item.category, {
           category: item.category,
-          label: RECIPE_CATEGORY_META[item.category].label,
+          label: t(`categories.${item.category}`),
           lines: [line],
         });
       }
@@ -439,7 +446,7 @@ export function RecipeAdjuster() {
     return RECIPE_CATEGORY_ORDER.filter((cat) => map.has(cat)).map(
       (cat) => map.get(cat)!,
     );
-  }, [scaledIngredients]);
+  }, [scaledIngredients, t]);
 
   const updateIngredient = (id: string, patch: Partial<IngredientRow>) => {
     setIngredients((prev) =>
@@ -480,7 +487,7 @@ export function RecipeAdjuster() {
   };
 
   if (!isHydrated) {
-    return <p className="text-sm text-slate-500">Loading saved recipe…</p>;
+    return <p className="text-sm text-slate-500">{t("loading")}</p>;
   }
 
   return (
@@ -488,7 +495,7 @@ export function RecipeAdjuster() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="original-yield" className="label-caption mb-2 block">
-            Original yield
+            {t("yield.original")}
           </label>
           <input
             id="original-yield"
@@ -497,7 +504,7 @@ export function RecipeAdjuster() {
             step="any"
             inputMode="decimal"
             className="input-field py-3.5 text-base shadow-md"
-            placeholder="e.g. 4 servings"
+            placeholder={t("yield.originalPlaceholder")}
             value={originalYield}
             onChange={(e) => setOriginalYield(e.target.value)}
           />
@@ -505,7 +512,7 @@ export function RecipeAdjuster() {
 
         <div>
           <label htmlFor="target-yield" className="label-caption mb-2 block">
-            Target yield
+            {t("yield.target")}
           </label>
           <input
             id="target-yield"
@@ -514,7 +521,7 @@ export function RecipeAdjuster() {
             step="any"
             inputMode="decimal"
             className="input-field py-3.5 text-base shadow-md"
-            placeholder="e.g. 10 servings"
+            placeholder={t("yield.targetPlaceholder")}
             value={targetYield}
             onChange={(e) => setTargetYield(e.target.value)}
           />
@@ -525,7 +532,6 @@ export function RecipeAdjuster() {
         <div className="space-y-4">
           <CalculationSavePanel
             toolSlug="recipe-adjuster"
-            toolName="Recipe Scaler"
             saveName={saveName}
             onSaveNameChange={setSaveName}
             inputs={{
@@ -533,31 +539,35 @@ export function RecipeAdjuster() {
               targetYield,
               ingredients: rawIngredients,
             }}
-            resultSummary={`Scaling by ${formatFactor(factor)} · ${
-              ingredients.filter(
-                (item) => item.ingredientId && item.amount.trim() !== "",
-              ).length || ingredients.length
-            } ingredients`}
+            resultSummary={t("resultSummary", {
+              factor: formatFactor(factor),
+              count:
+                ingredients.filter(
+                  (item) => item.ingredientId && item.amount.trim() !== "",
+                ).length || ingredients.length,
+            })}
           />
 
           <div className="rounded-2xl border-2 border-violet-300 bg-violet-50 px-6 py-5 text-center shadow-md">
-            <p className="label-caption mb-1 text-violet-600">Adjustment factor</p>
+            <p className="label-caption mb-1 text-violet-600">
+              {t("adjustmentFactor.label")}
+            </p>
             <p className="text-2xl font-bold text-violet-700 sm:text-3xl">
-              Scaling by {formatFactor(factor)}
+              {t("adjustmentFactor.scalingBy", { factor: formatFactor(factor) })}
             </p>
           </div>
         </div>
       ) : (
         <p className="text-center text-sm text-slate-400">
-          Enter valid yields to calculate the scaling factor.
+          {t("emptyState.invalidYields")}
         </p>
       )}
 
       <div className="space-y-6">
         <div className="flex items-center justify-between gap-3">
-          <p className="label-caption">Ingredients</p>
+          <p className="label-caption">{t("ingredients.sectionTitle")}</p>
           <button type="button" className="btn-secondary py-2.5" onClick={addIngredient}>
-            + Add ingredient
+            {t("ingredients.addIngredient")}
           </button>
         </div>
 
@@ -569,10 +579,11 @@ export function RecipeAdjuster() {
               <span
                 className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1 ${meta.badge}`}
               >
-                {meta.label}
+                {t(`categories.${category}`)}
               </span>
               <span className="text-xs text-slate-400">
-                {items.length} {items.length === 1 ? "item" : "items"}
+                {items.length}{" "}
+                {t("ingredients.item", { count: items.length })}
               </span>
             </div>
 
@@ -604,7 +615,7 @@ export function RecipeAdjuster() {
 
       <div className="flex justify-end">
         <button type="button" className="btn-secondary" onClick={handleClear}>
-          Reset
+          {t("actions.reset")}
         </button>
       </div>
     </div>

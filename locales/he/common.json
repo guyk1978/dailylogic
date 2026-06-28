@@ -129,5 +129,26 @@
     "description": "DailyLogic משתמש בעוגיות ובאנליטיקה (Google Analytics) כדי להבין כיצד מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. הקלט שלכם בכלים תמיד נשאר בדפדפן. אנא אשרו כדי להמשיך להשתמש באתר.",
     "accept": "אישור",
     "deny": "דחייה"
+  },
+  "toolsCommon": {
+    "reset": "איפוס",
+    "remove": "הסרה",
+    "amount": "סכום",
+    "category": "קטגוריה",
+    "priority": "עדיפות",
+    "custom": "מותאם אישית",
+    "placeholderDecimal": "0.00",
+    "placeholderAmount": "0",
+    "placeholderZeroOne": "0.0",
+    "levelLow": "נמוך",
+    "levelMedium": "בינוני",
+    "levelHigh": "גבוה",
+    "person_one": "אדם {{count}}",
+    "person_other": "{{count}} אנשים",
+    "item_one": "פריט {{count}}",
+    "item_other": "{{count}} פריטים",
+    "hour_one": "שעה {{count}}",
+    "hour_other": "{{count}} שעות",
+    "removeNamed": "הסר {{name}}"
   }
 }

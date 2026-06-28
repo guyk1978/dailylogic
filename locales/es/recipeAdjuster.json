@@ -1,0 +1,62 @@
+{
+  "toolName": "Escalador de recetas",
+  "loading": "Cargando receta guardada…",
+  "yield": {
+    "original": "Rendimiento original",
+    "target": "Rendimiento objetivo",
+    "originalPlaceholder": "p. ej. 4 porciones",
+    "targetPlaceholder": "p. ej. 10 porciones"
+  },
+  "adjustmentFactor": {
+    "label": "Factor de ajuste",
+    "scalingBy": "Escalando por {{factor}}"
+  },
+  "combobox": {
+    "label": "Ingrediente",
+    "placeholder": "Buscar más de 200 ingredientes…",
+    "noResults": "No se encontraron ingredientes — prueba otra búsqueda"
+  },
+  "ingredients": {
+    "sectionTitle": "Ingredientes",
+    "addIngredient": "+ Añadir ingrediente",
+    "category": "Categoría",
+    "originalAmount": "Cantidad original",
+    "unit": "Unidad",
+    "scaled": "Escalado",
+    "remove": "Eliminar",
+    "removeAriaLabel": "Eliminar ingrediente",
+    "amountPlaceholder": "0",
+    "item_one": "artículo",
+    "item_other": "artículos"
+  },
+  "categories": {
+    "meat": "Carne",
+    "dairy": "Lácteos",
+    "vegetables": "Verduras",
+    "fruits": "Frutas",
+    "spices": "Especias",
+    "substitutes": "Sustitutos",
+    "other": "Otros"
+  },
+  "units": {
+    "cups": "Tazas",
+    "g": "g",
+    "ml": "ml",
+    "tbsp": "cda",
+    "tsp": "cdta",
+    "pieces": "unidad"
+  },
+  "compiledRecipe": {
+    "title": "Receta escalada compilada",
+    "servingsFactor": "{{targetYield}} porciones · {{factor}}",
+    "copyFullRecipe": "Copiar receta completa",
+    "copied": "¡Copiado!"
+  },
+  "emptyState": {
+    "invalidYields": "Introduce rendimientos válidos para calcular el factor de escalado."
+  },
+  "actions": {
+    "reset": "Restablecer"
+  },
+  "resultSummary": "Escalando por {{factor}} · {{count}} ingredientes"
+}

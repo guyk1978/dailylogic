@@ -1,0 +1,85 @@
+{
+  "loading": "טוען מתכנן תקציב…",
+  "setup": {
+    "caption": "הגדרה",
+    "monthlyIncome": "הכנסה חודשית",
+    "savingsGoal": "יעד חיסכון",
+    "safetyBuffer": "כרית ביטחון חודשית",
+    "safetyBufferPlaceholder": "מינימום בחשבון עו\"ש",
+    "safetyBufferHint": "סכום נדרש להשאיר בחשבון העו\"ש שלך."
+  },
+  "priorities": {
+    "essential": {
+      "label": "חיוני",
+      "description": "מחויב — להגן על אלה קודם"
+    },
+    "flexible": {
+      "label": "גמיש",
+      "description": "בשיקול דעתך — לצמצם בעת הצורך"
+    },
+    "luxury": {
+      "label": "מותרות",
+      "description": "אופציונלי — ניתן להתאים בחופשיות"
+    }
+  },
+  "starterCategories": {
+    "housing": "דיור",
+    "food": "מזון",
+    "transport": "תחבורה",
+    "children": "ילדים",
+    "pets": "חיות מחמד",
+    "entertainment": "בידור"
+  },
+  "expenses": {
+    "caption": "קטגוריות הוצאות",
+    "addCategory": "+ הוספת קטגוריה"
+  },
+  "actions": {
+    "planBudget": "תכנון תקציב"
+  },
+  "decisionBoard": {
+    "caption": "לוח החלטות",
+    "empty": "אין קטגוריות עדיין",
+    "essentialsLocked": "הוצאות חיוניות נעולות בתוכנית זו."
+  },
+  "closeGap": {
+    "caption": "סגירת הפער",
+    "noCategories": "אין קטגוריות גמישות או מותרות לשינוי. הוסיפו קטגוריות או בדקו מחדש את יעד החיסכון וכרית הביטחון.",
+    "description": "התאימו הוצאות גמישות ומותרות כדי לכסות את המחסור.",
+    "gapCovered": "פער שכוסה",
+    "percentAddressed": "{{percent}}% מהפער טופל",
+    "remaining": "{{amount}} נותר",
+    "adjustReduction": "התאמת הפחתה: {{percent}}%",
+    "freesUp": "משחרר {{amount}} לכיוון הפער",
+    "fullyCovered": "ההתאמות שלכם מכסות את הפער במלואו. יישמו את הצמצומים כדי לעמוד ביעד החיסכון ובכרית הביטחון."
+  },
+  "results": {
+    "gapAnalysis": {
+      "caption": "ניתוח פער",
+      "shortBy": "חסר לכם {{gap}} כדי להגיע ליעד החיסכון של {{savings}} ולשמור על כרית הביטחון של {{buffer}}.",
+      "required": "נדרש החודש: {{required}} (הוצאות + חיסכון + כרית) מול הכנסה של {{income}}."
+    },
+    "balanced": {
+      "caption": "תוכנית מאוזנת",
+      "hint": "עודף לאחר הוצאות, יעד חיסכון וכרית ביטחון"
+    }
+  },
+  "allocation": {
+    "caption": "הקצאה חודשית",
+    "essential": "חיוני",
+    "flexible": "גמיש",
+    "luxury": "מותרות",
+    "savingsGoal": "יעד חיסכון",
+    "safetyBuffer": "כרית ביטחון",
+    "surplus": "עודף",
+    "surplusGap": "עודף / פער"
+  },
+  "emptyState": "השלימו את ההגדרה, הוסיפו הוצאות ולחצו על תכנון תקציב.",
+  "legacy": {
+    "fixedExpenses": "הוצאות קבועות"
+  },
+  "resultSummary": {
+    "gap": "פער של {{amount}} לסגירה",
+    "surplus": "עודף של {{amount}} לאחר היעדים"
+  }
+}

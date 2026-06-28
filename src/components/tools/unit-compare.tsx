@@ -10,6 +10,7 @@ import {
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
 
 export type PromotionType = "none" | "percent" | "dollar" | "bogo";
@@ -50,12 +51,9 @@ interface ParsedCompareItem {
   hasPromotion: boolean;
 }
 
-const PROMOTION_OPTIONS: { value: PromotionType; label: string }[] = [
-  { value: "none", label: "No promotion" },
-  { value: "percent", label: "% off" },
-  { value: "dollar", label: "$ off" },
-  { value: "bogo", label: "Buy 1 Get 1" },
-];
+const PROMOTION_TYPES: PromotionType[] = ["none", "percent", "dollar", "bogo"];
+
+type TranslateFn = (key: string, options?: Record<string, unknown>) => string;
 
 function createCompareItem(partial?: Partial<CompareItem>): CompareItem {
   return {
@@ -68,8 +66,11 @@ function createCompareItem(partial?: Partial<CompareItem>): CompareItem {
   };
 }
 
-function createDefaultItems(): CompareItem[] {
-  return [createCompareItem({ name: "Brand A" }), createCompareItem({ name: "Brand B" })];
+function createDefaultItems(t: TranslateFn): CompareItem[] {
+  return [
+    createCompareItem({ name: t("products.defaultBrandA") }),
+    createCompareItem({ name: t("products.defaultBrandB") }),
+  ];
 }
 
 function normalizeCompareItem(raw: CompareItem): CompareItem {
@@ -175,20 +176,29 @@ function itemPotentialSavings(
   return Math.max(0, sessionMaxUnitPrice - unitPrice) * quantity;
 }
 
-function promotionLabel(type: PromotionType, value: number): string | null {
+function promotionLabel(
+  type: PromotionType,
+  value: number,
+  t: TranslateFn,
+): string | null {
   switch (type) {
     case "percent":
-      return value > 0 ? `${value}% off` : null;
+      return value > 0 ? t("promotions.percentOff", { value }) : null;
     case "dollar":
-      return value > 0 ? `${formatCurrency(value)} off` : null;
+      return value > 0
+        ? t("promotions.dollarOff", { amount: formatCurrency(value) })
+        : null;
     case "bogo":
-      return "Buy 1 Get 1";
+      return t("promotions.bogo");
     default:
       return null;
   }
 }
 
-function migrateLegacyInputs(entry: CalculationHistoryEntry): CompareItem[] | null {
+function migrateLegacyInputs(
+  entry: CalculationHistoryEntry,
+  t: TranslateFn,
+): CompareItem[] | null {
   const { price1, quantity1, price2, quantity2 } = entry.inputs;
   if (price1 === undefined && price2 === undefined) return null;
 
@@ -196,7 +206,7 @@ function migrateLegacyInputs(entry: CalculationHistoryEntry): CompareItem[] | nu
   if (price1 !== undefined || quantity1 !== undefined) {
     items.push(
       createCompareItem({
-        name: "Option A",
+        name: t("products.legacyOptionA"),
         price: String(price1 ?? ""),
         quantity: String(quantity1 ?? ""),
       }),
@@ -205,7 +215,7 @@ function migrateLegacyInputs(entry: CalculationHistoryEntry): CompareItem[] | nu
   if (price2 !== undefined || quantity2 !== undefined) {
     items.push(
       createCompareItem({
-        name: "Option B",
+        name: t("products.legacyOptionB"),
         price: String(price2 ?? ""),
         quantity: String(quantity2 ?? ""),
       }),
@@ -218,29 +228,31 @@ function CartSummaryCard({
   itemCount,
   cartTotal,
   totalSavings,
+  t,
 }: {
   itemCount: number;
   cartTotal: number;
   totalSavings: number;
+  t: TranslateFn;
 }) {
   return (
     <div className="rounded-2xl bg-gradient-to-br from-blue-600 to-blue-700 p-5 text-white shadow-md sm:p-6">
       <div className="mb-4 flex items-center gap-2">
         <ShoppingCart className="h-5 w-5 shrink-0 opacity-90" aria-hidden />
         <p className="text-xs font-semibold uppercase tracking-wider opacity-90">
-          Your Cart
+          {t("cart.title")}
         </p>
       </div>
       <div className="grid gap-4 sm:grid-cols-3">
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-blue-200">
-            Items in cart
+            {t("cart.itemsInCart")}
           </p>
           <p className="mt-1 font-mono text-2xl font-bold">{itemCount}</p>
         </div>
         <div>
           <p className="text-xs font-medium uppercase tracking-wider text-blue-200">
-            Cart total
+            {t("cart.cartTotal")}
           </p>
           <p className="mt-1 font-mono text-2xl font-bold">
             {formatCurrency(cartTotal)}
@@ -250,7 +262,7 @@ function CartSummaryCard({
           <div className="flex items-center gap-1.5">
             <Sparkles className="h-4 w-4 text-amber-300" aria-hidden />
             <p className="text-xs font-semibold uppercase tracking-wider text-amber-200">
-              Total savings
+              {t("cart.totalSavings")}
             </p>
           </div>
           <p className="mt-1 font-mono text-2xl font-bold text-amber-300">
@@ -260,7 +272,7 @@ function CartSummaryCard({
       </div>
       {itemCount === 0 && (
         <p className="mt-4 text-sm text-blue-100/80">
-          Add products from your comparison to start tracking savings.
+          {t("cart.emptyHint")}
         </p>
       )}
     </div>
@@ -268,13 +280,14 @@ function CartSummaryCard({
 }
 
 export function UnitCompare() {
+  const { t, tc } = useToolTranslation("unit-compare");
   const [items, setItems, isHydrated] = useLocalStorage<CompareItem[]>(
     "tool:unit-compare:items",
-    createDefaultItems(),
+    createDefaultItems(t),
   );
   const [unitLabel, setUnitLabel] = useLocalStorage(
     "tool:unit-compare:unit-label",
-    "unit",
+    t("unitPrice.defaultUnit"),
   );
   const [shoppingList, setShoppingList] = useLocalStorage<ShoppingListItem[]>(
     "tool:unit-compare:shopping-list",
@@ -282,6 +295,8 @@ export function UnitCompare() {
   );
   const [saveName, setSaveName] = useState("");
   const [justAddedId, setJustAddedId] = useState<string | null>(null);
+
+  const defaultUnit = t("unitPrice.defaultUnit");
 
   const normalizedItems = useMemo(
     () => items.map(normalizeCompareItem),
@@ -341,7 +356,7 @@ export function UnitCompare() {
           (entry.inputs.items as CompareItem[]).map(normalizeCompareItem),
         );
       } else {
-        const migrated = migrateLegacyInputs(entry);
+        const migrated = migrateLegacyInputs(entry, t);
         if (migrated) setItems(migrated);
       }
       if (entry.inputs.unitLabel !== undefined) {
@@ -349,7 +364,7 @@ export function UnitCompare() {
       }
       setSaveName(entry.name);
     },
-    [setItems, setUnitLabel],
+    [setItems, setUnitLabel, t],
   );
 
   useCalculationRestore("unit-compare", handleRestore);
@@ -363,7 +378,11 @@ export function UnitCompare() {
   const addItem = () => {
     setItems((prev) => [
       ...prev,
-      createCompareItem({ name: `Brand ${String.fromCharCode(65 + prev.length)}` }),
+      createCompareItem({
+        name: t("products.dynamicBrand", {
+          letter: String.fromCharCode(65 + prev.length),
+        }),
+      }),
     ]);
   };
 
@@ -372,17 +391,19 @@ export function UnitCompare() {
   };
 
   const handleClear = () => {
-    setItems(createDefaultItems());
+    setItems(createDefaultItems(t));
     setSaveName("");
   };
 
   const addToShoppingList = (parsed: ParsedCompareItem) => {
     if (!analysis) return;
 
+    const resolvedUnit = unitLabel.trim() || defaultUnit;
+
     setShoppingList((prev) => [
       {
         id: crypto.randomUUID(),
-        name: parsed.name.trim() || "Unnamed item",
+        name: parsed.name.trim() || t("products.unnamedItem"),
         shelfPrice: parsed.shelfPrice,
         effectivePrice: parsed.effectivePrice,
         quantity: parsed.shelfQuantity,
@@ -390,7 +411,7 @@ export function UnitCompare() {
         promotionType: parsed.promotionType,
         promotionValue: parsed.promotionValue,
         sessionMaxUnitPrice: analysis.worstUnitPrice,
-        unitLabel: unitLabel.trim() || "unit",
+        unitLabel: resolvedUnit,
         addedAt: Date.now(),
       },
       ...prev,
@@ -410,10 +431,11 @@ export function UnitCompare() {
   );
 
   if (!isHydrated) {
-    return <p className="text-sm text-slate-500">Loading shopping assistant…</p>;
+    return <p className="text-sm text-slate-500">{t("loading")}</p>;
   }
 
-  const unitSuffix = unitLabel.trim() ? ` / ${unitLabel.trim()}` : " / unit";
+  const resolvedUnit = unitLabel.trim() || defaultUnit;
+  const unitSuffix = t("unitPrice.unitSuffix", { unit: resolvedUnit });
 
   return (
     <div className="space-y-6">
@@ -421,34 +443,35 @@ export function UnitCompare() {
         itemCount={cartStats.itemCount}
         cartTotal={cartStats.cartTotal}
         totalSavings={cartStats.totalSavings}
+        t={t}
       />
 
       <section className="space-y-6">
         <div className="rounded-2xl bg-white p-5 shadow-md">
-          <p className="label-caption mb-4 text-blue-500">Compare Setup</p>
+          <p className="label-caption mb-4 text-blue-500">{t("compareSetup.title")}</p>
           <div>
             <label htmlFor="unit-label" className="label-caption mb-2 block">
-              Unit type (same for all items)
+              {t("compareSetup.unitType")}
             </label>
             <input
               id="unit-label"
               type="text"
               className="input-field max-w-xs py-3 text-base"
-              placeholder="e.g. oz, g, ml, each"
+              placeholder={t("compareSetup.unitTypePlaceholder")}
               value={unitLabel}
               onChange={(e) => setUnitLabel(e.target.value)}
             />
             <p className="mt-1.5 text-xs text-slate-500">
-              Enter quantities in the same unit so prices compare fairly.
+              {t("compareSetup.unitTypeHint")}
             </p>
           </div>
         </div>
 
         <div className="space-y-3">
           <div className="flex items-center justify-between gap-3">
-            <p className="label-caption">Products to Compare</p>
+            <p className="label-caption">{t("products.sectionTitle")}</p>
             <button type="button" className="btn-secondary py-2.5" onClick={addItem}>
-              + Add Product
+              {t("products.addProduct")}
             </button>
           </div>
 
@@ -472,7 +495,7 @@ export function UnitCompare() {
                   {isBest && (
                     <div className="mb-3 flex items-center gap-2 text-emerald-600">
                       <CheckCircle2 className="h-5 w-5 shrink-0" aria-hidden />
-                      <span className="text-sm font-semibold">Best Value</span>
+                      <span className="text-sm font-semibold">{t("bestValue.label")}</span>
                     </div>
                   )}
 
@@ -482,13 +505,13 @@ export function UnitCompare() {
                         htmlFor={`name-${item.id}`}
                         className="label-caption mb-2 block"
                       >
-                        Product name
+                        {t("products.productName")}
                       </label>
                       <input
                         id={`name-${item.id}`}
                         type="text"
                         className="input-field py-3 text-base"
-                        placeholder="Brand or label"
+                        placeholder={t("products.productNamePlaceholder")}
                         value={item.name}
                         onChange={(e) => updateItem(item.id, { name: e.target.value })}
                       />
@@ -499,7 +522,7 @@ export function UnitCompare() {
                         htmlFor={`price-${item.id}`}
                         className="label-caption mb-2 block"
                       >
-                        Price
+                        {t("products.price")}
                       </label>
                       <input
                         id={`price-${item.id}`}
@@ -508,7 +531,7 @@ export function UnitCompare() {
                         step="0.01"
                         inputMode="decimal"
                         className="input-field py-3 font-mono text-base"
-                        placeholder="0.00"
+                        placeholder={tc("placeholderDecimal")}
                         value={item.price}
                         onChange={(e) => updateItem(item.id, { price: e.target.value })}
                       />
@@ -519,7 +542,7 @@ export function UnitCompare() {
                         htmlFor={`qty-${item.id}`}
                         className="label-caption mb-2 block"
                       >
-                        Quantity
+                        {t("products.quantity")}
                       </label>
                       <input
                         id={`qty-${item.id}`}
@@ -528,7 +551,7 @@ export function UnitCompare() {
                         step="any"
                         inputMode="decimal"
                         className="input-field py-3 font-mono text-base"
-                        placeholder="Amount"
+                        placeholder={t("products.quantityPlaceholder")}
                         value={item.quantity}
                         onChange={(e) =>
                           updateItem(item.id, { quantity: e.target.value })
@@ -541,9 +564,11 @@ export function UnitCompare() {
                       className="btn-secondary py-3"
                       onClick={() => removeItem(item.id)}
                       disabled={normalizedItems.length <= 2}
-                      aria-label={`Remove ${item.name || "product"}`}
+                      aria-label={tc("removeNamed", {
+                        name: item.name || t("products.productName"),
+                      })}
                     >
-                      Remove
+                      {tc("remove")}
                     </button>
                   </div>
 
@@ -553,7 +578,7 @@ export function UnitCompare() {
                         htmlFor={`promo-type-${item.id}`}
                         className="label-caption mb-2 block"
                       >
-                        Promotion
+                        {t("promotions.label")}
                       </label>
                       <select
                         id={`promo-type-${item.id}`}
@@ -567,9 +592,9 @@ export function UnitCompare() {
                           })
                         }
                       >
-                        {PROMOTION_OPTIONS.map((opt) => (
-                          <option key={opt.value} value={opt.value}>
-                            {opt.label}
+                        {PROMOTION_TYPES.map((type) => (
+                          <option key={type} value={type}>
+                            {t(`promotions.${type}`)}
                           </option>
                         ))}
                       </select>
@@ -583,8 +608,8 @@ export function UnitCompare() {
                           className="label-caption mb-2 block"
                         >
                           {item.promotionType === "percent"
-                            ? "Discount %"
-                            : "Discount amount"}
+                            ? t("promotions.discountPercent")
+                            : t("promotions.discountAmount")}
                         </label>
                         <input
                           id={`promo-val-${item.id}`}
@@ -593,7 +618,11 @@ export function UnitCompare() {
                           step={item.promotionType === "percent" ? "1" : "0.01"}
                           inputMode="decimal"
                           className="input-field max-w-xs py-3 font-mono text-base"
-                          placeholder={item.promotionType === "percent" ? "20" : "1.00"}
+                          placeholder={
+                            item.promotionType === "percent"
+                              ? t("promotions.percentPlaceholder")
+                              : t("promotions.dollarPlaceholder")
+                          }
                           value={item.promotionValue}
                           onChange={(e) =>
                             updateItem(item.id, { promotionValue: e.target.value })
@@ -604,7 +633,7 @@ export function UnitCompare() {
 
                     {item.promotionType === "bogo" && (
                       <p className="text-sm text-slate-500 sm:pb-3">
-                        Pay for one, get double the quantity — unit price halved.
+                        {t("promotions.bogoHint")}
                       </p>
                     )}
                   </div>
@@ -624,9 +653,9 @@ export function UnitCompare() {
                           {formatCurrency(parsed.unitPrice)}
                         </span>
                         {unitSuffix}
-                        {promotionLabel(parsed.promotionType, parsed.promotionValue) && (
+                        {promotionLabel(parsed.promotionType, parsed.promotionValue, t) && (
                           <span className="ml-2 rounded-full bg-amber-100 px-2 py-0.5 text-xs font-medium text-amber-800">
-                            {promotionLabel(parsed.promotionType, parsed.promotionValue)}
+                            {promotionLabel(parsed.promotionType, parsed.promotionValue, t)}
                           </span>
                         )}
                       </div>
@@ -637,7 +666,9 @@ export function UnitCompare() {
                         onClick={() => addToShoppingList(parsed)}
                       >
                         <ShoppingCart className="h-4 w-4" aria-hidden />
-                        {justAddedId === item.id ? "Added!" : "Add to Shopping List"}
+                        {justAddedId === item.id
+                          ? t("actions.added")
+                          : t("actions.addToShoppingList")}
                       </button>
                     </div>
                   )}
@@ -650,7 +681,7 @@ export function UnitCompare() {
         <div className="flex flex-wrap gap-2">
           {hasInput && (
             <button type="button" className="btn-secondary" onClick={handleClear}>
-              Reset Comparison
+              {t("actions.resetComparison")}
             </button>
           )}
         </div>
@@ -659,39 +690,41 @@ export function UnitCompare() {
           <div className="space-y-4">
             <CalculationSavePanel
               toolSlug="unit-compare"
-              toolName="Smart Shopping Assistant"
               saveName={saveName}
               onSaveNameChange={setSaveName}
               inputs={{ items: normalizedItems, unitLabel }}
-              resultSummary={`${analysis.bestItem.name || "Best pick"} — ${formatCurrency(analysis.bestItem.unitPrice)}${unitSuffix}`}
+              resultSummary={t("resultSummary", {
+                name: analysis.bestItem.name.trim() || t("bestValue.topPick"),
+                price: formatCurrency(analysis.bestItem.unitPrice),
+                unitSuffix,
+              })}
             />
 
             <div className="rounded-2xl border-2 border-emerald-300 bg-emerald-50 px-6 py-8 text-center shadow-md">
               <div className="mb-2 flex items-center justify-center gap-2 text-emerald-600">
                 <CheckCircle2 className="h-6 w-6" aria-hidden />
-                <p className="label-caption text-emerald-600">Best Value</p>
+                <p className="label-caption text-emerald-600">{t("bestValue.label")}</p>
               </div>
               <p className="text-2xl font-bold text-emerald-800 sm:text-3xl">
-                {analysis.bestItem.name.trim() || "Top pick"}
+                {analysis.bestItem.name.trim() || t("bestValue.topPick")}
               </p>
               <p className="mt-2 font-mono text-lg text-emerald-700">
                 {formatCurrency(analysis.bestItem.unitPrice)}
-                {unitLabel.trim() ? ` per ${unitLabel.trim()}` : " per unit"}
+                {t("unitPrice.perUnit", { unit: resolvedUnit })}
               </p>
               {analysis.savingsPerUnit > 0 && (
                 <p className="mt-3 text-sm text-emerald-700/80">
-                  Save up to{" "}
-                  <span className="font-mono font-semibold">
-                    {formatCurrency(analysis.savingsPerUnit)}
-                  </span>{" "}
-                  per {unitLabel.trim() || "unit"} vs the most expensive option (
-                  {analysis.savingsPercent.toFixed(1)}%)
+                  {t("bestValue.saveUpTo", {
+                    amount: formatCurrency(analysis.savingsPerUnit),
+                    unit: resolvedUnit,
+                    percent: analysis.savingsPercent.toFixed(1),
+                  })}
                 </p>
               )}
             </div>
 
             <div className="rounded-2xl bg-white px-5 py-4 shadow-md">
-              <p className="label-caption mb-3">Price Ranking</p>
+              <p className="label-caption mb-3">{t("ranking.title")}</p>
               <ul className="space-y-2">
                 {analysis.parsed.map((item, index) => (
                   <li
@@ -714,11 +747,12 @@ export function UnitCompare() {
                         </span>
                       )}
                       <span className="truncate font-medium text-slate-800">
-                        {item.name.trim() || `Product ${index + 1}`}
+                        {item.name.trim() ||
+                          t("products.unnamedProduct", { index: index + 1 })}
                       </span>
                       {item.hasPromotion && (
                         <span className="shrink-0 rounded-full bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-800">
-                          promo
+                          {t("promotions.promoBadge")}
                         </span>
                       )}
                     </div>
@@ -733,7 +767,7 @@ export function UnitCompare() {
           </div>
         ) : (
           <p className="text-center text-sm text-slate-400">
-            Add at least two products with price and quantity to compare.
+            {t("emptyState")}
           </p>
         )}
       </section>
@@ -745,9 +779,11 @@ export function UnitCompare() {
               <ShoppingCart className="h-5 w-5 text-blue-600" aria-hidden />
             </div>
             <div>
-              <p className="text-base font-semibold text-slate-900">Shopping List</p>
+              <p className="text-base font-semibold text-slate-900">
+                {t("shoppingList.title")}
+              </p>
               <p className="text-xs text-slate-500">
-                Saved locally — persists across refresh
+                {t("shoppingList.savedLocally")}
               </p>
             </div>
           </div>
@@ -757,7 +793,7 @@ export function UnitCompare() {
               className="btn-secondary py-2 text-sm"
               onClick={clearShoppingList}
             >
-              Clear all
+              {t("actions.clearAll")}
             </button>
           )}
         </div>
@@ -766,8 +802,7 @@ export function UnitCompare() {
           <div className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-8 text-center">
             <PiggyBank className="mx-auto mb-3 h-8 w-8 text-slate-300" aria-hidden />
             <p className="text-sm text-slate-500">
-              Your list is empty. Pick a winner from the comparison and tap{" "}
-              <strong>Add to Shopping List</strong>.
+              {t("shoppingList.emptyState")}
             </p>
           </div>
         ) : (
@@ -778,7 +813,7 @@ export function UnitCompare() {
                 item.quantity,
                 item.sessionMaxUnitPrice,
               );
-              const promo = promotionLabel(item.promotionType, item.promotionValue);
+              const promo = promotionLabel(item.promotionType, item.promotionValue, t);
 
               return (
                 <li
@@ -811,7 +846,10 @@ export function UnitCompare() {
                       {formatCurrency(item.unitPrice)}/{item.unitLabel}
                       {savings > 0 && (
                         <span className="ml-2 font-medium text-amber-600">
-                          · Saved {formatCurrency(savings)} vs priciest option
+                          ·{" "}
+                          {t("shoppingList.savedVsPriciest", {
+                            amount: formatCurrency(savings),
+                          })}
                         </span>
                       )}
                     </p>
@@ -821,7 +859,7 @@ export function UnitCompare() {
                     className="btn-secondary shrink-0 px-3 py-2 text-sm text-rose-600 hover:bg-rose-50"
                     onClick={() => removeFromShoppingList(item.id)}
                   >
-                    Remove
+                    {tc("remove")}
                   </button>
                 </li>
               );

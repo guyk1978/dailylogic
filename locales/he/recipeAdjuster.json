@@ -1,0 +1,62 @@
+{
+  "toolName": "מקנה מתכון",
+  "loading": "טוען מתכון שמור…",
+  "yield": {
+    "original": "תפוקה מקורית",
+    "target": "תפוקה יעד",
+    "originalPlaceholder": "למשל 4 מנות",
+    "targetPlaceholder": "למשל 10 מנות"
+  },
+  "adjustmentFactor": {
+    "label": "מקדם התאמה",
+    "scalingBy": "הגדלה ב-{{factor}}"
+  },
+  "combobox": {
+    "label": "מרכיב",
+    "placeholder": "חפש בין 200+ מרכיבים…",
+    "noResults": "לא נמצאו מרכיבים — נסה חיפוש אחר"
+  },
+  "ingredients": {
+    "sectionTitle": "מרכיבים",
+    "addIngredient": "+ הוסף מרכיב",
+    "category": "קטגוריה",
+    "originalAmount": "כמות מקורית",
+    "unit": "יחידה",
+    "scaled": "מותאם",
+    "remove": "הסר",
+    "removeAriaLabel": "הסר מרכיב",
+    "amountPlaceholder": "0",
+    "item_one": "פריט",
+    "item_other": "פריטים"
+  },
+  "categories": {
+    "meat": "בשר",
+    "dairy": "חלב",
+    "vegetables": "ירקות",
+    "fruits": "פירות",
+    "spices": "תבלינים",
+    "substitutes": "תחליפים",
+    "other": "אחר"
+  },
+  "units": {
+    "cups": "כוסות",
+    "g": "גרם",
+    "ml": "מ\"ל",
+    "tbsp": "כף",
+    "tsp": "כפית",
+    "pieces": "יחידה"
+  },
+  "compiledRecipe": {
+    "title": "מתכון מותאם מקובץ",
+    "servingsFactor": "{{targetYield}} מנות · {{factor}}",
+    "copyFullRecipe": "העתק מתכון מלא",
+    "copied": "הועתק!"
+  },
+  "emptyState": {
+    "invalidYields": "הזן תפוקות תקינות כדי לחשב את מקדם ההגדלה."
+  },
+  "actions": {
+    "reset": "איפוס"
+  },
+  "resultSummary": "הגדלה ב-{{factor}} · {{count}} מרכיבים"
+}

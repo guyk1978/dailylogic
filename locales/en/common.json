@@ -129,5 +129,26 @@
     "description": "DailyLogic uses cookies and analytics (Google Analytics) to understand how visitors use the site and to support advertising through Google AdSense. Your tool inputs always stay in your browser. Please accept to continue using the site.",
     "accept": "Accept",
     "deny": "Deny"
+  },
+  "toolsCommon": {
+    "reset": "Reset",
+    "remove": "Remove",
+    "amount": "Amount",
+    "category": "Category",
+    "priority": "Priority",
+    "custom": "Custom",
+    "placeholderDecimal": "0.00",
+    "placeholderAmount": "0",
+    "placeholderZeroOne": "0.0",
+    "levelLow": "Low",
+    "levelMedium": "Medium",
+    "levelHigh": "High",
+    "person_one": "{{count}} person",
+    "person_other": "{{count}} people",
+    "item_one": "{{count}} item",
+    "item_other": "{{count}} items",
+    "hour_one": "{{count}} hour",
+    "hour_other": "{{count}} hours",
+    "removeNamed": "Remove {{name}}"
   }
 }

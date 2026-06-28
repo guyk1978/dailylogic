@@ -1,0 +1,85 @@
+{
+  "loading": "Loading budget planner…",
+  "setup": {
+    "caption": "Setup",
+    "monthlyIncome": "Monthly Income",
+    "savingsGoal": "Savings Goal",
+    "safetyBuffer": "Monthly Safety Buffer",
+    "safetyBufferPlaceholder": "Min. in checking",
+    "safetyBufferHint": "Required amount to keep in your checking account."
+  },
+  "priorities": {
+    "essential": {
+      "label": "Essential",
+      "description": "Committed — protect these first"
+    },
+    "flexible": {
+      "label": "Flexible",
+      "description": "Your call — trim when needed"
+    },
+    "luxury": {
+      "label": "Luxury",
+      "description": "Optional — adjust freely"
+    }
+  },
+  "starterCategories": {
+    "housing": "Housing",
+    "food": "Food",
+    "transport": "Transport",
+    "children": "Children",
+    "pets": "Pets",
+    "entertainment": "Entertainment"
+  },
+  "expenses": {
+    "caption": "Expense Categories",
+    "addCategory": "+ Add Category"
+  },
+  "actions": {
+    "planBudget": "Plan Budget"
+  },
+  "decisionBoard": {
+    "caption": "Decision Board",
+    "empty": "No categories yet",
+    "essentialsLocked": "Essentials are locked in this plan."
+  },
+  "closeGap": {
+    "caption": "Close the Gap",
+    "noCategories": "No Flexible or Luxury categories to adjust. Add categories or revisit your savings goal and safety buffer.",
+    "description": "Adjust Flexible and Luxury spending to cover your shortfall.",
+    "gapCovered": "Gap covered",
+    "percentAddressed": "{{percent}}% of gap addressed",
+    "remaining": "{{amount}} remaining",
+    "adjustReduction": "Adjust reduction: {{percent}}%",
+    "freesUp": "Frees up {{amount}} toward your gap",
+    "fullyCovered": "Your adjustments fully cover the gap. Apply these cuts to hit your savings goal and safety buffer."
+  },
+  "results": {
+    "gapAnalysis": {
+      "caption": "Gap Analysis",
+      "shortBy": "You are short by {{gap}} to reach your savings goal of {{savings}} and keep your safety buffer of {{buffer}}.",
+      "required": "Required this month: {{required}} (expenses + savings + buffer) vs income of {{income}}."
+    },
+    "balanced": {
+      "caption": "Plan Balanced",
+      "hint": "Surplus after expenses, savings goal, and safety buffer"
+    }
+  },
+  "allocation": {
+    "caption": "Monthly Allocation",
+    "essential": "Essential",
+    "flexible": "Flexible",
+    "luxury": "Luxury",
+    "savingsGoal": "Savings Goal",
+    "safetyBuffer": "Safety Buffer",
+    "surplus": "Surplus",
+    "surplusGap": "Surplus / Gap"
+  },
+  "emptyState": "Complete setup, add your expenses, then click Plan Budget.",
+  "legacy": {
+    "fixedExpenses": "Fixed Expenses"
+  },
+  "resultSummary": {
+    "gap": "{{amount}} gap to close",
+    "surplus": "{{amount}} surplus after goals"
+  }
+}

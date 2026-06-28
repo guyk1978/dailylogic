@@ -7,7 +7,7 @@ import type { ToolSlug } from "@/lib/tools-registry";
 
 interface CalculationSavePanelProps {
   toolSlug: ToolSlug;
-  toolName: string;
+  toolName?: string;
   inputs: Record<string, unknown>;
   resultSummary: string;
   saveName: string;
@@ -23,13 +23,14 @@ export function CalculationSavePanel({
   onSaveNameChange,
 }: CalculationSavePanelProps) {
   const { t } = useTranslation("common");
+  const resolvedToolName = toolName ?? t(`tools.${toolSlug}.name`);
   const { addEntry } = useCalculationHistory();
   const [justSaved, setJustSaved] = useState(false);
 
   const handleSave = () => {
     addEntry({
       toolSlug,
-      toolName,
+      toolName: resolvedToolName,
       name: saveName,
       inputs,
       resultSummary,

@@ -1,0 +1,77 @@
+{
+  "toolName": "Asistente inteligente de compras",
+  "loading": "Cargando asistente de compras…",
+  "cart": {
+    "title": "Tu carrito",
+    "itemsInCart": "Artículos en el carrito",
+    "cartTotal": "Total del carrito",
+    "totalSavings": "Ahorro total",
+    "emptyHint": "Añade productos de tu comparación para empezar a registrar ahorros."
+  },
+  "compareSetup": {
+    "title": "Configuración de comparación",
+    "unitType": "Tipo de unidad (igual para todos los artículos)",
+    "unitTypePlaceholder": "p. ej. oz, g, ml, unidad",
+    "unitTypeHint": "Introduce las cantidades en la misma unidad para comparar precios de forma justa."
+  },
+  "products": {
+    "sectionTitle": "Productos a comparar",
+    "addProduct": "+ Añadir producto",
+    "productName": "Nombre del producto",
+    "productNamePlaceholder": "Marca o etiqueta",
+    "price": "Precio",
+    "quantity": "Cantidad",
+    "quantityPlaceholder": "Cantidad",
+    "remove": "Eliminar",
+    "removeAriaLabel": "Eliminar {{name}}",
+    "defaultBrandA": "Marca A",
+    "defaultBrandB": "Marca B",
+    "dynamicBrand": "Marca {{letter}}",
+    "unnamedProduct": "Producto {{index}}",
+    "unnamedItem": "Artículo sin nombre",
+    "legacyOptionA": "Opción A",
+    "legacyOptionB": "Opción B"
+  },
+  "promotions": {
+    "label": "Promoción",
+    "none": "Sin promoción",
+    "percent": "% de descuento",
+    "dollar": "$ de descuento",
+    "bogo": "Compra 1 y llévate 1",
+    "discountPercent": "Descuento %",
+    "discountAmount": "Importe del descuento",
+    "percentPlaceholder": "20",
+    "dollarPlaceholder": "1.00",
+    "bogoHint": "Paga uno y obtén el doble de cantidad — el precio unitario se reduce a la mitad.",
+    "percentOff": "{{value}}% de descuento",
+    "dollarOff": "{{amount}} de descuento",
+    "promoBadge": "promo"
+  },
+  "unitPrice": {
+    "defaultUnit": "unidad",
+    "perUnit": " por {{unit}}",
+    "unitSuffix": " / {{unit}}"
+  },
+  "actions": {
+    "resetComparison": "Restablecer comparación",
+    "addToShoppingList": "Añadir a la lista de compras",
+    "added": "¡Añadido!",
+    "clearAll": "Borrar todo"
+  },
+  "bestValue": {
+    "label": "Mejor valor",
+    "topPick": "Mejor opción",
+    "saveUpTo": "Ahorra hasta {{amount}} por {{unit}} frente a la opción más cara ({{percent}}%)"
+  },
+  "ranking": {
+    "title": "Clasificación por precio"
+  },
+  "shoppingList": {
+    "title": "Lista de compras",
+    "savedLocally": "Guardada localmente — persiste al actualizar",
+    "emptyState": "Tu lista está vacía. Elige un ganador de la comparación y pulsa Añadir a la lista de compras.",
+    "savedVsPriciest": "Ahorrado {{amount}} frente a la opción más cara"
+  },
+  "emptyState": "Añade al menos dos productos con precio y cantidad para comparar.",
+  "resultSummary": "{{name}} — {{price}}{{unitSuffix}}"
+}

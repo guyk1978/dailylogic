@@ -1,0 +1,85 @@
+{
+  "loading": "Cargando planificador de presupuesto…",
+  "setup": {
+    "caption": "Configuración",
+    "monthlyIncome": "Ingreso mensual",
+    "savingsGoal": "Meta de ahorro",
+    "safetyBuffer": "Colchón de seguridad mensual",
+    "safetyBufferPlaceholder": "Mín. en cuenta corriente",
+    "safetyBufferHint": "Cantidad requerida para mantener en tu cuenta corriente."
+  },
+  "priorities": {
+    "essential": {
+      "label": "Esencial",
+      "description": "Comprometido — protege esto primero"
+    },
+    "flexible": {
+      "label": "Flexible",
+      "description": "A tu criterio — recorta cuando haga falta"
+    },
+    "luxury": {
+      "label": "Lujo",
+      "description": "Opcional — ajústalo libremente"
+    }
+  },
+  "starterCategories": {
+    "housing": "Vivienda",
+    "food": "Alimentación",
+    "transport": "Transporte",
+    "children": "Niños",
+    "pets": "Mascotas",
+    "entertainment": "Entretenimiento"
+  },
+  "expenses": {
+    "caption": "Categorías de gastos",
+    "addCategory": "+ Añadir categoría"
+  },
+  "actions": {
+    "planBudget": "Planificar presupuesto"
+  },
+  "decisionBoard": {
+    "caption": "Panel de decisiones",
+    "empty": "Aún no hay categorías",
+    "essentialsLocked": "Los esenciales están bloqueados en este plan."
+  },
+  "closeGap": {
+    "caption": "Cerrar la brecha",
+    "noCategories": "No hay categorías flexibles o de lujo para ajustar. Añade categorías o revisa tu meta de ahorro y colchón de seguridad.",
+    "description": "Ajusta el gasto flexible y de lujo para cubrir el déficit.",
+    "gapCovered": "Brecha cubierta",
+    "percentAddressed": "{{percent}}% de la brecha abordada",
+    "remaining": "{{amount}} restante",
+    "adjustReduction": "Ajustar reducción: {{percent}}%",
+    "freesUp": "Libera {{amount}} hacia tu brecha",
+    "fullyCovered": "Tus ajustes cubren por completo la brecha. Aplica estos recortes para alcanzar tu meta de ahorro y colchón de seguridad."
+  },
+  "results": {
+    "gapAnalysis": {
+      "caption": "Análisis de brecha",
+      "shortBy": "Te faltan {{gap}} para alcanzar tu meta de ahorro de {{savings}} y mantener tu colchón de seguridad de {{buffer}}.",
+      "required": "Requerido este mes: {{required}} (gastos + ahorro + colchón) frente a ingresos de {{income}}."
+    },
+    "balanced": {
+      "caption": "Plan equilibrado",
+      "hint": "Superávit después de gastos, meta de ahorro y colchón de seguridad"
+    }
+  },
+  "allocation": {
+    "caption": "Asignación mensual",
+    "essential": "Esencial",
+    "flexible": "Flexible",
+    "luxury": "Lujo",
+    "savingsGoal": "Meta de ahorro",
+    "safetyBuffer": "Colchón de seguridad",
+    "surplus": "Superávit",
+    "surplusGap": "Superávit / Brecha"
+  },
+  "emptyState": "Completa la configuración, añade tus gastos y haz clic en Planificar presupuesto.",
+  "legacy": {
+    "fixedExpenses": "Gastos fijos"
+  },
+  "resultSummary": {
+    "gap": "{{amount}} de brecha por cerrar",
+    "surplus": "{{amount}} de superávit tras los objetivos"
+  }
+}

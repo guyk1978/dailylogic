@@ -1,0 +1,62 @@
+{
+  "toolName": "Recipe Scaler",
+  "loading": "Loading saved recipe…",
+  "yield": {
+    "original": "Original yield",
+    "target": "Target yield",
+    "originalPlaceholder": "e.g. 4 servings",
+    "targetPlaceholder": "e.g. 10 servings"
+  },
+  "adjustmentFactor": {
+    "label": "Adjustment factor",
+    "scalingBy": "Scaling by {{factor}}"
+  },
+  "combobox": {
+    "label": "Ingredient",
+    "placeholder": "Search 200+ ingredients…",
+    "noResults": "No ingredients found — try another search"
+  },
+  "ingredients": {
+    "sectionTitle": "Ingredients",
+    "addIngredient": "+ Add ingredient",
+    "category": "Category",
+    "originalAmount": "Original amount",
+    "unit": "Unit",
+    "scaled": "Scaled",
+    "remove": "Remove",
+    "removeAriaLabel": "Remove ingredient",
+    "amountPlaceholder": "0",
+    "item_one": "item",
+    "item_other": "items"
+  },
+  "categories": {
+    "meat": "Meat",
+    "dairy": "Dairy",
+    "vegetables": "Vegetables",
+    "fruits": "Fruits",
+    "spices": "Spices",
+    "substitutes": "Substitutes",
+    "other": "Other"
+  },
+  "units": {
+    "cups": "Cups",
+    "g": "g",
+    "ml": "ml",
+    "tbsp": "tbsp",
+    "tsp": "tsp",
+    "pieces": "unit"
+  },
+  "compiledRecipe": {
+    "title": "Compiled scaled recipe",
+    "servingsFactor": "{{targetYield}} servings · {{factor}}",
+    "copyFullRecipe": "Copy full recipe",
+    "copied": "Copied!"
+  },
+  "emptyState": {
+    "invalidYields": "Enter valid yields to calculate the scaling factor."
+  },
+  "actions": {
+    "reset": "Reset"
+  },
+  "resultSummary": "Scaling by {{factor}} · {{count}} ingredients"
+}

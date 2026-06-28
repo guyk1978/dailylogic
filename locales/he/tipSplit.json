@@ -1,0 +1,84 @@
+{
+  "toolName": "עוזר טיפ חכם",
+  "sections": {
+    "theBill": "החשבון",
+    "serviceContext": "הקשר השירות",
+    "rateExperience": "דרג את החוויה",
+    "tipSection": "טיפ"
+  },
+  "form": {
+    "totalAmount": "סכום כולל",
+    "numberOfPeople": "מספר אנשים",
+    "serviceType": "סוג שירות",
+    "currencyPlaceholder": "0.00"
+  },
+  "serviceType": {
+    "waiter": "מלצר",
+    "courier": "שליח אוכל",
+    "other": "שירות מקומי / אחר"
+  },
+  "rating": {
+    "waitTime": "זמן המתנה / משלוח",
+    "attitude": "יחס השירות",
+    "poor": "גרוע",
+    "average": "ממוצע",
+    "good": "טוב",
+    "unprofessional": "לא מקצועי",
+    "friendly": "ידידותי"
+  },
+  "issue": {
+    "label": "הייתה בעיה",
+    "hint": "למשל: משלוח מאוחר, פריט שגוי, פריטים חסרים"
+  },
+  "tip": {
+    "percentage": "אחוז טיפ",
+    "percentageAriaLabel": "אחוז טיפ",
+    "smartSuggested": "הצעה חכמה",
+    "resetToSuggested": "איפוס להצעה של {{percent}}%",
+    "scaleLabels": {
+      "zero": "0%",
+      "mid": "15%",
+      "max": "30%"
+    }
+  },
+  "explanation": {
+    "fragments": {
+      "negative": {
+        "longWaitTime": "זמן המתנה ארוך",
+        "averageWaitTime": "זמן המתנה ממוצע",
+        "unprofessionalService": "שירות לא מקצועי",
+        "averageAttitude": "יחס ממוצע",
+        "orderIssue": "בעיה בהזמנה"
+      },
+      "positive": {
+        "quickService": "שירות מהיר",
+        "friendlyService": "שירות ידידותי"
+      }
+    },
+    "serviceNotes": {
+      "courier": " (מותאם למשלוח)",
+      "other": " (שירות מקומי)"
+    },
+    "templates": {
+      "waitDespiteFriendly": "מומלץ {{percent}}% בשל {{waitIssue}}, למרות שירות ידידותי{{serviceNote}}.",
+      "mixedDespite": "מומלץ {{percent}}% בשל {{negatives}}, למרות {{positives}}{{serviceNote}}.",
+      "negativeOnly": "מומלץ {{percent}}% בשל {{negatives}}{{serviceNote}}.",
+      "positiveOnly": "מומלץ {{percent}}% עבור {{positives}}{{serviceNote}}."
+    },
+    "joinAnd": " ו"
+  },
+  "actions": {
+    "reset": "איפוס"
+  },
+  "results": {
+    "amountPerPerson": "סכום לאדם",
+    "person_one": "אדם",
+    "person_other": "אנשים",
+    "perPersonSummary": "{{count}} {{peopleLabel}} · {{tipPercent}}% טיפ",
+    "subtotal": "סכום ביניים",
+    "totalTip": "סה״כ טיפ ({{percent}}%)",
+    "totalBill": "סה״כ חשבון"
+  },
+  "emptyState": "הזן סכום חשבון — החלוקה מתעדכנת אוטומטית כשאתה משנה את הטיפ.",
+  "resultSummary": "{{amount}} לאדם · {{count}} אנשים"
+}

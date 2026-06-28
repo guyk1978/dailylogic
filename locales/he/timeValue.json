@@ -1,0 +1,84 @@
+{
+  "toolName": "להעביר או לעשות בעצמך",
+  "sections": {
+    "theNumbers": "המספרים",
+    "skillRisk": "מיומנות וסיכון"
+  },
+  "form": {
+    "hourlyWage": "שכר לשעה",
+    "professionalCost": "עלות מקצוען",
+    "timeRequired": "זמן נדרש (שעות)",
+    "confidenceQuestion": "עד כמה אתה בטוח שתוכל לעשות זאת בעצמך?",
+    "errorCost": "עלות שגיאה / תיקון אפשרית",
+    "errorCostHint": "כמה זה עלול לעלות אם משהו ישתבש?",
+    "qualityRequirement": "דרישת איכות",
+    "qualityScore": "{{value}}/10",
+    "qualityGoodEnough": "מספיק טוב",
+    "qualityProfessionalGrade": "רמת מקצוען",
+    "qualityHighWarning": "רף איכות גבוה — עבודה עצמית מקבלת קנס אלא אם הביטחון גבוה.",
+    "currencyPlaceholder": "0.00",
+    "hoursPlaceholder": "0.0"
+  },
+  "confidence": {
+    "low": "נמוך — כנראה אצטרך עזרה",
+    "medium": "בינוני — אוכל להסתדר עם מאמץ",
+    "high": "גבוה — כבר עשיתי את זה בעבר"
+  },
+  "factorLevel": {
+    "low": "נמוך",
+    "medium": "בינוני",
+    "high": "גבוה"
+  },
+  "actions": {
+    "evaluate": "הערך החלטה",
+    "reset": "איפוס"
+  },
+  "recommendation": {
+    "doYourself": "עשה בעצמך",
+    "delegate": "העבר למקצוען"
+  },
+  "summaries": {
+    "mathSaysDiyComplexitySuggestsPro": "החישוב מצביע על עבודה עצמית, אך ציון המורכבות ממליץ לשכור מקצוען.",
+    "diySavesLowConfidenceHighQuality": "עבודה עצמית חוסכת על הנייר, אך ביטחון נמוך ודרישות איכות גבוהות מעדיפים מקצוען.",
+    "numbersAndComplexityPointPro": "גם המספרים וגם המורכבות מצביעים על שכירת מקצוען.",
+    "numbersAndSkillSupportDiy": "המספרים ורמת המיומנות שלך תומכים בביצוע בעצמך.",
+    "hiringSmarterChoice": "שכירת מקצוען היא הבחירה הכלכלית החכמה יותר.",
+    "diyViableWeighQuality": "עבודה עצמית אפשרית — שקול את רף האיכות לפני שמתחייב.",
+    "leaningProModerateComplexity": "נטייה למקצוען — מורכבות בינונית מקזזת את החיסכון בעבודה עצמית."
+  },
+  "results": {
+    "finalRecommendation": "המלצה סופית",
+    "calculatedCost": "עלות מחושבת",
+    "professionalQuote": "הצעת מחיר מקצועית",
+    "diyTimeAndRisk": "זמן עצמי + סיכון",
+    "confidenceLevel": "רמת ביטחון",
+    "complexityScore": "ציון מורכבות {{score}}/100",
+    "timeSaved": "זמן שנחסך",
+    "reclaimedByNotDoingYourself": "זמן שהוחזר בכך שלא עשית בעצמך",
+    "hour_one": "שעה {{count}}",
+    "hour_other": "{{count}} שעות",
+    "delegateProductivity": "בהעברת המשימה, אתה מחזיר {{hours}}. אם הזמן שלך שווה {{hourlyRate}}, ההחלטה מוסיפה {{opportunityCost}} לפרודוקטיביות האישית שלך.",
+    "nextStep": "הצעד הבא",
+    "sinceYouDecidedDelegate": "מכיוון שהחלטת להעביר למקצוען:",
+    "nextSteps": {
+      "getQuotes": "קבל 3 הצעות מחיר.",
+      "verifyReferences": "בדוק המלצות.",
+      "setDeadline": "קבע מועד סיום ברור."
+    },
+    "costBreakdown": "פירוט עלויות",
+    "yourTimeOpportunityCost": "הזמן שלך (עלות הזדמנות)",
+    "weightedErrorRisk": "סיכון שגיאה משוקלל",
+    "diyEffectiveCost": "עלות עצמית אפקטיבית",
+    "professionalCostLabel": "עלות מקצועית",
+    "pureMathFavors": "החישוב הטהור מעדיף {{recommendation}}.",
+    "finalAdviceNote": "ההמלצה הסופית משקללת איכות, ביטחון ועלויות נסתרות של עבודה עצמית.",
+    "decisionFactors": "גורמי החלטה",
+    "factors": {
+      "confidence": "ביטחון",
+      "qualityNeeded": "איכות נדרשת",
+      "priceGap": "פער מחיר"
+    }
+  },
+  "emptyState": "מלא את המספרים והערכת המיומנות, ולאחר מכן הערך את ההחלטה.",
+  "resultSummary": "{{recommendation}} · {{cost}}"
+}

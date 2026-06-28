@@ -1,0 +1,77 @@
+{
+  "toolName": "עוזר קניות חכם",
+  "loading": "טוען עוזר קניות…",
+  "cart": {
+    "title": "העגלה שלך",
+    "itemsInCart": "פריטים בעגלה",
+    "cartTotal": "סה״כ עגלה",
+    "totalSavings": "סה״כ חיסכון",
+    "emptyHint": "הוסף מוצרים מההשוואה כדי להתחיל לעקוב אחר חיסכון."
+  },
+  "compareSetup": {
+    "title": "הגדרת השוואה",
+    "unitType": "סוג יחידה (זהה לכל הפריטים)",
+    "unitTypePlaceholder": "למשל oz, g, ml, יחידה",
+    "unitTypeHint": "הזן כמויות באותה יחידה כדי שהמחירים יושוו בצורה הוגנת."
+  },
+  "products": {
+    "sectionTitle": "מוצרים להשוואה",
+    "addProduct": "+ הוסף מוצר",
+    "productName": "שם מוצר",
+    "productNamePlaceholder": "מותג או תווית",
+    "price": "מחיר",
+    "quantity": "כמות",
+    "quantityPlaceholder": "כמות",
+    "remove": "הסר",
+    "removeAriaLabel": "הסר {{name}}",
+    "defaultBrandA": "מותג א'",
+    "defaultBrandB": "מותג ב'",
+    "dynamicBrand": "מותג {{letter}}",
+    "unnamedProduct": "מוצר {{index}}",
+    "unnamedItem": "פריט ללא שם",
+    "legacyOptionA": "אפשרות א'",
+    "legacyOptionB": "אפשרות ב'"
+  },
+  "promotions": {
+    "label": "מבצע",
+    "none": "ללא מבצע",
+    "percent": "הנחה באחוזים",
+    "dollar": "הנחה בש\"ח",
+    "bogo": "קנה 1 קבל 1",
+    "discountPercent": "אחוז הנחה",
+    "discountAmount": "סכום הנחה",
+    "percentPlaceholder": "20",
+    "dollarPlaceholder": "1.00",
+    "bogoHint": "שלם על אחד, קבל כמות כפולה — מחיר ליחידה מחולק בשניים.",
+    "percentOff": "{{value}}% הנחה",
+    "dollarOff": "{{amount}} הנחה",
+    "promoBadge": "מבצע"
+  },
+  "unitPrice": {
+    "defaultUnit": "יחידה",
+    "perUnit": " ל{{unit}}",
+    "unitSuffix": " / {{unit}}"
+  },
+  "actions": {
+    "resetComparison": "איפוס השוואה",
+    "addToShoppingList": "הוסף לרשימת קניות",
+    "added": "נוסף!",
+    "clearAll": "נקה הכל"
+  },
+  "bestValue": {
+    "label": "הערך הטוב ביותר",
+    "topPick": "הבחירה המובילה",
+    "saveUpTo": "חסוך עד {{amount}} ל{{unit}} לעומת האפשרות היקרה ביותר ({{percent}}%)"
+  },
+  "ranking": {
+    "title": "דירוג מחירים"
+  },
+  "shoppingList": {
+    "title": "רשימת קניות",
+    "savedLocally": "נשמר מקומית — נשמר גם לאחר רענון",
+    "emptyState": "הרשימה שלך ריקה. בחר מנצח מההשוואה ולחץ על הוסף לרשימת קניות.",
+    "savedVsPriciest": "נחסך {{amount}} לעומת האפשרות היקרה ביותר"
+  },
+  "emptyState": "הוסף לפחות שני מוצרים עם מחיר וכמות כדי להשוות.",
+  "resultSummary": "{{name}} — {{price}}{{unitSuffix}}"
+}

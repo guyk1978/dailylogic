@@ -1,0 +1,84 @@
+{
+  "toolName": "Delegate or Do",
+  "sections": {
+    "theNumbers": "The Numbers",
+    "skillRisk": "Skill & Risk"
+  },
+  "form": {
+    "hourlyWage": "Hourly wage",
+    "professionalCost": "Professional cost",
+    "timeRequired": "Time required (hours)",
+    "confidenceQuestion": "How confident are you in doing this yourself?",
+    "errorCost": "Potential error / repair cost",
+    "errorCostHint": "What might it cost if things go wrong?",
+    "qualityRequirement": "Quality requirement",
+    "qualityScore": "{{value}}/10",
+    "qualityGoodEnough": "Good enough",
+    "qualityProfessionalGrade": "Professional grade",
+    "qualityHighWarning": "High quality bar — DIY is penalized unless confidence is high.",
+    "currencyPlaceholder": "0.00",
+    "hoursPlaceholder": "0.0"
+  },
+  "confidence": {
+    "low": "Low — I'd probably need help",
+    "medium": "Medium — I could manage with effort",
+    "high": "High — I've done this before"
+  },
+  "factorLevel": {
+    "low": "Low",
+    "medium": "Medium",
+    "high": "High"
+  },
+  "actions": {
+    "evaluate": "Evaluate Decision",
+    "reset": "Reset"
+  },
+  "recommendation": {
+    "doYourself": "Do Yourself",
+    "delegate": "Delegate"
+  },
+  "summaries": {
+    "mathSaysDiyComplexitySuggestsPro": "The math says DIY, but the complexity score suggests hiring a professional.",
+    "diySavesLowConfidenceHighQuality": "DIY saves on paper, but low confidence and high quality needs favor a pro.",
+    "numbersAndComplexityPointPro": "Both the numbers and complexity point toward hiring a professional.",
+    "numbersAndSkillSupportDiy": "The numbers and your skill level support doing this yourself.",
+    "hiringSmarterChoice": "Hiring a professional is the smarter financial choice.",
+    "diyViableWeighQuality": "DIY is viable — weigh the quality bar before you commit.",
+    "leaningProModerateComplexity": "Leaning pro — moderate complexity offsets DIY savings."
+  },
+  "results": {
+    "finalRecommendation": "Final recommendation",
+    "calculatedCost": "Calculated cost",
+    "professionalQuote": "Professional quote",
+    "diyTimeAndRisk": "DIY time + risk",
+    "confidenceLevel": "Confidence level",
+    "complexityScore": "Complexity score {{score}}/100",
+    "timeSaved": "Time saved",
+    "reclaimedByNotDoingYourself": "Reclaimed by not doing this yourself",
+    "hour_one": "{{count}} hour",
+    "hour_other": "{{count}} hours",
+    "delegateProductivity": "By delegating this, you reclaim {{hours}}. If your time is worth {{hourlyRate}}, this decision adds {{opportunityCost}} value to your personal productivity.",
+    "nextStep": "Next step",
+    "sinceYouDecidedDelegate": "Since you decided to Delegate:",
+    "nextSteps": {
+      "getQuotes": "Get 3 quotes.",
+      "verifyReferences": "Verify references.",
+      "setDeadline": "Set a clear deadline."
+    },
+    "costBreakdown": "Cost breakdown",
+    "yourTimeOpportunityCost": "Your time (opportunity cost)",
+    "weightedErrorRisk": "Weighted error risk",
+    "diyEffectiveCost": "DIY effective cost",
+    "professionalCostLabel": "Professional cost",
+    "pureMathFavors": "Pure math favors {{recommendation}}.",
+    "finalAdviceNote": "Final advice weighs quality, confidence, and hidden DIY costs.",
+    "decisionFactors": "Decision factors",
+    "factors": {
+      "confidence": "Confidence",
+      "qualityNeeded": "Quality needed",
+      "priceGap": "Price gap"
+    }
+  },
+  "emptyState": "Fill in the numbers and skill assessment, then evaluate your decision.",
+  "resultSummary": "{{recommendation}} · {{cost}}"
+}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useState, type ReactNode } from "react";
 import {
   CheckCircle2,
   CircleAlert,
@@ -11,12 +11,22 @@ import {
 } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
 
 export type ConfidenceLevel = "low" | "medium" | "high";
 export type Recommendation = "Do Yourself" | "Delegate";
 export type FactorLevel = "Low" | "Medium" | "High";
+
+export type SummaryKey =
+  | "mathSaysDiyComplexitySuggestsPro"
+  | "diySavesLowConfidenceHighQuality"
+  | "numbersAndComplexityPointPro"
+  | "numbersAndSkillSupportDiy"
+  | "hiringSmarterChoice"
+  | "diyViableWeighQuality"
+  | "leaningProModerateComplexity";
 
 export interface Evaluation {
   opportunityCost: number;
@@ -26,7 +36,7 @@ export interface Evaluation {
   mathFavorsDIY: boolean;
   complexityScore: number;
   recommendation: Recommendation;
-  summary: string;
+  summaryKey: SummaryKey;
   factors: {
     confidence: FactorLevel;
     qualityNeeded: FactorLevel;
@@ -34,11 +44,7 @@ export interface Evaluation {
   };
 }
 
-const CONFIDENCE_OPTIONS: { value: ConfidenceLevel; label: string }[] = [
-  { value: "low", label: "Low — I'd probably need help" },
-  { value: "medium", label: "Medium — I could manage with effort" },
-  { value: "high", label: "High — I've done this before" },
-];
+const CONFIDENCE_LEVELS: ConfidenceLevel[] = ["low", "medium", "high"];
 
 const ERROR_WEIGHT: Record<ConfidenceLevel, number> = {
   low: 1,
@@ -52,6 +58,8 @@ const CONFIDENCE_PRESSURE: Record<ConfidenceLevel, number> = {
   high: 15,
 };
 
+type TranslateFn = (key: string, options?: Record<string, unknown>) => string;
+
 function formatCurrency(value: number): string {
   return value.toLocaleString(undefined, {
     style: "currency",
@@ -61,9 +69,12 @@ function formatCurrency(value: number): string {
   });
 }
 
-function formatHours(hours: number): string {
+function formatHours(
+  hours: number,
+  tc: TranslateFn,
+): string {
   const rounded = Math.round(hours * 10) / 10;
-  return `${rounded} hour${rounded === 1 ? "" : "s"}`;
+  return tc(rounded === 1 ? "hour_one" : "hour_other", { count: rounded });
 }
 
 function factorLevel(value: number): FactorLevel {
@@ -90,6 +101,27 @@ function confidenceFactorLabel(level: ConfidenceLevel): FactorLevel {
   return "High";
 }
 
+function factorLevelLabel(level: FactorLevel, tc: TranslateFn): string {
+  if (level === "Low") return tc("levelLow");
+  if (level === "Medium") return tc("levelMedium");
+  return tc("levelHigh");
+}
+
+function confidenceLevelLabel(level: ConfidenceLevel, tc: TranslateFn): string {
+  if (level === "low") return tc("levelLow");
+  if (level === "medium") return tc("levelMedium");
+  return tc("levelHigh");
+}
+
+function recommendationLabel(
+  recommendation: Recommendation,
+  t: TranslateFn,
+): string {
+  return recommendation === "Do Yourself"
+    ? t("recommendation.doYourself")
+    : t("recommendation.delegate");
+}
+
 function computeEvaluation(
   wage: number,
   cost: number,
@@ -113,43 +145,36 @@ function computeEvaluation(
   const elevatedQuality = quality >= 7;
 
   let recommendation: Recommendation;
-  let summary: string;
+  let summaryKey: SummaryKey;
 
   if (highQuality && mathFavorsDIY && confidence !== "high") {
     recommendation = "Delegate";
-    summary =
-      "The math says DIY, but the complexity score suggests hiring a professional.";
+    summaryKey = "mathSaysDiyComplexitySuggestsPro";
   } else if (complexityScore >= 70 && mathFavorsDIY) {
     recommendation = "Delegate";
-    summary =
-      "The math says DIY, but the complexity score suggests hiring a professional.";
+    summaryKey = "mathSaysDiyComplexitySuggestsPro";
   } else if (
     elevatedQuality &&
     mathFavorsDIY &&
     confidence === "low"
   ) {
     recommendation = "Delegate";
-    summary =
-      "DIY saves on paper, but low confidence and high quality needs favor a pro.";
+    summaryKey = "diySavesLowConfidenceHighQuality";
   } else if (!mathFavorsDIY && complexityScore >= 35) {
     recommendation = "Delegate";
-    summary =
-      "Both the numbers and complexity point toward hiring a professional.";
+    summaryKey = "numbersAndComplexityPointPro";
   } else if (mathFavorsDIY && complexityScore < 40) {
     recommendation = "Do Yourself";
-    summary =
-      "The numbers and your skill level support doing this yourself.";
+    summaryKey = "numbersAndSkillSupportDiy";
   } else if (!mathFavorsDIY) {
     recommendation = "Delegate";
-    summary = "Hiring a professional is the smarter financial choice.";
+    summaryKey = "hiringSmarterChoice";
   } else if (mathFavorsDIY) {
     recommendation = "Do Yourself";
-    summary =
-      "DIY is viable — weigh the quality bar before you commit.";
+    summaryKey = "diyViableWeighQuality";
   } else {
     recommendation = "Delegate";
-    summary =
-      "Leaning pro — moderate complexity offsets DIY savings.";
+    summaryKey = "leaningProModerateComplexity";
   }
 
   return {
@@ -160,7 +185,7 @@ function computeEvaluation(
     mathFavorsDIY,
     complexityScore,
     recommendation,
-    summary,
+    summaryKey,
     factors: {
       confidence: confidenceFactorLabel(confidence),
       qualityNeeded: factorLevel(quality),
@@ -170,26 +195,30 @@ function computeEvaluation(
 }
 
 function FactorChecklist({ factors }: { factors: Evaluation["factors"] }) {
+  const { t, tc } = useToolTranslation("time-value");
+
   const items = [
-    { label: "Confidence", value: factors.confidence },
-    { label: "Quality needed", value: factors.qualityNeeded },
-    { label: "Price gap", value: factors.priceGap },
+    { labelKey: "results.factors.confidence", value: factors.confidence },
+    { labelKey: "results.factors.qualityNeeded", value: factors.qualityNeeded },
+    { labelKey: "results.factors.priceGap", value: factors.priceGap },
   ] as const;
 
   return (
     <div className="rounded-2xl bg-white px-5 py-4 shadow-md">
-      <p className="label-caption mb-3">Decision factors</p>
+      <p className="label-caption mb-3">{t("results.decisionFactors")}</p>
       <ul className="space-y-2">
         {items.map((item) => (
           <li
-            key={item.label}
+            key={item.labelKey}
             className="flex items-center justify-between rounded-xl bg-slate-50 px-3 py-2.5 text-sm"
           >
             <span className="flex items-center gap-2 text-slate-600">
               <CheckCircle2 className="h-4 w-4 text-blue-500" aria-hidden />
-              {item.label}
+              {t(item.labelKey)}
             </span>
-            <span className="font-semibold text-slate-800">{item.value}</span>
+            <span className="font-semibold text-slate-800">
+              {factorLevelLabel(item.value, tc)}
+            </span>
           </li>
         ))}
       </ul>
@@ -197,7 +226,23 @@ function FactorChecklist({ factors }: { factors: Evaluation["factors"] }) {
   );
 }
 
+function renderInterpolatedText(
+  text: string,
+  markers: Record<string, ReactNode>,
+): ReactNode[] {
+  const pattern = new RegExp(
+    `(${Object.keys(markers).map((key) => key.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join("|")})`,
+  );
+  return text.split(pattern).map((segment, index) => {
+    if (segment in markers) {
+      return <span key={index}>{markers[segment]}</span>;
+    }
+    return segment ? <span key={index}>{segment}</span> : null;
+  });
+}
+
 export function TimeValue() {
+  const { t, tc } = useToolTranslation("time-value");
   const [hourlyWage, setHourlyWage] = useLocalStorage(
     "tool:time-value:hourly-wage",
     "",
@@ -325,14 +370,19 @@ export function TimeValue() {
     evaluation && calculated ? Number(hourlyWage) : null;
   const isDelegate = evaluation?.recommendation === "Delegate";
 
+  const hoursMarker = "\u0000H\u0000";
+  const rateMarker = "\u0000R\u0000";
+  const costMarker = "\u0000C\u0000";
+  const recommendationMarker = "\u0000REC\u0000";
+
   return (
     <div className="space-y-6">
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-4 text-blue-500">The Numbers</p>
+        <p className="label-caption mb-4 text-blue-500">{t("sections.theNumbers")}</p>
         <div className="grid gap-4 sm:grid-cols-3">
           <div>
             <label htmlFor="hourly-wage" className="label-caption mb-2 block">
-              Hourly wage
+              {t("form.hourlyWage")}
             </label>
             <input
               id="hourly-wage"
@@ -340,7 +390,7 @@ export function TimeValue() {
               min={0}
               step="0.01"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={t("form.currencyPlaceholder")}
               value={hourlyWage}
               onChange={(e) => {
                 setHourlyWage(e.target.value);
@@ -351,7 +401,7 @@ export function TimeValue() {
 
           <div>
             <label htmlFor="task-cost" className="label-caption mb-2 block">
-              Professional cost
+              {t("form.professionalCost")}
             </label>
             <input
               id="task-cost"
@@ -359,7 +409,7 @@ export function TimeValue() {
               min={0}
               step="0.01"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={t("form.currencyPlaceholder")}
               value={taskCost}
               onChange={(e) => {
                 setTaskCost(e.target.value);
@@ -370,7 +420,7 @@ export function TimeValue() {
 
           <div>
             <label htmlFor="time-required" className="label-caption mb-2 block">
-              Time required (hours)
+              {t("form.timeRequired")}
             </label>
             <input
               id="time-required"
@@ -378,7 +428,7 @@ export function TimeValue() {
               min={0}
               step="0.25"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.0"
+              placeholder={t("form.hoursPlaceholder")}
               value={timeRequired}
               onChange={(e) => {
                 setTimeRequired(e.target.value);
@@ -390,11 +440,11 @@ export function TimeValue() {
       </div>
 
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-4 text-blue-500">Skill &amp; Risk</p>
+        <p className="label-caption mb-4 text-blue-500">{t("sections.skillRisk")}</p>
         <div className="grid gap-5 lg:grid-cols-2">
           <div>
             <label htmlFor="confidence" className="label-caption mb-2 block">
-              How confident are you in doing this yourself?
+              {t("form.confidenceQuestion")}
             </label>
             <select
               id="confidence"
@@ -405,9 +455,9 @@ export function TimeValue() {
                 invalidate();
               }}
             >
-              {CONFIDENCE_OPTIONS.map((opt) => (
-                <option key={opt.value} value={opt.value}>
-                  {opt.label}
+              {CONFIDENCE_LEVELS.map((value) => (
+                <option key={value} value={value}>
+                  {t(`confidence.${value}`)}
                 </option>
               ))}
             </select>
@@ -415,7 +465,7 @@ export function TimeValue() {
 
           <div>
             <label htmlFor="error-cost" className="label-caption mb-2 block">
-              Potential error / repair cost
+              {t("form.errorCost")}
             </label>
             <input
               id="error-cost"
@@ -423,7 +473,7 @@ export function TimeValue() {
               min={0}
               step="0.01"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={t("form.currencyPlaceholder")}
               value={errorCost}
               onChange={(e) => {
                 setErrorCost(e.target.value);
@@ -431,7 +481,7 @@ export function TimeValue() {
               }}
             />
             <p className="mt-1.5 text-xs text-slate-500">
-              What might it cost if things go wrong?
+              {t("form.errorCostHint")}
             </p>
           </div>
         </div>
@@ -439,10 +489,10 @@ export function TimeValue() {
         <div className="mt-5">
           <div className="mb-2 flex items-center justify-between">
             <label htmlFor="quality" className="label-caption">
-              Quality requirement
+              {t("form.qualityRequirement")}
             </label>
             <span className="rounded-full bg-blue-100 px-2.5 py-0.5 text-sm font-bold text-blue-700">
-              {qualityRequirement}/10
+              {t("form.qualityScore", { value: qualityRequirement })}
             </span>
           </div>
           <input
@@ -459,13 +509,13 @@ export function TimeValue() {
             className="h-3 w-full cursor-pointer accent-blue-500"
           />
           <div className="mt-1 flex justify-between text-xs text-slate-400">
-            <span>Good enough</span>
-            <span>Professional grade</span>
+            <span>{t("form.qualityGoodEnough")}</span>
+            <span>{t("form.qualityProfessionalGrade")}</span>
           </div>
           {qualityRequirement >= 9 && (
             <p className="mt-2 flex items-start gap-2 rounded-xl bg-amber-50 px-3 py-2 text-xs text-amber-800">
               <CircleAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden />
-              High quality bar — DIY is penalized unless confidence is high.
+              {t("form.qualityHighWarning")}
             </p>
           )}
         </div>
@@ -478,11 +528,11 @@ export function TimeValue() {
           disabled={!evaluation}
           onClick={handleEvaluate}
         >
-          Evaluate Decision
+          {t("actions.evaluate")}
         </button>
         {hasInput && (
           <button type="button" className="btn-secondary" onClick={handleClear}>
-            Reset
+            {tc("reset")}
           </button>
         )}
       </div>
@@ -491,7 +541,6 @@ export function TimeValue() {
         <div className="space-y-4">
           <CalculationSavePanel
             toolSlug="time-value"
-            toolName="Delegate or Do"
             saveName={saveName}
             onSaveNameChange={setSaveName}
             inputs={{
@@ -502,7 +551,10 @@ export function TimeValue() {
               qualityRequirement,
               errorCost,
             }}
-            resultSummary={`${evaluation.recommendation} · ${formatCurrency(recommendedCost ?? 0)}`}
+            resultSummary={t("resultSummary", {
+              recommendation: recommendationLabel(evaluation.recommendation, t),
+              cost: formatCurrency(recommendedCost ?? 0),
+            })}
           />
 
           <div
@@ -525,40 +577,42 @@ export function TimeValue() {
                     : "text-emerald-600"
                 }`}
               >
-                Final recommendation
+                {t("results.finalRecommendation")}
               </p>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl bg-white/70 px-4 py-3 text-center ring-1 ring-black/5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Calculated cost
+                  {t("results.calculatedCost")}
                 </p>
                 <p className="mt-1 font-mono text-xl font-bold text-slate-900">
                   {formatCurrency(recommendedCost ?? 0)}
                 </p>
                 <p className="mt-1 text-xs text-slate-400">
                   {evaluation.recommendation === "Delegate"
-                    ? "Professional quote"
-                    : "DIY time + risk"}
+                    ? t("results.professionalQuote")
+                    : t("results.diyTimeAndRisk")}
                 </p>
               </div>
 
               <div className="rounded-xl bg-white/70 px-4 py-3 text-center ring-1 ring-black/5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Confidence level
+                  {t("results.confidenceLevel")}
                 </p>
                 <p className="mt-1 text-xl font-bold capitalize text-slate-900">
-                  {confidence}
+                  {confidenceLevelLabel(confidence, tc)}
                 </p>
                 <p className="mt-1 text-xs text-slate-400">
-                  Complexity score {evaluation.complexityScore}/100
+                  {t("results.complexityScore", {
+                    score: evaluation.complexityScore,
+                  })}
                 </p>
               </div>
 
               <div className="rounded-xl bg-white/70 px-4 py-3 text-center ring-1 ring-black/5">
                 <p className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                  Final recommendation
+                  {t("results.finalRecommendation")}
                 </p>
                 <p
                   className={`mt-1 text-xl font-bold ${
@@ -567,7 +621,7 @@ export function TimeValue() {
                       : "text-emerald-700"
                   }`}
                 >
-                  {evaluation.recommendation}
+                  {recommendationLabel(evaluation.recommendation, t)}
                 </p>
               </div>
             </div>
@@ -577,20 +631,20 @@ export function TimeValue() {
                 <div className="mb-1 flex items-center justify-center gap-1.5 text-emerald-600">
                   <Clock className="h-4 w-4" aria-hidden />
                   <p className="text-xs font-semibold uppercase tracking-wider">
-                    Time saved
+                    {t("results.timeSaved")}
                   </p>
                 </div>
                 <p className="font-mono text-2xl font-bold text-emerald-900">
-                  {formatHours(hoursSaved)}
+                  {formatHours(hoursSaved, tc)}
                 </p>
                 <p className="mt-0.5 text-xs text-emerald-700/70">
-                  Reclaimed by not doing this yourself
+                  {t("results.reclaimedByNotDoingYourself")}
                 </p>
               </div>
             )}
 
             <p className="mx-auto mt-6 max-w-lg text-center text-sm leading-relaxed text-slate-700">
-              {evaluation.summary}
+              {t(`summaries.${evaluation.summaryKey}`)}
             </p>
           </div>
 
@@ -601,72 +655,93 @@ export function TimeValue() {
             hourlyRate > 0 && (
               <>
                 <p className="rounded-xl border border-blue-100 bg-blue-50/60 px-4 py-3 text-center text-sm leading-relaxed text-slate-600">
-                  By delegating this, you reclaim{" "}
-                  <span className="font-semibold text-slate-800">
-                    {formatHours(hoursSaved)}
-                  </span>
-                  . If your time is worth{" "}
-                  <span className="font-mono font-medium text-slate-700">
-                    {formatCurrency(hourlyRate)}
-                  </span>
-                  , this decision adds{" "}
-                  <span className="font-mono font-semibold text-blue-700">
-                    {formatCurrency(evaluation.opportunityCost)}
-                  </span>{" "}
-                  value to your personal productivity.
+                  {renderInterpolatedText(
+                    t("results.delegateProductivity", {
+                      hours: hoursMarker,
+                      hourlyRate: rateMarker,
+                      opportunityCost: costMarker,
+                    }),
+                    {
+                      [hoursMarker]: (
+                        <span className="font-semibold text-slate-800">
+                          {formatHours(hoursSaved, tc)}
+                        </span>
+                      ),
+                      [rateMarker]: (
+                        <span className="font-mono font-medium text-slate-700">
+                          {formatCurrency(hourlyRate)}
+                        </span>
+                      ),
+                      [costMarker]: (
+                        <span className="font-mono font-semibold text-blue-700">
+                          {formatCurrency(evaluation.opportunityCost)}
+                        </span>
+                      ),
+                    },
+                  )}
                 </p>
 
                 <div className="rounded-2xl bg-white px-5 py-4 shadow-md ring-1 ring-slate-100">
                   <div className="mb-3 flex items-center gap-2">
                     <ListChecks className="h-4 w-4 text-blue-500" aria-hidden />
-                    <p className="label-caption text-blue-500">Next step</p>
+                    <p className="label-caption text-blue-500">{t("results.nextStep")}</p>
                   </div>
                   <p className="text-sm font-medium text-slate-800">
-                    Since you decided to Delegate:
+                    {t("results.sinceYouDecidedDelegate")}
                   </p>
                   <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-sm text-slate-600">
-                    <li>Get 3 quotes.</li>
-                    <li>Verify references.</li>
-                    <li>Set a clear deadline.</li>
+                    <li>{t("results.nextSteps.getQuotes")}</li>
+                    <li>{t("results.nextSteps.verifyReferences")}</li>
+                    <li>{t("results.nextSteps.setDeadline")}</li>
                   </ol>
                 </div>
               </>
             )}
 
           <div className="rounded-2xl bg-white px-5 py-4 shadow-md">
-            <p className="label-caption mb-3">Cost breakdown</p>
+            <p className="label-caption mb-3">{t("results.costBreakdown")}</p>
             <div className="grid gap-2 text-sm sm:grid-cols-2">
               <div className="flex justify-between rounded-xl bg-slate-50 px-3 py-2">
-                <span className="text-slate-500">Your time (opportunity cost)</span>
+                <span className="text-slate-500">{t("results.yourTimeOpportunityCost")}</span>
                 <span className="font-mono font-medium">
                   {formatCurrency(evaluation.opportunityCost)}
                 </span>
               </div>
               <div className="flex justify-between rounded-xl bg-slate-50 px-3 py-2">
-                <span className="text-slate-500">Weighted error risk</span>
+                <span className="text-slate-500">{t("results.weightedErrorRisk")}</span>
                 <span className="font-mono font-medium">
                   {formatCurrency(evaluation.weightedErrorCost)}
                 </span>
               </div>
               <div className="flex justify-between rounded-xl bg-orange-50 px-3 py-2">
-                <span className="text-orange-700">DIY effective cost</span>
+                <span className="text-orange-700">{t("results.diyEffectiveCost")}</span>
                 <span className="font-mono font-semibold text-orange-800">
                   {formatCurrency(evaluation.diyEffectiveCost)}
                 </span>
               </div>
               <div className="flex justify-between rounded-xl bg-emerald-50 px-3 py-2">
-                <span className="text-emerald-700">Professional cost</span>
+                <span className="text-emerald-700">{t("results.professionalCostLabel")}</span>
                 <span className="font-mono font-semibold text-emerald-800">
                   {formatCurrency(evaluation.delegateCost)}
                 </span>
               </div>
             </div>
             <p className="mt-3 text-xs text-slate-400">
-              Pure math favors{" "}
-              <strong className="text-slate-600">
-                {evaluation.mathFavorsDIY ? "Do Yourself" : "Delegate"}
-              </strong>
-              . Final advice weighs quality, confidence, and hidden DIY costs.
+              {renderInterpolatedText(
+                `${t("results.pureMathFavors", {
+                  recommendation: recommendationMarker,
+                })} ${t("results.finalAdviceNote")}`,
+                {
+                  [recommendationMarker]: (
+                    <strong className="text-slate-600">
+                      {recommendationLabel(
+                        evaluation.mathFavorsDIY ? "Do Yourself" : "Delegate",
+                        t,
+                      )}
+                    </strong>
+                  ),
+                },
+              )}
             </p>
           </div>
 
@@ -674,7 +749,7 @@ export function TimeValue() {
         </div>
       ) : (
         <p className="text-center text-sm text-slate-400">
-          Fill in the numbers and skill assessment, then evaluate your decision.
+          {t("emptyState")}
         </p>
       )}
     </div>

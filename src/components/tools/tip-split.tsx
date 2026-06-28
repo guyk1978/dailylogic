@@ -5,16 +5,13 @@ import { Sparkles } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
 import { useLocalStorage } from "@/hooks/use-local-storage";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
 
 export type ServiceType = "waiter" | "courier" | "other";
 export type RatingLevel = 0 | 1 | 2;
 
-const SERVICE_OPTIONS: { value: ServiceType; label: string }[] = [
-  { value: "waiter", label: "Waiter" },
-  { value: "courier", label: "Food Courier" },
-  { value: "other", label: "Other / Local Service" },
-];
+type TranslateFn = (key: string, options?: Record<string, unknown>) => string;
 
 function formatCurrency(value: number): string {
   return value.toLocaleString(undefined, {
@@ -30,6 +27,7 @@ function clampTip(value: number): number {
 }
 
 function computeSuggestedTip(
+  t: TranslateFn,
   serviceType: ServiceType,
   waitTime: RatingLevel,
   attitude: RatingLevel,
@@ -50,6 +48,7 @@ function computeSuggestedTip(
 
   const percent = clampTip(base);
   const explanation = buildExplanation(
+    t,
     percent,
     waitTime,
     attitude,
@@ -61,50 +60,80 @@ function computeSuggestedTip(
 }
 
 function buildExplanation(
+  t: TranslateFn,
   percent: number,
   waitTime: RatingLevel,
   attitude: RatingLevel,
   issueEncountered: boolean,
   serviceType: ServiceType,
 ): string {
-  const negatives: string[] = [];
-  const positives: string[] = [];
+  const negativeKeys: string[] = [];
+  const positiveKeys: string[] = [];
+  let waitNegativeKey: string | null = null;
 
-  if (waitTime === 0) negatives.push("long wait time");
-  else if (waitTime === 1) negatives.push("average wait time");
-  else positives.push("quick service");
+  if (waitTime === 0) {
+    waitNegativeKey = "explanation.fragments.negative.longWaitTime";
+    negativeKeys.push(waitNegativeKey);
+  } else if (waitTime === 1) {
+    waitNegativeKey = "explanation.fragments.negative.averageWaitTime";
+    negativeKeys.push(waitNegativeKey);
+  } else {
+    positiveKeys.push("explanation.fragments.positive.quickService");
+  }
 
-  if (attitude === 0) negatives.push("unprofessional service");
-  else if (attitude === 1) negatives.push("average attitude");
-  else positives.push("friendly service");
+  if (attitude === 0) {
+    negativeKeys.push("explanation.fragments.negative.unprofessionalService");
+  } else if (attitude === 1) {
+    negativeKeys.push("explanation.fragments.negative.averageAttitude");
+  } else {
+    positiveKeys.push("explanation.fragments.positive.friendlyService");
+  }
 
-  if (issueEncountered) negatives.push("an order issue");
+  if (issueEncountered) {
+    negativeKeys.push("explanation.fragments.negative.orderIssue");
+  }
 
   const serviceNote =
     serviceType === "courier"
-      ? " (adjusted for delivery)"
+      ? t("explanation.serviceNotes.courier")
       : serviceType === "other"
-        ? " (local service)"
+        ? t("explanation.serviceNotes.other")
         : "";
 
-  if (
-    negatives.some((n) => n.includes("wait")) &&
-    attitude === 2 &&
-    !issueEncountered
-  ) {
-    const waitIssue = negatives.find((n) => n.includes("wait")) ?? negatives[0];
-    return `Suggested ${percent}% due to ${waitIssue}, despite friendly service${serviceNote}.`;
+  const joinAnd = t("explanation.joinAnd");
+  const negatives = negativeKeys.map((key) => t(key));
+  const positives = positiveKeys.map((key) => t(key));
+
+  if (waitNegativeKey && attitude === 2 && !issueEncountered) {
+    return t("explanation.templates.waitDespiteFriendly", {
+      percent,
+      waitIssue: t(waitNegativeKey),
+      serviceNote,
+    });
   }
 
   if (negatives.length > 0 && positives.length > 0) {
-    return `Suggested ${percent}% due to ${negatives.join(" and ")}, despite ${positives.join(" and ")}${serviceNote}.`;
+    return t("explanation.templates.mixedDespite", {
+      percent,
+      negatives: negatives.join(joinAnd),
+      positives: positives.join(joinAnd),
+      serviceNote,
+    });
   }
 
   if (negatives.length > 0) {
-    return `Suggested ${percent}% due to ${negatives.join(" and ")}${serviceNote}.`;
+    return t("explanation.templates.negativeOnly", {
+      percent,
+      negatives: negatives.join(joinAnd),
+      serviceNote,
+    });
   }
 
-  return `Suggested ${percent}% for ${positives.join(" and ")}${serviceNote}.`;
+  return t("explanation.templates.positiveOnly", {
+    percent,
+    positives: positives.join(joinAnd),
+    serviceNote,
+  });
 }
 
 function RatingSlider({
@@ -155,6 +184,7 @@ function RatingSlider({
 }
 
 export function TipSplit() {
+  const { t, tc } = useToolTranslation("tip-split");
   const [totalAmount, setTotalAmount] = useLocalStorage(
     "tool:tip-split:total-amount",
     "",
@@ -183,9 +213,20 @@ export function TipSplit() {
   const [manualOverride, setManualOverride] = useState(false);
   const [saveName, setSaveName] = useState("");
 
+  const serviceOptions = useMemo(
+    () =>
+      [
+        { value: "waiter" as const, label: t("serviceType.waiter") },
+        { value: "courier" as const, label: t("serviceType.courier") },
+        { value: "other" as const, label: t("serviceType.other") },
+      ] satisfies { value: ServiceType; label: string }[],
+    [t],
+  );
+
   const suggestion = useMemo(
-    () => computeSuggestedTip(serviceType, waitTime, attitude, issueEncountered),
-    [serviceType, waitTime, attitude, issueEncountered],
+    () =>
+      computeSuggestedTip(t, serviceType, waitTime, attitude, issueEncountered),
+    [t, serviceType, waitTime, attitude, issueEncountered],
   );
 
   useEffect(() => {
@@ -274,11 +315,11 @@ export function TipSplit() {
   return (
     <div className="space-y-6">
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-4 text-blue-500">The Bill</p>
+        <p className="label-caption mb-4 text-blue-500">{t("sections.theBill")}</p>
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="total-amount" className="label-caption mb-2 block">
-              Total amount
+              {t("form.totalAmount")}
             </label>
             <input
               id="total-amount"
@@ -287,7 +328,7 @@ export function TipSplit() {
               step="0.01"
               inputMode="decimal"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={t("form.currencyPlaceholder")}
               value={totalAmount}
               onChange={(e) => setTotalAmount(e.target.value)}
             />
@@ -295,7 +336,7 @@ export function TipSplit() {
 
           <div>
             <label htmlFor="people-count" className="label-caption mb-2 block">
-              Number of people
+              {t("form.numberOfPeople")}
             </label>
             <input
               id="people-count"
@@ -316,9 +357,11 @@ export function TipSplit() {
       </div>
 
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-4 text-blue-500">Service context</p>
+        <p className="label-caption mb-4 text-blue-500">
+          {t("sections.serviceContext")}
+        </p>
         <label htmlFor="service-type" className="label-caption mb-2 block">
-          Service type
+          {t("form.serviceType")}
         </label>
         <select
           id="service-type"
@@ -329,7 +372,7 @@ export function TipSplit() {
             setManualOverride(false);
           }}
         >
-          {SERVICE_OPTIONS.map((opt) => (
+          {serviceOptions.map((opt) => (
             <option key={opt.value} value={opt.value}>
               {opt.label}
             </option>
@@ -338,14 +381,16 @@ export function TipSplit() {
       </div>
 
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-5 text-blue-500">Rate your experience</p>
+        <p className="label-caption mb-5 text-blue-500">
+          {t("sections.rateExperience")}
+        </p>
         <div className="space-y-6">
           <RatingSlider
             id="wait-time"
-            label="Wait / delivery time"
-            lowLabel="Poor"
-            midLabel="Average"
-            highLabel="Good"
+            label={t("rating.waitTime")}
+            lowLabel={t("rating.poor")}
+            midLabel={t("rating.average")}
+            highLabel={t("rating.good")}
             value={waitTime}
             onChange={(v) => {
               onRatingChange(setWaitTime, v);
@@ -355,10 +400,10 @@ export function TipSplit() {
 
           <RatingSlider
             id="attitude"
-            label="Service attitude"
-            lowLabel="Unprofessional"
-            midLabel="Average"
-            highLabel="Friendly"
+            label={t("rating.attitude")}
+            lowLabel={t("rating.unprofessional")}
+            midLabel={t("rating.average")}
+            highLabel={t("rating.friendly")}
             value={attitude}
             onChange={(v) => {
               onRatingChange(setAttitude, v);
@@ -378,11 +423,9 @@ export function TipSplit() {
             />
             <span>
               <span className="block text-sm font-medium text-slate-800">
-                Issue encountered
+                {t("issue.label")}
               </span>
-              <span className="text-xs text-slate-500">
-                e.g. late delivery, wrong item, missing items
-              </span>
+              <span className="text-xs text-slate-500">{t("issue.hint")}</span>
             </span>
           </label>
         </div>
@@ -391,13 +434,13 @@ export function TipSplit() {
       <div className="rounded-2xl bg-white p-5 shadow-md">
         <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
           <label htmlFor="tip-percent" className="label-caption">
-            Tip percentage
+            {t("tip.percentage")}
           </label>
           <div className="flex items-center gap-2">
             {!manualOverride && (
               <span className="inline-flex items-center gap-1 rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
                 <Sparkles className="h-3 w-3" aria-hidden />
-                Smart suggested
+                {t("tip.smartSuggested")}
               </span>
             )}
             <input
@@ -415,7 +458,7 @@ export function TipSplit() {
                 );
                 setManualOverride(true);
               }}
-              aria-label="Tip percentage"
+              aria-label={t("tip.percentageAriaLabel")}
             />
             <span className="text-sm font-medium text-slate-500">%</span>
           </div>
@@ -439,9 +482,9 @@ export function TipSplit() {
         />
 
         <div className="mt-3 flex justify-between text-xs text-slate-400">
-          <span>0%</span>
-          <span>15%</span>
-          <span>30%</span>
+          <span>{t("tip.scaleLabels.zero")}</span>
+          <span>{t("tip.scaleLabels.mid")}</span>
+          <span>{t("tip.scaleLabels.max")}</span>
         </div>
 
         <p className="mt-4 rounded-xl bg-blue-50 px-3 py-2.5 text-sm leading-relaxed text-blue-800/90">
@@ -454,14 +497,14 @@ export function TipSplit() {
             className="mt-3 text-sm font-medium text-blue-600 hover:text-blue-700"
             onClick={applySuggestion}
           >
-            Reset to suggested {suggestion.percent}%
+            {t("tip.resetToSuggested", { percent: suggestion.percent })}
           </button>
         )}
       </div>
 
       {hasInput && (
         <button type="button" className="btn-secondary" onClick={handleClear}>
-          Reset
+          {tc("reset")}
         </button>
       )}
 
@@ -469,7 +512,6 @@ export function TipSplit() {
         <div className="space-y-4">
           <CalculationSavePanel
             toolSlug="tip-split"
-            toolName="Smart Tip Assistant"
             saveName={saveName}
             onSaveNameChange={setSaveName}
             inputs={{
@@ -482,33 +524,43 @@ export function TipSplit() {
               issueEncountered,
               manualOverride,
             }}
-            resultSummary={`${formatCurrency(result.perPerson)} per person · ${clampedPeople} people`}
+            resultSummary={t("resultSummary", {
+              amount: formatCurrency(result.perPerson),
+              count: clampedPeople,
+            })}
           />
 
           <div className="rounded-2xl border-2 border-blue-300 bg-blue-50 px-6 py-8 text-center shadow-md">
-            <p className="label-caption mb-2 text-blue-600">Amount per person</p>
+            <p className="label-caption mb-2 text-blue-600">
+              {t("results.amountPerPerson")}
+            </p>
             <p className="font-mono text-4xl font-bold text-blue-600 sm:text-5xl">
               {formatCurrency(result.perPerson)}
             </p>
             <p className="mt-2 text-sm text-blue-700/70">
-              {clampedPeople} {clampedPeople === 1 ? "person" : "people"} ·{" "}
-              {clampedTip}% tip
+              {t("results.perPersonSummary", {
+                count: clampedPeople,
+                peopleLabel: t("results.person", { count: clampedPeople }),
+                tipPercent: clampedTip,
+              })}
             </p>
           </div>
 
           <div className="rounded-2xl bg-white px-5 py-4 shadow-md">
             <div className="flex items-center justify-between text-sm text-slate-500">
-              <span>Subtotal</span>
+              <span>{t("results.subtotal")}</span>
               <span className="font-mono">
                 {formatCurrency(Number(totalAmount))}
               </span>
             </div>
             <div className="mt-2 flex items-center justify-between text-sm text-slate-500">
-              <span>Total tip ({clampedTip}%)</span>
+              <span>
+                {t("results.totalTip", { percent: clampedTip })}
+              </span>
               <span className="font-mono">{formatCurrency(result.tipAmount)}</span>
             </div>
             <div className="mt-3 flex items-center justify-between border-t border-slate-100 pt-3 text-sm font-medium text-slate-700">
-              <span>Total bill</span>
+              <span>{t("results.totalBill")}</span>
               <span className="font-mono">
                 {formatCurrency(result.totalWithTip)}
               </span>
@@ -516,10 +568,7 @@ export function TipSplit() {
           </div>
         </div>
       ) : (
-        <p className="text-center text-sm text-slate-400">
-          Enter a bill total — split updates automatically as you adjust your
-          tip.
-        </p>
+        <p className="text-center text-sm text-slate-400">{t("emptyState")}</p>
       )}
     </div>
   );

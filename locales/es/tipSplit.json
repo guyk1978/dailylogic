@@ -1,0 +1,84 @@
+{
+  "toolName": "Asistente inteligente de propinas",
+  "sections": {
+    "theBill": "La cuenta",
+    "serviceContext": "Contexto del servicio",
+    "rateExperience": "Califica tu experiencia",
+    "tipSection": "Propina"
+  },
+  "form": {
+    "totalAmount": "Importe total",
+    "numberOfPeople": "Número de personas",
+    "serviceType": "Tipo de servicio",
+    "currencyPlaceholder": "0.00"
+  },
+  "serviceType": {
+    "waiter": "Camarero",
+    "courier": "Repartidor de comida",
+    "other": "Otro / Servicio local"
+  },
+  "rating": {
+    "waitTime": "Tiempo de espera / entrega",
+    "attitude": "Actitud del servicio",
+    "poor": "Malo",
+    "average": "Regular",
+    "good": "Bueno",
+    "unprofessional": "Poco profesional",
+    "friendly": "Amable"
+  },
+  "issue": {
+    "label": "Problema encontrado",
+    "hint": "p. ej. entrega tardía, artículo incorrecto, artículos faltantes"
+  },
+  "tip": {
+    "percentage": "Porcentaje de propina",
+    "percentageAriaLabel": "Porcentaje de propina",
+    "smartSuggested": "Sugerencia inteligente",
+    "resetToSuggested": "Restablecer a la sugerencia del {{percent}}%",
+    "scaleLabels": {
+      "zero": "0%",
+      "mid": "15%",
+      "max": "30%"
+    }
+  },
+  "explanation": {
+    "fragments": {
+      "negative": {
+        "longWaitTime": "tiempo de espera largo",
+        "averageWaitTime": "tiempo de espera promedio",
+        "unprofessionalService": "servicio poco profesional",
+        "averageAttitude": "actitud regular",
+        "orderIssue": "un problema con el pedido"
+      },
+      "positive": {
+        "quickService": "servicio rápido",
+        "friendlyService": "servicio amable"
+      }
+    },
+    "serviceNotes": {
+      "courier": " (ajustado para entrega)",
+      "other": " (servicio local)"
+    },
+    "templates": {
+      "waitDespiteFriendly": "Se sugiere {{percent}}% debido a {{waitIssue}}, a pesar del servicio amable{{serviceNote}}.",
+      "mixedDespite": "Se sugiere {{percent}}% debido a {{negatives}}, a pesar de {{positives}}{{serviceNote}}.",
+      "negativeOnly": "Se sugiere {{percent}}% debido a {{negatives}}{{serviceNote}}.",
+      "positiveOnly": "Se sugiere {{percent}}% por {{positives}}{{serviceNote}}."
+    },
+    "joinAnd": " y "
+  },
+  "actions": {
+    "reset": "Restablecer"
+  },
+  "results": {
+    "amountPerPerson": "Importe por persona",
+    "person_one": "persona",
+    "person_other": "personas",
+    "perPersonSummary": "{{count}} {{peopleLabel}} · {{tipPercent}}% de propina",
+    "subtotal": "Subtotal",
+    "totalTip": "Propina total ({{percent}}%)",
+    "totalBill": "Cuenta total"
+  },
+  "emptyState": "Introduce el total de la cuenta — la división se actualiza automáticamente al ajustar la propina.",
+  "resultSummary": "{{amount}} por persona · {{count}} personas"
+}

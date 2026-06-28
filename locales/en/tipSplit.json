@@ -1,0 +1,84 @@
+{
+  "toolName": "Smart Tip Assistant",
+  "sections": {
+    "theBill": "The Bill",
+    "serviceContext": "Service context",
+    "rateExperience": "Rate your experience",
+    "tipSection": "Tip"
+  },
+  "form": {
+    "totalAmount": "Total amount",
+    "numberOfPeople": "Number of people",
+    "serviceType": "Service type",
+    "currencyPlaceholder": "0.00"
+  },
+  "serviceType": {
+    "waiter": "Waiter",
+    "courier": "Food Courier",
+    "other": "Other / Local Service"
+  },
+  "rating": {
+    "waitTime": "Wait / delivery time",
+    "attitude": "Service attitude",
+    "poor": "Poor",
+    "average": "Average",
+    "good": "Good",
+    "unprofessional": "Unprofessional",
+    "friendly": "Friendly"
+  },
+  "issue": {
+    "label": "Issue encountered",
+    "hint": "e.g. late delivery, wrong item, missing items"
+  },
+  "tip": {
+    "percentage": "Tip percentage",
+    "percentageAriaLabel": "Tip percentage",
+    "smartSuggested": "Smart suggested",
+    "resetToSuggested": "Reset to suggested {{percent}}%",
+    "scaleLabels": {
+      "zero": "0%",
+      "mid": "15%",
+      "max": "30%"
+    }
+  },
+  "explanation": {
+    "fragments": {
+      "negative": {
+        "longWaitTime": "long wait time",
+        "averageWaitTime": "average wait time",
+        "unprofessionalService": "unprofessional service",
+        "averageAttitude": "average attitude",
+        "orderIssue": "an order issue"
+      },
+      "positive": {
+        "quickService": "quick service",
+        "friendlyService": "friendly service"
+      }
+    },
+    "serviceNotes": {
+      "courier": " (adjusted for delivery)",
+      "other": " (local service)"
+    },
+    "templates": {
+      "waitDespiteFriendly": "Suggested {{percent}}% due to {{waitIssue}}, despite friendly service{{serviceNote}}.",
+      "mixedDespite": "Suggested {{percent}}% due to {{negatives}}, despite {{positives}}{{serviceNote}}.",
+      "negativeOnly": "Suggested {{percent}}% due to {{negatives}}{{serviceNote}}.",
+      "positiveOnly": "Suggested {{percent}}% for {{positives}}{{serviceNote}}."
+    },
+    "joinAnd": " and "
+  },
+  "actions": {
+    "reset": "Reset"
+  },
+  "results": {
+    "amountPerPerson": "Amount per person",
+    "person_one": "person",
+    "person_other": "people",
+    "perPersonSummary": "{{count}} {{peopleLabel}} · {{tipPercent}}% tip",
+    "subtotal": "Subtotal",
+    "totalTip": "Total tip ({{percent}}%)",
+    "totalBill": "Total bill"
+  },
+  "emptyState": "Enter a bill total — split updates automatically as you adjust your tip.",
+  "resultSummary": "{{amount}} per person · {{count}} people"
+}

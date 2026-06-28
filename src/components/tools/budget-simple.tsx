@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useState } from "react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { useToolTranslation } from "@/hooks/use-tool-translation";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
 
@@ -13,55 +14,44 @@ export interface ExpenseCategory {
   name: string;
   amount: string;
   priority: ExpensePriority;
+  starterKey?: string;
 }
 
 type ExpenseAdjustments = Record<string, number>;
 
-const PRIORITY_META: Record<
+const PRIORITY_STYLES: Record<
   ExpensePriority,
-  { label: string; color: string; bar: string; description: string }
+  { color: string; bar: string }
 > = {
-  essential: {
-    label: "Essential",
-    color: "text-blue-600",
-    bar: "bg-blue-500",
-    description: "Committed — protect these first",
-  },
-  flexible: {
-    label: "Flexible",
-    color: "text-amber-600",
-    bar: "bg-amber-500",
-    description: "Your call — trim when needed",
-  },
-  luxury: {
-    label: "Luxury",
-    color: "text-rose-600",
-    bar: "bg-rose-500",
-    description: "Optional — adjust freely",
-  },
+  essential: { color: "text-blue-600", bar: "bg-blue-500" },
+  flexible: { color: "text-amber-600", bar: "bg-amber-500" },
+  luxury: { color: "text-rose-600", bar: "bg-rose-500" },
 };
 
-const STARTER_CATEGORIES: Omit<ExpenseCategory, "id" | "amount">[] = [
-  { name: "Housing", priority: "essential" },
-  { name: "Food", priority: "essential" },
-  { name: "Transport", priority: "essential" },
-  { name: "Children", priority: "essential" },
-  { name: "Pets", priority: "flexible" },
-  { name: "Entertainment", priority: "luxury" },
+const STARTER_CATEGORIES: { starterKey: string; priority: ExpensePriority }[] = [
+  { starterKey: "housing", priority: "essential" },
+  { starterKey: "food", priority: "essential" },
+  { starterKey: "transport", priority: "essential" },
+  { starterKey: "children", priority: "essential" },
+  { starterKey: "pets", priority: "flexible" },
+  { starterKey: "entertainment", priority: "luxury" },
 ];
 
 function createExpense(
-  partial: Partial<ExpenseCategory> & { name: string; priority: ExpensePriority },
+  partial: Partial<ExpenseCategory> & { priority: ExpensePriority },
 ): ExpenseCategory {
   return {
     id: crypto.randomUUID(),
+    name: partial.name ?? "",
     amount: "",
     ...partial,
   };
 }
 
 function createDefaultExpenses(): ExpenseCategory[] {
-  return STARTER_CATEGORIES.map((cat) => createExpense(cat));
+  return STARTER_CATEGORIES.map((cat) =>
+    createExpense({ starterKey: cat.starterKey, priority: cat.priority }),
+  );
 }
 
 function formatCurrency(value: number): string {
@@ -76,6 +66,16 @@ function formatCurrency(value: number): string {
 function parseAmount(value: string): number {
   const n = Number(value);
   return Number.isFinite(n) && n >= 0 ? n : 0;
+}
+
+function getCategoryDisplayName(
+  item: ExpenseCategory,
+  translate: (key: string) => string,
+): string {
+  if (item.starterKey) {
+    return translate(`starterCategories.${item.starterKey}`);
+  }
+  return item.name;
 }
 
 type BudgetPlanResult = {
@@ -150,11 +150,13 @@ function DecisionBoard({
   expenses: AdjustedExpense[];
   totals: Record<ExpensePriority, number>;
 }) {
+  const { t } = useToolTranslation("budget-simple");
+
   return (
     <div className="grid gap-4 lg:grid-cols-3">
       {(["essential", "flexible", "luxury"] as ExpensePriority[]).map((priority) => {
         const items = expenses.filter((item) => item.priority === priority);
-        const meta = PRIORITY_META[priority];
+        const styles = PRIORITY_STYLES[priority];
 
         return (
           <div
@@ -162,15 +164,19 @@ function DecisionBoard({
             className="rounded-2xl bg-white p-5 shadow-md ring-1 ring-slate-100"
           >
             <div className="mb-4">
-              <p className={`text-sm font-semibold ${meta.color}`}>{meta.label}</p>
-              <p className="mt-0.5 text-xs text-slate-500">{meta.description}</p>
+              <p className={`text-sm font-semibold ${styles.color}`}>
+                {t(`priorities.${priority}.label`)}
+              </p>
+              <p className="mt-0.5 text-xs text-slate-500">
+                {t(`priorities.${priority}.description`)}
+              </p>
               <p className="mt-2 font-mono text-xl font-bold text-slate-900">
                 {formatCurrency(totals[priority])}
               </p>
             </div>
 
             {items.length === 0 ? (
-              <p className="text-xs text-slate-400">No categories yet</p>
+              <p className="text-xs text-slate-400">{t("decisionBoard.empty")}</p>
             ) : (
               <ul className="space-y-2">
                 {items.map((item) => (
@@ -202,7 +208,7 @@ function DecisionBoard({
 
             {priority === "essential" && (
               <p className="mt-3 text-xs text-slate-400">
-                Essentials are locked in this plan.
+                {t("decisionBoard.essentialsLocked")}
               </p>
             )}
           </div>
@@ -228,6 +234,8 @@ function CloseTheGapSection({
   adjustments: ExpenseAdjustments;
   onAdjust: (id: string, reductionPercent: number) => void;
 }) {
+  const { t } = useToolTranslation("budget-simple");
+
   const { totalCuts, gapClosed, gapRemaining, coveredPercent } = useMemo(() => {
     let cuts = 0;
     for (const item of reducible) {
@@ -246,11 +254,8 @@ function CloseTheGapSection({
   if (reducible.length === 0) {
     return (
       <div className="rounded-2xl border border-rose-200 bg-rose-50 p-5 shadow-md">
-        <p className="label-caption mb-2 text-rose-600">Close the Gap</p>
-        <p className="text-sm text-rose-800">
-          No Flexible or Luxury categories to adjust. Add categories or revisit
-          your savings goal and safety buffer.
-        </p>
+        <p className="label-caption mb-2 text-rose-600">{t("closeGap.caption")}</p>
+        <p className="text-sm text-rose-800">{t("closeGap.noCategories")}</p>
       </div>
     );
   }
@@ -259,14 +264,12 @@ function CloseTheGapSection({
     <div className="rounded-2xl border border-amber-200 bg-white p-5 shadow-md sm:p-6">
       <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
         <div>
-          <p className="label-caption text-amber-700">Close the Gap</p>
-          <p className="mt-1 text-sm text-slate-600">
-            Adjust Flexible and Luxury spending to cover your shortfall.
-          </p>
+          <p className="label-caption text-amber-700">{t("closeGap.caption")}</p>
+          <p className="mt-1 text-sm text-slate-600">{t("closeGap.description")}</p>
         </div>
         <div className="text-right">
           <p className="text-xs font-medium uppercase tracking-wider text-slate-500">
-            Gap covered
+            {t("closeGap.gapCovered")}
           </p>
           <p className="font-mono text-lg font-bold text-emerald-600">
             {formatCurrency(gapClosed)} / {formatCurrency(gap)}
@@ -276,8 +279,14 @@ function CloseTheGapSection({
 
       <div className="mb-6">
         <div className="mb-2 flex justify-between text-xs text-slate-500">
-          <span>{coveredPercent.toFixed(0)}% of gap addressed</span>
-          <span>{formatCurrency(gapRemaining)} remaining</span>
+          <span>
+            {t("closeGap.percentAddressed", {
+              percent: coveredPercent.toFixed(0),
+            })}
+          </span>
+          <span>
+            {t("closeGap.remaining", { amount: formatCurrency(gapRemaining) })}
+          </span>
         </div>
         <div className="h-3 overflow-hidden rounded-full bg-slate-100">
           <div
@@ -301,8 +310,8 @@ function CloseTheGapSection({
               <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
                 <div>
                   <p className="font-semibold text-slate-900">{item.name}</p>
-                  <p className={`text-xs ${PRIORITY_META[item.priority].color}`}>
-                    {PRIORITY_META[item.priority].label}
+                  <p className={`text-xs ${PRIORITY_STYLES[item.priority].color}`}>
+                    {t(`priorities.${item.priority}.label`)}
                   </p>
                 </div>
                 <div className="text-right text-sm">
@@ -319,7 +328,7 @@ function CloseTheGapSection({
                 htmlFor={`adjust-${item.id}`}
                 className="label-caption mb-2 block"
               >
-                Adjust reduction: {reduction}%
+                {t("closeGap.adjustReduction", { percent: reduction })}
               </label>
               <input
                 id={`adjust-${item.id}`}
@@ -332,11 +341,7 @@ function CloseTheGapSection({
                 className="h-3 w-full cursor-pointer accent-amber-500"
               />
               <p className="mt-2 text-xs text-slate-500">
-                Frees up{" "}
-                <span className="font-mono font-medium text-emerald-600">
-                  {formatCurrency(cut)}
-                </span>{" "}
-                toward your gap
+                {t("closeGap.freesUp", { amount: formatCurrency(cut) })}
               </p>
             </li>
           );
@@ -345,8 +350,7 @@ function CloseTheGapSection({
 
       {gapRemaining <= 0 && totalCuts > 0 && (
         <p className="mt-4 rounded-xl bg-emerald-50 px-4 py-3 text-sm font-medium text-emerald-800">
-          Your adjustments fully cover the gap. Apply these cuts to hit your
-          savings goal and safety buffer.
+          {t("closeGap.fullyCovered")}
         </p>
       )}
     </div>
@@ -354,6 +358,7 @@ function CloseTheGapSection({
 }
 
 export function BudgetPlanner() {
+  const { t, tc } = useToolTranslation("budget-simple");
   const [monthlyIncome, setMonthlyIncome] = useLocalStorage(
     "tool:budget-planner:income",
     "",
@@ -392,6 +397,7 @@ export function BudgetPlanner() {
 
     const parsed = expenses.map((item) => ({
       ...item,
+      name: getCategoryDisplayName(item, t),
       parsedAmount: parseAmount(item.amount),
     }));
 
@@ -429,7 +435,7 @@ export function BudgetPlanner() {
       parsed,
       reducible,
     } satisfies BudgetPlanResult;
-  }, [monthlyIncome, goalSavings, safetyBuffer, expenses]);
+  }, [monthlyIncome, goalSavings, safetyBuffer, expenses, t]);
 
   const displayPlan = useMemo(() => {
     if (!result) return null;
@@ -446,7 +452,7 @@ export function BudgetPlanner() {
       } else if (entry.inputs.fixedExpenses !== undefined) {
         setExpenses([
           createExpense({
-            name: "Fixed Expenses",
+            name: t("legacy.fixedExpenses"),
             priority: "essential",
             amount: String(entry.inputs.fixedExpenses),
           }),
@@ -458,7 +464,7 @@ export function BudgetPlanner() {
       setCalculated(true);
       setSaveName(entry.name);
     },
-    [setMonthlyIncome, setGoalSavings, setSafetyBuffer, setExpenses],
+    [setMonthlyIncome, setGoalSavings, setSafetyBuffer, setExpenses, t],
   );
 
   useCalculationRestore("budget-simple", handleRestore);
@@ -474,7 +480,7 @@ export function BudgetPlanner() {
   const addCategory = () => {
     setExpenses((prev) => [
       ...prev,
-      createExpense({ name: "Custom", priority: "flexible" }),
+      createExpense({ name: tc("custom"), priority: "flexible" }),
     ]);
     setCalculated(false);
     setAdjustments({});
@@ -516,20 +522,22 @@ export function BudgetPlanner() {
     monthlyIncome !== "" ||
     goalSavings !== "" ||
     safetyBuffer !== "" ||
-    expenses.some((item) => item.amount !== "" || item.name !== "Custom");
+    expenses.some(
+      (item) => item.amount !== "" || item.name !== "" || item.starterKey,
+    );
 
   if (!isHydrated) {
-    return <p className="text-sm text-slate-500">Loading budget planner…</p>;
+    return <p className="text-sm text-slate-500">{t("loading")}</p>;
   }
 
   return (
     <div className="space-y-6">
       <div className="rounded-2xl bg-white p-5 shadow-md">
-        <p className="label-caption mb-4 text-blue-500">Setup</p>
+        <p className="label-caption mb-4 text-blue-500">{t("setup.caption")}</p>
         <div className="grid gap-5 sm:grid-cols-3">
           <div>
             <label htmlFor="monthly-income" className="label-caption mb-2 block">
-              Monthly Income
+              {t("setup.monthlyIncome")}
             </label>
             <input
               id="monthly-income"
@@ -538,7 +546,7 @@ export function BudgetPlanner() {
               step="0.01"
               inputMode="decimal"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={tc("placeholderDecimal")}
               value={monthlyIncome}
               onChange={(e) => {
                 setMonthlyIncome(e.target.value);
@@ -549,7 +557,7 @@ export function BudgetPlanner() {
 
           <div>
             <label htmlFor="goal-savings" className="label-caption mb-2 block">
-              Savings Goal
+              {t("setup.savingsGoal")}
             </label>
             <input
               id="goal-savings"
@@ -558,7 +566,7 @@ export function BudgetPlanner() {
               step="0.01"
               inputMode="decimal"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="0.00"
+              placeholder={tc("placeholderDecimal")}
               value={goalSavings}
               onChange={(e) => {
                 setGoalSavings(e.target.value);
@@ -569,7 +577,7 @@ export function BudgetPlanner() {
 
           <div>
             <label htmlFor="safety-buffer" className="label-caption mb-2 block">
-              Monthly Safety Buffer
+              {t("setup.safetyBuffer")}
             </label>
             <input
               id="safety-buffer"
@@ -578,7 +586,7 @@ export function BudgetPlanner() {
               step="0.01"
               inputMode="decimal"
               className="input-field py-3.5 font-mono text-base"
-              placeholder="Min. in checking"
+              placeholder={t("setup.safetyBufferPlaceholder")}
               value={safetyBuffer}
               onChange={(e) => {
                 setSafetyBuffer(e.target.value);
@@ -586,7 +594,7 @@ export function BudgetPlanner() {
               }}
             />
             <p className="mt-1.5 text-xs text-slate-500">
-              Required amount to keep in your checking account.
+              {t("setup.safetyBufferHint")}
             </p>
           </div>
         </div>
@@ -594,13 +602,13 @@ export function BudgetPlanner() {
 
       <div className="space-y-3">
         <div className="flex items-center justify-between gap-3">
-          <p className="label-caption">Expense Categories</p>
+          <p className="label-caption">{t("expenses.caption")}</p>
           <button
             type="button"
             className="btn-secondary py-2.5"
             onClick={addCategory}
           >
-            + Add Category
+            {t("expenses.addCategory")}
           </button>
         </div>
 
@@ -616,15 +624,22 @@ export function BudgetPlanner() {
                     htmlFor={`name-${item.id}`}
                     className="label-caption mb-2 block"
                   >
-                    Category
+                    {tc("category")}
                   </label>
                   <input
                     id={`name-${item.id}`}
                     type="text"
                     className="input-field py-3 text-base"
-                    value={item.name}
+                    value={
+                      item.starterKey
+                        ? getCategoryDisplayName(item, t)
+                        : item.name
+                    }
                     onChange={(e) =>
-                      updateExpense(item.id, { name: e.target.value })
+                      updateExpense(item.id, {
+                        name: e.target.value,
+                        starterKey: undefined,
+                      })
                     }
                   />
                 </div>
@@ -634,7 +649,7 @@ export function BudgetPlanner() {
                     htmlFor={`amount-${item.id}`}
                     className="label-caption mb-2 block"
                   >
-                    Amount
+                    {tc("amount")}
                   </label>
                   <input
                     id={`amount-${item.id}`}
@@ -643,7 +658,7 @@ export function BudgetPlanner() {
                     step="0.01"
                     inputMode="decimal"
                     className="input-field py-3 font-mono text-base"
-                    placeholder="0"
+                    placeholder={tc("placeholderAmount")}
                     value={item.amount}
                     onChange={(e) =>
                       updateExpense(item.id, { amount: e.target.value })
@@ -656,7 +671,7 @@ export function BudgetPlanner() {
                     htmlFor={`priority-${item.id}`}
                     className="label-caption mb-2 block"
                   >
-                    Priority
+                    {tc("priority")}
                   </label>
                   <select
                     id={`priority-${item.id}`}
@@ -668,16 +683,13 @@ export function BudgetPlanner() {
                       })
                     }
                   >
-                    {(
-                      Object.entries(PRIORITY_META) as [
-                        ExpensePriority,
-                        (typeof PRIORITY_META)[ExpensePriority],
-                      ][]
-                    ).map(([key, meta]) => (
-                      <option key={key} value={key}>
-                        {meta.label}
-                      </option>
-                    ))}
+                    {(["essential", "flexible", "luxury"] as ExpensePriority[]).map(
+                      (key) => (
+                        <option key={key} value={key}>
+                          {t(`priorities.${key}.label`)}
+                        </option>
+                      ),
+                    )}
                   </select>
                 </div>
 
@@ -686,9 +698,11 @@ export function BudgetPlanner() {
                   className="btn-secondary py-3"
                   onClick={() => removeCategory(item.id)}
                   disabled={expenses.length <= 1}
-                  aria-label={`Remove ${item.name}`}
+                  aria-label={tc("removeNamed", {
+                    name: getCategoryDisplayName(item, t),
+                  })}
                 >
-                  Remove
+                  {tc("remove")}
                 </button>
               </div>
             </li>
@@ -703,11 +717,11 @@ export function BudgetPlanner() {
           disabled={!result}
           onClick={handleCalculate}
         >
-          Plan Budget
+          {t("actions.planBudget")}
         </button>
         {hasInput && (
           <button type="button" className="btn-secondary" onClick={handleClear}>
-            Reset
+            {tc("reset")}
           </button>
         )}
       </div>
@@ -716,7 +730,6 @@ export function BudgetPlanner() {
         <div className="space-y-4">
           <CalculationSavePanel
             toolSlug="budget-simple"
-            toolName="Budget Planner"
             saveName={saveName}
             onSaveNameChange={setSaveName}
             inputs={{
@@ -728,42 +741,50 @@ export function BudgetPlanner() {
             }}
             resultSummary={
               displayPlan.gap > 0
-                ? `${formatCurrency(displayPlan.gap)} gap to close`
-                : `${formatCurrency(displayPlan.surplus)} surplus after goals`
+                ? t("resultSummary.gap", {
+                    amount: formatCurrency(displayPlan.gap),
+                  })
+                : t("resultSummary.surplus", {
+                    amount: formatCurrency(displayPlan.surplus),
+                  })
             }
           />
 
           {displayPlan.gap > 0 ? (
             <div className="rounded-2xl border-2 border-rose-300 bg-rose-50 px-6 py-6 shadow-md">
-              <p className="label-caption mb-2 text-rose-600">Gap Analysis</p>
+              <p className="label-caption mb-2 text-rose-600">
+                {t("results.gapAnalysis.caption")}
+              </p>
               <p className="text-lg font-semibold leading-relaxed text-rose-900">
-                You are short by{" "}
-                <span className="font-mono">{formatCurrency(displayPlan.gap)}</span>{" "}
-                to reach your savings goal of{" "}
-                <span className="font-mono">{formatCurrency(displayPlan.savings)}</span>{" "}
-                and keep your safety buffer of{" "}
-                <span className="font-mono">{formatCurrency(displayPlan.buffer)}</span>.
+                {t("results.gapAnalysis.shortBy", {
+                  gap: formatCurrency(displayPlan.gap),
+                  savings: formatCurrency(displayPlan.savings),
+                  buffer: formatCurrency(displayPlan.buffer),
+                })}
               </p>
               <p className="mt-3 text-sm text-rose-700/80">
-                Required this month: {formatCurrency(displayPlan.totalRequired)} (
-                expenses + savings + buffer) vs income of{" "}
-                {formatCurrency(displayPlan.income)}.
+                {t("results.gapAnalysis.required", {
+                  required: formatCurrency(displayPlan.totalRequired),
+                  income: formatCurrency(displayPlan.income),
+                })}
               </p>
             </div>
           ) : (
             <div className="rounded-2xl border-2 border-emerald-300 bg-emerald-50 px-6 py-6 text-center shadow-md">
-              <p className="label-caption mb-2 text-emerald-600">Plan Balanced</p>
+              <p className="label-caption mb-2 text-emerald-600">
+                {t("results.balanced.caption")}
+              </p>
               <p className="font-mono text-3xl font-bold text-emerald-700 sm:text-4xl">
                 {formatCurrency(displayPlan.surplus)}
               </p>
               <p className="mt-2 text-sm text-emerald-800">
-                Surplus after expenses, savings goal, and safety buffer
+                {t("results.balanced.hint")}
               </p>
             </div>
           )}
 
           <div>
-            <p className="label-caption mb-4">Decision Board</p>
+            <p className="label-caption mb-4">{t("decisionBoard.caption")}</p>
             <DecisionBoard
               expenses={displayPlan.parsed}
               totals={displayPlan.totals}
@@ -780,7 +801,7 @@ export function BudgetPlanner() {
           )}
 
           <div className="rounded-2xl bg-white px-5 py-4 shadow-md">
-            <p className="label-caption mb-3">Monthly Allocation</p>
+            <p className="label-caption mb-3">{t("allocation.caption")}</p>
             <div className="mb-3 flex h-4 overflow-hidden rounded-full bg-slate-100">
               {displayPlan.income > 0 && (
                 <>
@@ -789,35 +810,35 @@ export function BudgetPlanner() {
                     style={{
                       width: `${(displayPlan.totals.essential / displayPlan.income) * 100}%`,
                     }}
-                    title="Essential"
+                    title={t("allocation.essential")}
                   />
                   <div
                     className="bg-amber-500 transition-all duration-200"
                     style={{
                       width: `${(displayPlan.totals.flexible / displayPlan.income) * 100}%`,
                     }}
-                    title="Flexible"
+                    title={t("allocation.flexible")}
                   />
                   <div
                     className="bg-rose-500 transition-all duration-200"
                     style={{
                       width: `${(displayPlan.totals.luxury / displayPlan.income) * 100}%`,
                     }}
-                    title="Luxury"
+                    title={t("allocation.luxury")}
                   />
                   <div
                     className="bg-violet-400 transition-all duration-200"
                     style={{
                       width: `${(displayPlan.savings / displayPlan.income) * 100}%`,
                     }}
-                    title="Savings Goal"
+                    title={t("allocation.savingsGoal")}
                   />
                   <div
                     className="bg-indigo-400 transition-all duration-200"
                     style={{
                       width: `${(displayPlan.buffer / displayPlan.income) * 100}%`,
                     }}
-                    title="Safety Buffer"
+                    title={t("allocation.safetyBuffer")}
                   />
                   {displayPlan.surplus > 0 && (
                     <div
@@ -825,7 +846,7 @@ export function BudgetPlanner() {
                       style={{
                         width: `${(displayPlan.surplus / displayPlan.income) * 100}%`,
                       }}
-                      title="Surplus"
+                      title={t("allocation.surplus")}
                     />
                   )}
                 </>
@@ -833,13 +854,13 @@ export function BudgetPlanner() {
             </div>
             <div className="grid gap-2 text-sm text-slate-500 sm:grid-cols-2">
               <div className="flex justify-between">
-                <span>Essential</span>
+                <span>{t("allocation.essential")}</span>
                 <span className="font-mono">
                   {formatCurrency(displayPlan.totals.essential)}
                 </span>
               </div>
               <div className="flex justify-between">
-                <span>Flexible</span>
+                <span>{t("allocation.flexible")}</span>
                 <span
                   className={`font-mono transition-colors duration-200 ${
                     displayPlan.totals.flexible < result.totals.flexible
@@ -851,7 +872,7 @@ export function BudgetPlanner() {
                 </span>
               </div>
               <div className="flex justify-between">
-                <span>Luxury</span>
+                <span>{t("allocation.luxury")}</span>
                 <span
                   className={`font-mono transition-colors duration-200 ${
                     displayPlan.totals.luxury < result.totals.luxury
@@ -863,15 +884,15 @@ export function BudgetPlanner() {
                 </span>
               </div>
               <div className="flex justify-between">
-                <span>Savings Goal</span>
+                <span>{t("allocation.savingsGoal")}</span>
                 <span className="font-mono">{formatCurrency(displayPlan.savings)}</span>
               </div>
               <div className="flex justify-between">
-                <span>Safety Buffer</span>
+                <span>{t("allocation.safetyBuffer")}</span>
                 <span className="font-mono">{formatCurrency(displayPlan.buffer)}</span>
               </div>
               <div className="flex justify-between font-medium text-slate-700">
-                <span>Surplus / Gap</span>
+                <span>{t("allocation.surplusGap")}</span>
                 <span
                   className={`font-mono transition-colors duration-200 ${
                     displayPlan.surplus >= 0 ? "text-emerald-600" : "text-rose-600"
@@ -886,9 +907,7 @@ export function BudgetPlanner() {
           </div>
         </div>
       ) : (
-        <p className="text-center text-sm text-slate-400">
-          Complete setup, add your expenses, then click Plan Budget.
-        </p>
+        <p className="text-center text-sm text-slate-400">{t("emptyState")}</p>
       )}
     </div>
   );

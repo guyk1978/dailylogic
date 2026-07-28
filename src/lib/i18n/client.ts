@@ -32,6 +32,12 @@ export function initI18n(locale?: AppLocale) {
   const resolved = locale ?? readInitialLocale();
 
   if (i18n.isInitialized) {
+    // Keep bundles in sync when locale JSON changes (HMR / new keys).
+    for (const [lng, bundles] of Object.entries(localeResources)) {
+      for (const [ns, resources] of Object.entries(bundles)) {
+        i18n.addResourceBundle(lng, ns, resources as object, true, true);
+      }
+    }
     if (locale && i18n.language !== locale) {
       void i18n.changeLanguage(locale);
     }

@@ -10,6 +10,23 @@
   "header": {
     "backHome": "Back to Home"
   },
+  "install": {
+    "caption": "App",
+    "button": "Install app",
+    "title": "Install DailyLogic on your device",
+    "description": "Open tools instantly from your home screen — works offline for pages you’ve already visited.",
+    "iosTitle": "Add to Home Screen",
+    "iosStep1": "Tap the Share button in Safari",
+    "iosStep2": "Scroll and choose “Add to Home Screen”.",
+    "iosStep3": "Confirm with “Add” — the app icon will appear on your home screen.",
+    "desktopTitle": "Install from your browser",
+    "desktopStep1": "Open this site in Chrome, Edge, or another Chromium browser.",
+    "desktopStep2": "Look for the install icon in the address bar, or open the browser menu (⋮).",
+    "desktopStep3": "Choose “Install app” / “Install DailyLogic” and confirm.",
+    "installNow": "Install now",
+    "gotIt": "Got it",
+    "close": "Close"
+  },
   "language": {
     "label": "Language",
     "en": "English",

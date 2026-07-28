@@ -8,6 +8,7 @@ import {
   localeLabels,
   LOCALE_COOKIE_KEY,
   LOCALE_STORAGE_KEY,
+  defaultLocale,
   type AppLocale,
 } from "@/lib/i18n/settings";
 
@@ -40,14 +41,13 @@ export function I18nProvider({
   children: ReactNode;
   locale: AppLocale;
 }) {
-  const instance = useMemo(
-    () =>
-      i18n.cloneInstance({
-        lng: locale,
-        fallbackLng: locale,
-      }),
-    [locale],
-  );
+  const instance = useMemo(() => {
+    initI18n(locale);
+    return i18n.cloneInstance({
+      lng: locale,
+      fallbackLng: locale === "en" ? false : [locale, defaultLocale],
+    });
+  }, [locale]);
 
   useEffect(() => {
     persistLocale(locale);

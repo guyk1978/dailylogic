@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { usePathname } from "next/navigation";
 import { useTranslation } from "@/lib/i18n/provider";
 import { LanguageSwitcher } from "@/components/layout/language-switcher";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { stripLocalePrefix } from "@/lib/i18n/paths";
 
@@ -63,6 +64,7 @@ export function AppHeader() {
           </nav>
 
           <LanguageSwitcher />
+          <InstallAppButton />
 
           {!isHome && (
             <motion.div whileTap={{ scale: 0.97 }}>

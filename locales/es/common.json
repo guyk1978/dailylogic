@@ -10,6 +10,23 @@
   "header": {
     "backHome": "Volver al inicio"
   },
+  "install": {
+    "caption": "App",
+    "button": "Instalar app",
+    "title": "Instala Lógica diaria en tu dispositivo",
+    "description": "Abre las herramientas desde la pantalla de inicio — también sin conexión en páginas ya visitadas.",
+    "iosTitle": "Añadir a la pantalla de inicio",
+    "iosStep1": "Toca el botón Compartir en Safari",
+    "iosStep2": "Desplázate y elige “Añadir a pantalla de inicio”.",
+    "iosStep3": "Confirma con “Añadir” — el icono aparecerá en tu pantalla de inicio.",
+    "desktopTitle": "Instalar desde el navegador",
+    "desktopStep1": "Abre este sitio en Chrome, Edge u otro navegador similar.",
+    "desktopStep2": "Busca el icono de instalación en la barra de direcciones, o abre el menú del navegador (⋮).",
+    "desktopStep3": "Elige “Instalar aplicación” y confirma.",
+    "installNow": "Instalar ahora",
+    "gotIt": "Entendido",
+    "close": "Cerrar"
+  },
   "language": {
     "label": "Idioma",
     "en": "English",

@@ -12,6 +12,7 @@ import {
   getCategoryIconBg,
 } from "@/components/dashboard/category-illustrations";
 import { RecentCalculations } from "@/components/dashboard/recent-calculations";
+import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { useFavorites } from "@/hooks/use-favorites";
 import {
   useTranslatedCategories,
@@ -165,6 +166,9 @@ export function ToolDashboard() {
         <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600">
           {t("app.heroDescription")}
         </p>
+        <div className="mt-6">
+          <InstallAppButton variant="banner" />
+        </div>
       </motion.header>
 
       <div className="space-y-12">

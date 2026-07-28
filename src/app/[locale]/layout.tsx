@@ -6,6 +6,7 @@ import { SiteFooter } from "@/components/layout/site-footer";
 import { I18nProvider } from "@/lib/i18n/provider";
 import { localeResources } from "@/lib/i18n/resources";
 import { isAppLocale, locales, type AppLocale } from "@/lib/i18n/settings";
+import { PwaInstallProvider } from "@/hooks/use-pwa-install";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -49,11 +50,13 @@ export default async function LocaleLayout({
 
   return (
     <I18nProvider locale={locale}>
-      <LocaleLayoutShell>
-        <AppHeader />
-        <main className="flex-1">{children}</main>
-        <SiteFooter />
-      </LocaleLayoutShell>
+      <PwaInstallProvider>
+        <LocaleLayoutShell>
+          <AppHeader />
+          <main className="flex-1">{children}</main>
+          <SiteFooter />
+        </LocaleLayoutShell>
+      </PwaInstallProvider>
     </I18nProvider>
   );
 }

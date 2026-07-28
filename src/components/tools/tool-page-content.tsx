@@ -4,6 +4,7 @@ import { usePathname } from "next/navigation";
 import { ToolPageMotion } from "@/components/layout/tool-page-motion";
 import { ToolJsonLd } from "@/components/seo/tool-json-ld";
 import { ToolSeoContent } from "@/components/seo/tool-seo-content";
+import { ShareToolButton } from "@/components/tools/share-tool-button";
 import { ToolRenderer } from "@/components/tool-renderer";
 import { useTranslatedCategories, useTranslatedTool } from "@/hooks/use-translated-tools";
 import { useToolSeo } from "@/hooks/use-tool-seo";
@@ -31,23 +32,20 @@ export function ToolPageContent({ slug }: { slug: ToolSlug }) {
 
       <ToolPageMotion>
         <div className="mb-10">
-          <p className="label-caption mb-3 text-blue-500">{category.label}</p>
+          <div className="mb-3 flex flex-wrap items-center justify-between gap-3">
+            <p className="label-caption text-blue-500">{category.label}</p>
+            <ShareToolButton
+              slug={slug}
+              name={tool.name}
+              description={seo?.heroDescription ?? tool.description}
+            />
+          </div>
           <h1 className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
             {tool.name}
           </h1>
           <p className="mt-4 text-lg text-slate-600">
             {seo?.heroDescription ?? tool.description}
           </p>
-
-          {tool.tags && tool.tags.length > 0 && (
-            <div className="mt-5 flex flex-wrap gap-2">
-              {tool.tags.map((tag) => (
-                <span key={tag} className="tag-pill">
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
         </div>
 
         <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8">

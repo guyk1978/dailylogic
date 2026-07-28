@@ -1,0 +1,39 @@
+import type { ToolCategory, ToolSlug } from "@/lib/tools-registry";
+
+export const OG_SIZE = { width: 1200, height: 630 } as const;
+
+export const TOOL_OG_ACCENT: Record<
+  ToolCategory,
+  { from: string; to: string; chip: string; soft: string }
+> = {
+  finance: {
+    from: "#eff6ff",
+    to: "#dbeafe",
+    chip: "#2563eb",
+    soft: "#93c5fd",
+  },
+  kitchen: {
+    from: "#fffbeb",
+    to: "#fef3c7",
+    chip: "#d97706",
+    soft: "#fcd34d",
+  },
+  shopping: {
+    from: "#ecfdf5",
+    to: "#d1fae5",
+    chip: "#059669",
+    soft: "#6ee7b7",
+  },
+};
+
+export const TOOL_OG_EMOJI: Record<ToolSlug, string> = {
+  "budget-simple": "📊",
+  "time-value": "⏱️",
+  "tip-split": "💵",
+  "recipe-adjuster": "🍳",
+  "unit-compare": "🛒",
+};
+
+export function toolOgImagePath(locale: string, slug: string): string {
+  return `/${locale}/tool/${slug}/opengraph-image`;
+}

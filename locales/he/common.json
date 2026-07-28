@@ -27,6 +27,17 @@
     "gotIt": "הבנתי",
     "close": "סגירה"
   },
+  "share": {
+    "button": "שיתוף",
+    "menuTitle": "שתפו את הכלי",
+    "native": "שיתוף…",
+    "copy": "העתקת קישור",
+    "copied": "הועתק!",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "facebook": "Facebook",
+    "x": "X"
+  },
   "language": {
     "label": "שפה",
     "en": "English",

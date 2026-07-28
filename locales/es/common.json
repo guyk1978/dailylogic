@@ -27,6 +27,17 @@
     "gotIt": "Entendido",
     "close": "Cerrar"
   },
+  "share": {
+    "button": "Compartir",
+    "menuTitle": "Compartir esta herramienta",
+    "native": "Compartir…",
+    "copy": "Copiar enlace",
+    "copied": "¡Copiado!",
+    "whatsapp": "WhatsApp",
+    "telegram": "Telegram",
+    "facebook": "Facebook",
+    "x": "X"
+  },
   "language": {
     "label": "Idioma",
     "en": "English",

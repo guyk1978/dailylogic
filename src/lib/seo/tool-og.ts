@@ -37,3 +37,13 @@ export const TOOL_OG_EMOJI: Record<ToolSlug, string> = {
 export function toolOgImagePath(locale: string, slug: string): string {
   return `/${locale}/tool/${slug}/opengraph-image`;
 }
+
+/**
+ * Satori (next/og) paints glyphs left-to-right and mishandles CSS `direction: rtl`
+ * (it reverses characters but does not flip layout). For Hebrew, convert logical
+ * text to visual order and right-align in the layout instead.
+ */
+export function satoriVisualText(text: string, rtl: boolean): string {
+  if (!rtl || !text) return text;
+  return [...text].reverse().join("");
+}

@@ -5,6 +5,7 @@ import {
   OG_SIZE,
   TOOL_OG_ACCENT,
   TOOL_OG_EMOJI,
+  satoriVisualText,
 } from "@/lib/seo/tool-og";
 import { getToolBySlug, type ToolSlug } from "@/lib/tools-registry";
 
@@ -22,7 +23,6 @@ async function loadFont(text: string, locale: AppLocale): Promise<ArrayBuffer | 
     const cssUrl = `https://fonts.googleapis.com/css2?family=${family}&text=${encodeURIComponent(text)}`;
     const css = await fetch(cssUrl, {
       headers: {
-        // Request a direct font file URL.
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
       },
     }).then((res) => res.text());
@@ -56,12 +56,18 @@ export default async function ToolOpenGraphImage({
   const categoryKey = (tool?.meta.category ?? "finance") as keyof typeof TOOL_OG_ACCENT;
   const accent = TOOL_OG_ACCENT[categoryKey];
   const emoji = TOOL_OG_EMOJI[(slug as ToolSlug) in TOOL_OG_EMOJI ? (slug as ToolSlug) : "budget-simple"];
-  const dir = locale === "he" ? "rtl" : "ltr";
+  const rtl = locale === "he";
+  const align = rtl ? "right" : "left";
+  const items = rtl ? "flex-end" : "flex-start";
 
   const fontText = `${brand}${name}${description}${tagline}`;
   const fontData = await loadFont(fontText, locale);
-
   const fontFamily = fontData ? "ToolOg" : "sans-serif";
+
+  const brandVisual = satoriVisualText(brand, rtl);
+  const taglineVisual = satoriVisualText(tagline, rtl);
+  const nameVisual = satoriVisualText(name, rtl);
+  const descriptionVisual = satoriVisualText(description, rtl);
 
   return new ImageResponse(
     (
@@ -72,13 +78,22 @@ export default async function ToolOpenGraphImage({
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
+          alignItems: items,
           padding: 64,
           background: `linear-gradient(135deg, ${accent.from} 0%, #ffffff 48%, ${accent.to} 100%)`,
-          direction: dir,
           fontFamily,
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: rtl ? "row-reverse" : "row",
+            alignItems: "center",
+            gap: 16,
+            width: "100%",
+            justifyContent: items,
+          }}
+        >
           <div
             style={{
               width: 64,
@@ -95,15 +110,38 @@ export default async function ToolOpenGraphImage({
           >
             DL
           </div>
-          <div style={{ display: "flex", flexDirection: "column" }}>
-            <div style={{ fontSize: 28, fontWeight: 700, color: "#0f172a" }}>
-              {brand}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: items,
+            }}
+          >
+            <div
+              style={{
+                fontSize: 28,
+                fontWeight: 700,
+                color: "#0f172a",
+                textAlign: align,
+              }}
+            >
+              {brandVisual}
             </div>
-            <div style={{ fontSize: 20, color: "#64748b" }}>{tagline}</div>
+            <div style={{ fontSize: 20, color: "#64748b", textAlign: align }}>
+              {taglineVisual}
+            </div>
           </div>
         </div>
 
-        <div style={{ display: "flex", flexDirection: "column", gap: 20 }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 20,
+            alignItems: items,
+            width: "100%",
+          }}
+        >
           <div
             style={{
               width: 88,
@@ -126,9 +164,10 @@ export default async function ToolOpenGraphImage({
               color: "#0f172a",
               lineHeight: 1.1,
               maxWidth: 980,
+              textAlign: align,
             }}
           >
-            {name}
+            {nameVisual}
           </div>
           <div
             style={{
@@ -136,17 +175,18 @@ export default async function ToolOpenGraphImage({
               color: "#475569",
               lineHeight: 1.35,
               maxWidth: 920,
+              textAlign: align,
             }}
           >
-            {description}
+            {descriptionVisual}
           </div>
         </div>
 
         <div
           style={{
             display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
+            width: "100%",
+            justifyContent: items,
           }}
         >
           <div

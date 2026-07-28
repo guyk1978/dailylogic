@@ -1219,12 +1219,21 @@ const CATEGORY_UNITS: Record<string, IngredientUnit> = {
   Dairy: "ml",
   Baking: "cups",
   "Oils & Condiments": "tbsp",
+  Custom: "cups",
 };
 
 const FUZZY_RESULT_LIMIT = 10;
 const PREVIEW_PER_CATEGORY = 2;
 
+export type IngredientSearchLabels = {
+  /** Raw library category → localized label (for display + search). */
+  categoryLabels?: Record<string, string>;
+  /** Ingredient id → localized name (optional; English names remain searchable). */
+  nameById?: Record<string, string>;
+};
+
 function fuzzyScore(query: string, target: string): number {
+  if (!target) return 0;
   const q = query.toLowerCase();
   const t = target.toLowerCase();
 
@@ -1253,14 +1262,21 @@ export function getUnitForIngredient(
   return CATEGORY_UNITS[ingredient.category] ?? "cups";
 }
 
-export function getIngredientCategories(): string[] {
-  return [
-    ...new Set(INGREDIENTS_LIBRARY.map((item) => item.category)),
+export function getIngredientCategories(
+  extras: IngredientLibraryItem[] = [],
+): string[] {
+  const categories = [
+    ...new Set([
+      ...INGREDIENTS_LIBRARY.map((item) => item.category),
+      ...extras.map((item) => item.category),
+    ]),
   ];
+  return categories;
 }
 
 export function groupIngredientsByCategory(
   ingredients: IngredientLibraryItem[],
+  extras: IngredientLibraryItem[] = [],
 ): { category: string; items: IngredientLibraryItem[] }[] {
   const grouped = new Map<string, IngredientLibraryItem[]>();
 
@@ -1270,7 +1286,7 @@ export function groupIngredientsByCategory(
     grouped.set(item.category, list);
   }
 
-  return getIngredientCategories()
+  return getIngredientCategories(extras)
     .filter((category) => grouped.has(category))
     .map((category) => ({
       category,
@@ -1281,21 +1297,40 @@ export function groupIngredientsByCategory(
 export function fuzzySearchIngredients(
   query: string,
   limit = FUZZY_RESULT_LIMIT,
+  labels?: IngredientSearchLabels,
+  extras: IngredientLibraryItem[] = [],
 ): IngredientLibraryItem[] {
   const normalized = query.trim().toLowerCase();
+  const catalog =
+    extras.length > 0
+      ? [...INGREDIENTS_LIBRARY, ...extras]
+      : INGREDIENTS_LIBRARY;
 
   if (!normalized) {
-    return INGREDIENTS_LIBRARY.slice(0, limit);
+    return catalog.slice(0, limit);
   }
 
-  return INGREDIENTS_LIBRARY.map((item) => ({
-    item,
-    score: Math.max(
-      fuzzyScore(normalized, item.name),
-      fuzzyScore(normalized, item.category) * 0.6,
-      ...normalized.split(/\s+/).map((word) => fuzzyScore(word, item.name)),
-    ),
-  }))
+  const words = normalized.split(/\s+/).filter(Boolean);
+
+  return catalog
+    .map((item) => {
+      const localizedName = labels?.nameById?.[item.id] ?? "";
+      const localizedCategory = labels?.categoryLabels?.[item.category] ?? "";
+
+      const score = Math.max(
+        fuzzyScore(normalized, item.name),
+        fuzzyScore(normalized, localizedName),
+        fuzzyScore(normalized, item.category) * 0.6,
+        fuzzyScore(normalized, localizedCategory) * 0.6,
+        ...words.flatMap((word) => [
+          fuzzyScore(word, item.name),
+          fuzzyScore(word, localizedName),
+          fuzzyScore(word, localizedCategory) * 0.6,
+        ]),
+      );
+
+      return { item, score };
+    })
     .filter(({ score }) => score > 0)
     .sort((a, b) => b.score - a.score)
     .slice(0, limit)
@@ -1304,21 +1339,30 @@ export function fuzzySearchIngredients(
 
 export function getGroupedIngredientOptions(
   query: string,
+  labels?: IngredientSearchLabels,
+  extras: IngredientLibraryItem[] = [],
 ): { category: string; items: IngredientLibraryItem[] }[] {
   const normalized = query.trim().toLowerCase();
+  const catalog =
+    extras.length > 0
+      ? [...INGREDIENTS_LIBRARY, ...extras]
+      : INGREDIENTS_LIBRARY;
 
   if (!normalized) {
-    return getIngredientCategories()
+    return getIngredientCategories(extras)
       .map((category) => ({
         category,
-        items: INGREDIENTS_LIBRARY.filter(
-          (item) => item.category === category,
-        ).slice(0, PREVIEW_PER_CATEGORY),
+        items: catalog
+          .filter((item) => item.category === category)
+          .slice(0, PREVIEW_PER_CATEGORY),
       }))
       .filter((group) => group.items.length > 0);
   }
 
-  return groupIngredientsByCategory(fuzzySearchIngredients(query));
+  return groupIngredientsByCategory(
+    fuzzySearchIngredients(query, FUZZY_RESULT_LIMIT, labels, extras),
+    extras,
+  );
 }
 
 export function formatUnit(unit: IngredientUnit, value: number): string {

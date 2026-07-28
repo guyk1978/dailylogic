@@ -14,7 +14,10 @@
   "combobox": {
     "label": "מרכיב",
     "placeholder": "חפש בין 200+ מרכיבים…",
-    "noResults": "לא נמצאו מרכיבים — נסה חיפוש אחר"
+    "noResults": "לא נמצאו מרכיבים — נסה חיפוש אחר",
+    "selectedMeta": "{{category}} · {{unit}}",
+    "addCustom": "הוסף \"{{name}}\"",
+    "addCustomHint": "יישמר למתכונים הבאים במכשיר זה"
   },
   "ingredients": {
     "sectionTitle": "מרכיבים",
@@ -30,13 +33,26 @@
     "item_other": "פריטים"
   },
   "categories": {
+    "staples": "בסיס / דגנים",
     "meat": "בשר",
     "dairy": "חלב",
     "vegetables": "ירקות",
     "fruits": "פירות",
     "spices": "תבלינים",
+    "baking": "אפייה",
     "substitutes": "תחליפים",
     "other": "אחר"
+  },
+  "libraryCategories": {
+    "staples": "בסיס / דגנים",
+    "vegetables": "ירקות",
+    "fruits": "פירות",
+    "proteins": "חלבונים",
+    "spicesAndHerbs": "תבלינים ועשבי תיבול",
+    "dairy": "מוצרי חלב",
+    "baking": "אפייה",
+    "oilsAndCondiments": "שמנים ומתבלים",
+    "custom": "המרכיבים שלי"
   },
   "units": {
     "cups": "כוסות",
@@ -49,8 +65,11 @@
   "compiledRecipe": {
     "title": "מתכון מותאם מקובץ",
     "servingsFactor": "{{targetYield}} מנות · {{factor}}",
-    "copyFullRecipe": "העתק מתכון מלא",
-    "copied": "הועתק!"
+    "copyHeader": "{{title}} ({{servingsFactor}})",
+    "viewFullRecipe": "הצג מתכון מלא",
+    "copyFullRecipe": "העתק מתכון",
+    "copied": "הועתק!",
+    "close": "סגור"
   },
   "emptyState": {
     "invalidYields": "הזן תפוקות תקינות כדי לחשב את מקדם ההגדלה."

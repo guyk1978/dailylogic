@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, type ReactNode } from "react";
+import { useEffect, useMemo, type ReactNode } from "react";
 import { I18nextProvider } from "react-i18next";
 import { initI18n, i18n } from "@/lib/i18n/client";
 import {
@@ -14,12 +14,14 @@ import {
 initI18n();
 
 function applyDocumentLocale(lng: string) {
-  if (!isAppLocale(lng)) return;
+  if (typeof document === "undefined" || !isAppLocale(lng)) return;
   const dir = localeLabels[lng].dir;
   document.documentElement.lang = lng;
   document.documentElement.dir = dir;
-  document.body.dir = dir;
-  document.body.lang = lng;
+  if (document.body) {
+    document.body.dir = dir;
+    document.body.lang = lng;
+  }
 }
 
 function persistLocale(locale: AppLocale) {
@@ -38,6 +40,15 @@ export function I18nProvider({
   children: ReactNode;
   locale: AppLocale;
 }) {
+  const instance = useMemo(
+    () =>
+      i18n.cloneInstance({
+        lng: locale,
+        fallbackLng: locale,
+      }),
+    [locale],
+  );
+
   useEffect(() => {
     persistLocale(locale);
     applyDocumentLocale(locale);
@@ -51,13 +62,13 @@ export function I18nProvider({
       applyDocumentLocale(lng);
     };
 
-    i18n.on("languageChanged", handler);
+    instance.on("languageChanged", handler);
     return () => {
-      i18n.off("languageChanged", handler);
+      instance.off("languageChanged", handler);
     };
-  }, []);
+  }, [instance]);
 
-  return <I18nextProvider i18n={i18n}>{children}</I18nextProvider>;
+  return <I18nextProvider i18n={instance}>{children}</I18nextProvider>;
 }
 
 /** Sync i18n + persistence when navigating via URL locale change. */

@@ -21,6 +21,10 @@
     "searchPlaceholder": "Search by name, category, or tag…",
     "noToolsTitle": "No tools found",
     "noToolsHint": "Try a different name or category.",
+    "toolsTitle": "Your tools",
+    "toolsDescription": "Pick a tool and start — everything stays in your browser.",
+    "toolsCount": "{{count}} tools",
+    "openTool": "Open",
     "favoritesTitle": "Your Favorites",
     "favoritesDescription": "Quick access to the tools you use most",
     "results_one": "{{count}} result",
@@ -80,7 +84,9 @@
   "notFound": {
     "title": "Tool not found",
     "description": "This tool doesn't exist in the registry.",
-    "browseTools": "Browse Tools"
+    "browseTools": "Browse Tools",
+    "toolMetaTitle": "Tool Not Found",
+    "articleMetaTitle": "Article Not Found"
   },
   "toolLoading": "Loading tool…",
   "content": {

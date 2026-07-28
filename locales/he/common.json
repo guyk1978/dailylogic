@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DailyLogic",
+    "name": "לוגיקה יומית",
     "tagline": "כלים לבית ולחיים",
     "heroCaption": "כלים לבית ולחיים",
     "heroDescription": "כלים מעשיים לתקציב, בישול, קניות והחלטות יומיומיות — הכל רץ מקומית בדפדפן שלך.",
@@ -21,6 +21,10 @@
     "searchPlaceholder": "חפש לפי שם, קטגוריה או תג…",
     "noToolsTitle": "לא נמצאו כלים",
     "noToolsHint": "נסה שם או קטגוריה אחרים.",
+    "toolsTitle": "הכלים שלך",
+    "toolsDescription": "בחרו כלי והתחילו — הכל נשאר בדפדפן שלכם.",
+    "toolsCount": "{{count}} כלים",
+    "openTool": "פתיחה",
     "favoritesTitle": "המועדפים שלך",
     "favoritesDescription": "גישה מהירה לכלים שאתה משתמש בהם הכי הרבה",
     "results_one": "תוצאה {{count}}",
@@ -56,7 +60,7 @@
     },
     "time-value": {
       "name": "לעשות או להעביר",
-      "description": "מטריצת החלטה: DIY מול שכירת מקצוען."
+      "description": "מטריצת החלטה: לעשות בעצמכם מול שכירת מקצוען."
     },
     "tip-split": {
       "name": "עוזר טיפ חכם",
@@ -80,7 +84,9 @@
   "notFound": {
     "title": "הכלי לא נמצא",
     "description": "הכלי הזה לא קיים ברשימה.",
-    "browseTools": "עיין בכלים"
+    "browseTools": "עיין בכלים",
+    "toolMetaTitle": "הכלי לא נמצא",
+    "articleMetaTitle": "המאמר לא נמצא"
   },
   "toolLoading": "טוען כלי…",
   "content": {
@@ -94,7 +100,7 @@
     "relatedArticlesTitle": "מאמרים קשורים",
     "backToArticles": "→ חזרה לכל המאמרים",
     "readArticle": "קראו את המאמר ←",
-    "blogCaption": "בלוג DailyLogic",
+    "blogCaption": "בלוג לוגיקה יומית",
     "blogTitle": "רעיונות להחלטות יומיומיות חכמות יותר",
     "blogDescription": "מדריכים קצרים ומעשיים — עם קישורים לכלים החינמיים שיעזרו לכם ליישם.",
     "noArticlesTitle": "אין מאמרים עדיין",
@@ -116,7 +122,7 @@
     "browseAllTools": "עיינו בכל הכלים",
     "launchTool": "הפעילו {{toolName}}",
     "toolsIndexCaption": "מדריכי כלים",
-    "toolsIndexTitle": "גלו את כלי DailyLogic",
+    "toolsIndexTitle": "גלו את כלי לוגיקה יומית",
     "toolsIndexDescription": "מדריכים ברורים וממוקדים לכל כלי — מה הוא עושה, מתי להשתמש, ואיך להתחיל.",
     "viewGuide": "צפו במדריך ←",
     "fromBlogCaption": "מהבלוג",
@@ -126,7 +132,7 @@
   "consent": {
     "caption": "פרטיות",
     "title": "עוגיות ואנליטיקה",
-    "description": "DailyLogic משתמש בעוגיות ובאנליטיקה (Google Analytics) כדי להבין כיצד מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. הקלט שלכם בכלים תמיד נשאר בדפדפן. אנא אשרו כדי להמשיך להשתמש באתר.",
+    "description": "לוגיקה יומית משתמשת בעוגיות ובאנליטיקה (Google Analytics) כדי להבין כיצד מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. הקלט שלכם בכלים תמיד נשאר בדפדפן. אנא אשרו כדי להמשיך להשתמש באתר.",
     "accept": "אישור",
     "deny": "דחייה"
   },

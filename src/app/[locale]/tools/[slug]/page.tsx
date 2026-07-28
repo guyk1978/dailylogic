@@ -5,6 +5,7 @@ import {
   getLocalizedToolLanding,
   getLocalizedToolLandingSlugs,
 } from "@/lib/content/tool-landing-registry";
+import { localeResources } from "@/lib/i18n/resources";
 import { getRouteLocale } from "@/lib/i18n/server";
 import { getLandingAlternateLanguages } from "@/lib/seo/tool-seo";
 import { locales } from "@/lib/i18n/settings";
@@ -24,7 +25,9 @@ export async function generateMetadata({ params }: ToolLandingRouteProps) {
   const { slug } = await params;
   const locale = await getRouteLocale(params);
   const landing = getLocalizedToolLanding(slug, locale);
-  if (!landing) return { title: "Tool Not Found" };
+  if (!landing) {
+    return { title: localeResources[locale].common.notFound.toolMetaTitle };
+  }
 
   return {
     title: landing.seoTitle ?? landing.title,

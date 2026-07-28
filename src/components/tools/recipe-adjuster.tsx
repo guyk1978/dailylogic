@@ -1,13 +1,17 @@
 "use client";
 
 import { useCallback, useMemo, useState } from "react";
-import { Check, Copy } from "lucide-react";
+import { ScrollText } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
+import { RecipeShareModal } from "@/components/tools/recipe-share-modal";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { useCustomIngredients } from "@/hooks/use-custom-ingredients";
+import { useIngredientLabels } from "@/hooks/use-ingredient-labels";
 import { useToolTranslation } from "@/hooks/use-tool-translation";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import type { CalculationHistoryEntry } from "@/lib/calculation-history";
-import { getIngredientById, INGREDIENTS_LIBRARY } from "@/lib/ingredients-data";
+import { resolveIngredient } from "@/lib/custom-ingredients";
+import { INGREDIENTS_LIBRARY } from "@/lib/ingredients-data";
 import {
   IngredientCombobox,
   IngredientIconBadge,
@@ -25,6 +29,7 @@ import {
   type RecipeAmountUnit,
   type RecipeIngredientCategory,
 } from "@/lib/recipe-scaler";
+import type { IngredientLibraryItem } from "@/lib/ingredients-data";
 
 interface IngredientRow {
   id: string;
@@ -53,18 +58,31 @@ function createIngredientRow(): IngredientRow {
   };
 }
 
-function migrateIngredients(rows: LegacyIngredientRow[]): IngredientRow[] {
+function migrateIngredients(
+  rows: LegacyIngredientRow[],
+  extras: IngredientLibraryItem[] = [],
+): IngredientRow[] {
   return rows.map((row) => {
     let ingredientId = row.ingredientId ?? "";
 
     if (!ingredientId && row.name) {
-      const match = INGREDIENTS_LIBRARY.find(
-        (item) => item.name.toLowerCase() === row.name!.toLowerCase(),
-      );
+      const match =
+        INGREDIENTS_LIBRARY.find(
+          (item) => item.name.toLowerCase() === row.name!.toLowerCase(),
+        ) ??
+        extras.find(
+          (item) => item.name.toLowerCase() === row.name!.toLowerCase(),
+        );
       ingredientId = match?.id ?? "";
     }
 
-    const item = getIngredientById(ingredientId);
+    const item = resolveIngredient(ingredientId, extras);
+    const mappedCategory = item
+      ? mapLibraryToRecipeCategory(item.category)
+      : "other";
+    const storedCategory = row.category
+      ? normalizeRecipeCategory(row.category)
+      : null;
 
     return {
       id: row.id,
@@ -75,11 +93,11 @@ function migrateIngredients(rows: LegacyIngredientRow[]): IngredientRow[] {
         : item
           ? defaultUnitForIngredient(item)
           : "cups",
-      category: row.category
-        ? normalizeRecipeCategory(row.category)
-        : item
-          ? mapLibraryToRecipeCategory(item.category)
-          : "other",
+      // Prefer library mapping when nothing stored, or legacy catch-all "other"
+      category:
+        !storedCategory || storedCategory === "other"
+          ? mappedCategory
+          : storedCategory,
     };
   });
 }
@@ -100,10 +118,12 @@ function formatAmount(value: number): string {
 
 interface IngredientEditorProps {
   ingredient: IngredientRow & {
-    libraryItem?: ReturnType<typeof getIngredientById>;
+    libraryItem?: IngredientLibraryItem;
     scaled: number | null;
   };
   canRemove: boolean;
+  extras: IngredientLibraryItem[];
+  onCreateIngredient: (name: string) => IngredientLibraryItem | undefined;
   onUpdate: (patch: Partial<IngredientRow>) => void;
   onRemove: () => void;
   onSelectIngredient: (ingredientId: string) => void;
@@ -112,11 +132,14 @@ interface IngredientEditorProps {
 function IngredientEditor({
   ingredient,
   canRemove,
+  extras,
+  onCreateIngredient,
   onUpdate,
   onRemove,
   onSelectIngredient,
 }: IngredientEditorProps) {
   const { t } = useToolTranslation("recipe-adjuster");
+  const { getName } = useIngredientLabels(extras);
   const meta = RECIPE_CATEGORY_META[ingredient.category];
 
   return (
@@ -151,6 +174,8 @@ function IngredientEditor({
           <IngredientCombobox
             value={ingredient.ingredientId}
             onChange={onSelectIngredient}
+            extras={extras}
+            onCreate={onCreateIngredient}
           />
         </div>
 
@@ -167,14 +192,20 @@ function IngredientEditor({
 
       {ingredient.libraryItem && (
         <div className="mb-3 flex items-center gap-2">
-          <IngredientIconBadge ingredientId={ingredient.ingredientId} />
+          <IngredientIconBadge
+            ingredientId={ingredient.ingredientId}
+            extras={extras}
+          />
           <span
             className={`rounded-full px-2 py-0.5 text-[11px] font-semibold ring-1 ${meta.badge}`}
           >
             {t(`categories.${ingredient.category}`)}
           </span>
           <span className="truncate text-sm font-medium text-slate-700">
-            {ingredient.libraryItem.name}
+            {getName(
+              ingredient.libraryItem.id,
+              ingredient.libraryItem.name,
+            )}
           </span>
         </div>
       )}
@@ -224,7 +255,7 @@ function IngredientEditor({
         </div>
 
         <span
-          className="hidden pb-3 text-xl text-slate-300 sm:block"
+          className="hidden pb-3 text-xl text-slate-300 sm:block rtl:rotate-180"
           aria-hidden
         >
           →
@@ -236,7 +267,9 @@ function IngredientEditor({
             {ingredient.scaled !== null ? formatAmount(ingredient.scaled) : "—"}
           </p>
           {ingredient.scaled !== null && (
-            <p className="mt-0.5 text-xs text-violet-600">{ingredient.unit}</p>
+            <p className="mt-0.5 text-xs text-violet-600">
+              {t(`units.${ingredient.unit}`)}
+            </p>
           )}
         </div>
       </div>
@@ -260,83 +293,88 @@ function CompiledScaledRecipe({
   factorLabel: string;
 }) {
   const { t } = useToolTranslation("recipe-adjuster");
-  const [copied, setCopied] = useState(false);
+  const [open, setOpen] = useState(false);
 
   if (groups.length === 0) return null;
 
+  const servingsFactor = t("compiledRecipe.servingsFactor", {
+    targetYield,
+    factor: factorLabel,
+  });
   const copyText = buildCompiledRecipeText(
     groups.map((g) => ({ label: g.label, lines: g.lines })),
-    { targetYield, factorLabel },
+    t("compiledRecipe.copyHeader", {
+      title: t("compiledRecipe.title"),
+      servingsFactor,
+    }),
   );
 
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(copyText);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      // Clipboard unavailable — fail silently.
-    }
-  };
-
   return (
-    <section className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-900 shadow-lg">
-      <div className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-700/80 px-5 py-4 sm:px-6">
-        <div>
-          <p className="text-xs font-semibold uppercase tracking-wider text-violet-300">
-            {t("compiledRecipe.title")}
-          </p>
-          <p className="mt-1 text-sm text-slate-400">
-            {t("compiledRecipe.servingsFactor", {
-              targetYield,
-              factor: factorLabel,
-            })}
-          </p>
-        </div>
-        <button
-          type="button"
-          className="inline-flex items-center gap-2 rounded-xl bg-white px-4 py-2.5 text-sm font-semibold text-slate-900 shadow-sm transition hover:bg-slate-100"
-          onClick={handleCopy}
-        >
-          {copied ? (
-            <>
-              <Check className="h-4 w-4 text-emerald-600" aria-hidden />
-              {t("compiledRecipe.copied")}
-            </>
-          ) : (
-            <>
-              <Copy className="h-4 w-4" aria-hidden />
-              {t("compiledRecipe.copyFullRecipe")}
-            </>
-          )}
-        </button>
-      </div>
-
-      <div className="space-y-5 px-5 py-5 sm:px-6 sm:py-6">
-        {groups.map((group) => (
-          <div key={group.category}>
-            <p className="text-[11px] font-bold uppercase tracking-widest text-slate-500">
-              {group.label}
+    <>
+      <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+        <div className="flex flex-wrap items-start justify-between gap-4 border-b border-slate-200 px-5 py-4 sm:px-6">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wider text-[#111827]">
+              {t("compiledRecipe.title")}
             </p>
-            <ul className="mt-2 space-y-1.5">
-              {group.lines.map((line, index) => (
-                <li
-                  key={`${group.category}-${index}`}
-                  className="font-mono text-sm leading-relaxed text-slate-100"
-                >
-                  {line}
-                </li>
-              ))}
-            </ul>
+            <p className="mt-1 text-sm text-slate-500">
+              {t("compiledRecipe.servingsFactor", {
+                targetYield,
+                factor: factorLabel,
+              })}
+            </p>
           </div>
-        ))}
-      </div>
-    </section>
+          <button
+            type="button"
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-sm font-semibold text-[#111827] shadow-sm transition hover:bg-slate-50"
+            onClick={() => setOpen(true)}
+          >
+            <ScrollText className="h-4 w-4" aria-hidden />
+            {t("compiledRecipe.viewFullRecipe")}
+          </button>
+        </div>
+
+        <div className="space-y-5 px-5 py-5 sm:px-6 sm:py-6">
+          {groups.map((group) => (
+            <div key={group.category}>
+              <p className="text-[11px] font-bold uppercase tracking-widest text-[#111827]">
+                {group.label}
+              </p>
+              <ul className="mt-2 space-y-1.5">
+                {group.lines.map((line, index) => (
+                  <li
+                    key={`${group.category}-${index}`}
+                    className="font-mono text-sm leading-relaxed text-[#374151]"
+                  >
+                    {line}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <RecipeShareModal
+        open={open}
+        onClose={() => setOpen(false)}
+        title={t("compiledRecipe.title")}
+        subtitle={servingsFactor}
+        groups={groups}
+        copyText={copyText}
+        copyLabel={t("compiledRecipe.copyFullRecipe")}
+        copiedLabel={t("compiledRecipe.copied")}
+        closeLabel={t("compiledRecipe.close")}
+      />
+    </>
   );
 }
 
 export function RecipeAdjuster() {
   const { t } = useToolTranslation("recipe-adjuster");
+  const { customs, addCustom } = useCustomIngredients();
+  const extras = customs;
+  const { getName, nameById } = useIngredientLabels(extras);
   const [saveName, setSaveName] = useState("");
   const [originalYield, setOriginalYield] = useLocalStorage(
     "tool:recipe-adjuster:original-yield",
@@ -351,8 +389,8 @@ export function RecipeAdjuster() {
   >("tool:recipe-adjuster:ingredients", [createIngredientRow()]);
 
   const ingredients = useMemo(
-    () => migrateIngredients(rawIngredients),
-    [rawIngredients],
+    () => migrateIngredients(rawIngredients, extras),
+    [rawIngredients, extras],
   );
 
   const handleRestore = useCallback(
@@ -386,13 +424,13 @@ export function RecipeAdjuster() {
   const scaledIngredients = useMemo(() => {
     if (factor === null) return [];
     return ingredients.map((ingredient) => {
-      const libraryItem = getIngredientById(ingredient.ingredientId);
+      const libraryItem = resolveIngredient(ingredient.ingredientId, extras);
       const amount = Number(ingredient.amount);
       const scaled =
         Number.isFinite(amount) && amount >= 0 ? amount * factor : null;
       return { ...ingredient, libraryItem, scaled };
     });
-  }, [ingredients, factor]);
+  }, [ingredients, factor, extras]);
 
   const groupedIngredients = useMemo(() => {
     const map = new Map<RecipeIngredientCategory, typeof scaledIngredients>();
@@ -427,9 +465,10 @@ export function RecipeAdjuster() {
 
     for (const item of valid) {
       const line = formatRecipeLine(
-        item.libraryItem!.name,
+        getName(item.libraryItem!.id, item.libraryItem!.name),
         item.unit,
         item.scaled!,
+        t(`units.${item.unit}`),
       );
       const existing = map.get(item.category);
       if (existing) {
@@ -446,18 +485,18 @@ export function RecipeAdjuster() {
     return RECIPE_CATEGORY_ORDER.filter((cat) => map.has(cat)).map(
       (cat) => map.get(cat)!,
     );
-  }, [scaledIngredients, t]);
+  }, [scaledIngredients, t, getName]);
 
   const updateIngredient = (id: string, patch: Partial<IngredientRow>) => {
     setIngredients((prev) =>
-      migrateIngredients(prev).map((item) =>
+      migrateIngredients(prev, extras).map((item) =>
         item.id === id ? { ...item, ...patch } : item,
       ),
     );
   };
 
   const selectIngredient = (id: string, ingredientId: string) => {
-    const item = getIngredientById(ingredientId);
+    const item = resolveIngredient(ingredientId, extras);
     const patch: Partial<IngredientRow> = { ingredientId };
 
     if (item) {
@@ -468,13 +507,24 @@ export function RecipeAdjuster() {
     updateIngredient(id, patch);
   };
 
+  const createIngredient = useCallback(
+    (name: string) => {
+      const created = addCustom(name, nameById);
+      return created;
+    },
+    [addCustom, nameById],
+  );
+
   const addIngredient = () => {
-    setIngredients((prev) => [...migrateIngredients(prev), createIngredientRow()]);
+    setIngredients((prev) => [
+      ...migrateIngredients(prev, extras),
+      createIngredientRow(),
+    ]);
   };
 
   const removeIngredient = (id: string) => {
     setIngredients((prev) => {
-      const next = migrateIngredients(prev);
+      const next = migrateIngredients(prev, extras);
       return next.length <= 1 ? next : next.filter((item) => item.id !== id);
     });
   };
@@ -593,6 +643,8 @@ export function RecipeAdjuster() {
                   key={ingredient.id}
                   ingredient={ingredient}
                   canRemove={ingredients.length > 1}
+                  extras={extras}
+                  onCreateIngredient={createIngredient}
                   onUpdate={(patch) => updateIngredient(ingredient.id, patch)}
                   onRemove={() => removeIngredient(ingredient.id)}
                   onSelectIngredient={(ingredientId) =>

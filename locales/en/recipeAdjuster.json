@@ -14,7 +14,10 @@
   "combobox": {
     "label": "Ingredient",
     "placeholder": "Search 200+ ingredients…",
-    "noResults": "No ingredients found — try another search"
+    "noResults": "No ingredients found — try another search",
+    "selectedMeta": "{{category}} · {{unit}}",
+    "addCustom": "Add “{{name}}”",
+    "addCustomHint": "Saved for future recipes on this device"
   },
   "ingredients": {
     "sectionTitle": "Ingredients",
@@ -30,13 +33,26 @@
     "item_other": "items"
   },
   "categories": {
+    "staples": "Staples",
     "meat": "Meat",
     "dairy": "Dairy",
     "vegetables": "Vegetables",
     "fruits": "Fruits",
     "spices": "Spices",
+    "baking": "Baking",
     "substitutes": "Substitutes",
     "other": "Other"
+  },
+  "libraryCategories": {
+    "staples": "Staples",
+    "vegetables": "Vegetables",
+    "fruits": "Fruits",
+    "proteins": "Proteins",
+    "spicesAndHerbs": "Spices & Herbs",
+    "dairy": "Dairy",
+    "baking": "Baking",
+    "oilsAndCondiments": "Oils & Condiments",
+    "custom": "My ingredients"
   },
   "units": {
     "cups": "Cups",
@@ -49,8 +65,11 @@
   "compiledRecipe": {
     "title": "Compiled scaled recipe",
     "servingsFactor": "{{targetYield}} servings · {{factor}}",
-    "copyFullRecipe": "Copy full recipe",
-    "copied": "Copied!"
+    "copyHeader": "{{title}} ({{servingsFactor}})",
+    "viewFullRecipe": "View full recipe",
+    "copyFullRecipe": "Copy recipe",
+    "copied": "Copied!",
+    "close": "Close"
   },
   "emptyState": {
     "invalidYields": "Enter valid yields to calculate the scaling factor."

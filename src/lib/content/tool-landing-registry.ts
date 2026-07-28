@@ -63,8 +63,8 @@ export function getLocalizedToolLandingMeta(
 
   return {
     slug,
-    title: landing.seoTitle ?? landing.title,
-    description: landing.seoDescription ?? landing.subtitle,
+    title: landing.title,
+    description: landing.subtitle ?? landing.seoDescription ?? "",
     publishedAt: landing.publishedAt,
   };
 }

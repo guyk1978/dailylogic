@@ -5,6 +5,7 @@ import {
   getArticlePage,
   getContentSlugs,
 } from "@/lib/content/loader";
+import { localeResources } from "@/lib/i18n/resources";
 import { getRouteLocale } from "@/lib/i18n/server";
 import { locales } from "@/lib/i18n/settings";
 
@@ -23,7 +24,9 @@ export async function generateMetadata({ params }: BlogPostRouteProps) {
   const { slug } = await params;
   const locale = await getRouteLocale(params);
   const page = await getArticlePage(slug, locale);
-  if (!page) return { title: "Article Not Found" };
+  if (!page) {
+    return { title: localeResources[locale].common.notFound.articleMetaTitle };
+  }
 
   return {
     title: page.frontmatter.title,

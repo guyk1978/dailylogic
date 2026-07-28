@@ -24,23 +24,43 @@ export function saveAnalyticsConsent(): void {
   }
 }
 
+/**
+ * Load gtag.js and queue the standard init commands.
+ * Important: push `arguments` (not a rest-parameter Array) — GA only processes Arguments objects.
+ */
 export function loadGoogleTag(measurementId: string = GA_MEASUREMENT_ID): void {
   if (typeof window === "undefined" || document.getElementById("google-gtag")) return;
 
   window.dataLayer = window.dataLayer ?? [];
-  window.gtag = function gtag(...args: unknown[]) {
-    window.dataLayer?.push(args);
+  window.gtag = function gtag() {
+    // GA requires the Arguments object, not [...args].
+    // eslint-disable-next-line prefer-rest-params
+    window.dataLayer?.push(arguments);
   };
+
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId, {
+    anonymize_ip: true,
+    send_page_view: true,
+  });
 
   const script = document.createElement("script");
   script.id = "google-gtag";
   script.async = true;
   script.src = `https://www.googletagmanager.com/gtag/js?id=${measurementId}`;
-  script.onload = () => {
-    window.gtag?.("js", new Date());
-    window.gtag?.("config", measurementId);
-  };
   document.head.appendChild(script);
+}
+
+/** Record a client-side navigation as a GA4 page_view. */
+export function trackPageView(path: string, measurementId: string = GA_MEASUREMENT_ID): void {
+  if (typeof window === "undefined" || typeof window.gtag !== "function") return;
+
+  window.gtag("event", "page_view", {
+    page_path: path,
+    page_location: window.location.href,
+    page_title: document.title,
+    send_to: measurementId,
+  });
 }
 
 declare global {

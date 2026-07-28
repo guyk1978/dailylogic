@@ -1,5 +1,6 @@
 import { notFound } from "next/navigation";
 import { ToolPageContent } from "@/components/tools/tool-page-content";
+import { localeResources } from "@/lib/i18n/resources";
 import { getRouteLocale } from "@/lib/i18n/server";
 import {
   getToolAlternateLanguages,
@@ -24,7 +25,9 @@ export async function generateMetadata({ params }: ToolPageProps) {
   const locale = await getRouteLocale(params);
   const tool = getToolBySlug(slug);
 
-  if (!tool) return { title: "Tool Not Found" };
+  if (!tool) {
+    return { title: localeResources[locale].common.notFound.toolMetaTitle };
+  }
 
   const { title, description } = getToolSeoMetadata(slug as ToolSlug, locale);
 

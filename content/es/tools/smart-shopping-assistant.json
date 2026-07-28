@@ -1,7 +1,7 @@
 {
   "title": "Asistente de compras inteligente",
   "subtitle": "No mires solo la etiqueta. Calcula el precio unitario y decide mejor al instante.",
-  "seoTitle": "Calculadora de precio unitario y comparador | DailyLogic",
+  "seoTitle": "Calculadora de precio unitario y comparador | Lógica diaria",
   "seoDescription": "Compara productos por precio unitario entre marcas y tamaños. Lista de compras inteligente con calculadora gratuita para ahorrar en el súper.",
   "heroDescription": "¿Te confunden los tamaños de paquete? El asistente compara por precio unitario para que sepas qué producto ofrece mejor valor.",
   "toolSlug": "unit-compare",
@@ -23,7 +23,7 @@
       "paragraphs": [
         "Introduce precio total y tamaño de cada producto con su unidad de medida. El paquete grande no siempre es el más barato por unidad, especialmente con promociones.",
         "Evalúa ofertas multipack que exigen comprar más de lo necesario. Añade los mejores valores a tu lista y actualiza cuando cambien las promociones.",
-        "Combínalo con el Planificador de presupuesto de DailyLogic para ver cómo los ahorros se acumulan en el mes."
+        "Combínalo con el Planificador de presupuesto de Lógica diaria para ver cómo los ahorros se acumulan en el mes."
       ]
     },
     {

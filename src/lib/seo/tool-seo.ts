@@ -1,9 +1,28 @@
 import { getLocalizedToolLanding } from "@/lib/content/tool-landing-registry";
 import type { ToolLandingJson } from "@/lib/content/types";
+import { localeResources } from "@/lib/i18n/resources";
 import type { AppLocale } from "@/lib/i18n/settings";
 import { locales } from "@/lib/i18n/settings";
 import type { ToolSlug } from "@/lib/tools-registry";
 import { getToolBySlug } from "@/lib/tools-registry";
+
+const toolSeoFallbacks: Record<
+  AppLocale,
+  { title: string; description: string }
+> = {
+  en: {
+    title: "DailyLogic Tool",
+    description: "Free browser-based tool by DailyLogic.",
+  },
+  he: {
+    title: "כלי לוגיקה יומית",
+    description: "כלי חינמי בדפדפן מאת לוגיקה יומית.",
+  },
+  es: {
+    title: "Herramienta de Lógica diaria",
+    description: "Herramienta gratuita en el navegador de Lógica diaria.",
+  },
+};
 
 /** Maps interactive tool slugs to their landing-page content slugs. */
 export const toolToLandingSlug: Record<ToolSlug, string> = {
@@ -44,14 +63,23 @@ export function getToolSeoMetadata(
 ): { title: string; description: string } {
   const landing = getToolSeoContent(toolSlug, locale);
   const tool = getToolBySlug(toolSlug);
+  const fallback = toolSeoFallbacks[locale];
+  const tools = localeResources[locale].common.tools;
+  const translated = tools[toolSlug as keyof typeof tools];
 
   return {
-    title: landing?.seoTitle ?? landing?.title ?? tool?.meta.name ?? "DailyLogic Tool",
+    title:
+      landing?.seoTitle ??
+      landing?.title ??
+      translated?.name ??
+      tool?.meta.name ??
+      fallback.title,
     description:
       landing?.seoDescription ??
       landing?.subtitle ??
+      translated?.description ??
       tool?.meta.description ??
-      "Free browser-based tool by DailyLogic.",
+      fallback.description,
   };
 }
 

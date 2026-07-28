@@ -1,7 +1,7 @@
 {
   "title": "Planificador de presupuesto",
   "subtitle": "Crea un presupuesto mensual realista con análisis de brechas, colchón de seguridad y compensaciones claras — sin hojas de cálculo abrumadoras.",
-  "seoTitle": "Planificador de presupuesto mensual gratis | DailyLogic",
+  "seoTitle": "Planificador de presupuesto mensual gratis | Lógica diaria",
   "seoDescription": "Planifica tu presupuesto mensual con análisis de brechas, colchón de seguridad y controles flexibles. Calculadora gratuita en el navegador — sin registro.",
   "heroDescription": "Ve exactamente a dónde va tu dinero, detecta déficits a tiempo y decide qué ajustar antes de que empiece el mes.",
   "toolSlug": "budget-simple",
@@ -13,7 +13,7 @@
     {
       "heading": "Qué hace el Planificador de presupuesto",
       "paragraphs": [
-        "El Planificador de presupuesto de DailyLogic te ayuda a construir un panorama financiero mensual claro en minutos. En lugar de luchar con hojas de cálculo complejas, introduces ingresos, costos fijos y categorías de gasto flexible en una sola interfaz. La herramienta muestra al instante si tu plan cuadra o tiene déficit.",
+        "El Planificador de presupuesto de Lógica diaria te ayuda a construir un panorama financiero mensual claro en minutos. En lugar de luchar con hojas de cálculo complejas, introduces ingresos, costos fijos y categorías de gasto flexible en una sola interfaz. La herramienta muestra al instante si tu plan cuadra o tiene déficit.",
         "A diferencia de apps que requieren vincular el banco o suscripción, esta calculadora funciona íntegramente en tu navegador. Tus cifras permanecen privadas en tu dispositivo, ideal para quien busca planificación simple sin compartir datos sensibles.",
         "El planificador prioriza el realismo: un colchón de seguridad dedicado evita planificar cada centavo hasta cero y reduce el estrés ante gastos imprevistos."
       ]
@@ -30,7 +30,7 @@
       "heading": "Beneficios clave para el presupuesto diario",
       "paragraphs": [
         "El análisis visual de brechas elimina las conjeturas antes de descubiertos o deuda con tarjeta. Los deslizadores permiten experimentar sin empezar de cero.",
-        "Todo funciona localmente: sin cuenta, sin anuncios ni recopilación de datos. Combínalo con las guías de ahorro y compras de DailyLogic."
+        "Todo funciona localmente: sin cuenta, sin anuncios ni recopilación de datos. Combínalo con las guías de ahorro y compras de Lógica diaria."
       ]
     }
   ],
@@ -40,7 +40,7 @@
     { "title": "Privado en el navegador", "description": "Sin vincular el banco — tus datos quedan en tu dispositivo." }
   ],
   "faq": [
-    { "question": "¿Es gratis?", "answer": "Sí. Las herramientas DailyLogic son gratuitas y funcionan en el navegador." },
+    { "question": "¿Es gratis?", "answer": "Sí. Las herramientas Lógica diaria son gratuitas y funcionan en el navegador." },
     { "question": "¿Necesito cuenta?", "answer": "No. Puedes guardar cálculos en el navegador para acceder después." },
     { "question": "¿Con qué frecuencia actualizar?", "answer": "Al inicio de cada mes y cuando cambien ingresos o gastos de forma significativa." }
   ]

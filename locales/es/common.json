@@ -1,6 +1,6 @@
 {
   "app": {
-    "name": "DailyLogic",
+    "name": "Lógica diaria",
     "tagline": "Herramientas para el hogar",
     "heroCaption": "Herramientas para el hogar",
     "heroDescription": "Herramientas prácticas para presupuesto, cocina, compras y decisiones diarias — todo funciona localmente en tu navegador.",
@@ -21,6 +21,10 @@
     "searchPlaceholder": "Buscar por nombre, categoría o etiqueta…",
     "noToolsTitle": "No se encontraron herramientas",
     "noToolsHint": "Prueba otro nombre o categoría.",
+    "toolsTitle": "Tus herramientas",
+    "toolsDescription": "Elige una herramienta y empieza — todo permanece en tu navegador.",
+    "toolsCount": "{{count}} herramientas",
+    "openTool": "Abrir",
     "favoritesTitle": "Tus favoritos",
     "favoritesDescription": "Acceso rápido a las herramientas que más usas",
     "results_one": "{{count}} resultado",
@@ -56,7 +60,7 @@
     },
     "time-value": {
       "name": "Delegar o hacer",
-      "description": "Matriz de decisión: DIY vs contratar un profesional."
+      "description": "Matriz de decisión: hacerlo uno mismo vs contratar un profesional."
     },
     "tip-split": {
       "name": "Asistente de propinas",
@@ -80,7 +84,9 @@
   "notFound": {
     "title": "Herramienta no encontrada",
     "description": "Esta herramienta no existe en el registro.",
-    "browseTools": "Ver herramientas"
+    "browseTools": "Ver herramientas",
+    "toolMetaTitle": "Herramienta no encontrada",
+    "articleMetaTitle": "Artículo no encontrado"
   },
   "toolLoading": "Cargando herramienta…",
   "content": {
@@ -94,7 +100,7 @@
     "relatedArticlesTitle": "Artículos relacionados",
     "backToArticles": "← Volver a todos los artículos",
     "readArticle": "Leer artículo →",
-    "blogCaption": "Blog DailyLogic",
+    "blogCaption": "Blog Lógica diaria",
     "blogTitle": "Ideas para decisiones cotidianas más inteligentes",
     "blogDescription": "Guías breves y prácticas — con enlaces a las herramientas gratuitas para aplicarlas.",
     "noArticlesTitle": "Aún no hay artículos",
@@ -116,7 +122,7 @@
     "browseAllTools": "Ver todas las herramientas",
     "launchTool": "Iniciar {{toolName}}",
     "toolsIndexCaption": "Guías de herramientas",
-    "toolsIndexTitle": "Explora las herramientas DailyLogic",
+    "toolsIndexTitle": "Explora las herramientas Lógica diaria",
     "toolsIndexDescription": "Guías claras para cada herramienta — qué hace, cuándo usarla y cómo empezar.",
     "viewGuide": "Ver guía →",
     "fromBlogCaption": "Del blog",
@@ -126,7 +132,7 @@
   "consent": {
     "caption": "Privacidad",
     "title": "Cookies y analítica",
-    "description": "DailyLogic utiliza cookies y analítica (Google Analytics) para entender cómo los visitantes usan el sitio y para apoyar la publicidad a través de Google AdSense. Tus datos en las herramientas siempre permanecen en tu navegador. Acepta para continuar usando el sitio.",
+    "description": "Lógica diaria utiliza cookies y analítica (Google Analytics) para entender cómo los visitantes usan el sitio y para apoyar la publicidad a través de Google AdSense. Tus datos en las herramientas siempre permanecen en tu navegador. Acepta para continuar usando el sitio.",
     "accept": "Aceptar",
     "deny": "Rechazar"
   },

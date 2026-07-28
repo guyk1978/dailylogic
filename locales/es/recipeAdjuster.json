@@ -14,7 +14,10 @@
   "combobox": {
     "label": "Ingrediente",
     "placeholder": "Buscar más de 200 ingredientes…",
-    "noResults": "No se encontraron ingredientes — prueba otra búsqueda"
+    "noResults": "No se encontraron ingredientes — prueba otra búsqueda",
+    "selectedMeta": "{{category}} · {{unit}}",
+    "addCustom": "Añadir “{{name}}”",
+    "addCustomHint": "Se guarda para futuras recetas en este dispositivo"
   },
   "ingredients": {
     "sectionTitle": "Ingredientes",
@@ -30,13 +33,26 @@
     "item_other": "artículos"
   },
   "categories": {
+    "staples": "Básicos",
     "meat": "Carne",
     "dairy": "Lácteos",
     "vegetables": "Verduras",
     "fruits": "Frutas",
     "spices": "Especias",
+    "baking": "Repostería",
     "substitutes": "Sustitutos",
     "other": "Otros"
+  },
+  "libraryCategories": {
+    "staples": "Básicos / Cereales",
+    "vegetables": "Verduras",
+    "fruits": "Frutas",
+    "proteins": "Proteínas",
+    "spicesAndHerbs": "Especias y hierbas",
+    "dairy": "Lácteos",
+    "baking": "Repostería",
+    "oilsAndCondiments": "Aceites y condimentos",
+    "custom": "Mis ingredientes"
   },
   "units": {
     "cups": "Tazas",
@@ -49,8 +65,11 @@
   "compiledRecipe": {
     "title": "Receta escalada compilada",
     "servingsFactor": "{{targetYield}} porciones · {{factor}}",
-    "copyFullRecipe": "Copiar receta completa",
-    "copied": "¡Copiado!"
+    "copyHeader": "{{title}} ({{servingsFactor}})",
+    "viewFullRecipe": "Ver receta completa",
+    "copyFullRecipe": "Copiar receta",
+    "copied": "¡Copiado!",
+    "close": "Cerrar"
   },
   "emptyState": {
     "invalidYields": "Introduce rendimientos válidos para calcular el factor de escalado."

@@ -59,18 +59,6 @@ export function ToolLinkCard({ meta, href }: ToolLinkCardProps) {
         <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
           {display.description}
         </p>
-        {meta.tags && meta.tags.length > 0 && (
-          <div className="mt-4 flex flex-wrap gap-2">
-            {meta.tags.map((tag) => (
-              <span
-                key={tag}
-                className="rounded-full bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-500 ring-1 ring-slate-100"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
       </Link>
     </motion.div>
   );

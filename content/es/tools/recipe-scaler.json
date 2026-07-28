@@ -1,7 +1,7 @@
 {
   "title": "Escalador de recetas",
   "subtitle": "Escala cualquier receta al instante — ajusta porciones, convierte unidades y copia un resultado limpio.",
-  "seoTitle": "Escalador de recetas gratis | Calculadora de porciones | DailyLogic",
+  "seoTitle": "Escalador de recetas gratis | Calculadora de porciones | Lógica diaria",
   "seoDescription": "Escala recetas para cualquier número de porciones. Ajusta ingredientes, convierte unidades y copia resultados al instante. Calculadora de cocina gratuita.",
   "heroDescription": "¿Cocinas para dos en lugar de seis? ¿Medias una receta familiar? Obtén cantidades exactas en segundos.",
   "toolSlug": "recipe-adjuster",
@@ -12,7 +12,7 @@
     {
       "heading": "Qué hace el Escalador de recetas",
       "paragraphs": [
-        "El Escalador de recetas de DailyLogic elimina las matemáticas mentales al cocinar. Cuando una receta es para cuatro y necesitas dos — o doce — recalcular cada ingrediente manualmente invita a errores. Esta herramienta escala todos los ingredientes proporcionalmente según las porciones deseadas.",
+        "El Escalador de recetas de Lógica diaria elimina las matemáticas mentales al cocinar. Cuando una receta es para cuatro y necesitas dos — o doce — recalcular cada ingrediente manualmente invita a errores. Esta herramienta escala todos los ingredientes proporcionalmente según las porciones deseadas.",
         "Además de multiplicar cantidades, agrupa ingredientes por categoría para mantener la preparación organizada. Ideal para meal prep, reducir porciones o duplicar para invitados.",
         "Todo se procesa localmente en tu navegador; tus recetas no se suben a ningún servidor.",
         "Es especialmente útil para recetas familiares transmitidas entre generaciones, manteniendo proporciones fieles aunque cambie el número de comensales."

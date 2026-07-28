@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   applicationName: "DailyLogic",
   title: {
     default: "DailyLogic — Life & Home Tools",
-    template: "%s · DailyLogic",
+    template: "%s",
   },
   description:
     "Focused tools for life, home, and personal management — all in your browser.",

@@ -1,59 +1,93 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { ChevronDown, Search } from "lucide-react";
+import { ChevronDown, Plus, Search } from "lucide-react";
 import {
   getGroupedIngredientOptions,
-  getIngredientById,
   getUnitForIngredient,
   type IngredientLibraryItem,
 } from "@/lib/ingredients-data";
+import {
+  findIngredientByExactName,
+  resolveIngredient,
+} from "@/lib/custom-ingredients";
 import { IngredientIcon } from "@/components/tools/ingredient-icon";
+import { useIngredientLabels } from "@/hooks/use-ingredient-labels";
 import { useToolTranslation } from "@/hooks/use-tool-translation";
 
 interface IngredientComboboxProps {
   value: string;
   onChange: (ingredientId: string) => void;
+  extras?: IngredientLibraryItem[];
+  onCreate?: (name: string) => IngredientLibraryItem | undefined;
 }
 
-export function IngredientCombobox({ value, onChange }: IngredientComboboxProps) {
+export function IngredientCombobox({
+  value,
+  onChange,
+  extras = [],
+  onCreate,
+}: IngredientComboboxProps) {
   const { t } = useToolTranslation("recipe-adjuster");
+  const { getName, getCategoryLabel, searchLabels, nameById } =
+    useIngredientLabels(extras);
   const listboxId = useId();
   const containerRef = useRef<HTMLDivElement>(null);
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
 
-  const selected = getIngredientById(value);
+  const selected = resolveIngredient(value, extras);
 
   const groupedOptions = useMemo(
-    () => getGroupedIngredientOptions(query),
-    [query],
+    () => getGroupedIngredientOptions(query, searchLabels, extras),
+    [query, searchLabels, extras],
   );
 
-  const hasOptions = groupedOptions.some((group) => group.items.length > 0);
+  const trimmedQuery = query.trim();
+  const exactMatch = useMemo(
+    () =>
+      trimmedQuery
+        ? findIngredientByExactName(trimmedQuery, extras, nameById)
+        : undefined,
+    [trimmedQuery, extras, nameById],
+  );
+  const canCreate =
+    Boolean(onCreate) && trimmedQuery.length > 0 && !exactMatch;
+
+  const hasOptions =
+    groupedOptions.some((group) => group.items.length > 0) || canCreate;
 
   useEffect(() => {
     if (selected) {
-      setQuery(selected.name);
+      setQuery(getName(selected.id, selected.name));
     }
-  }, [selected]);
+  }, [selected, getName]);
 
   useEffect(() => {
     const handlePointerDown = (event: MouseEvent) => {
       if (!containerRef.current?.contains(event.target as Node)) {
         setOpen(false);
-        if (selected) setQuery(selected.name);
+        if (selected) setQuery(getName(selected.id, selected.name));
         else setQuery("");
       }
     };
 
     document.addEventListener("mousedown", handlePointerDown);
     return () => document.removeEventListener("mousedown", handlePointerDown);
-  }, [selected]);
+  }, [selected, getName]);
 
   const handleSelect = (ingredient: IngredientLibraryItem) => {
     onChange(ingredient.id);
-    setQuery(ingredient.name);
+    setQuery(getName(ingredient.id, ingredient.name));
+    setOpen(false);
+  };
+
+  const handleCreate = () => {
+    if (!onCreate || !trimmedQuery) return;
+    const created = onCreate(trimmedQuery);
+    if (!created) return;
+    onChange(created.id);
+    setQuery(created.name);
     setOpen(false);
   };
 
@@ -70,12 +104,12 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
       </label>
       <div className="relative">
         {selected && !open ? (
-          <span className="pointer-events-none absolute left-3.5 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-lg bg-violet-100 text-violet-600">
+          <span className="pointer-events-none absolute start-3.5 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center rounded-lg bg-violet-100 text-violet-600">
             <IngredientIcon name={selected.icon} className="h-3.5 w-3.5" />
           </span>
         ) : (
           <Search
-            className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
+            className="pointer-events-none absolute start-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400"
             aria-hidden
           />
         )}
@@ -90,10 +124,16 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
           value={query}
           onChange={(e) => handleInputChange(e.target.value)}
           onFocus={() => setOpen(true)}
-          className="input-field py-3.5 pl-10 pr-10 text-base shadow-md"
+          onKeyDown={(e) => {
+            if (e.key === "Enter" && canCreate) {
+              e.preventDefault();
+              handleCreate();
+            }
+          }}
+          className="input-field py-3.5 ps-10 pe-10 text-base shadow-md"
         />
         <ChevronDown
-          className={`pointer-events-none absolute right-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 transition duration-200 ${
+          className={`pointer-events-none absolute end-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-400 transition duration-200 ${
             open ? "rotate-180" : ""
           }`}
           aria-hidden
@@ -104,63 +144,98 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
         <div
           id={listboxId}
           role="listbox"
-          className="absolute z-20 mt-2 max-h-72 w-full overflow-y-auto rounded-2xl bg-white py-2 shadow-md ring-1 ring-slate-100"
+          className="absolute z-20 mt-2 max-h-72 w-full overflow-y-auto rounded-2xl bg-white p-2 shadow-md ring-1 ring-slate-100"
         >
+          {canCreate && (
+            <button
+              type="button"
+              role="option"
+              aria-selected={false}
+              className="mb-1 flex w-full items-center gap-3 rounded-xl px-4 py-3 text-start transition duration-200 hover:bg-violet-50"
+              onMouseDown={(e) => e.preventDefault()}
+              onClick={handleCreate}
+            >
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-100 text-emerald-700">
+                <Plus className="h-4 w-4" aria-hidden />
+              </span>
+              <span className="min-w-0">
+                <span className="block text-sm font-semibold text-slate-900">
+                  {t("combobox.addCustom", { name: trimmedQuery })}
+                </span>
+                <span className="mt-0.5 block text-xs text-slate-500">
+                  {t("combobox.addCustomHint")}
+                </span>
+              </span>
+            </button>
+          )}
+
           {!hasOptions ? (
             <p className="px-4 py-3 text-sm text-slate-500">
               {t("combobox.noResults")}
             </p>
           ) : (
-            groupedOptions.map((group, groupIndex) => (
-              <div key={group.category} role="group" aria-label={group.category}>
-                <p
-                  className={`sticky top-0 bg-white/95 px-4 py-2 text-[11px] font-semibold uppercase tracking-widest text-slate-400 backdrop-blur-sm ${
-                    groupIndex > 0 ? "border-t border-slate-100" : ""
-                  }`}
+            groupedOptions.map((group, groupIndex) => {
+              const categoryLabel = getCategoryLabel(group.category);
+              return (
+                <div
+                  key={group.category}
+                  role="group"
+                  aria-label={categoryLabel}
                 >
-                  {group.category}
-                </p>
-                <ul>
-                  {group.items.map((ingredient) => {
-                    const isSelected = ingredient.id === value;
-
-                    return (
-                      <li
-                        key={ingredient.id}
-                        role="option"
-                        aria-selected={isSelected}
-                      >
-                        <button
-                          type="button"
-                          className={`flex w-full items-center gap-3 px-4 py-3 text-left transition duration-200 hover:bg-violet-50 ${
-                            isSelected ? "bg-violet-50" : ""
-                          }`}
-                          onMouseDown={(e) => e.preventDefault()}
-                          onClick={() => handleSelect(ingredient)}
+                  <p
+                    className={`sticky top-0 bg-white/95 px-4 py-2 text-[11px] font-semibold tracking-wide text-slate-400 backdrop-blur-sm uppercase rtl:normal-case rtl:tracking-normal ${
+                      groupIndex > 0 || canCreate
+                        ? "border-t border-slate-100"
+                        : ""
+                    }`}
+                  >
+                    {categoryLabel}
+                  </p>
+                  <ul>
+                    {group.items.map((ingredient) => {
+                      const isSelected = ingredient.id === value;
+                      const label = getName(ingredient.id, ingredient.name);
+                      return (
+                        <li
+                          key={ingredient.id}
+                          role="option"
+                          aria-selected={isSelected}
                         >
-                          <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-600">
-                            <IngredientIcon
-                              name={ingredient.icon}
-                              className="h-4 w-4"
-                            />
-                          </span>
-                          <span className="text-sm font-semibold text-slate-900">
-                            {ingredient.name}
-                          </span>
-                        </button>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </div>
-            ))
+                          <button
+                            type="button"
+                            className={`flex w-full items-center gap-3 px-4 py-3 text-start transition duration-200 hover:bg-violet-50 ${
+                              isSelected ? "bg-violet-50" : ""
+                            }`}
+                            onMouseDown={(e) => e.preventDefault()}
+                            onClick={() => handleSelect(ingredient)}
+                          >
+                            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-violet-100 text-violet-600">
+                              <IngredientIcon
+                                name={ingredient.icon}
+                                className="h-4 w-4"
+                              />
+                            </span>
+                            <span className="text-sm font-semibold text-slate-900">
+                              {label}
+                            </span>
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              );
+            })
           )}
         </div>
       )}
 
       {selected && !open && (
         <p className="mt-2 text-xs text-slate-500">
-          {selected.category} · {getUnitForIngredient(selected)}
+          {t("combobox.selectedMeta", {
+            category: getCategoryLabel(selected.category),
+            unit: t(`units.${getUnitForIngredient(selected)}`),
+          })}
         </p>
       )}
     </div>
@@ -169,12 +244,14 @@ export function IngredientCombobox({ value, onChange }: IngredientComboboxProps)
 
 export function IngredientIconBadge({
   ingredientId,
+  extras = [],
   size = "md",
 }: {
   ingredientId: string;
+  extras?: IngredientLibraryItem[];
   size?: "sm" | "md";
 }) {
-  const ingredient = getIngredientById(ingredientId);
+  const ingredient = resolveIngredient(ingredientId, extras);
   if (!ingredient) return null;
 
   const sizeClasses =

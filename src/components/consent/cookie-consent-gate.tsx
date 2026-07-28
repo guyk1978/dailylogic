@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState, type ReactNode } from "react";
+import { useCallback, useEffect, useRef, useState, type ReactNode } from "react";
 import { usePathname } from "next/navigation";
 import { I18nextProvider } from "react-i18next";
 import { useTranslation } from "@/lib/i18n/provider";
@@ -14,6 +14,7 @@ import {
   isSearchEngineBot,
   loadGoogleTag,
   saveAnalyticsConsent,
+  trackPageView,
 } from "@/lib/analytics/google-tag";
 
 type GateState = "loading" | "open" | "closed";
@@ -62,6 +63,8 @@ function CookieConsentModal({
 
 function CookieConsentGateInner({ children }: { children: ReactNode }) {
   const [gateState, setGateState] = useState<GateState>("loading");
+  const pathname = usePathname();
+  const skipNextPageView = useRef(true);
 
   const setBodyScrollLocked = useCallback((locked: boolean) => {
     document.body.style.overflow = locked ? "hidden" : "";
@@ -88,6 +91,16 @@ function CookieConsentGateInner({ children }: { children: ReactNode }) {
     setBodyScrollLocked(gateState === "open" || gateState === "loading");
     return () => setBodyScrollLocked(false);
   }, [gateState, setBodyScrollLocked]);
+
+  // SPA navigations — initial page_view is sent by gtag config.
+  useEffect(() => {
+    if (gateState !== "closed" || !hasAnalyticsConsent()) return;
+    if (skipNextPageView.current) {
+      skipNextPageView.current = false;
+      return;
+    }
+    trackPageView(pathname);
+  }, [pathname, gateState]);
 
   const handleAccept = () => {
     saveAnalyticsConsent();

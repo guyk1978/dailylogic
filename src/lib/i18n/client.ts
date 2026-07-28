@@ -28,19 +28,35 @@ function readInitialLocale(): AppLocale {
   return defaultLocale;
 }
 
-export function initI18n() {
-  if (i18n.isInitialized) return i18n;
+export function initI18n(locale?: AppLocale) {
+  const resolved = locale ?? readInitialLocale();
+
+  if (i18n.isInitialized) {
+    if (locale && i18n.language !== locale) {
+      void i18n.changeLanguage(locale);
+    }
+    return i18n;
+  }
 
   i18n.use(initReactI18next).init({
     resources: localeResources,
-    lng: readInitialLocale(),
+    lng: resolved,
     fallbackLng: {
       es: [defaultLocale],
       he: [defaultLocale],
       default: [defaultLocale],
     },
     defaultNS: "common",
-    ns: ["common", "pages", "budgetPlanner", "timeValue", "tipSplit", "recipeAdjuster", "unitCompare"],
+    ns: [
+      "common",
+      "pages",
+      "budgetPlanner",
+      "timeValue",
+      "tipSplit",
+      "recipeAdjuster",
+      "unitCompare",
+      "ingredients",
+    ],
     interpolation: { escapeValue: false },
     react: { useSuspense: false },
     returnNull: false,

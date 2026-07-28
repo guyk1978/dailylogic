@@ -1,13 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import { AnimatePresence, motion } from "framer-motion";
-import { Heart } from "lucide-react";
-import { useMemo, useState, type ReactNode } from "react";
+import { motion } from "framer-motion";
+import { ArrowLeft, ArrowRight, Heart } from "lucide-react";
+import { useMemo } from "react";
 import { useTranslation } from "@/lib/i18n/provider";
+import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
 import {
-  CategoryIllustration,
   getCategoryAccent,
   getCategoryIconBg,
 } from "@/components/dashboard/category-illustrations";
@@ -20,47 +20,41 @@ import {
 } from "@/hooks/use-translated-tools";
 import { ICON_STROKE_WIDTH, getToolIcon } from "@/lib/tool-icons";
 import {
-  contentCrossfade,
   fadeSlideUp,
-  fadeSlideUpSection,
   staggerList,
   toolCardHover,
   toolIconHover,
 } from "@/lib/motion-presets";
-import { type ToolCategory, type ToolSlug } from "@/lib/tools-registry";
+import { type ToolSlug } from "@/lib/tools-registry";
 
-function matchesQuery(
-  tool: TranslatedToolMeta,
-  query: string,
-  categoryLabel: string,
-): boolean {
-  return (
-    tool.name.toLowerCase().includes(query) ||
-    tool.description.toLowerCase().includes(query) ||
-    tool.category.toLowerCase().includes(query) ||
-    categoryLabel.toLowerCase().includes(query) ||
-    (tool.tags?.some((tag) => tag.toLowerCase().includes(query)) ?? false)
-  );
-}
-
-interface ToolCardProps {
-  meta: TranslatedToolMeta;
-  categoryLabel: string;
-  isFavorite: boolean;
-  onToggleFavorite: (slug: ToolSlug) => void;
-}
+const CARD_WASH: Record<string, string> = {
+  finance:
+    "from-blue-50/90 via-white to-white hover:ring-blue-200/80",
+  kitchen:
+    "from-amber-50/90 via-white to-white hover:ring-amber-200/80",
+  shopping:
+    "from-emerald-50/90 via-white to-white hover:ring-emerald-200/80",
+};
 
 function ToolCard({
   meta,
   categoryLabel,
   isFavorite,
   onToggleFavorite,
-}: ToolCardProps) {
+}: {
+  meta: TranslatedToolMeta;
+  categoryLabel: string;
+  isFavorite: boolean;
+  onToggleFavorite: (slug: ToolSlug) => void;
+}) {
   const { t } = useTranslation("common");
   const lp = useLocalizedPath();
+  const dir = useLocaleDirection();
   const Icon = getToolIcon(meta.slug);
   const iconColor = getCategoryAccent(meta.category);
   const iconBg = getCategoryIconBg(meta.category);
+  const wash = CARD_WASH[meta.category] ?? CARD_WASH.finance;
+  const Arrow = dir === "rtl" ? ArrowLeft : ArrowRight;
 
   return (
     <div className="relative h-full">
@@ -78,10 +72,10 @@ function ToolCard({
           e.stopPropagation();
           onToggleFavorite(meta.slug);
         }}
-        className="absolute end-4 top-4 z-10 rounded-full p-2 transition-colors duration-200 hover:bg-blue-50"
+        className="absolute end-3.5 top-3.5 z-10 rounded-full bg-white/80 p-2 shadow-sm ring-1 ring-slate-100/80 backdrop-blur-sm transition-colors duration-200 hover:bg-white"
       >
         <Heart
-          className={`h-5 w-5 transition duration-200 ${
+          className={`h-4 w-4 transition duration-200 ${
             isFavorite
               ? "fill-blue-500 text-blue-500"
               : "text-slate-300 hover:text-blue-400"
@@ -100,10 +94,15 @@ function ToolCard({
         <Link
           href={lp(`/tool/${meta.slug}`)}
           prefetch
-          className="group flex h-full flex-col rounded-2xl bg-white p-6 pe-14 ring-1 ring-slate-100/80 transition-colors duration-300 hover:ring-blue-100"
+          className={`group relative flex h-full flex-col overflow-hidden rounded-3xl bg-gradient-to-br p-6 pe-12 shadow-sm ring-1 ring-slate-200/70 transition duration-300 hover:shadow-md ${wash}`}
         >
+          <div
+            className="pointer-events-none absolute -end-8 -top-10 h-28 w-28 rounded-full bg-white/50 blur-2xl"
+            aria-hidden
+          />
+
           <motion.div
-            className={`mb-4 flex h-11 w-11 items-center justify-center rounded-xl ${iconBg}`}
+            className={`relative mb-5 flex h-12 w-12 items-center justify-center rounded-2xl shadow-sm ring-1 ring-white/80 ${iconBg}`}
             variants={toolIconHover}
           >
             <Icon
@@ -112,49 +111,26 @@ function ToolCard({
             />
           </motion.div>
 
-          <span className="tag-pill mb-3 w-fit">{categoryLabel}</span>
-          <h3 className="text-lg font-semibold text-slate-900 transition-colors duration-200 group-hover:text-blue-600">
+          <span
+            className={`relative mb-3 w-fit rounded-full px-2.5 py-0.5 text-[11px] font-semibold ${iconBg} ${iconColor}`}
+          >
+            {categoryLabel}
+          </span>
+
+          <h3 className="relative text-xl font-semibold tracking-tight text-slate-900 transition-colors duration-200 group-hover:text-blue-700">
             {meta.name}
           </h3>
-          <p className="mt-2 flex-1 text-sm leading-relaxed text-slate-500">
+          <p className="relative mt-2 flex-1 text-sm leading-relaxed text-slate-500">
             {meta.description}
           </p>
-          {meta.tags && meta.tags.length > 0 && (
-            <div className="mt-4 flex flex-wrap gap-2">
-              {meta.tags.map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full bg-slate-50 px-2.5 py-0.5 text-xs font-medium text-slate-500 ring-1 ring-slate-100"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-          )}
+
+          <span className="relative mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-slate-400 transition duration-200 group-hover:gap-2.5 group-hover:text-blue-600">
+            {t("dashboard.openTool")}
+            <Arrow className="h-4 w-4" strokeWidth={ICON_STROKE_WIDTH} aria-hidden />
+          </span>
         </Link>
       </motion.div>
     </div>
-  );
-}
-
-function ToolCardGrid({ children }: { children: ReactNode }) {
-  return (
-    <motion.ul
-      className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3"
-      variants={staggerList}
-      initial="hidden"
-      animate="show"
-    >
-      {children}
-    </motion.ul>
-  );
-}
-
-function AnimatedToolCard(props: ToolCardProps) {
-  return (
-    <motion.li variants={fadeSlideUp} className="h-full">
-      <ToolCard {...props} />
-    </motion.li>
   );
 }
 
@@ -162,61 +138,17 @@ export function ToolDashboard() {
   const { t } = useTranslation("common");
   const tools = useTranslatedTools();
   const categories = useTranslatedCategories();
-  const [query, setQuery] = useState("");
   const { favorites, isFavorite, toggleFavorite, isHydrated } = useFavorites();
 
-  const normalizedQuery = query.trim().toLowerCase();
-
-  const favoriteTools = useMemo(() => {
-    const bySlug = new Map(tools.map((tool) => [tool.slug, tool]));
-    return favorites
-      .map((slug) => bySlug.get(slug))
+  const orderedTools = useMemo(() => {
+    if (!isHydrated || favorites.length === 0) return tools;
+    const favoriteSet = new Set(favorites);
+    const favored = favorites
+      .map((slug) => tools.find((tool) => tool.slug === slug))
       .filter((tool): tool is TranslatedToolMeta => tool !== undefined);
-  }, [tools, favorites]);
-
-  const filteredTools = useMemo(() => {
-    if (!normalizedQuery) return tools;
-    return tools.filter((tool) =>
-      matchesQuery(tool, normalizedQuery, categories[tool.category].label),
-    );
-  }, [tools, normalizedQuery, categories]);
-
-  const filteredFavorites = useMemo(() => {
-    if (!normalizedQuery) return favoriteTools;
-    return favoriteTools.filter((tool) =>
-      matchesQuery(tool, normalizedQuery, categories[tool.category].label),
-    );
-  }, [favoriteTools, normalizedQuery, categories]);
-
-  const groupedTools = useMemo(() => {
-    if (normalizedQuery) return null;
-
-    const favoriteSlugs = new Set(favorites);
-
-    return (Object.keys(categories) as ToolCategory[])
-      .map((category) => ({
-        category,
-        label: categories[category].label,
-        description: categories[category].description,
-        tools: tools.filter(
-          (tool) =>
-            tool.category === category && !favoriteSlugs.has(tool.slug),
-        ),
-      }))
-      .filter((section) => section.tools.length > 0);
-  }, [tools, normalizedQuery, favorites, categories]);
-
-  const renderToolCard = (meta: TranslatedToolMeta) => (
-    <AnimatedToolCard
-      key={meta.slug}
-      meta={meta}
-      categoryLabel={categories[meta.category].label}
-      isFavorite={isFavorite(meta.slug)}
-      onToggleFavorite={toggleFavorite}
-    />
-  );
-
-  const contentKey = normalizedQuery || "browse";
+    const rest = tools.filter((tool) => !favoriteSet.has(tool.slug));
+    return [...favored, ...rest];
+  }, [tools, favorites, isHydrated]);
 
   return (
     <div className="mx-auto max-w-5xl px-6 py-10 sm:py-14">
@@ -235,97 +167,58 @@ export function ToolDashboard() {
         </p>
       </motion.header>
 
-      <motion.div
-        className="mb-10"
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.35, delay: 0.08 }}
-      >
-        <label htmlFor="tool-search" className="label-caption mb-2 block">
-          {t("dashboard.searchLabel")}
-        </label>
-        <input
-          id="tool-search"
-          type="search"
-          placeholder={t("dashboard.searchPlaceholder")}
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="input-field py-3.5 text-base shadow-md"
-          autoComplete="off"
-        />
-      </motion.div>
-
-      {filteredTools.length === 0 ? (
-        <motion.div
-          className="rounded-2xl bg-white px-6 py-16 text-center shadow-md"
-          initial={{ opacity: 0, scale: 0.98 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.25 }}
+      <div className="space-y-12">
+        <motion.section
+          initial={{ opacity: 0, y: 18 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.06 }}
         >
-          <p className="text-lg font-medium text-slate-700">
-            {t("dashboard.noToolsTitle")}
-          </p>
-          <p className="mt-2 text-sm text-slate-500">{t("dashboard.noToolsHint")}</p>
-        </motion.div>
-      ) : (
-        <AnimatePresence mode="wait">
-          <motion.div
-            key={contentKey}
-            className="space-y-14"
-            variants={contentCrossfade}
-            initial="hidden"
-            animate="show"
-            exit="exit"
-          >
-            {isHydrated && filteredFavorites.length > 0 && !normalizedQuery && (
-              <motion.section variants={fadeSlideUpSection}>
-                <div className="mb-6">
-                  <h2 className="text-2xl font-semibold text-slate-900">
-                    {t("dashboard.favoritesTitle")}
-                  </h2>
-                  <p className="mt-1 text-sm text-slate-500">
-                    {t("dashboard.favoritesDescription")}
-                  </p>
-                </div>
-                <ToolCardGrid>
-                  {filteredFavorites.map(renderToolCard)}
-                </ToolCardGrid>
-              </motion.section>
-            )}
+          <div className="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-blue-50/70 via-white to-emerald-50/40 p-5 shadow-sm ring-1 ring-slate-200/60 sm:p-7">
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.35]"
+              style={{
+                backgroundImage:
+                  "radial-gradient(circle at 12% 18%, rgba(59,130,246,0.12), transparent 34%), radial-gradient(circle at 88% 12%, rgba(16,185,129,0.10), transparent 30%), radial-gradient(circle at 70% 85%, rgba(245,158,11,0.10), transparent 28%)",
+              }}
+              aria-hidden
+            />
 
-            {!normalizedQuery && <RecentCalculations />}
-
-            {normalizedQuery ? (
-              <motion.section variants={fadeSlideUpSection}>
-                <p className="label-caption mb-4">
-                  {t("dashboard.results", { count: filteredTools.length })}
+            <div className="relative mb-6 flex flex-wrap items-end justify-between gap-3">
+              <div>
+                <h2 className="text-2xl font-semibold tracking-tight text-slate-900">
+                  {t("dashboard.toolsTitle")}
+                </h2>
+                <p className="mt-1 text-sm text-slate-500">
+                  {t("dashboard.toolsDescription")}
                 </p>
-                <ToolCardGrid>{filteredTools.map(renderToolCard)}</ToolCardGrid>
-              </motion.section>
-            ) : (
-              groupedTools?.map(
-                ({ category, label, description, tools: sectionTools }) => (
-                  <motion.section key={category} variants={fadeSlideUpSection}>
-                    <div className="mb-6 flex items-start justify-between gap-4">
-                      <div>
-                        <h2 className="text-2xl font-semibold text-slate-900">
-                          {label}
-                        </h2>
-                        <p className="mt-1 text-sm text-slate-500">
-                          {description}
-                        </p>
-                      </div>
-                      <CategoryIllustration category={category} />
-                    </div>
-                    <ToolCardGrid>{sectionTools.map(renderToolCard)}</ToolCardGrid>
-                  </motion.section>
-                ),
-              )
-            )}
-          </motion.div>
-        </AnimatePresence>
-      )}
+              </div>
+              <p className="rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200/70">
+                {t("dashboard.toolsCount", { count: tools.length })}
+              </p>
+            </div>
 
+            <motion.ul
+              className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+              variants={staggerList}
+              initial="hidden"
+              animate="show"
+            >
+              {orderedTools.map((meta) => (
+                <motion.li key={meta.slug} variants={fadeSlideUp} className="h-full">
+                  <ToolCard
+                    meta={meta}
+                    categoryLabel={categories[meta.category].label}
+                    isFavorite={isFavorite(meta.slug)}
+                    onToggleFavorite={toggleFavorite}
+                  />
+                </motion.li>
+              ))}
+            </motion.ul>
+          </div>
+        </motion.section>
+
+        <RecentCalculations />
+      </div>
     </div>
   );
 }

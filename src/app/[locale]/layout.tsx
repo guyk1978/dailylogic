@@ -1,9 +1,11 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { AppHeader } from "@/components/layout/app-header";
 import { LocaleLayoutShell } from "@/components/layout/locale-layout-shell";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { I18nProvider } from "@/lib/i18n/provider";
-import { isAppLocale, locales } from "@/lib/i18n/settings";
+import { localeResources } from "@/lib/i18n/resources";
+import { isAppLocale, locales, type AppLocale } from "@/lib/i18n/settings";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -12,6 +14,30 @@ interface LocaleLayoutProps {
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
+}
+
+export async function generateMetadata({
+  params,
+}: LocaleLayoutProps): Promise<Metadata> {
+  const { locale: raw } = await params;
+  if (!isAppLocale(raw)) return {};
+
+  const locale = raw as AppLocale;
+  const { app } = localeResources[locale].common;
+
+  return {
+    applicationName: app.name,
+    title: {
+      default: `${app.name} — ${app.tagline}`,
+      template: `%s · ${app.name}`,
+    },
+    description: app.metaDescription,
+    appleWebApp: {
+      capable: true,
+      title: app.name,
+      statusBarStyle: "default",
+    },
+  };
 }
 
 export default async function LocaleLayout({

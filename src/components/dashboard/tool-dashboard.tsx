@@ -11,6 +11,7 @@ import {
   getCategoryAccent,
   getCategoryIconBg,
 } from "@/components/dashboard/category-illustrations";
+import { DailyMiniCrossword } from "@/components/dashboard/daily-mini-crossword";
 import { RecentCalculations } from "@/components/dashboard/recent-calculations";
 import { InstallAppButton } from "@/components/pwa/install-app-button";
 import { useFavorites } from "@/hooks/use-favorites";
@@ -172,6 +173,8 @@ export function ToolDashboard() {
       </motion.header>
 
       <div className="space-y-12">
+        <DailyMiniCrossword />
+
         <motion.section
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}

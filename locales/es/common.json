@@ -61,6 +61,30 @@
     "removeFavorite": "Quitar {{name}} de favoritos",
     "loading": "Cargando…"
   },
+  "crossword": {
+    "badge": "Acertijo diario",
+    "title": "Mini crucigrama diario",
+    "description": "Tema de hoy: {{theme}} — resuélvelo en menos de un minuto.",
+    "underMinute": "< 1 min",
+    "across": "Horizontal",
+    "down": "Vertical",
+    "liveHint": "Las letras se ponen verdes si son correctas y rojas si no.",
+    "hintsTitle": "Pistas",
+    "showHint": "Mostrar pista {{number}}",
+    "hideHint": "Ocultar pista {{number}}",
+    "successTitle": "¡Bien hecho — crucigrama resuelto!",
+    "successDescription": "¿Listo para la herramienta del día? Entra y pon el tema en práctica.",
+    "cta": "Ir a la herramienta del día: {{tool}}",
+    "gridLabel": "Cuadrícula del crucigrama",
+    "cellLabel": "Fila {{row}}, columna {{col}}",
+    "themes": {
+      "budget": "Presupuesto y facturas",
+      "kitchen": "Básicos de cocina",
+      "tip": "Propinas y división",
+      "shopping": "Compras inteligentes",
+      "delegate": "Tiempo vs dinero"
+    }
+  },
   "recent": {
     "title": "Cálculos recientes",
     "description": "Continúa donde lo dejaste",

@@ -61,6 +61,30 @@
     "removeFavorite": "הסר {{name}} מהמועדפים",
     "loading": "טוען…"
   },
+  "crossword": {
+    "badge": "חידה יומית",
+    "title": "תשבץ יומי קצר",
+    "description": "נושא היום: {{theme}} — פתרו בפחות מדקה.",
+    "underMinute": "< דקה",
+    "across": "אופקי",
+    "down": "אנכי",
+    "liveHint": "אות נכונה נצבעת בירוק, שגויה באדום.",
+    "hintsTitle": "רמזים",
+    "showHint": "הצג רמז {{number}}",
+    "hideHint": "הסתר רמז {{number}}",
+    "successTitle": "כל הכבוד — התשבץ נפתר!",
+    "successDescription": "מוכנים לכלי היומי? עברו אליו והמשיכו את הנושא בפועל.",
+    "cta": "עבור לכלי היומי: {{tool}}",
+    "gridLabel": "רשת התשבץ",
+    "cellLabel": "שורה {{row}}, עמודה {{col}}",
+    "themes": {
+      "budget": "תקציב וחשבונות",
+      "kitchen": "יסודות במטבח",
+      "tip": "טיפים וחלוקת חשבון",
+      "shopping": "קניות חכמות",
+      "delegate": "זמן מול כסף"
+    }
+  },
   "recent": {
     "title": "חישובים אחרונים",
     "description": "המשך מאיפה שהפסקת",

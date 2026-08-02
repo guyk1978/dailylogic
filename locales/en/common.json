@@ -61,6 +61,30 @@
     "removeFavorite": "Remove {{name}} from favorites",
     "loading": "Loading…"
   },
+  "crossword": {
+    "badge": "Daily puzzle",
+    "title": "Daily Mini-Crossword",
+    "description": "Today’s theme: {{theme}} — solve it in under a minute.",
+    "underMinute": "< 1 min",
+    "across": "Across",
+    "down": "Down",
+    "liveHint": "Letters turn green when correct, red when wrong.",
+    "hintsTitle": "Hints",
+    "showHint": "Show Hint {{number}}",
+    "hideHint": "Hide Hint {{number}}",
+    "successTitle": "Nice work — puzzle solved!",
+    "successDescription": "Ready for today’s featured tool? Jump in and put the theme into practice.",
+    "cta": "Go to today’s tool: {{tool}}",
+    "gridLabel": "Crossword grid",
+    "cellLabel": "Row {{row}}, column {{col}}",
+    "themes": {
+      "budget": "Budget & bills",
+      "kitchen": "Kitchen basics",
+      "tip": "Tips & splitting",
+      "shopping": "Smart shopping",
+      "delegate": "Time vs money"
+    }
+  },
   "recent": {
     "title": "Recent Calculations",
     "description": "Pick up where you left off",

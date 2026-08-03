@@ -87,7 +87,7 @@ function baseSplit(goal: PrimaryGoal): PocketSplit {
 function normalizeSplit(split: PocketSplit): PocketSplit {
   const spend = Math.round(clamp(split.spend, 20, 70));
   const give = Math.round(clamp(split.give, 5, 25));
-  let save = 100 - spend - give;
+  const save = 100 - spend - give;
   if (save < 15) {
     const deficit = 15 - save;
     const fromSpend = Math.min(deficit, spend - 20);

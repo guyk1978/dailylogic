@@ -7,7 +7,7 @@
   "toolSlug": "pocket-money-calculator",
   "schemaType": "WebApplication",
   "applicationCategory": "FinanceApplication",
-  "relatedArticles": [],
+  "relatedArticles": ["allowance-calculator"],
   "publishedAt": "2026-08-03",
   "sections": [
     {

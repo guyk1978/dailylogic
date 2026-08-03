@@ -7,7 +7,7 @@
   "toolSlug": "physical-health-calculator",
   "schemaType": "WebApplication",
   "applicationCategory": "HealthApplication",
-  "relatedArticles": [],
+  "relatedArticles": ["physical-health-calculator", "calorie-burn-calculator"],
   "publishedAt": "2026-08-03",
   "sections": [
     {

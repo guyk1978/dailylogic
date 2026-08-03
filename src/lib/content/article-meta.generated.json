@@ -1,6 +1,66 @@
 {
   "en": [
     {
+      "slug": "allowance-calculator",
+      "title": "Allowance that teaches — money habits, family budgets, and calm financial literacy for kids",
+      "description": "A practical guide to pocket money and personal finance basics: monthly budgets, needs vs wants, long-term saving, consumer temptation, and how the Allowance Calculator helps families plan with clear numbers.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "business-partnership-calculator",
+      "title": "Building a business partnership that lasts — equity, transparency, and decisions before the handshake",
+      "description": "A clear-eyed guide to co-founding and business partnerships: ownership splits, money transparency, disagreement, shared risk, contribution over time, and how the Business Partnership Calculator sharpens the conversation.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "calorie-burn-calculator",
+      "title": "Calories as energy, not a verdict — understanding burn across walking, running, rope, swimming, and more",
+      "description": "A practical guide to multi-activity calorie burn: metabolism, BMR and resting energy, aerobic vs strength, how body weight and duration shape estimates, varied weekly movement, and how the Multi-Activity Calorie Burn Calculator helps you plan without obsession.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "deep-relationship-quiz",
+      "title": "Going deeper together — emotional communication, hidden needs, and a pause that strengthens the bond",
+      "description": "A practical look at relationship depth: love languages, expectations, active listening, daily burnout, and how the Deep Relationship Quiz opens conversations ordinary weeks push aside.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "dog-ownership-calculator",
+      "title": "What it really costs to keep a dog — money, time, and the everyday bond",
+      "description": "A clear-eyed guide to dog ownership: budgets, energy, breed-and-size fit, and how the Dog Ownership Calculator helps you plan before surprises arrive.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "life-love-calculator",
+      "title": "Everyday love that lasts — communication, trust, and small habits that keep a relationship alive",
+      "description": "A practical, clear-eyed look at long-term relationships — and how the Everyday Love Calculator helps you pause, notice patterns, and bring more care into daily life.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "parental-respect-calculator",
+      "title": "Respect that stays warm — adult children, aging parents, and the everyday work of intergenerational care",
+      "description": "A practical look at parental respect and family bonds: listening across generations, independence with involvement, bridging gaps, everyday appreciation, and how the Parental Respect Calculator helps you pause and invest wisely.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "physical-health-calculator",
+      "title": "Physical health as a practice — moderate movement, balanced fuel, and a sustainable active life",
+      "description": "A practical guide to physical health and an active lifestyle: sedentary modern life, varied movement, energy and rest, body signals, the mind-body link, and how the Physical Health and calorie tools help you set realistic goals.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "resilience-balance-calculator",
+      "title": "Resilience is not the absence of hard days — building mental balance in a restless age",
+      "description": "A practical guide to personal resilience and mental balance: energy versus time, emotional support, cognitive flexibility, body-mind signals, intentional rest, and how the Resilience & Balance Calculator helps you map load and strength.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "stranger-sharing-calculator",
+      "title": "Talking to strangers with sense — small talk, safe openness, and the gift of unexpected conversation",
+      "description": "A practical guide to stranger sharing and open conversation: screens and isolation, safe boundaries, listening to people you just met, easing mild social anxiety, and how the Stranger Sharing Quiz helps you practice with clarity.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
       "slug": "the-hidden-cost-of-diy",
       "title": "The Hidden Cost of DIY: Why Your Time Is More Valuable Than You Think",
       "description": "Why spending 10 hours to save $100 might be the worst financial decision you've made this month.",
@@ -33,6 +93,66 @@
   ],
   "he": [
     {
+      "slug": "allowance-calculator",
+      "title": "דמי כיס שמחנכים — הרגלי כסף, תקציב משפחתי ואוריינות פיננסית רגועה לילדים",
+      "description": "מדריך מעשי לדמי כיס וליסודות כספיים אישיים: תקציב חודשי, צרכים מול רצונות, חיסכון לטווח ארוך, פיתויי צריכה, ואיך מחשבון דמי הכיס עוזר למשפחות לתכנן עם מספרים ברורים.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "business-partnership-calculator",
+      "title": "לבנות שותפות עסקית שנשארת — אחוזי בעלות, שקיפות והחלטות לפני לחיצת היד",
+      "description": "מדריך מפוכח לייסוד משותף ולשותפויות עסקיות: חלוקת מניות, שקיפות כספית, אי־הסכמה, סיכון משותף, מדידת תרומה לאורך זמן, ואיך מחשבון השותפות העסקית מחדד את השיחה.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "calorie-burn-calculator",
+      "title": "קלוריות הן אנרגיה, לא פסק דין — להבין שריפה בהליכה, ריצה, חבל, שחייה ועוד",
+      "description": "מדריך מעשי לשריפת קלוריות בפעילויות מרובות: מטבוליזם, BMR ואנרגיית מנוחה, אירובי מול כוח, איך משקל גוף ומשך משפיעים על הערכות, תנועה שבועית מגוונת, ואיך מחשבון שריפת הקלוריות הרב־פעילויות עוזר לתכנן בלי אובססיה.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "deep-relationship-quiz",
+      "title": "ללכת עמוק יותר יחד — תקשורת רגשית, צרכים סמויים והפסקה שמחזקת את הקשר",
+      "description": "מבט מעשי על עומק זוגי: שפות אהבה, ציפיות, הקשבה פעילה, שחיקה יומיומית, ואיך שאלון עומק לזוגיות פותח שיחות שהשבוע הרגיל דוחה שוב ושוב.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "dog-ownership-calculator",
+      "title": "כמה באמת עולה להחזיק כלב — כסף, זמן והקשר היומיומי",
+      "description": "מדריך מפוכח לאחריות של חיים עם כלב: תקציב, אנרגיה, התאמה לגודל ולגיל, ואיך מחשבון עלות וטיפול בכלב של DailyLogic עוזר לתכנן לפני שההפתעות מגיעות.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "life-love-calculator",
+      "title": "אהבה יומיומית שנשארת — תקשורת, אמון והרגלים קטנים שמחזיקים זוגיות בחיים",
+      "description": "מבט מעשי ומפוכח על מערכות יחסים ארוכות טווח — ואיך מחשבון האהבה היומיומית של DailyLogic עוזר לעצור לרגע, לזהות דפוסים ולהחזיר תשומת לב ליום־יום.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "parental-respect-calculator",
+      "title": "כבוד שנשאר חם — ילדים בוגרים, הורים מזדקנים, והעבודה היומיומית של קשר בין־דורי",
+      "description": "מבט מעשי על כבוד להורים ועל קשר משפחתי: הקשבה בין דורות, עצמאות לצד מעורבות, גישור על פערים, הערכה ביום־יום, ואיך מחשבון הכבוד ההורי עוזר לעצור ולהשקיע בחכמה.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "physical-health-calculator",
+      "title": "בריאות גופנית כתרגול — תנועה מתונה, דלק מאוזן וחיים פעילים בני־קיימא",
+      "description": "מדריך מעשי לבריאות גופנית ולאורח חיים פעיל: חיים יושבניים מודרניים, תנועה מגוונת, אנרגיה ומנוחה, אותות הגוף, הקשר גוף־נפש, ואיך מחשבון הבריאות הגופנית ומחשבון שריפת הקלוריות עוזרים להציב יעדים ריאליים.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "resilience-balance-calculator",
+      "title": "חוסן אינו היעדר ימים קשים — לבנות איזון נפשי בעידן חסר מנוחה",
+      "description": "מדריך מעשי לחוסן אישי ולאיזון נפשי: אנרגיה מול זמן, רשת תמיכה רגשית, גמישות קוגניטיבית, אותות גוף־נפש, מנוחות מכוונות, ואיך מחשבון החוסן והאיזון הנפשי עוזר למפות עומס וכוחות.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "stranger-sharing-calculator",
+      "title": "לדבר עם זרים בשיקול דעת — שיחת חולין, פתיחות בטוחה והמתנה שבשיחה לא מתוכננת",
+      "description": "מדריך מעשי לשיתוף עם זרים ולשיחה פתוחה: מסכים ובדידות, גבולות בטוחים, הקשבה למי שזה עתה פגשתם, הקלה בחרדה חברתית קלה, ואיך שאלון השיתוף עם זרים עוזר לתרגל בבהירות.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
       "slug": "the-hidden-cost-of-diy",
       "title": "העלות הנסתרת של 'עשה זאת בעצמך': למה הזמן שלכם שווה יותר ממה שאתם חושבים",
       "description": "למה להשקיע 10 שעות כדי לחסוך 100 שקל עשוי להיות ההחלטה הכספית הגרועה ביותר שלכם החודש.",
@@ -64,6 +184,66 @@
     }
   ],
   "es": [
+    {
+      "slug": "allowance-calculator",
+      "title": "La paga que educa — hábitos de dinero, presupuestos familiares y alfabetización financiera tranquila para niños",
+      "description": "Una guía práctica sobre la paga y las bases de las finanzas personales: presupuesto mensual, necesidades frente a deseos, ahorro a largo plazo, tentación de consumo y cómo la Calculadora de Paga ayuda a las familias a planificar con números claros.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "business-partnership-calculator",
+      "title": "Construir una sociedad empresarial que dure — participación, transparencia y decisiones antes del apretón de manos",
+      "description": "Una guía clara sobre cofundación y sociedades de negocio: reparto de propiedad, transparencia financiera, desacuerdo, riesgo compartido, contribución a lo largo del tiempo y cómo la Calculadora de sociedad empresarial afila la conversación.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "calorie-burn-calculator",
+      "title": "Las calorías son energía, no un veredicto — entender la quema al caminar, correr, saltar a la cuerda, nadar y más",
+      "description": "Una guía práctica sobre la quema de calorías en varias actividades: metabolismo, BMR y energía en reposo, aeróbico frente a fuerza, cómo el peso corporal y la duración moldean las estimaciones, movimiento semanal variado, y cómo la Calculadora Multiactividad de Quema de Calorías ayuda a planificar sin obsesión.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "deep-relationship-quiz",
+      "title": "Ir más profundo juntos — comunicación emocional, necesidades ocultas y una pausa que fortalece el vínculo",
+      "description": "Una mirada práctica a la profundidad de pareja: lenguajes del amor, expectativas, escucha activa, desgaste cotidiano, y cómo el cuestionario profundo de pareja abre conversaciones que la semana ordinaria aplaza.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "dog-ownership-calculator",
+      "title": "Lo que realmente cuesta tener un perro — dinero, tiempo y el vínculo de cada día",
+      "description": "Una guía clara y con los pies en la tierra sobre la responsabilidad de vivir con un perro: presupuesto, energía, encaje por tamaño y edad, y cómo la Calculadora de Coste y Cuidado del Perro te ayuda a planificar antes de que lleguen las sorpresas.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "life-love-calculator",
+      "title": "Amor cotidiano que dura — comunicación, confianza y pequeños hábitos que mantienen viva una relación",
+      "description": "Una mirada práctica y con los pies en la tierra sobre las relaciones a largo plazo — y cómo la Calculadora de Amor Cotidiano te ayuda a pausar, notar patrones y cuidar más el día a día.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "parental-respect-calculator",
+      "title": "Un respeto que sigue siendo cálido — hijos adultos, padres que envejecen y el trabajo cotidiano del cuidado intergeneracional",
+      "description": "Una mirada práctica al respeto parental y al vínculo familiar: escuchar entre generaciones, independencia con implicación, tender puentes, apreciación cotidiana, y cómo la Calculadora de Respeto Parental ayuda a pausar e invertir con sabiduría.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "physical-health-calculator",
+      "title": "La salud física como práctica — movimiento moderado, combustible equilibrado y una vida activa sostenible",
+      "description": "Una guía práctica sobre salud física y estilo de vida activo: vida sedentaria moderna, movimiento variado, energía y descanso, señales del cuerpo, el vínculo cuerpo-mente, y cómo la Calculadora de Salud Física y la de quema de calorías ayudan a fijar metas realistas.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "resilience-balance-calculator",
+      "title": "La resiliencia no es la ausencia de días difíciles — construir equilibrio mental en una época inquieta",
+      "description": "Una guía práctica sobre resiliencia personal y equilibrio mental: energía frente a tiempo, red de apoyo emocional, flexibilidad cognitiva, señales cuerpo-mente, descanso intencional y cómo la Calculadora de Resiliencia y Equilibrio Mental te ayuda a mapear carga y fortalezas.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
+    {
+      "slug": "stranger-sharing-calculator",
+      "title": "Hablar con desconocidos con sentido común — conversación ligera, apertura segura y el regalo de un encuentro inesperado",
+      "description": "Una guía práctica sobre compartir con desconocidos y la conversación abierta: pantallas y aislamiento, límites seguros, escuchar a quien acabas de conocer, aliviar la ansiedad social leve, y cómo el cuestionario Stranger Sharing te ayuda a practicar con claridad.",
+      "publishedAt": "2026-08-03T00:00:00.000Z"
+    },
     {
       "slug": "the-hidden-cost-of-diy",
       "title": "El costo oculto del bricolaje: por qué tu tiempo vale más de lo que crees",

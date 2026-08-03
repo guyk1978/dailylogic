@@ -7,7 +7,7 @@
   "toolSlug": "relationship-depth",
   "schemaType": "WebApplication",
   "applicationCategory": "LifestyleApplication",
-  "relatedArticles": [],
+  "relatedArticles": ["deep-relationship-quiz"],
   "publishedAt": "2026-08-03",
   "sections": [
     {

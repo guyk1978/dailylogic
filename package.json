@@ -9,7 +9,8 @@
     "pages:build": "npx @cloudflare/next-on-pages",
     "start": "next start",
     "lint": "next lint",
-    "translate": "node scripts/translate-locales.mjs"
+    "translate": "node scripts/translate-locales.mjs",
+    "sitemap:check": "node scripts/check-sitemap-coverage.mjs"
   },
   "dependencies": {
     "framer-motion": "^12.42.0",

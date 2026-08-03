@@ -7,7 +7,7 @@
   "toolSlug": "dog-ownership-calculator",
   "schemaType": "WebApplication",
   "applicationCategory": "FinanceApplication",
-  "relatedArticles": [],
+  "relatedArticles": ["dog-ownership-calculator"],
   "publishedAt": "2026-08-03",
   "sections": [
     {

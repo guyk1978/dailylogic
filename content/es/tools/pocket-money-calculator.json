@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de mesada: plan familiar para niños",
+  "subtitle": "Contexto breve, cuestionario rápido o completo, y un plan con rango de monto, reparto ahorro/gasto/donación y hábitos de sociedad.",
+  "seoTitle": "Calculadora de mesada para niños | Plan familiar | DailyLogic",
+  "seoDescription": "Calculadora gratuita de mesada: edad y modelo, cuestionario rápido o 25 preguntas. Rango mensual, reparto ahorro/gasto/donación y consejos — en el navegador.",
+  "heroDescription": "La mesada funciona cuando la sociedad es clara: monto, reglas, ahorro y qué pasa cuando se acaba. Esta herramienta ayuda a alinear a padres e hijos con un plan práctico.",
+  "toolSlug": "pocket-money-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Antes del cuestionario eligen edad, modelo y objetivo — para ajustar redacción y consejos. Luego eligen modo rápido o plan completo.",
+        "Las preguntas cubren responsabilidad, ahorro, sociedad familiar y sabiduría al gastar — con matices por edad y modelo.",
+        "El informe incluye rango mensual, porcentajes, ideas, consejos y hábitos. Todo queda local en el navegador."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completen el contexto con el niño/a, elijan la longitud y respondan con barra de progreso clara.",
+        "Guarden en el historial (Expand en la portada) o descarguen/copien la tarjeta.",
+        "Usen el plan como base de conversación — no como veredicto."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "Mesada sin reglas se vuelve pelea. Una estructura simple construye responsabilidad y confianza.",
+        "La guía por edad evita expectativas irreales — en monto y en lenguaje.",
+        "Repetir a los pocos meses muestra si los hábitos realmente se pegaron."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Contexto afinado", "description": "Edad, modelo y objetivo dan forma a las preguntas." },
+    { "title": "Dos longitudes", "description": "Rápido o un plan familiar más profundo." },
+    { "title": "Plan de acción", "description": "Monto, reparto, consejos y hábitos de sociedad." }
+  ],
+  "faq": [
+    { "question": "¿Hay que responder con el niño/a?", "answer": "Muy recomendable — es una sociedad. También se puede preparar la charla solo con el adulto." },
+    { "question": "¿El monto recomendado es obligatorio?", "answer": "No. Es una guía educativa según edad y responsabilidad — ajústala a tu hogar." },
+    { "question": "¿Los datos se guardan en un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}

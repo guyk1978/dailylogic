@@ -1,0 +1,204 @@
+{
+  "intro": {
+    "eyebrow": "Pareja honesta, sin filtro",
+    "title": "Evaluación de profundidad de pareja",
+    "body": "Revisa vuestra dinámica real — comunicación, resiliencia, espacio personal y crecimiento compartido. Elige versión rápida o completa. Todo se queda en el navegador."
+  },
+  "modes": {
+    "quick": "Chequeo rápido",
+    "quickMeta": "~10 preguntas · 2–3 minutos",
+    "full": "Evaluación completa",
+    "fullMeta": "30 preguntas · 8–10 minutos"
+  },
+  "scale": {
+    "1": "Casi nunca",
+    "2": "Rara vez",
+    "3": "A veces",
+    "4": "A menudo",
+    "5": "Casi siempre"
+  },
+  "actions": {
+    "start": "Empezar",
+    "next": "Siguiente",
+    "back": "Anterior",
+    "finish": "Terminar y ver informe",
+    "restart": "Nueva evaluación",
+    "changeMode": "Cambiar modo",
+    "newInsight": "Otra reflexión",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a las herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Perfil de pareja honesto",
+    "overall": "Puntuación global",
+    "dimensions": "Dimensiones",
+    "insights": "Reflexiones",
+    "tips": "Consejos de sentido común",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · Evaluación de profundidad de pareja",
+    "shareText": "Nuestro perfil de pareja: {{profile}} ({{score}}%). {{insight}} | Evaluación de pareja — Lógica diaria",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Necesita atención",
+      "developing": "En crecimiento",
+      "steady": "Estable y humano",
+      "strong": "Fuerte y conectado"
+    },
+    "dimensionLabels": {
+      "resilience": "Resiliencia",
+      "communication": "Comunicación",
+      "personalSpace": "Espacio personal",
+      "sharedGrowth": "Crecimiento compartido"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No se pudo copiar la imagen — descárgala"
+  },
+  "profiles": {
+    "steady-partners": "Compañeros estables — con margen de mejora suave",
+    "growing-allies": "Aliados que crecen juntos",
+    "quiet-strength": "Fuerza callada construida en lo cotidiano",
+    "honest-builders": "Constructores honestos — imperfectos, reales",
+    "work-in-progress-good": "Obra en curso — de la buena",
+    "tender-realists": "Realistas tiernos",
+    "learning-curve": "Curva de aprendizaje de pareja activa",
+    "fragile-hope": "Esperanza frágil — merece protección",
+    "repair-ready": "Listos para reparar, no solo dramatizar",
+    "needs-attention": "El sistema pide atención",
+    "honest-wake-up": "Despertar honesto — sin pánico",
+    "care-first": "Primero cuidar, después optimizar"
+  },
+  "insights": {
+    "dim-resilience-high": "Vuestra resiliencia se nota: bajo presión hay base de “estamos juntos en esto”. Mantenedla también en épocas tranquilas.",
+    "dim-resilience-low": "La resiliencia pide refuerzo — no heroísmo, sino fiabilidad pequeña: quién hace qué cuando cuesta.",
+    "dim-communication-high": "Vuestra comunicación respira. Es raro — usadla también en temas aburridos, no solo en crisis.",
+    "dim-communication-low": "Hay una brecha entre lo sentido y lo dicho. Empezad con frases cortas y limpias, sin acusaciones.",
+    "dim-personalSpace-high": "El espacio personal no amenaza el vínculo — lo alimenta. Eso es madurez de pareja.",
+    "dim-personalSpace-low": "El “juntos” puede apretar. El espacio no es distancia; es oxígeno a largo plazo.",
+    "dim-sharedGrowth-high": "Tenéis dirección compartida. Aunque el ritmo difiera — hay brújula.",
+    "dim-sharedGrowth-low": "El crecimiento compartido necesita un ritual pequeño: un objetivo, una charla, una celebración al mes.",
+    "overall-strong": "El panorama global es fuerte y conectado — sin fingir que todo es perfecto.",
+    "overall-steady": "Estáis en una estabilidad humana: fortalezas claras y puntos que requieren mantenimiento.",
+    "overall-developing": "Hay potencial real, con trabajo de raíz por delante — no solo una foto para redes.",
+    "overall-needs-care": "Este informe pide delicadeza y honestidad: no culpar; sí elegir una acción pequeña esta semana.",
+    "balance-note": "Una pareja sana no es simetría perfecta — es la capacidad de reparar cuando se pierde el equilibrio.",
+    "humor-note": "Si aún podéis reíros de vosotros a veces — tenéis una herramienta de reparación que ninguna app mide."
+  },
+  "tips": {
+    "tip-repair-ritual": "Definid un ritual de reparación tras un conflicto: 10 minutos, sin móviles — qué dolió y qué necesitáis.",
+    "tip-stress-plan": "Escribid de antemano quién hace qué bajo estrés (hijos, dinero, salud). Un plan baja el drama.",
+    "tip-small-reliability": "Elegid un compromiso semanal pequeño y cumplidlo — la fiabilidad construye resiliencia.",
+    "tip-weekly-talk": "Una charla de estado de 20 minutos a la semana: qué funcionó, qué duele, qué pedís.",
+    "tip-reflect-before-reply": "Antes de una respuesta cortante — una respiración y una pregunta aclaratoria.",
+    "tip-soft-start": "Empezad frases difíciles con “siento” en vez de “tú siempre”.",
+    "tip-alone-calendar": "Bloquead tiempo a solas para cada uno en el calendario — como una reunión que no se cancela.",
+    "tip-friend-night": "Una noche de amigos por separado cada dos semanas, sin chequeos de humor innecesarios.",
+    "tip-no-scorekeeping": "Dejad de llevar la cuenta de quién cedió más. Preguntad: ¿qué me falta ahora?",
+    "tip-shared-goal": "Elegid un objetivo mensual pequeño compartido (viaje, ahorro, hábito) y revisad juntos.",
+    "tip-celebrate-tiny": "Celebrad victorias pequeñas en voz alta — terminar una pelea en paz cuenta.",
+    "tip-fair-chores": "Reequilibrad la carga del hogar cada mes. La equidad se actualiza; no se fija para siempre.",
+    "tip-common-sense-pause": "Cuando sube el tono — una pausa de 20 minutos no es huida; es mantenimiento."
+  },
+  "questions": {
+    "talk-hard-topics": {
+      "prompt": "Cuando surge un tema sensible (dinero, familia, futuro) — podemos hablar sin huir ni explotar."
+    },
+    "listen-to-understand": {
+      "prompt": "Cuando mi pareja habla — escucho para entender, no solo para responder."
+    },
+    "repair-after-fight": {
+      "prompt": "Tras una pelea, sabemos volver y reparar — aunque tarde un poco."
+    },
+    "daily-checkins": {
+      "prompt": "Tenemos pequeños chequeos diarios, no solo un “¿qué tal?” automático."
+    },
+    "honest-without-cruel": {
+      "prompt": "Podemos ser honestos sin humillar, y tiernos sin ocultar."
+    },
+    "disagree-respect": {
+      "prompt": "Podemos disentir sin convertir eso en una prueba de lealtad."
+    },
+    "humor-in-friction": {
+      "prompt": "Incluso en la fricción a veces usamos humor sano que baja el fuego sin borrar el dolor."
+    },
+    "say-needs-clearly": {
+      "prompt": "Puedo pedir lo que necesito en vez de insinuar y enfadarme después."
+    },
+    "crisis-support": {
+      "prompt": "En una crisis (salud, trabajo, familia) — sentimos que tenemos la espalda del otro."
+    },
+    "stress-teamwork": {
+      "prompt": "Bajo estrés actuamos más como equipo que como dos rivales cansados."
+    },
+    "bounce-after-hurt": {
+      "prompt": "Cuando hay herida — hay camino de vuelta a la confianza, no solo silencio largo."
+    },
+    "money-tension": {
+      "prompt": "La tensión por dinero se abre en conversación, no solo en sospecha."
+    },
+    "family-pressure": {
+      "prompt": "La presión de las familias de origen se gestiona en pareja, no como guerra de lealtades."
+    },
+    "health-or-hard-week": {
+      "prompt": "En una semana dura ajustamos expectativas en vez de exigir “negocio habitual”."
+    },
+    "trust-under-doubt": {
+      "prompt": "Aunque aparezca la duda — hay una base de confianza a la que volver."
+    },
+    "apologize-and-change": {
+      "prompt": "Una disculpa en nosotros viene con intento de cambio, no solo con palabras bonitas."
+    },
+    "alone-time-ok": {
+      "prompt": "El tiempo a solas se acepta sin ofensa ni sospecha."
+    },
+    "friends-without-guilt": {
+      "prompt": "Podemos ver amigos por separado sin una pequeña sensación de traición."
+    },
+    "hobbies-respected": {
+      "prompt": "Los hobbies e intereses personales reciben respeto, aunque no se compartan."
+    },
+    "no-mind-reading": {
+      "prompt": "No esperamos telepatía — ni nos ofendemos cuando alguien pide claridad."
+    },
+    "boundaries-held": {
+      "prompt": "Los límites que nombramos se sostienen, no se borran a los dos días."
+    },
+    "togetherness-not-fusion": {
+      "prompt": "Nuestro “juntos” no exige borrar quiénes somos por separado."
+    },
+    "jealousy-handled": {
+      "prompt": "Los celos o la inseguridad se tratan en conversación, no con control."
+    },
+    "future-talks": {
+      "prompt": "Hablamos del futuro con honestidad — sueños y miedos."
+    },
+    "celebrate-wins": {
+      "prompt": "Nos celebramos también en victorias cotidianas pequeñas."
+    },
+    "learn-from-conflict": {
+      "prompt": "Tras un conflicto queda algo aprendido — no solo un rasguño."
+    },
+    "shared-rituals": {
+      "prompt": "Tenemos rituales compartidos pequeños (comida, paseo, serie) que sostienen el vínculo."
+    },
+    "support-dreams": {
+      "prompt": "Cada uno siente apoyo a los sueños personales — aunque la logística sea dura."
+    },
+    "fair-load-home": {
+      "prompt": "La carga del hogar se siente suficientemente justa, y se puede renegociar."
+    },
+    "intimacy-of-ordinary": {
+      "prompt": "Hay intimidad entre nosotros también en lo ordinario aburrido — no solo en los picos."
+    }
+  }
+}

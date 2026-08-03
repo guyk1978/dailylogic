@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora del amor cotidiano: sinergia con un guiño",
+  "subtitle": "Elige pequeños placeres, un vicio leve y el ánimo de hoy — obtén una sinergia vital con reflexiones ingeniosas.",
+  "seoTitle": "Calculadora del amor cotidiano | Sinergia vital | Lógica diaria",
+  "seoDescription": "La calculadora del amor cotidiano cruza pequeños placeres, hábitos y ánimos en una puntuación de sinergia vital humorística. Gratis en el navegador.",
+  "heroDescription": "La vida está llena de pequeños amores — el café de la mañana, aparcar perfecto, el silencio cuando los niños duermen. Esta calculadora los cruza con tus hábitos y ánimo para una sinergia ingeniosa.",
+  "toolSlug": "love-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace la calculadora",
+      "paragraphs": [
+        "En lugar de una calculadora de amor por nombres, esta herramienta explora los pequeños amores cotidianos: comida y bebida, momentos en casa, hábitos raros, objetos queridos y rachas de suerte. Eliges lo que te alegra, tu vicio leve y el ánimo — y el motor genera una puntuación de sinergia única.",
+        "La puntuación no es puro azar: usa vectores de rasgos (energía, comodidad, caos, lo social, indulgencia) y cruces de categorías y etiquetas. El resultado llega con reflexiones humorísticas que puedes renovar una y otra vez.",
+        "Todo corre en local en tu navegador — sin registro y sin enviar tus elecciones a un servidor."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Elige lo que te alegra en la biblioteca de categorías, añade tu vicio leve y marca el ánimo de hoy. Pulsa calcular y disfruta de una breve animación de “sentido común”.",
+        "Después del resultado, pide una nueva reflexión o un análisis más profundo, comparte o copia, y guarda el cálculo si quieres. Luego vuelve al resto de herramientas.",
+        "Prueba distintas combinaciones — cada trío cuenta una historia distinta sobre cómo vives el día a día."
+      ]
+    },
+    {
+      "heading": "Por qué importa la sinergia de los pequeños amores",
+      "paragraphs": [
+        "La felicidad cotidiana suele construirse con momentos pequeños, no con grandes eventos. La herramienta ayuda a ver patrones: ¿buscas silencio, caprichos, suerte urbana o límites sanos?",
+        "El humor permite mirar los hábitos con cariño — sin juicios pesados, con un guiño de sentido común.",
+        "Usa el resultado como conversación contigo o con amigos: qué te llena de verdad hoy, y qué parece un “vicio” pero en realidad te cuida."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Biblioteca rica", "description": "Decenas de pequeños amores en categorías de la vida real." },
+    { "title": "Motor inteligente", "description": "Sinergia según rasgos, etiquetas y ánimo — no solo un sorteo." },
+    { "title": "Reflexiones rotativas", "description": "Renueva ideas y análisis profundos para más perlas de humor." }
+  ],
+  "faq": [
+    { "question": "¿Es una calculadora de amor de pareja?", "answer": "No. Es para los pequeños amores cotidianos — hábitos, momentos y ánimos — con reflexiones ingeniosas." },
+    { "question": "¿La puntuación es aleatoria?", "answer": "Es determinista según tu combinación, con una ligera variación por hash — la misma combinación se mantiene coherente." },
+    { "question": "¿Se guardan datos en un servidor?", "answer": "No. Las elecciones y guardados se quedan en tu navegador." }
+  ]
+}

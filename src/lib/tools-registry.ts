@@ -1,13 +1,17 @@
 import type { ComponentType } from "react";
 
-export type ToolCategory = "finance" | "kitchen" | "shopping";
+export type ToolCategory = "finance" | "kitchen" | "shopping" | "life";
 
 export type ToolSlug =
   | "time-value"
   | "tip-split"
   | "recipe-adjuster"
   | "budget-simple"
-  | "unit-compare";
+  | "unit-compare"
+  | "love-calculator"
+  | "relationship-depth"
+  | "business-partnership-calculator"
+  | "pocket-money-calculator";
 
 export interface ToolMeta {
   slug: ToolSlug;
@@ -37,6 +41,10 @@ export const toolCategories: Record<
   shopping: {
     label: "Smart Shopping",
     description: "Compare prices and shop smarter",
+  },
+  life: {
+    label: "Everyday Life",
+    description: "Small joys, moods, and everyday wit",
   },
 };
 
@@ -104,6 +112,62 @@ export const toolsRegistry: ToolEntry[] = [
     loadComponent: () =>
       import("@/components/tools/unit-compare").then((m) => ({
         default: m.UnitCompare,
+      })),
+  },
+  {
+    meta: {
+      slug: "love-calculator",
+      name: "Everyday Love Calculator",
+      description:
+        "Cross your small joys, tiny vices, and mood for a witty life-synergy score.",
+      category: "life",
+      tags: ["life", "mood", "fun", "synergy"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/love-calculator").then((m) => ({
+        default: m.LoveCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "relationship-depth",
+      name: "Relationship Depth Assessment",
+      description:
+        "Honest partnership questionnaire with resilience, communication, space, and growth scores.",
+      category: "life",
+      tags: ["relationship", "quiz", "communication", "depth"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/relationship-depth").then((m) => ({
+        default: m.RelationshipDepth,
+      })),
+  },
+  {
+    meta: {
+      slug: "business-partnership-calculator",
+      name: "Business Partnership Calculator",
+      description:
+        "Honest venture-partner assessment with setup wizard, industry-aware questions, and founder-agreement prompts.",
+      category: "finance",
+      tags: ["business", "partnership", "equity", "founders"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/business-partnership").then((m) => ({
+        default: m.BusinessPartnershipCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "pocket-money-calculator",
+      name: "Pocket Money Calculator",
+      description:
+        "Family allowance plan with age-aware setup, spend/save/give split, and practical partnership habits.",
+      category: "finance",
+      tags: ["kids", "allowance", "family", "saving", "education"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/pocket-money").then((m) => ({
+        default: m.PocketMoneyCalculator,
       })),
   },
 ];

@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de sociedad empresarial: sinergia honesta de fundadores",
+  "subtitle": "Un setup breve, cuestionario rápido o completo, e informe con métricas y puntos para el acuerdo de fundadores.",
+  "seoTitle": "Calculadora de sociedad empresarial | Evaluación de fundadores | Lógica diaria",
+  "seoDescription": "Calculadora honesta de sociedad empresarial: setup, chequeo rápido o 30 preguntas profundas con giro por industria, métricas, consejos y puntos para el acuerdo de fundadores — gratis en el navegador.",
+  "heroDescription": "Las sociedades se rompen por dinero, ego, carga invisible y salida — no por eslóganes. Esta calculadora recoge contexto, hace preguntas honestas (con giros de industria) y produce un perfil de sinergia con recomendaciones para el acuerdo de fundadores.",
+  "toolSlug": "business-partnership-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "BusinessApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace la calculadora",
+      "paragraphs": [
+        "Antes del cuestionario defines estado, número de socios, sector y reparto — afinando lenguaje y énfasis. Luego eliges rápido o completo.",
+        "Las preguntas tocan lo que realmente rompe sociedades: responsabilidad ante el fallo, caja, decisiones, trabajo invisible y salida futura — con variantes por industria.",
+        "El informe incluye métricas, reflexiones, consejos y cláusulas que conviene poner en un acuerdo de fundadores. Todo se queda en local."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa el setup, elige la longitud del cuestionario y responde en una escala de frecuencia con barra de progreso.",
+        "Guarda el resultado en el historial (con Expand en la home) o descarga/copia una tarjeta.",
+        "Usa el informe como inicio de conversación de fundadores — no como veredicto."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "La mayoría de conflictos vienen de la ambigüedad, no de la maldad. Escribir pronto evita dramas caros.",
+        "Los prompts por industria ayudan a tocar puntos sensibles reales (IP en tech, stock en comercio, clientes en servicios).",
+        "Repetir tras un trimestre puede mostrar si la alineación ocurrió de verdad."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Setup inicial", "description": "Estado, socios, sector y equity condicionan lo que sigue." },
+    { "title": "Dos longitudes", "description": "Rápido por velocidad o completo para una lectura seria." },
+    { "title": "Acuerdo de fundadores", "description": "Reflexiones y cláusulas que conviene dejar por escrito." }
+  ],
+  "faq": [
+    { "question": "¿Hay que ser ya socios?", "answer": "No. También sirve si estáis considerando asociaros — el lenguaje se adapta." },
+    { "question": "¿Se envían datos a un servidor?", "answer": "No. Todo corre y se guarda en tu navegador." },
+    { "question": "¿Sustituye a un abogado?", "answer": "No. Es una herramienta de alineación y checklist — no asesoramiento legal." }
+  ]
+}

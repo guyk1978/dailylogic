@@ -1,0 +1,48 @@
+{
+  "title": "Pocket Money Calculator: a family allowance plan",
+  "subtitle": "Short setup, quick or full quiz, then a plan with amount range, save/spend/give split, and partnership habits.",
+  "seoTitle": "Kids Pocket Money Calculator | Family Plan | DailyLogic",
+  "seoDescription": "Free kids allowance calculator: age and model setup, quick or 25-question blueprint. Get a monthly range, save/spend/give split, and practical tips — all in your browser.",
+  "heroDescription": "Allowance works when the partnership is clear: amount, rules, saving, and what happens when money runs out. This tool helps parent and child align and build a practical plan.",
+  "toolSlug": "pocket-money-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "Before the quiz you choose age, allowance model, and goal — so wording and advice fit. Then pick quick setup or a full family blueprint.",
+        "Questions cover responsibility, saving, family partnership, and spending wisdom — with age and model tweaks.",
+        "The report includes a recommended monthly range, percentage split, insights, tips, and habits. Everything stays local in the browser."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill the background with your child, choose quiz length, and answer on a frequency scale with a clear progress bar.",
+        "Save to history (Expand on the home page) or download/copy a result card.",
+        "Use the plan as a conversation starter — not a verdict."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "Allowance without rules becomes arguments. Simple structure builds responsibility and trust.",
+        "Age-aware guidance prevents unrealistic expectations — in amount and in language.",
+        "Re-running after a few months shows whether habits actually stuck."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Tuned setup", "description": "Age, model, and goal shape the questions." },
+    { "title": "Two lengths", "description": "Quick setup or a deeper family blueprint." },
+    { "title": "Action plan", "description": "Amount, split, tips, and partnership habits." }
+  ],
+  "faq": [
+    { "question": "Do we have to answer with the child?", "answer": "Strongly recommended — it’s a partnership. Parents can also fill it as prep for a talk." },
+    { "question": "Is the recommended amount mandatory?", "answer": "No. It’s an educational guide by age and responsibility — adapt it to your household." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

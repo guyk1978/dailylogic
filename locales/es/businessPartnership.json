@@ -1,0 +1,293 @@
+{
+  "intro": {
+    "eyebrow": "Sociedad de negocios sin maquillaje",
+    "title": "Calculadora de sociedad empresarial honesta",
+    "body": "Empieza con un setup breve, elige rápido o completo, y obtén un perfil de sinergia con métricas y puntos para el acuerdo de fundadores. Todo se queda en el navegador."
+  },
+  "setup": {
+    "title": "Setup de la sociedad",
+    "subtitle": "Estos datos afinan el lenguaje y los énfasis después.",
+    "statusLabel": "Estado de la sociedad",
+    "partnersLabel": "Número de socios",
+    "industryLabel": "Sector / industria",
+    "equityLabel": "Reparto de equity / beneficios",
+    "continue": "Continuar al cuestionario",
+    "status": {
+      "active": "Ya somos socios en la práctica",
+      "considering": "Estamos considerando asociarnos"
+    },
+    "partners": {
+      "2": "2 socios",
+      "3": "3 socios",
+      "4plus": "4 o más"
+    },
+    "industry": {
+      "tech": "Tecnología / SaaS",
+      "commerce": "Comercio y ecommerce",
+      "services": "Servicios / agencia",
+      "food": "Restauración / culinary",
+      "other": "Otro"
+    },
+    "equity": {
+      "equal": "Reparto igual (p. ej. 50-50)",
+      "majority": "Mayoría clara de un lado",
+      "complex": "Reparto complejo / dinámico"
+    }
+  },
+  "modes": {
+    "quick": "Chequeo rápido",
+    "quickMeta": "~10 preguntas clave · 2–3 minutos",
+    "full": "Evaluación completa",
+    "fullMeta": "30 preguntas · 8–10 minutos",
+    "backToSetup": "Volver al setup"
+  },
+  "scale": {
+    "1": "Casi nunca",
+    "2": "Rara vez",
+    "3": "A veces",
+    "4": "A menudo",
+    "5": "Casi siempre"
+  },
+  "actions": {
+    "start": "Empezar",
+    "next": "Siguiente",
+    "back": "Anterior",
+    "finish": "Terminar y ver informe",
+    "restart": "Nueva evaluación",
+    "changeMode": "Cambiar modo",
+    "newInsight": "Otra reflexión",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a las herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Perfil de sinergia empresarial",
+    "overall": "Puntuación global",
+    "dimensions": "Dimensiones",
+    "insights": "Reflexiones",
+    "tips": "Consejos de mejora",
+    "agreement": "Anclar en el acuerdo de fundadores",
+    "setupSummary": "Setup",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · Calculadora de sociedad empresarial",
+    "shareText": "Nuestro perfil de sociedad: {{profile}} ({{score}}%). {{insight}} | Sociedad empresarial — Lógica diaria",
+    "resultSummary": "{{profile}} · {{score}}% · {{industry}} · {{mode}}",
+    "bands": {
+      "needs-care": "Necesita atención",
+      "developing": "En alineación",
+      "steady": "Estable y profesional",
+      "strong": "Fuerte y alineado"
+    },
+    "dimensionLabels": {
+      "opsResilience": "Resiliencia contractual y ops",
+      "financialAlignment": "Alineación financiera",
+      "conflictGovernance": "Gobernanza de conflictos",
+      "workloadClarity": "Claridad de carga y roles"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No se pudo copiar la imagen — descárgala"
+  },
+  "profiles": {
+    "aligned-operators": "Operadores alineados — con mantenimiento",
+    "durable-venture": "Un venture con resiliencia estructural",
+    "clear-bench": "Banca clara de ownership y decisiones",
+    "working-partners": "Socios que trabajan — no solo sueñan",
+    "honest-builders-biz": "Constructores honestos de negocio",
+    "pragmatic-duo": "Pragmáticos con brújula compartida",
+    "alignment-gap": "Brecha de alineación que pide conversación",
+    "early-friction": "Fricción temprana — aún gestionable",
+    "paperwork-needed": "Hace falta papel antes de más impulso",
+    "high-risk-signal": "Señal de alto riesgo para la sociedad",
+    "pause-and-write": "Pausa y escribe los acuerdos",
+    "founders-talk-now": "Charla de fundadores — ahora, no después"
+  },
+  "insights": {
+    "dim-opsResilience-high": "Vuestra resiliencia ops/contractual es relativamente fuerte — dejadla por escrito.",
+    "dim-opsResilience-low": "La resiliencia ops pide refuerzo: quién decide, quién lidera crisis y reglas de salida.",
+    "dim-financialAlignment-high": "La alineación financiera es relativamente fuerte — protégela con una reunión mensual.",
+    "dim-financialAlignment-low": "Las brechas de dinero rompen sociedades. Alinead umbrales, retiros y repartos.",
+    "dim-conflictGovernance-high": "Podéis disentir sin destruir el negocio — mantened un mecanismo escrito.",
+    "dim-conflictGovernance-low": "Sin reglas de conflicto, cada pelea es crisis de confianza. Definid reglas antes.",
+    "dim-workloadClarity-high": "La claridad de carga/roles es buena — verificad también el trabajo invisible.",
+    "dim-workloadClarity-low": "Las brechas de ritmo/carga erosionan. Haced un RACI ligero y revisión mensual.",
+    "overall-strong": "La alineación global se ve fuerte — escribidlo antes de que la presión os pruebe.",
+    "overall-steady": "Hay base profesional con puntos blandos — priorizad una mejora esta semana.",
+    "overall-developing": "Hay potencial, pero las brechas son grandes para acelerar a ciegas. Alinead antes.",
+    "overall-needs-care": "Las señales apuntan a alto riesgo. Pausa para honestidad y un documento mínimo.",
+    "industry-tech": "En tech: IP, delivery y transparencia de prod son líneas rojas — no lo dejéis oral.",
+    "industry-commerce": "En comercio: stock, proveedores y caja rompen rápido — documentad dinero y dependencias.",
+    "industry-services": "En servicios: clientes, reputación y carga son el núcleo — definid quién habla fuera.",
+    "industry-food": "En food: turnos, estándar de servicio y proveedores exigen coordinación diaria.",
+    "industry-other": "Fuera de industrias clásicas — mismos principios: claridad, dinero, decisión y salida.",
+    "equity-equal": "Equity igual ≠ carga igual. Revisad el aporte real cada trimestre.",
+    "equity-majority": "Con mayoría clara: definid protecciones de minoría (veto en temas críticos).",
+    "equity-complex": "Con split complejo: simplificad reglas de update/vesting — sin docs es una trampa."
+  },
+  "tips": {
+    "tip-decision-rights": "Escribid una matriz de decisión: solo / juntos / mayoría.",
+    "tip-crisis-owner": "Nombrad owner de crisis y deputy — antes del incidente.",
+    "tip-exit-clause": "Definid salida/buyout básico: aviso, valoración, pago.",
+    "tip-monthly-money-meeting": "Reunión mensual de dinero: burn, compromisos, decisiones próximas.",
+    "tip-expense-thresholds": "Definid umbral de gasto: solo vs alineación obligatoria.",
+    "tip-sweat-vs-cash": "Registrad sweat vs cash — para que no se vuelva rencor antiguo.",
+    "tip-deadlock-rule": "Definid anti-bloqueo: advisor, sorteo controlado o silla rotativa.",
+    "tip-feedback-ritual": "Ritual quincenal de feedback: 20 minutos, hechos primero.",
+    "tip-no-side-channels": "Sin canales laterales en decisiones críticas — todo en la mesa.",
+    "tip-raci-lite": "Un RACI ligero para solo 5 procesos críticos.",
+    "tip-capacity-check": "Semanal: % de capacidad libre por socio — sin heroicidades.",
+    "tip-invisible-work-log": "Registrad una semana de trabajo invisible — luego redistribuid.",
+    "tip-founders-cadence": "Un sync semanal fijo de fundadores — aunque sean 30 minutos."
+  },
+  "agreement": {
+    "agree-decision-matrix": "Matriz de derechos de decisión (solo / conjunto / mayoría).",
+    "agree-exit-and-buyout": "Cláusula básica de salida y buyout.",
+    "agree-ip-ownership": "Propiedad de IP/activos/relaciones y cesión a la sociedad.",
+    "agree-compensation-policy": "Política de salario/dividendos/gastos y umbrales de aprobación.",
+    "agree-conflict-escalation": "Ruta de escalado y mediación/arbitraje en punto muerto.",
+    "agree-time-commitment": "Compromiso mínimo de tiempo y actualización si cambia la capacidad."
+  },
+  "questions": {
+    "decide-under-pressure": {
+      "prompt": "Bajo presión aún podemos decidir sin congelarnos ni explotar."
+    },
+    "failure-ownership": {
+      "prompt": "Cuando algo falla — la responsabilidad es clara, sin culpas.",
+      "byIndustry": {
+        "tech": "Cuando un release falla — la ownership es clara, sin ping-pong de culpas.",
+        "commerce": "Cuando falla stock/envío — está claro quién cierra con proveedor y cliente.",
+        "services": "Cuando un proyecto se rompe — está claro quién habla al cliente y quién corrige.",
+        "food": "Cuando el servicio se cae — está claro quién tira de la cuerda en tiempo real.",
+        "other": "Cuando algo falla en campo — la responsabilidad y el cierre son claros."
+      }
+    },
+    "roles-clear": {
+      "prompt": "Los roles y la autoridad entre nosotros son lo bastante claros."
+    },
+    "exit-talked": {
+      "prompt": "Hablamos con honestidad de una posible salida — no solo del éxito."
+    },
+    "red-lines-named": {
+      "prompt": "Hay líneas rojas dichas en voz alta (dinero, ética, tiempo)."
+    },
+    "crisis-playbook": {
+      "prompt": "Sabemos quién lidera en una crisis operativa.",
+      "byIndustry": {
+        "tech": "En un incidente de prod/seguridad — sabemos quién comunica y quién corrige.",
+        "commerce": "En crisis de proveedor/almacén — sabemos quién decide pausa/descuentos.",
+        "services": "En crisis de cliente grande — sabemos quién lidera la llamada y quién respalda.",
+        "food": "En crisis de cocina/personal — sabemos quién cierra menú/turnos al momento.",
+        "other": "En crisis operativa — sabemos quién lidera sin debate infinito."
+      }
+    },
+    "ip-or-assets-clarity": {
+      "prompt": "Está claro qué pertenece a la sociedad y qué es personal.",
+      "byIndustry": {
+        "tech": "Está claro quién posee código, datos e IP — aunque alguien salga.",
+        "commerce": "Está claro quién posee marca, audiencia y proveedores críticos.",
+        "services": "Está claro quién posee relaciones de cliente, métodos y materiales.",
+        "food": "Está claro quién posee recetas, proveedores y marca.",
+        "other": "Está claro qué es de la sociedad y qué es activo personal."
+      }
+    },
+    "vendors-and-deps": {
+      "prompt": "Las dependencias externas se gestionan con transparencia.",
+      "byIndustry": {
+        "tech": "El trabajo con freelancers/proveedores tech es transparente.",
+        "commerce": "Proveedores e inventario son transparentes — sin tratos laterales.",
+        "services": "Los subcontratistas están aprobados y visibles para los socios.",
+        "food": "Proveedores de comida y servicios se gestionan con transparencia.",
+        "other": "Las dependencias externas se gestionan con transparencia."
+      }
+    },
+    "money-talks-honest": {
+      "prompt": "Las conversaciones de dinero son honestas — también con números duros."
+    },
+    "first-money-vs-sweat": {
+      "prompt": "Alineamos cash inicial, sweat equity y aportes asimétricos."
+    },
+    "equity-feels-fair": {
+      "prompt": "El split se siente lo bastante justo frente al aporte real."
+    },
+    "burn-and-runway": {
+      "prompt": "Hay transparencia de burn y runway — sin sorpresas de fin de mes."
+    },
+    "salary-vs-reinvest": {
+      "prompt": "Acordamos cuándo sacar salario/dividendos y cuándo reinvertir."
+    },
+    "expense-authority": {
+      "prompt": "Está claro hasta qué monto se gasta solo y cuándo hay que alinear."
+    },
+    "investor-or-debt-views": {
+      "prompt": "Hay alineación sobre captación/deuda — o un proceso para decidir."
+    },
+    "profit-distribution-rules": {
+      "prompt": "Las reglas de reparto de beneficios están explícitas."
+    },
+    "disagree-then-decide": {
+      "prompt": "Tras un desacuerdo sabemos cerrar una decisión y seguir."
+    },
+    "ego-in-meetings": {
+      "prompt": "El ego no bloquea buenas decisiones — aunque cueste."
+    },
+    "feedback-without-war": {
+      "prompt": "Podemos dar feedback duro sin convertir eso en una guerra."
+    },
+    "deadlock-break": {
+      "prompt": "Hay un mecanismo anti-bloqueo — no solo esperanza."
+    },
+    "client-or-team-conflict": {
+      "prompt": "El conflicto con cliente/equipo se gestiona como socios, no bandos.",
+      "byIndustry": {
+        "tech": "Las peleas de prioridad de producto se cierran como equipo fundador.",
+        "commerce": "El conflicto con clientes/devoluciones se gestiona juntos.",
+        "services": "Cuando un cliente presiona — alineamos antes de responder.",
+        "food": "Una queja/reseña pública se gestiona como un solo frente.",
+        "other": "El conflicto externo se gestiona como socios, no bandos."
+      }
+    },
+    "apology-and-course-correct": {
+      "prompt": "La disculpa viene con corrección de rumbo — no solo un mail educado."
+    },
+    "transparency-default": {
+      "prompt": "La transparencia es el default — no un premio."
+    },
+    "pace-mismatch": {
+      "prompt": "Cuando el ritmo difiere — hablamos antes de que explote."
+    },
+    "invisible-labor": {
+      "prompt": "El trabajo invisible se reconoce, no solo se hace."
+    },
+    "who-owns-delivery": {
+      "prompt": "Está claro quién posee el delivery — no \"todos\" y luego nadie.",
+      "byIndustry": {
+        "tech": "Está claro quién posee el delivery técnico/release — también fuera de horario.",
+        "commerce": "Está claro quién posee el fulfillment de punta a punta.",
+        "services": "Está claro quién posee el delivery al cliente y el timeline.",
+        "food": "Está claro quién posee el estándar de servicio en cada turno.",
+        "other": "Está claro quién posee el delivery real de punta a punta."
+      }
+    },
+    "time-off-without-guilt": {
+      "prompt": "Podemos tomarnos un descanso sin sentir traición a la sociedad."
+    },
+    "hiring-and-firing-views": {
+      "prompt": "Hay alineación sobre contratar y despedir."
+    },
+    "communication-cadence": {
+      "prompt": "Hay una cadencia de comunicación suficiente — no solo chats caóticos."
+    },
+    "vision-still-shared": {
+      "prompt": "Aún compartimos dirección estratégica — o sabemos realinear."
+    }
+  }
+}

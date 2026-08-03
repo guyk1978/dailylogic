@@ -89,7 +89,47 @@
     "title": "חישובים אחרונים",
     "description": "המשך מאיפה שהפסקת",
     "clearAll": "נקה הכל",
-    "delete": "מחק {{name}}"
+    "delete": "מחק {{name}}",
+    "expand": "הצג הכל",
+    "close": "סגירה",
+    "expandedCaption": "תוצאה שמורה",
+    "resultLabel": "סיכום התוצאה",
+    "detailsLabel": "פרטי החישוב",
+    "openInTool": "פתחו בכלי",
+    "fields": {
+      "mode": "מצב",
+      "score": "ציון",
+      "band": "רמת סינרגיה",
+      "friction": "חיכוך",
+      "joyId": "אהבה קטנה",
+      "viceId": "חטא קטן",
+      "moodId": "מצב רוח",
+      "leftId": "פריט א׳",
+      "rightId": "פריט ב׳",
+      "weeklyIds": "פריטי השבוע",
+      "insightId": "מזהה תובנה",
+      "weeklyTitleId": "כותרת דוח",
+      "totalAmount": "סכום",
+      "tipPercent": "אחוז טיפ",
+      "people": "מספר אנשים",
+      "serviceType": "סוג שירות",
+      "waitTime": "זמן המתנה",
+      "attitude": "יחס",
+      "issueEncountered": "תקלה",
+      "manualOverride": "עקיפה ידנית",
+      "overall": "ציון כולל",
+      "overallBand": "רמה כללית",
+      "profileId": "פרופיל",
+      "dimensions": "מדדים",
+      "insightIds": "תובנות",
+      "tipIds": "טיפים",
+      "answers": "תשובות",
+      "setup": "רקע",
+      "agreementIds": "סעיפי הסכם",
+      "habitIds": "הרגלים",
+      "recommendedAmount": "סכום מומלץ",
+      "split": "חלוקה"
+    }
   },
   "categories": {
     "finance": {
@@ -103,6 +143,10 @@
     "shopping": {
       "label": "קניות חכמות",
       "description": "השוואת מחירים וקניות חכמות"
+    },
+    "life": {
+      "label": "חיים יומיומיים",
+      "description": "אהבות קטנות, מצבי רוח והיגיון בריא עם קריצה"
     }
   },
   "tools": {
@@ -125,6 +169,22 @@
     "unit-compare": {
       "name": "עוזר קניות חכם",
       "description": "השווה מחיר ליחידה ובנה רשימת קניות."
+    },
+    "love-calculator": {
+      "name": "מחשבון אהבה לחיים",
+      "description": "מצליבים אהבות קטנות, חטאים קטנים ומצב רוח לציון סינרגיה שנון לחיים."
+    },
+    "relationship-depth": {
+      "name": "שאלון עומק לזוגיות",
+      "description": "שאלון כנה לזוגיות אמיתית — חוסן, תקשורת, מרחב אישי וצמיחה משותפת."
+    },
+    "business-partnership-calculator": {
+      "name": "מחשבון שותפות עסקית",
+      "description": "הערכת שותפות כנה עם רקע עסקי, שאלון לפי ענף ותובנות להסכם מייסדים."
+    },
+    "pocket-money-calculator": {
+      "name": "מחשבון דמי כיס",
+      "description": "תוכנית דמי כיס משפחתית עם התאמה לגיל, חלוקה לחיסכון והרגלי שותפות."
     }
   },
   "save": {

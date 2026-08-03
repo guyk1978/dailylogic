@@ -1,0 +1,293 @@
+{
+  "intro": {
+    "eyebrow": "Honest business partnership",
+    "title": "Honest Business Partnership Calculator",
+    "body": "Start with a short business setup, choose quick or full depth, and get a synergy profile with metrics and founder-agreement prompts. Everything stays in your browser."
+  },
+  "setup": {
+    "title": "Partnership setup",
+    "subtitle": "These details tune wording and emphasis later.",
+    "statusLabel": "Partnership status",
+    "partnersLabel": "Number of partners",
+    "industryLabel": "Industry / sector",
+    "equityLabel": "Equity / profit split",
+    "continue": "Continue to questionnaire",
+    "status": {
+      "active": "Already partners in practice",
+      "considering": "Considering entering a partnership"
+    },
+    "partners": {
+      "2": "2 partners",
+      "3": "3 partners",
+      "4plus": "4 or more"
+    },
+    "industry": {
+      "tech": "Technology / SaaS",
+      "commerce": "Commerce & ecommerce",
+      "services": "Services / agency",
+      "food": "Food & hospitality",
+      "other": "Other"
+    },
+    "equity": {
+      "equal": "Equal split (e.g. 50-50)",
+      "majority": "Clear majority to one side",
+      "complex": "Complex / dynamic split"
+    }
+  },
+  "modes": {
+    "quick": "Quick business check",
+    "quickMeta": "~10 core questions · 2–3 minutes",
+    "full": "Full venture assessment",
+    "fullMeta": "30 questions · 8–10 minutes",
+    "backToSetup": "Back to setup"
+  },
+  "scale": {
+    "1": "Almost never",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Almost always"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & see report",
+    "restart": "New assessment",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Business synergy profile",
+    "overall": "Overall score",
+    "dimensions": "Dimensions",
+    "insights": "Insights",
+    "tips": "Improvement tips",
+    "agreement": "Anchor in a founders agreement",
+    "setupSummary": "Setup",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Business Partnership Calculator",
+    "shareText": "Our partnership profile: {{profile}} ({{score}}%). {{insight}} | Business Partnership — DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{industry}} · {{mode}}",
+    "bands": {
+      "needs-care": "Needs attention",
+      "developing": "Aligning",
+      "steady": "Steady & professional",
+      "strong": "Strong & aligned"
+    },
+    "dimensionLabels": {
+      "opsResilience": "Contractual & ops resilience",
+      "financialAlignment": "Financial expectation alignment",
+      "conflictGovernance": "Conflict governance",
+      "workloadClarity": "Workload & role clarity"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn’t copy image — download instead"
+  },
+  "profiles": {
+    "aligned-operators": "Aligned operators — with ongoing maintenance",
+    "durable-venture": "A venture with structural resilience",
+    "clear-bench": "A clear bench of ownership and decisions",
+    "working-partners": "Working partners — not only dreamers",
+    "honest-builders-biz": "Honest business builders",
+    "pragmatic-duo": "Pragmatic partners with a shared compass",
+    "alignment-gap": "An alignment gap that needs a talk",
+    "early-friction": "Early friction — still manageable",
+    "paperwork-needed": "Paperwork needed before more momentum",
+    "high-risk-signal": "High-risk signal for the partnership",
+    "pause-and-write": "Pause and write the agreements",
+    "founders-talk-now": "Founders talk — now, not later"
+  },
+  "insights": {
+    "dim-opsResilience-high": "Your ops/contractual resilience is relatively strong — keep it written, not only remembered.",
+    "dim-opsResilience-low": "Ops resilience needs reinforcement: who decides, who leads crises, and exit rules.",
+    "dim-financialAlignment-high": "Financial alignment is relatively strong — rare. Protect it with a monthly money meeting.",
+    "dim-financialAlignment-low": "Money expectation gaps are a classic partnership breaker. Align thresholds, draws, and splits.",
+    "dim-conflictGovernance-high": "You can disagree without destroying the business — keep a written decision breaker.",
+    "dim-conflictGovernance-low": "Without conflict rules, every fight becomes a trust crisis. Set decision rules in advance.",
+    "dim-workloadClarity-high": "Workload/role clarity is relatively good — verify invisible work is counted too.",
+    "dim-workloadClarity-low": "Silent pace/load gaps grind partnerships down. Do a light RACI and monthly load check.",
+    "overall-strong": "Overall alignment looks strong — write it down before pressure stress-tests you.",
+    "overall-steady": "There's a professional base with soft spots — prioritize one upgrade this week.",
+    "overall-developing": "Potential exists, but gaps are too big for blind acceleration. Align before scaling.",
+    "overall-needs-care": "Signals point to high risk. Pause for an honesty round and a minimal document first.",
+    "industry-tech": "In tech: IP, delivery, and prod transparency are red lines — don't leave them oral.",
+    "industry-commerce": "In commerce: inventory, vendors, and cashflow break partnerships fast — document money and deps.",
+    "industry-services": "In services: clients, reputation, and project load are core — define who speaks externally.",
+    "industry-food": "In food: shifts, service standards, and vendors demand strong daily coordination.",
+    "industry-other": "Outside classic industries — same principles: clarity, money, decisions, and exit.",
+    "equity-equal": "Equal equity ≠ equal load. Recheck actual contribution each quarter.",
+    "equity-majority": "With a clear majority: define minority protections (veto on critical topics).",
+    "equity-complex": "With complex splits: simplify update/vesting rules — complexity without docs is a trap."
+  },
+  "tips": {
+    "tip-decision-rights": "Write a decision matrix: solo / together / majority required.",
+    "tip-crisis-owner": "Name a crisis owner and deputy — before the incident.",
+    "tip-exit-clause": "Define a basic exit/buyout: notice, valuation, payment.",
+    "tip-monthly-money-meeting": "A fixed monthly money meeting: burn, commitments, near-term decisions.",
+    "tip-expense-thresholds": "Set an expense threshold for solo spend vs mandatory alignment.",
+    "tip-sweat-vs-cash": "Track sweat vs cash contribution — so it doesn't become old resentment.",
+    "tip-deadlock-rule": "Set a deadlock breaker: advisor, controlled coin-flip, or rotating chair.",
+    "tip-feedback-ritual": "Biweekly feedback ritual: 20 minutes, facts first, interpretation second.",
+    "tip-no-side-channels": "No side-channels on critical decisions — everything at the shared table.",
+    "tip-raci-lite": "A light RACI for only 5 critical processes. Not a 40-page wiki.",
+    "tip-capacity-check": "Weekly: open capacity % per partner — no heroics.",
+    "tip-invisible-work-log": "Log one week of invisible work — then redistribute.",
+    "tip-founders-cadence": "A fixed weekly founders sync — even 30 minutes — beats chaotic chat."
+  },
+  "agreement": {
+    "agree-decision-matrix": "Decision-rights matrix (solo / joint / majority).",
+    "agree-exit-and-buyout": "Basic exit & buyout clause (notice, valuation, payment schedule).",
+    "agree-ip-ownership": "Ownership of IP/assets/client relationships and assignment to the venture.",
+    "agree-compensation-policy": "Salary/dividend/expense reimbursement policy and approval thresholds.",
+    "agree-conflict-escalation": "Escalation path and mediation/arbitration on deadlock.",
+    "agree-time-commitment": "Minimum time commitment and updates when capacity changes."
+  },
+  "questions": {
+    "decide-under-pressure": {
+      "prompt": "Under pressure we can still decide without freezing or exploding."
+    },
+    "failure-ownership": {
+      "prompt": "When something fails — ownership is clear, without blame games.",
+      "byIndustry": {
+        "tech": "When a feature/release fails — ownership is clear, without bug-blame ping-pong.",
+        "commerce": "When inventory/shipping fails — it's clear who closes with vendor and customer.",
+        "services": "When a client project breaks — it's clear who talks to the client and who fixes inside.",
+        "food": "When service/shift collapses — it's clear who pulls the rope in real time.",
+        "other": "When something fails in the field — ownership and closure are clear."
+      }
+    },
+    "roles-clear": {
+      "prompt": "Roles and authority between us are clear enough for day-to-day work."
+    },
+    "exit-talked": {
+      "prompt": "We've talked honestly about a possible exit — not only the success dream."
+    },
+    "red-lines-named": {
+      "prompt": "Red lines were named out loud (money, ethics, time) — not just \"we'll see\"."
+    },
+    "crisis-playbook": {
+      "prompt": "We know who leads in an ops crisis, even without a dramatic meeting.",
+      "byIndustry": {
+        "tech": "In a prod/security incident — we know who leads comms and who fixes.",
+        "commerce": "In a supplier/warehouse crisis — we know who decides pause/discounts/compensation.",
+        "services": "In a major client crisis — we know who leads the call and who backs resources.",
+        "food": "In a kitchen/staffing crisis — we know who closes menu/shifts immediately.",
+        "other": "In an ops crisis — we know who leads without endless debate."
+      }
+    },
+    "ip-or-assets-clarity": {
+      "prompt": "It's clear what belongs to the partnership vs personal (assets / know-how / relationships).",
+      "byIndustry": {
+        "tech": "It's clear who owns code, data, and IP — even if someone exits.",
+        "commerce": "It's clear who owns brand, audience, and critical suppliers.",
+        "services": "It's clear who owns client relationships, methods, and materials.",
+        "food": "It's clear who owns recipes, suppliers, and brand name.",
+        "other": "It's clear what belongs to the partnership vs personal assets."
+      }
+    },
+    "vendors-and-deps": {
+      "prompt": "External dependencies (vendors/contractors) are managed transparently between partners.",
+      "byIndustry": {
+        "tech": "Work with freelancers/tech vendors is transparent to both partners.",
+        "commerce": "Supplier and inventory relationships are transparent — no side deals.",
+        "services": "Subcontractors are approved and visible to partners.",
+        "food": "Food and external service vendors are managed with partner transparency.",
+        "other": "External dependencies are managed transparently between partners."
+      }
+    },
+    "money-talks-honest": {
+      "prompt": "Money talks are honest — even when the numbers aren't flattering."
+    },
+    "first-money-vs-sweat": {
+      "prompt": "We align on early cash, sweat equity, and asymmetric contribution."
+    },
+    "equity-feels-fair": {
+      "prompt": "Equity/profit split feels fair enough relative to actual contribution."
+    },
+    "burn-and-runway": {
+      "prompt": "There's transparency on burn and runway — no end-of-month surprises."
+    },
+    "salary-vs-reinvest": {
+      "prompt": "We agree when to take salary/dividends vs reinvest."
+    },
+    "expense-authority": {
+      "prompt": "It's clear up to what amount one can spend alone vs must align."
+    },
+    "investor-or-debt-views": {
+      "prompt": "We're aligned on fundraising/debt — or have a process to decide."
+    },
+    "profit-distribution-rules": {
+      "prompt": "Profit distribution rules are written or at least explicit."
+    },
+    "disagree-then-decide": {
+      "prompt": "After disagreement we know how to close a decision and move on."
+    },
+    "ego-in-meetings": {
+      "prompt": "Ego doesn't block good decisions — even when it's hard to swallow."
+    },
+    "feedback-without-war": {
+      "prompt": "We can give sharp feedback without starting a world war."
+    },
+    "deadlock-break": {
+      "prompt": "There's a deadlock breaker (tie-break / advisor / rotation) — not only hope."
+    },
+    "client-or-team-conflict": {
+      "prompt": "Client/team conflict is handled as partners, not two camps.",
+      "byIndustry": {
+        "tech": "Product/customer priority fights close as a founding team — not two camps.",
+        "commerce": "Customer/returns conflict is handled together — not good-cop/bad-cop theater.",
+        "services": "When a client pushes — we align before answering, not after.",
+        "food": "A customer complaint/public review is handled as one front.",
+        "other": "External conflict is handled as partners, not camps."
+      }
+    },
+    "apology-and-course-correct": {
+      "prompt": "Apology comes with course-correction — not only a polite email."
+    },
+    "transparency-default": {
+      "prompt": "Transparency is the default (info, risks, mistakes) — not a reward."
+    },
+    "pace-mismatch": {
+      "prompt": "When work pace differs — we talk before frustration explodes."
+    },
+    "invisible-labor": {
+      "prompt": "Invisible work (admin, follow-ups, firefighting) is recognized, not only done."
+    },
+    "who-owns-delivery": {
+      "prompt": "It's clear who owns delivery — not \"everyone\" and then no one.",
+      "byIndustry": {
+        "tech": "It's clear who owns technical delivery/release — including after hours.",
+        "commerce": "It's clear who owns end-to-end supply/fulfillment targets.",
+        "services": "It's clear who owns client delivery and who holds the timeline.",
+        "food": "It's clear who owns service-quality standards every shift.",
+        "other": "It's clear who owns real delivery end to end."
+      }
+    },
+    "time-off-without-guilt": {
+      "prompt": "We can take time off without feeling like we betrayed the partnership."
+    },
+    "hiring-and-firing-views": {
+      "prompt": "We're aligned on hiring and letting go of people/contractors."
+    },
+    "communication-cadence": {
+      "prompt": "We have enough communication cadence — not only chaotic chat threads."
+    },
+    "vision-still-shared": {
+      "prompt": "We still share strategic direction — or know how to realign when we diverge."
+    }
+  }
+}

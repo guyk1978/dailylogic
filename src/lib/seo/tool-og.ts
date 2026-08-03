@@ -24,6 +24,12 @@ export const TOOL_OG_ACCENT: Record<
     chip: "#059669",
     soft: "#6ee7b7",
   },
+  life: {
+    from: "#fff1f2",
+    to: "#ffe4e6",
+    chip: "#e11d48",
+    soft: "#fda4af",
+  },
 };
 
 export const TOOL_OG_EMOJI: Record<ToolSlug, string> = {
@@ -32,6 +38,10 @@ export const TOOL_OG_EMOJI: Record<ToolSlug, string> = {
   "tip-split": "💵",
   "recipe-adjuster": "🍳",
   "unit-compare": "🛒",
+  "love-calculator": "💛",
+  "relationship-depth": "🤝",
+  "business-partnership-calculator": "📑",
+  "pocket-money-calculator": "🪙",
 };
 
 export function toolOgImagePath(locale: string, slug: string): string {

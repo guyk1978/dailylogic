@@ -1,0 +1,318 @@
+{
+  "intro": {
+    "eyebrow": "Kids allowance as a family partnership",
+    "title": "Pocket Money Calculator",
+    "body": "Parent and child set a short background, answer together, and get a family allowance plan: a fair monthly range, spend/save/give split, and practical tips. Everything stays in the browser."
+  },
+  "setup": {
+    "title": "Quick background",
+    "subtitle": "These choices tune the questions and recommendations.",
+    "ageLabel": "Child’s age",
+    "modelLabel": "Current allowance model",
+    "goalLabel": "Main money goal right now",
+    "continue": "Continue to quiz length",
+    "age": {
+      "young": "Young kids 6–9",
+      "tween": "Tweens 10–14",
+      "teen": "Teens 15–18"
+    },
+    "model": {
+      "fixed": "Fixed amount",
+      "chores": "Chore-based",
+      "hybrid": "Hybrid: base + saving/enterprise"
+    },
+    "goal": {
+      "delay": "Learn delayed gratification",
+      "save-goal": "Save for a big goal",
+      "independence": "First independent budget",
+      "value": "Understand money’s value"
+    }
+  },
+  "modes": {
+    "quick": "Quick setup",
+    "quickMeta": "~10 light questions · ~2 minutes",
+    "full": "Full family blueprint",
+    "fullMeta": "25 questions · 6–8 minutes",
+    "backToSetup": "Back to background"
+  },
+  "scale": {
+    "1": "Almost never",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Usually",
+    "5": "Almost always"
+  },
+  "currency": {
+    "symbol": "$",
+    "code": "USD"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & get the plan",
+    "restart": "New plan",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Family pocket-money plan",
+    "overall": "Financial partnership score",
+    "amount": "Recommended monthly amount",
+    "amountRange": "{{min}}–{{max}} {{symbol}} · focus {{mid}} {{symbol}}",
+    "amountNote": "An educational guide — adapt to your household reality.",
+    "split": "Smart split",
+    "spend": "Spend / fun",
+    "save": "Save",
+    "give": "Give / community",
+    "dimensions": "Scores",
+    "insights": "Insights",
+    "tips": "Practical tips",
+    "habits": "Partnership habits",
+    "setupSummary": "Background",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Pocket Money Calculator",
+    "shareText": "Our pocket-money plan: {{profile}} · {{mid}} {{symbol}} · save {{save}}% | Pocket Money — DailyLogic",
+    "resultSummary": "{{profile}} · {{mid}} {{symbol}} · save {{save}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Needs clear structure",
+      "developing": "Practicing together",
+      "steady": "Steady and learning",
+      "strong": "Strong partnership"
+    },
+    "dimensionLabels": {
+      "moneyResponsibility": "Money responsibility",
+      "savingDiscipline": "Saving discipline",
+      "familyPartnership": "Family partnership",
+      "spendingWisdom": "Spending wisdom"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn’t copy image — download instead"
+  },
+  "profiles": {
+    "steady-partners": "Steady money partners at home",
+    "savvy-team": "Age-smart money team",
+    "trust-builders": "Building trust through transparency",
+    "learning-crew": "Learning crew",
+    "fair-starters": "Fair starters",
+    "growing-together": "Growing with the rules",
+    "needs-structure": "Needs simpler structure",
+    "practice-week": "Practice week before scaling up",
+    "clarify-rules": "Clarify the rules first",
+    "reset-gently": "Gentle reset — no shame",
+    "start-smaller": "Start with a smaller amount",
+    "talk-first": "Talk first — then set the amount"
+  },
+  "insights": {
+    "dim-moneyResponsibility-high": "There’s real ownership of money — keep a simple tracker so it doesn’t fade.",
+    "dim-moneyResponsibility-low": "When cash “vanishes” without a story — write what happens when the wallet is empty.",
+    "dim-savingDiscipline-high": "Saving feels real — celebrate small milestones out loud.",
+    "dim-savingDiscipline-low": "Without a visible goal, saving slips. Put a goal photo by the jar.",
+    "dim-familyPartnership-high": "Partnership feels present — renew the rules every few months.",
+    "dim-familyPartnership-low": "If only one side decides, allowance becomes a fight. Take 15 minutes to co-write rules.",
+    "dim-spendingWisdom-high": "There’s a pause before buying — reward that muscle with words, not only money.",
+    "dim-spendingWisdom-low": "Impulse asks break budgets. Try a 24-hour rule for non-urgent wants.",
+    "overall-strong": "The base is strong — write down amount, split, and empty-wallet rules.",
+    "overall-steady": "Good direction with a few soft spots — pick one habit for the next two weeks.",
+    "overall-developing": "Willingness is there, rules are fuzzy. Simplify before raising the amount.",
+    "overall-needs-care": "Reset gently: smaller amount, clearer rules, conversation without blame.",
+    "age-young": "At this age, visuals win — colorful jars and counting coins in hand.",
+    "age-tween": "Friend pressure rises — practice a polite “not this week” and plan ahead.",
+    "age-teen": "Digital independence needs transparency without smothering surveillance.",
+    "model-fixed": "With a fixed model: match the amount to responsibility — not only convenience.",
+    "model-chores": "With chores: separate family duties from paid extras — don’t trade dignity for cash.",
+    "model-hybrid": "Hybrid works best with a stable base plus a clear bonus lane for saving/enterprise.",
+    "goal-delay": "For delayed gratification: a waiting rule matters more than a bigger sum.",
+    "goal-save-goal": "For a big goal: break it into short milestones with dates.",
+    "goal-independence": "For independence: allow a small mistake — then review it together.",
+    "goal-value": "For money value: compare prices and keep a small give share in the split."
+  },
+  "tips": {
+    "tip-sunday-reset": "Sunday reset: count what’s left and sketch the week in two minutes.",
+    "tip-empty-wallet-plan": "Write the empty-wallet plan — no automatic parent bailout.",
+    "tip-visible-tracker": "A visible tracker (notebook/simple app) — 30 seconds after each purchase.",
+    "tip-pay-yourself-first": "On payday: move savings first, then fun money.",
+    "tip-photo-goal": "Goal photo on the fridge or lock screen — daily reminder.",
+    "tip-match-small": "A small parent match on savings (e.g. 1:1 up to a cap) motivates without buying everything.",
+    "tip-family-meeting": "A 15-minute monthly allowance meeting — amount, what worked, what changes.",
+    "tip-chore-menu": "Chore menu: family duties vs paid bonus tasks — written and clear.",
+    "tip-two-voices": "Rule changes need both voices — child and parent.",
+    "tip-24h-pause": "Non-urgent buys above an agreed threshold wait 24 hours.",
+    "tip-needs-wants-list": "One-page needs vs wants list — refresh weekly.",
+    "tip-give-jar": "A small give jar: pick a cause together each quarter.",
+    "tip-monthly-review": "Month-end: what we learned, not only what remained."
+  },
+  "habits": {
+    "habit-jar-split": "Three jars/envelopes: spend, save, give — at the agreed percentages.",
+    "habit-receipt-photo": "Snap a receipt or jot it down immediately — memory rewrites stories.",
+    "habit-goal-countdown": "Countdown to the goal: weeks left and weekly shortfall.",
+    "habit-praise-ritual": "Praise good process — not only cool purchases.",
+    "habit-no-bailout-default": "Default: no automatic bailout. Exceptions only after an agreed talk.",
+    "habit-earn-bonus-lane": "A capped bonus lane for small enterprise/extra tasks — without replacing the base."
+  },
+  "questions": {
+    "money-runs-out": {
+      "prompt": "When money runs out before the period ends — we have a clear plan (no drama).",
+      "byAge": {
+        "young": "When the coins run out early — we know what happens without big tears or anger.",
+        "tween": "When allowance ends mid-way — there’s a clear rule instead of a fight.",
+        "teen": "When the budget ends early — we agree what happens (no automatic loan)."
+      }
+    },
+    "track-what-spent": {
+      "prompt": "We roughly know where most of the money went lately.",
+      "byAge": {
+        "young": "We remember/draw where the coins went.",
+        "tween": "There’s a simple tracker — notebook or note — for what we bought.",
+        "teen": "There’s light tracking (app/note) without surveillance vibes."
+      }
+    },
+    "ask-before-borrow": {
+      "prompt": "Borrowing from parents/siblings only happens after a clear ask — not “just because”."
+    },
+    "own-mistakes": {
+      "prompt": "When a purchase was a mistake — we talk honestly without shame spirals.",
+      "byAge": {
+        "young": "If we regret a buy — we say it out loud and move on.",
+        "tween": "Buying mistakes are lessons, not punishments.",
+        "teen": "We review a bad purchase together — without a long lecture."
+      }
+    },
+    "plan-the-month": {
+      "prompt": "At the start of the period we have a rough idea how money will split."
+    },
+    "no-secret-spending": {
+      "prompt": "No secret spending that breaks trust at home."
+    },
+    "save-before-spend": {
+      "prompt": "Some money goes to savings before the fun spending starts."
+    },
+    "goal-feels-real": {
+      "prompt": "There’s a savings goal that feels real to both sides.",
+      "byAge": {
+        "young": "There’s a visible goal (photo/toy) we’re moving toward.",
+        "tween": "There’s a clear goal with a rough date.",
+        "teen": "There’s a priced goal and a weekly plan."
+      }
+    },
+    "wait-for-want": {
+      "prompt": "We can wait a bit before a non-urgent purchase.",
+      "byAge": {
+        "young": "Sometimes we say “let’s think tomorrow” instead of buying now.",
+        "tween": "There’s a waiting rule for non-urgent wants.",
+        "teen": "There’s a conscious pause before impulse buys (online/friends)."
+      }
+    },
+    "celebrate-milestones": {
+      "prompt": "We celebrate saving progress — not only the final purchase."
+    },
+    "protect-savings-jar": {
+      "prompt": "Savings are protected — not “borrowed from” without agreement.",
+      "byModel": {
+        "fixed": "Even with a fixed amount — savings don’t get swallowed by daily spend.",
+        "chores": "Chore bonuses don’t replace the savings jar.",
+        "hybrid": "In the hybrid path it’s clear which share is locked for saving."
+      }
+    },
+    "match-encourage": {
+      "prompt": "Saving gets positive encouragement (words or a small match) — not only pressure.",
+      "byModel": {
+        "fixed": "Even on a fixed model we encourage saving without buying everything for the child.",
+        "chores": "Paying for chores doesn’t cancel the value of saving.",
+        "hybrid": "There’s a clear encouragement lane for saving/enterprise."
+      }
+    },
+    "chores-vs-pay": {
+      "prompt": "We’re clear what is a family duty vs a paid task.",
+      "byModel": {
+        "fixed": "Even without paying for every chore — expectations as household partners are clear.",
+        "chores": "There’s a transparent chore list and rates — no daily haggling.",
+        "hybrid": "There’s a stable base plus defined bonus tasks."
+      }
+    },
+    "rules-were-agreed": {
+      "prompt": "Allowance rules were agreed together — not just announced."
+    },
+    "both-voices-heard": {
+      "prompt": "Both parent and child feel heard in money talks.",
+      "byAge": {
+        "young": "The child helps choose jars and the goal.",
+        "tween": "Both sides get a say before changing rules.",
+        "teen": "There’s an adult dialogue — not a one-way lecture."
+      }
+    },
+    "review-together": {
+      "prompt": "We occasionally check if the amount and rules still fit."
+    },
+    "fair-when-busy": {
+      "prompt": "Even in a busy week — agreements hold without silent punishment.",
+      "byModel": {
+        "fixed": "The amount arrives on time as agreed.",
+        "chores": "Fairly canceled chores don’t become vague money punishment.",
+        "hybrid": "The base stays stable even when there’s no bonus that week."
+      }
+    },
+    "praise-not-only-pay": {
+      "prompt": "Good money habits get praise in words — not only cash."
+    },
+    "sibling-or-friends-pressure": {
+      "prompt": "We talk honestly about friend/sibling pressure around buying.",
+      "byAge": {
+        "young": "We explain why we don’t buy everything a friend has.",
+        "tween": "We practice answers to social pressure about money.",
+        "teen": "There’s an open talk about status, brands, and real budgets."
+      }
+    },
+    "impulse-pause": {
+      "prompt": "Before a spontaneous purchase there’s a pause.",
+      "byAge": {
+        "young": "Sometimes the want goes on a “tomorrow list”.",
+        "tween": "There’s a waiting rule for non-urgent things.",
+        "teen": "In-store/online — we pause before checkout."
+      }
+    },
+    "needs-vs-wants": {
+      "prompt": "We can tell needs from wants without shaming the feeling."
+    },
+    "give-back-share": {
+      "prompt": "There’s a small place for giving/donation in the split."
+    },
+    "compare-prices": {
+      "prompt": "Sometimes we check an alternative price before buying.",
+      "byAge": {
+        "young": "We compare two simple options (cheaper/pricier).",
+        "tween": "We check if a reasonable alternative exists.",
+        "teen": "We compare prices/deals before a relatively big buy."
+      }
+    },
+    "digital-vs-cash": {
+      "prompt": "We understand digital money also “runs out” — not only coins.",
+      "byAge": {
+        "young": "We talk about cards/apps being real money too.",
+        "tween": "There’s a clear limit for digital spend if it exists.",
+        "teen": "There’s basic transparency on digital spend without month-long audits."
+      }
+    },
+    "earn-extra-ok": {
+      "prompt": "There’s a fair way to earn a bit more — without turning home into a marketplace.",
+      "byModel": {
+        "fixed": "Small enterprise outside the fixed amount is ok when coordinated.",
+        "chores": "Bonus chores are defined ahead — not endless haggling.",
+        "hybrid": "The enterprise/bonus lane is clear and capped."
+      }
+    }
+  }
+}

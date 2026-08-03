@@ -60,6 +60,10 @@ export function useTranslatedCategories(): Record<
         label: t("categories.shopping.label"),
         description: t("categories.shopping.description"),
       },
+      life: {
+        label: t("categories.life.label"),
+        description: t("categories.life.description"),
+      },
     }),
     [t],
   );

@@ -1,0 +1,48 @@
+{
+  "title": "Business Partnership Calculator: honest founder synergy",
+  "subtitle": "A short business setup, quick or full questionnaire, and a report with metrics plus founders-agreement prompts.",
+  "seoTitle": "Business Partnership Calculator | Founders Assessment | DailyLogic",
+  "seoDescription": "Honest business partnership calculator: setup wizard, quick or 30 deep industry-aware questions, synergy metrics, tips, and founders-agreement prompts — free in your browser.",
+  "heroDescription": "Partnerships break on money, ego, invisible load, and exit — not slogans. This calculator collects context, asks honest questions (including industry twists), and produces a synergy profile with founders-agreement recommendations.",
+  "toolSlug": "business-partnership-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "BusinessApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What the Business Partnership Calculator does",
+      "paragraphs": [
+        "Before the quiz, you set status, partner count, industry, and equity split — tuning wording and emphasis. Then choose quick or full depth.",
+        "Questions hit what actually breaks partnerships: failure ownership, cashflow, decisions, invisible work, and future exit — with industry variants.",
+        "The report includes metrics, insights, tips, and clauses worth putting in a founders agreement. Everything stays local in your browser."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Complete the setup wizard, pick questionnaire length, and answer on a frequency scale while watching the progress bar.",
+        "Save results to history (with Expand on the home page), or download/copy a result card.",
+        "Use the report as a founders conversation starter — not a verdict."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "Most business conflicts come from ambiguity, not malice. Writing early prevents expensive drama.",
+        "Industry-aware prompts help touch real sensitive points (IP in tech, inventory in commerce, clients in services).",
+        "Retaking after a quarter can show whether alignment actually happened."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Setup wizard", "description": "Status, partners, industry, and equity shape what follows." },
+    { "title": "Two lengths", "description": "Quick for speed or full depth for a serious read." },
+    { "title": "Founders agreement", "description": "Insights and clauses worth putting in writing." }
+  ],
+  "faq": [
+    { "question": "Do we need to already be partners?", "answer": "No. You can also use the considering-partnership mode — wording adapts." },
+    { "question": "Is data sent to a server?", "answer": "No. Everything runs and saves locally in your browser." },
+    { "question": "Does this replace a lawyer?", "answer": "No. It’s an alignment tool and checklist — not legal advice." }
+  ]
+}

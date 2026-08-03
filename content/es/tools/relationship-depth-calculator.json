@@ -1,0 +1,48 @@
+{
+  "title": "Evaluación de profundidad de pareja: un perfil honesto",
+  "subtitle": "Mide comunicación, resiliencia, espacio personal y crecimiento compartido — rápida o completa.",
+  "seoTitle": "Cuestionario de pareja profundo | Resiliencia y comunicación | Lógica diaria",
+  "seoDescription": "Cuestionario honesto de pareja: chequeo rápido o 30 preguntas profundas. Obtén puntuaciones de resiliencia, comunicación, espacio y crecimiento — gratis en el navegador.",
+  "heroDescription": "Una pareja real incluye rutina, compromisos y reparación tras un conflicto. Esta evaluación construye un perfil honesto con métricas claras y consejos de sentido común — serio, no cínico.",
+  "toolSlug": "relationship-depth",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace la evaluación",
+      "paragraphs": [
+        "En lugar de un test ligero de compatibilidad, esta herramienta pregunta por la dinámica cotidiana: cómo habláis cuando cuesta, cómo reparáis tras una pelea, cómo cuidáis el espacio personal y cómo crecéis juntos bajo presión.",
+        "Elige un chequeo rápido de unas 10 preguntas para una foto rápida, o una evaluación completa de 30 para un análisis más rico. Las respuestas se ponderan en puntuaciones claras.",
+        "Todo corre en local en el navegador — guarda resultados, comparte una tarjeta y reabre el informe desde cálculos recientes."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Elige un modo, responde en una escala de frecuencia y sigue la barra de progreso. Recibirás un perfil, cuatro métricas, reflexiones y consejos prácticos.",
+        "Guarda el resultado para reabrirlo desde la home con expansión al informe completo, o descarga una tarjeta para compartir.",
+        "La evaluación busca honestidad amable — no juicio. Úsala como inicio de conversación, no como veredicto."
+      ]
+    },
+    {
+      "heading": "Por qué importan métricas honestas de pareja",
+      "paragraphs": [
+        "La pareja a largo plazo se sostiene en la reparación, no en la perfección. Métricas como resiliencia y comunicación ayudan a ver fortalezas y puntos blandos.",
+        "Los consejos se centran en sentido común: rituales de reparación, carga justa, espacio personal y charlas cortas regulares.",
+        "Repetir la evaluación más adelante puede mostrar cambio — sin convertir el amor en un marcador."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Dos modos", "description": "Rápido por velocidad, o completo para una lectura seria." },
+    { "title": "Cuatro métricas", "description": "Resiliencia, comunicación, espacio personal, crecimiento compartido." },
+    { "title": "Guardar y compartir", "description": "Historial local con expansión y tarjeta descargable." }
+  ],
+  "faq": [
+    { "question": "¿Hay que responder juntos?", "answer": "Sirve solo o juntos. Si es juntos, sed honestos aunque no coincidáis en cada ítem." },
+    { "question": "¿Se envían datos a un servidor?", "answer": "No. Respuestas y guardados se quedan en tu navegador." },
+    { "question": "¿Qué diferencia hay entre rápido y completo?", "answer": "El rápido da una visión general; el completo cubre más situaciones y afina las métricas." }
+  ]
+}

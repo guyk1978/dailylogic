@@ -36,6 +36,8 @@ const CARD_WASH: Record<string, string> = {
     "from-amber-50/90 via-white to-white hover:ring-amber-200/80",
   shopping:
     "from-emerald-50/90 via-white to-white hover:ring-emerald-200/80",
+  life:
+    "from-rose-50/90 via-white to-white hover:ring-rose-200/80",
 };
 
 function ToolCard({

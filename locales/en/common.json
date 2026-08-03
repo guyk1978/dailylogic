@@ -89,7 +89,47 @@
     "title": "Recent Calculations",
     "description": "Pick up where you left off",
     "clearAll": "Clear all",
-    "delete": "Delete {{name}}"
+    "delete": "Delete {{name}}",
+    "expand": "View full result",
+    "close": "Close",
+    "expandedCaption": "Saved result",
+    "resultLabel": "Result summary",
+    "detailsLabel": "Calculation details",
+    "openInTool": "Open in tool",
+    "fields": {
+      "mode": "Mode",
+      "score": "Score",
+      "band": "Synergy band",
+      "friction": "Friction",
+      "joyId": "Small love",
+      "viceId": "Tiny vice",
+      "moodId": "Mood",
+      "leftId": "Item A",
+      "rightId": "Item B",
+      "weeklyIds": "Week items",
+      "insightId": "Insight id",
+      "weeklyTitleId": "Report title id",
+      "totalAmount": "Amount",
+      "tipPercent": "Tip percent",
+      "people": "People",
+      "serviceType": "Service type",
+      "waitTime": "Wait time",
+      "attitude": "Attitude",
+      "issueEncountered": "Issue encountered",
+      "manualOverride": "Manual override",
+      "overall": "Overall score",
+      "overallBand": "Overall band",
+      "profileId": "Profile",
+      "dimensions": "Dimensions",
+      "insightIds": "Insights",
+      "tipIds": "Tips",
+      "answers": "Answers",
+      "setup": "Setup",
+      "agreementIds": "Agreement clauses",
+      "habitIds": "Habits",
+      "recommendedAmount": "Recommended amount",
+      "split": "Split"
+    }
   },
   "categories": {
     "finance": {
@@ -103,6 +143,10 @@
     "shopping": {
       "label": "Smart Shopping",
       "description": "Compare prices and shop smarter"
+    },
+    "life": {
+      "label": "Everyday Life",
+      "description": "Small joys, moods, and everyday wit"
     }
   },
   "tools": {
@@ -125,6 +169,22 @@
     "unit-compare": {
       "name": "Smart Shopping Assistant",
       "description": "Compare multiple brands by unit price and build your shopping list."
+    },
+    "love-calculator": {
+      "name": "Everyday Love Calculator",
+      "description": "Cross your small joys, tiny vices, and mood for a witty life-synergy score."
+    },
+    "relationship-depth": {
+      "name": "Relationship Depth Assessment",
+      "description": "Honest partnership questionnaire with resilience, communication, space, and growth scores."
+    },
+    "business-partnership-calculator": {
+      "name": "Business Partnership Calculator",
+      "description": "Honest venture-partner assessment with setup wizard, industry-aware questions, and founder-agreement prompts."
+    },
+    "pocket-money-calculator": {
+      "name": "Pocket Money Calculator",
+      "description": "Family allowance plan with age-aware setup, spend/save/give split, and practical partnership habits."
     }
   },
   "save": {

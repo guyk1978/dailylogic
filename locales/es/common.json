@@ -89,7 +89,47 @@
     "title": "Cálculos recientes",
     "description": "Continúa donde lo dejaste",
     "clearAll": "Borrar todo",
-    "delete": "Eliminar {{name}}"
+    "delete": "Eliminar {{name}}",
+    "expand": "Ver resultado completo",
+    "close": "Cerrar",
+    "expandedCaption": "Resultado guardado",
+    "resultLabel": "Resumen del resultado",
+    "detailsLabel": "Detalles del cálculo",
+    "openInTool": "Abrir en la herramienta",
+    "fields": {
+      "mode": "Modo",
+      "score": "Puntuación",
+      "band": "Nivel de sinergia",
+      "friction": "Fricción",
+      "joyId": "Pequeño amor",
+      "viceId": "Pequeño vicio",
+      "moodId": "Ánimo",
+      "leftId": "Elemento A",
+      "rightId": "Elemento B",
+      "weeklyIds": "Elementos de la semana",
+      "insightId": "Id de reflexión",
+      "weeklyTitleId": "Id del titular",
+      "totalAmount": "Importe",
+      "tipPercent": "Porcentaje de propina",
+      "people": "Personas",
+      "serviceType": "Tipo de servicio",
+      "waitTime": "Tiempo de espera",
+      "attitude": "Actitud",
+      "issueEncountered": "Incidencia",
+      "manualOverride": "Ajuste manual",
+      "overall": "Puntuación global",
+      "overallBand": "Nivel global",
+      "profileId": "Perfil",
+      "dimensions": "Dimensiones",
+      "insightIds": "Reflexiones",
+      "tipIds": "Consejos",
+      "answers": "Respuestas",
+      "setup": "Contexto",
+      "agreementIds": "Cláusulas de acuerdo",
+      "habitIds": "Hábitos",
+      "recommendedAmount": "Monto recomendado",
+      "split": "Reparto"
+    }
   },
   "categories": {
     "finance": {
@@ -103,6 +143,10 @@
     "shopping": {
       "label": "Compras inteligentes",
       "description": "Compara precios y compra mejor"
+    },
+    "life": {
+      "label": "Vida cotidiana",
+      "description": "Pequeños placeres, estados de ánimo e ingenio diario"
     }
   },
   "tools": {
@@ -125,6 +169,22 @@
     "unit-compare": {
       "name": "Asistente de compras",
       "description": "Compara precio por unidad y crea tu lista de compras."
+    },
+    "love-calculator": {
+      "name": "Calculadora del amor cotidiano",
+      "description": "Cruza pequeños placeres, vicios leves y ánimo para una sinergia vital ingeniosa."
+    },
+    "relationship-depth": {
+      "name": "Evaluación de profundidad de pareja",
+      "description": "Cuestionario honesto de pareja con puntuaciones de resiliencia, comunicación, espacio y crecimiento."
+    },
+    "business-partnership-calculator": {
+      "name": "Calculadora de sociedad empresarial",
+      "description": "Evaluación honesta de socios con setup, preguntas por industria y puntos para el acuerdo de fundadores."
+    },
+    "pocket-money-calculator": {
+      "name": "Calculadora de mesada",
+      "description": "Plan familiar de mesada con setup por edad, reparto ahorro/gasto/donación y hábitos de sociedad."
     }
   },
   "save": {

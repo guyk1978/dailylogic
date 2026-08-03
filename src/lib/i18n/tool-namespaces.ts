@@ -7,6 +7,10 @@ export const TOOL_I18N_NAMESPACE = {
   "tip-split": "tipSplit",
   "recipe-adjuster": "recipeAdjuster",
   "unit-compare": "unitCompare",
+  "love-calculator": "loveCalculator",
+  "relationship-depth": "relationshipDepth",
+  "business-partnership-calculator": "businessPartnership",
+  "pocket-money-calculator": "pocketMoney",
 } as const satisfies Record<ToolSlug, string>;
 
 export type ToolI18nNamespace = (typeof TOOL_I18N_NAMESPACE)[ToolSlug];

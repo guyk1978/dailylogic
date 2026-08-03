@@ -1,8 +1,12 @@
 import {
   Briefcase,
+  BriefcaseBusiness,
   ChefHat,
   Coins,
+  Heart,
+  HeartHandshake,
   PieChart,
+  PiggyBank,
   ShoppingBasket,
   type LucideIcon,
 } from "lucide-react";
@@ -17,6 +21,10 @@ export const TOOL_ICONS: Record<ToolSlug, LucideIcon> = {
   "tip-split": Coins,
   "recipe-adjuster": ChefHat,
   "unit-compare": ShoppingBasket,
+  "love-calculator": Heart,
+  "relationship-depth": HeartHandshake,
+  "business-partnership-calculator": BriefcaseBusiness,
+  "pocket-money-calculator": PiggyBank,
 };
 
 export function getToolIcon(slug: ToolSlug): LucideIcon {

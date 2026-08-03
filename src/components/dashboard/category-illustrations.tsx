@@ -141,16 +141,44 @@ function ShoppingIllustration({ className }: IllustrationProps) {
   );
 }
 
+function LifeIllustration({ className }: IllustrationProps) {
+  return (
+    <svg
+      viewBox="0 0 64 64"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={className}
+      aria-hidden
+    >
+      <path
+        d="M32 52s-16-10.5-16-22a9 9 0 0 1 16-5.5A9 9 0 0 1 48 30c0 11.5-16 22-16 22z"
+        stroke="currentColor"
+        strokeWidth={STROKE}
+        strokeLinejoin="round"
+      />
+      <path
+        d="M22 18c2-4 6-6 10-6"
+        stroke="currentColor"
+        strokeWidth={STROKE}
+        strokeLinecap="round"
+      />
+      <circle cx="46" cy="16" r="3" stroke="currentColor" strokeWidth={STROKE} />
+    </svg>
+  );
+}
+
 const ILLUSTRATIONS: Record<ToolCategory, ComponentType<IllustrationProps>> = {
   finance: FinanceIllustration,
   kitchen: KitchenIllustration,
   shopping: ShoppingIllustration,
+  life: LifeIllustration,
 };
 
 const CATEGORY_ACCENT: Record<ToolCategory, string> = {
   finance: "text-blue-500 bg-blue-50",
   kitchen: "text-amber-600 bg-amber-50",
   shopping: "text-emerald-600 bg-emerald-50",
+  life: "text-rose-500 bg-rose-50",
 };
 
 export function CategoryIllustration({

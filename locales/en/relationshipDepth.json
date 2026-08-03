@@ -1,0 +1,204 @@
+{
+  "intro": {
+    "eyebrow": "Honest partnership, no filter",
+    "title": "Relationship Depth Assessment",
+    "body": "Check your real dynamics — communication, resilience, personal space, and shared growth. Choose a quick check or full depth. Everything stays in your browser."
+  },
+  "modes": {
+    "quick": "Quick check",
+    "quickMeta": "~10 questions · 2–3 minutes",
+    "full": "Full depth assessment",
+    "fullMeta": "30 questions · 8–10 minutes"
+  },
+  "scale": {
+    "1": "Almost never",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Often",
+    "5": "Almost always"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & see report",
+    "restart": "New assessment",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Honest relationship profile",
+    "overall": "Overall score",
+    "dimensions": "Dimensions",
+    "insights": "Insights",
+    "tips": "Common-sense tips",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Relationship Depth Assessment",
+    "shareText": "Our relationship profile: {{profile}} ({{score}}%). {{insight}} | Relationship Depth — DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Needs attention",
+      "developing": "Growing",
+      "steady": "Steady & human",
+      "strong": "Strong & connected"
+    },
+    "dimensionLabels": {
+      "resilience": "Resilience",
+      "communication": "Communication",
+      "personalSpace": "Personal space",
+      "sharedGrowth": "Shared growth"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn’t copy image — download instead"
+  },
+  "profiles": {
+    "steady-partners": "Steady partners — with room for gentle upgrades",
+    "growing-allies": "Allies who grow together",
+    "quiet-strength": "Quiet strength built from ordinary days",
+    "honest-builders": "Honest builders — imperfect, real",
+    "work-in-progress-good": "Work in progress — the good kind",
+    "tender-realists": "Tender realists",
+    "learning-curve": "An active relationship learning curve",
+    "fragile-hope": "Fragile hope — worth protecting",
+    "repair-ready": "Ready to repair, not just dramatize",
+    "needs-attention": "The system is asking for attention",
+    "honest-wake-up": "An honest wake-up — without panic",
+    "care-first": "Care first, optimize later"
+  },
+  "insights": {
+    "dim-resilience-high": "Your resilience shows: under pressure there’s a base of “we’re in this together.” Keep that alive in quiet seasons too.",
+    "dim-resilience-low": "Resilience wants reinforcement — not heroics, but small reliability: who handles what when it’s hard.",
+    "dim-communication-high": "Your communication breathes. That’s rare — use it for boring topics, not only crises.",
+    "dim-communication-low": "There’s a gap between what’s felt and what’s said. Start with short, clean sentences — no prosecutions.",
+    "dim-personalSpace-high": "Personal space doesn’t threaten your bond — it feeds it. That’s relational maturity.",
+    "dim-personalSpace-low": "Togetherness may be crowding you. Space isn’t distance; it’s oxygen for the long run.",
+    "dim-sharedGrowth-high": "You have a shared direction. Even if the pace differs — there’s a compass.",
+    "dim-sharedGrowth-low": "Shared growth needs a tiny ritual: one goal, one talk, one celebration a month.",
+    "overall-strong": "The overall picture is strong and connected — without pretending everything is perfect.",
+    "overall-steady": "You’re in human steadiness: clear strengths and points that need maintenance.",
+    "overall-developing": "Real potential, with root-level work still ahead — not just a photo for social media.",
+    "overall-needs-care": "This report asks for gentleness and honesty: don’t blame; do pick one small action this week.",
+    "balance-note": "Healthy partnership isn’t perfect symmetry — it’s the ability to repair when balance slips.",
+    "humor-note": "If you can still laugh at yourselves sometimes — you have a repair tool apps can’t measure."
+  },
+  "tips": {
+    "tip-repair-ritual": "Set a repair ritual after conflict: 10 minutes, no phones — what hurt, what you need.",
+    "tip-stress-plan": "Write ahead who does what under stress (kids, money, health). A plan lowers drama.",
+    "tip-small-reliability": "Pick one small weekly commitment and keep it — reliability builds resilience.",
+    "tip-weekly-talk": "A 20-minute weekly status: what worked, what hurts, what you’re asking for.",
+    "tip-reflect-before-reply": "Before a sharp reply — one breath and one clarifying question.",
+    "tip-soft-start": "Start hard sentences with “I feel” instead of “you always.”",
+    "tip-alone-calendar": "Block alone time for each person on the calendar — like a meeting you don’t cancel.",
+    "tip-friend-night": "A separate friends night every two weeks, without unnecessary mood checks.",
+    "tip-no-scorekeeping": "Stop scorekeeping who yielded more. Ask: what do I need right now?",
+    "tip-shared-goal": "Pick one small shared monthly goal (trip, savings, habit) and review together.",
+    "tip-celebrate-tiny": "Celebrate tiny wins out loud — ending a fight peacefully counts.",
+    "tip-fair-chores": "Rebalance home load monthly. Fairness updates; it isn’t locked forever.",
+    "tip-common-sense-pause": "When the volume rises — a 20-minute pause isn’t escape; it’s maintenance."
+  },
+  "questions": {
+    "talk-hard-topics": {
+      "prompt": "When a sensitive topic comes up (money, family, future) — we can talk without fleeing or exploding."
+    },
+    "listen-to-understand": {
+      "prompt": "When my partner speaks — I listen to understand, not only to reply."
+    },
+    "repair-after-fight": {
+      "prompt": "After a fight, we know how to come back and repair — even if it takes time."
+    },
+    "daily-checkins": {
+      "prompt": "We have small daily check-ins, not only an automatic “how was your day.”"
+    },
+    "honest-without-cruel": {
+      "prompt": "We can be honest without humiliating, and tender without hiding."
+    },
+    "disagree-respect": {
+      "prompt": "We can disagree without turning it into a loyalty test."
+    },
+    "humor-in-friction": {
+      "prompt": "Even in friction, we sometimes use healthy humor that cools heat without erasing pain."
+    },
+    "say-needs-clearly": {
+      "prompt": "I can ask for what I need instead of hinting and getting angry later."
+    },
+    "crisis-support": {
+      "prompt": "In a crisis (health, work, family) — we feel we have each other’s back."
+    },
+    "stress-teamwork": {
+      "prompt": "Under stress we act more like a team than two tired opponents."
+    },
+    "bounce-after-hurt": {
+      "prompt": "When hurt happens — there’s a path back to trust, not only long silence."
+    },
+    "money-tension": {
+      "prompt": "Money tension opens into conversation with us, not only suspicion."
+    },
+    "family-pressure": {
+      "prompt": "Pressure from families of origin is handled as a couple, not a loyalty war."
+    },
+    "health-or-hard-week": {
+      "prompt": "In a hard week we adjust expectations instead of demanding “business as usual.”"
+    },
+    "trust-under-doubt": {
+      "prompt": "Even when doubt appears — there’s a base of trust we can return to."
+    },
+    "apologize-and-change": {
+      "prompt": "An apology with us comes with an attempt to change, not only pretty words."
+    },
+    "alone-time-ok": {
+      "prompt": "Alone time is accepted without offense or suspicion."
+    },
+    "friends-without-guilt": {
+      "prompt": "We can see friends separately without a tiny sense of betrayal."
+    },
+    "hobbies-respected": {
+      "prompt": "Personal hobbies and interests get respect, even when not shared."
+    },
+    "no-mind-reading": {
+      "prompt": "We don’t expect mind-reading — and we don’t take offense when someone asks for clarity."
+    },
+    "boundaries-held": {
+      "prompt": "Boundaries we name are held, not erased two days later."
+    },
+    "togetherness-not-fusion": {
+      "prompt": "Our togetherness doesn’t require erasing who we are apart."
+    },
+    "jealousy-handled": {
+      "prompt": "Jealousy or insecurity is handled in conversation, not through control."
+    },
+    "future-talks": {
+      "prompt": "We talk about the future honestly — dreams and fears alike."
+    },
+    "celebrate-wins": {
+      "prompt": "We celebrate each other even in small everyday wins."
+    },
+    "learn-from-conflict": {
+      "prompt": "After conflict, something learned remains — not only a scratch."
+    },
+    "shared-rituals": {
+      "prompt": "We have small shared rituals (meal, walk, a show) that hold the bond."
+    },
+    "support-dreams": {
+      "prompt": "Each of us feels support for personal dreams — even when logistics are hard."
+    },
+    "fair-load-home": {
+      "prompt": "Home load feels fair enough, and can be renegotiated."
+    },
+    "intimacy-of-ordinary": {
+      "prompt": "There’s intimacy between us in ordinary boredom — not only in peak moments."
+    }
+  }
+}

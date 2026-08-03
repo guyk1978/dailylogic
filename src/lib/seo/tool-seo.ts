@@ -31,6 +31,10 @@ export const toolToLandingSlug: Record<ToolSlug, string> = {
   "tip-split": "smart-tip-assistant",
   "recipe-adjuster": "recipe-scaler",
   "unit-compare": "smart-shopping-assistant",
+  "love-calculator": "everyday-love-calculator",
+  "relationship-depth": "relationship-depth-calculator",
+  "business-partnership-calculator": "business-partnership-calculator",
+  "pocket-money-calculator": "pocket-money-calculator",
 };
 
 export function getLandingSlugForTool(toolSlug: ToolSlug): string {

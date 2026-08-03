@@ -1,0 +1,48 @@
+{
+  "title": "Relationship Depth Assessment: an honest partnership profile",
+  "subtitle": "Measure communication, resilience, personal space, and shared growth — quick or full depth.",
+  "seoTitle": "Relationship Depth Quiz | Resilience & Communication Scores | DailyLogic",
+  "seoDescription": "An honest relationship questionnaire: quick check or 30 deep questions. Get resilience, communication, space, and growth scores — free in your browser.",
+  "heroDescription": "Real partnership includes routine, compromise, and repair after conflict. This assessment builds an honest profile with clear metrics and common-sense tips — thoughtful, not cynical.",
+  "toolSlug": "relationship-depth",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What the Relationship Depth Assessment does",
+      "paragraphs": [
+        "Instead of a light compatibility quiz, this tool asks about everyday dynamics: how you talk when it’s hard, how you repair after fights, how you protect personal space, and how you grow together under pressure.",
+        "Choose a quick check of about 10 questions for a fast snapshot, or a full 30-question depth assessment for a richer analysis. Answers are weighted into clear dimension scores.",
+        "Everything runs locally in your browser — save results, share a result card, and reopen the full report from recent calculations."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Pick a mode, answer on a frequency scale (almost never to almost always), and follow the progress bar. You’ll get a profile, four metrics, insights, and practical tips.",
+        "Save the result to reopen it from the home page with expand for the full report, or download a shareable card.",
+        "The assessment is for gentle honesty — not judgment. Use it as a conversation starter, not a verdict."
+      ]
+    },
+    {
+      "heading": "Why honest relationship metrics matter",
+      "paragraphs": [
+        "Long-term partnership leans on repair, not perfection. Metrics like resilience and communication help you see strengths and soft spots.",
+        "Tips focus on common sense: repair rituals, fair load, personal space, and short regular talks.",
+        "Retaking the assessment later can show change — without turning love into scorekeeping."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Two modes", "description": "Quick for speed, or full depth for a serious read." },
+    { "title": "Four metrics", "description": "Resilience, communication, personal space, shared growth." },
+    { "title": "Save & share", "description": "Local history with expand, plus a downloadable result card." }
+  ],
+  "faq": [
+    { "question": "Do we need to answer together?", "answer": "Solo or together both work. If together, stay honest even when you disagree on items." },
+    { "question": "Is data sent to a server?", "answer": "No. Answers and saves stay in your browser." },
+    { "question": "What’s the difference between quick and full?", "answer": "Quick gives a fast overview; full covers more situations and sharpens the metrics." }
+  ]
+}

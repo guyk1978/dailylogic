@@ -1,0 +1,318 @@
+{
+  "intro": {
+    "eyebrow": "Mesada como sociedad familiar",
+    "title": "Calculadora de mesada / dinero de bolsillo",
+    "body": "Padre/madre e hijo/a eligen un contexto breve, responden juntos y reciben un plan: rango mensual recomendado, reparto gastar/ahorrar/donar y consejos prácticos. Todo queda en el navegador."
+  },
+  "setup": {
+    "title": "Contexto breve",
+    "subtitle": "Estas elecciones ajustan las preguntas y recomendaciones.",
+    "ageLabel": "Edad del niño/a",
+    "modelLabel": "Modelo actual de mesada",
+    "goalLabel": "Objetivo principal ahora",
+    "continue": "Continuar a elegir el cuestionario",
+    "age": {
+      "young": "Niños 6–9",
+      "tween": "Precios 10–14",
+      "teen": "Adolescentes 15–18"
+    },
+    "model": {
+      "fixed": "Cantidad fija",
+      "chores": "Basado en tareas",
+      "hybrid": "Híbrido: base + ahorro/emprendimiento"
+    },
+    "goal": {
+      "delay": "Aprender a diferir gratificación",
+      "save-goal": "Ahorrar para una meta grande",
+      "independence": "Primer presupuesto independiente",
+      "value": "Entender el valor del dinero"
+    }
+  },
+  "modes": {
+    "quick": "Configuración rápida",
+    "quickMeta": "~10 preguntas ligeras · ~2 minutos",
+    "full": "Plan familiar completo",
+    "fullMeta": "25 preguntas · 6–8 minutos",
+    "backToSetup": "Volver al contexto"
+  },
+  "scale": {
+    "1": "Casi nunca",
+    "2": "Rara vez",
+    "3": "A veces",
+    "4": "Habitualmente",
+    "5": "Casi siempre"
+  },
+  "currency": {
+    "symbol": "€",
+    "code": "EUR"
+  },
+  "actions": {
+    "start": "Empezar",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "finish": "Terminar y ver el plan",
+    "restart": "Plan nuevo",
+    "changeMode": "Cambiar modo",
+    "newInsight": "Otra idea",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Plan familiar de mesada",
+    "overall": "Índice de sociedad financiera",
+    "amount": "Cantidad mensual recomendada",
+    "amountRange": "{{min}}–{{max}} {{symbol}} · foco {{mid}} {{symbol}}",
+    "amountNote": "Guía educativa — ajústala a la realidad de tu hogar.",
+    "split": "Reparto inteligente",
+    "spend": "Gastar / diversión",
+    "save": "Ahorrar",
+    "give": "Donar / comunidad",
+    "dimensions": "Indicadores",
+    "insights": "Ideas",
+    "tips": "Consejos prácticos",
+    "habits": "Hábitos de sociedad",
+    "setupSummary": "Contexto",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · Calculadora de mesada",
+    "shareText": "Nuestro plan de mesada: {{profile}} · {{mid}} {{symbol}} · ahorro {{save}}% | Mesada — DailyLogic",
+    "resultSummary": "{{profile}} · {{mid}} {{symbol}} · ahorro {{save}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Necesita estructura clara",
+      "developing": "Practicando juntos",
+      "steady": "Estable y aprendiendo",
+      "strong": "Sociedad fuerte"
+    },
+    "dimensionLabels": {
+      "moneyResponsibility": "Responsabilidad con el dinero",
+      "savingDiscipline": "Disciplina de ahorro",
+      "familyPartnership": "Sociedad familiar",
+      "spendingWisdom": "Sabiduría al gastar"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No se pudo copiar la imagen — descárgala"
+  },
+  "profiles": {
+    "steady-partners": "Socios estables del dinero en casa",
+    "savvy-team": "Equipo financiero acorde a la edad",
+    "trust-builders": "Construyen confianza con transparencia",
+    "learning-crew": "Equipo que aprende junto",
+    "fair-starters": "Empiezan con equidad",
+    "growing-together": "Crecen con las reglas",
+    "needs-structure": "Necesita estructura más simple",
+    "practice-week": "Semana de práctica antes de subir",
+    "clarify-rules": "Aclarar las reglas primero",
+    "reset-gently": "Reinicio suave — sin vergüenza",
+    "start-smaller": "Empezar con menos cantidad",
+    "talk-first": "Primero hablar — luego fijar monto"
+  },
+  "insights": {
+    "dim-moneyResponsibility-high": "Hay sentido de dueño del dinero — mantengan un seguimiento simple.",
+    "dim-moneyResponsibility-low": "Cuando el dinero “desaparece” sin historia — escriban qué pasa con la billetera vacía.",
+    "dim-savingDiscipline-high": "El ahorro se siente real — celebren hitos pequeños en voz alta.",
+    "dim-savingDiscipline-low": "Sin meta visible, el ahorro se pospone. Pongan una foto de la meta junto al tarro.",
+    "dim-familyPartnership-high": "Hay sociedad — renueven las reglas cada pocos meses.",
+    "dim-familyPartnership-low": "Si solo un lado decide, la mesada se vuelve pelea. 15 minutos para acordar juntos.",
+    "dim-spendingWisdom-high": "Hay pausa antes de comprar — premien ese músculo con palabras, no solo dinero.",
+    "dim-spendingWisdom-low": "Los impulsos rompen el presupuesto. Prueben regla de 24 horas para lo no urgente.",
+    "overall-strong": "La base es fuerte — documenten monto, reparto y reglas de billetera vacía.",
+    "overall-steady": "Buen rumbo con puntos a reforzar — elijan un hábito para dos semanas.",
+    "overall-developing": "Hay ganas, pero las reglas están borrosas. Simplifiquen antes de subir el monto.",
+    "overall-needs-care": "Mejor reiniciar con suavidad: menos monto, reglas claras, charla sin culpa.",
+    "age-young": "A esta edad gana lo visual: tarros de colores y contar monedas.",
+    "age-tween": "Sube la presión de amigos — practiquen un “no esta semana” educado.",
+    "age-teen": "La independencia digital pide transparencia sin vigilancia asfixiante.",
+    "model-fixed": "Con modelo fijo: ajusten el monto a la responsabilidad — no solo a la comodidad.",
+    "model-chores": "Con tareas: separen deberes familiares de extras pagados.",
+    "model-hybrid": "Lo híbrido funciona con base estable + carril de bono claro.",
+    "goal-delay": "Para diferir gratificación: la regla de espera importa más que un monto alto.",
+    "goal-save-goal": "Para una meta grande: divídanla en hitos cortos con fecha.",
+    "goal-independence": "Para independencia: permitan un error pequeño y revísenlo juntos.",
+    "goal-value": "Para valor del dinero: comparen precios e incluyan una parte para donar."
+  },
+  "tips": {
+    "tip-sunday-reset": "Reinicio domingo: cuenten lo que queda y planifiquen la semana en dos minutos.",
+    "tip-empty-wallet-plan": "Escriban el plan de billetera vacía — sin rescate automático de los padres.",
+    "tip-visible-tracker": "Seguimiento visible (cuaderno/app simple) — 30 segundos tras cada compra.",
+    "tip-pay-yourself-first": "Al recibir la mesada: primero ahorro, luego diversión.",
+    "tip-photo-goal": "Foto de la meta en la nevera o pantalla de bloqueo.",
+    "tip-match-small": "Un match pequeño de los padres al ahorro motiva sin comprarlo todo.",
+    "tip-family-meeting": "Reunión mensual de 15 minutos: monto, qué funcionó, qué cambia.",
+    "tip-chore-menu": "Menú de tareas: deberes familiares vs extras pagados — por escrito.",
+    "tip-two-voices": "Cambios de reglas requieren las dos voces — hijo/a y padre/madre.",
+    "tip-24h-pause": "Compras no urgentes sobre un umbral acordado esperan 24 horas.",
+    "tip-needs-wants-list": "Lista de necesidades vs deseos en una hoja — cada semana.",
+    "tip-give-jar": "Tarro de donación: elijan una causa juntos cada trimestre.",
+    "tip-monthly-review": "Fin de mes: qué aprendimos, no solo cuánto quedó."
+  },
+  "habits": {
+    "habit-jar-split": "Tres tarros/sobres: gastar, ahorrar, donar — según los porcentajes acordados.",
+    "habit-receipt-photo": "Foto del ticket o anotación inmediata — la memoria reescribe la historia.",
+    "habit-goal-countdown": "Cuenta atrás a la meta: semanas restantes y falta semanal.",
+    "habit-praise-ritual": "Elogiar el proceso bueno — no solo la compra cool.",
+    "habit-no-bailout-default": "Por defecto: sin rescate automático. Excepciones solo tras charla acordada.",
+    "habit-earn-bonus-lane": "Carril de bono limitado para emprendimiento/tareas especiales — sin reemplazar la base."
+  },
+  "questions": {
+    "money-runs-out": {
+      "prompt": "Cuando el dinero se acaba antes de tiempo — tenemos un plan claro (sin drama).",
+      "byAge": {
+        "young": "Cuando se acaban las monedas temprano — sabemos qué pasa sin llanto o enfado grande.",
+        "tween": "Cuando la mesada se acaba a mitad — hay una regla clara en vez de pelea.",
+        "teen": "Cuando el presupuesto se acaba pronto — acordamos qué pasa (sin préstamo automático)."
+      }
+    },
+    "track-what-spent": {
+      "prompt": "Sabemos más o menos a dónde fue la mayor parte del dinero.",
+      "byAge": {
+        "young": "Recordamos/dibujamos a dónde fueron las monedas.",
+        "tween": "Hay un seguimiento simple — cuaderno o nota — de lo comprado.",
+        "teen": "Hay seguimiento ligero (app/nota) sin sensación de vigilancia."
+      }
+    },
+    "ask-before-borrow": {
+      "prompt": "Pedir prestado a padres/hermanos solo tras una petición clara — no “porque sí”."
+    },
+    "own-mistakes": {
+      "prompt": "Cuando una compra fue un error — hablamos con honestidad sin vergüenza.",
+      "byAge": {
+        "young": "Si nos arrepentimos de una compra — lo decimos en voz alta y seguimos.",
+        "tween": "Los errores de compra son lecciones, no castigos.",
+        "teen": "Revisamos una mala compra juntos — sin sermón largo."
+      }
+    },
+    "plan-the-month": {
+      "prompt": "Al inicio del periodo tenemos una idea aproximada de cómo se reparte el dinero."
+    },
+    "no-secret-spending": {
+      "prompt": "No hay gastos secretos que rompan la confianza en casa."
+    },
+    "save-before-spend": {
+      "prompt": "Parte del dinero va al ahorro antes de gastar en diversión."
+    },
+    "goal-feels-real": {
+      "prompt": "Hay una meta de ahorro que se siente real para ambos.",
+      "byAge": {
+        "young": "Hay una meta visible (foto/juguete) a la que nos acercamos.",
+        "tween": "Hay una meta clara con una fecha aproximada.",
+        "teen": "Hay una meta con precio y plan semanal."
+      }
+    },
+    "wait-for-want": {
+      "prompt": "Podemos esperar un poco antes de una compra no urgente.",
+      "byAge": {
+        "young": "A veces decimos “pensemos mañana” en vez de comprar ya.",
+        "tween": "Hay una regla de espera para deseos no urgentes.",
+        "teen": "Hay una pausa consciente antes de impulsos (online/amigos)."
+      }
+    },
+    "celebrate-milestones": {
+      "prompt": "Celebramos el progreso del ahorro — no solo la compra final."
+    },
+    "protect-savings-jar": {
+      "prompt": "El ahorro está protegido — no se “pide prestado” sin acuerdo.",
+      "byModel": {
+        "fixed": "Aun con monto fijo — el ahorro no se traga el gasto diario.",
+        "chores": "Los bonos por tareas no reemplazan el tarro de ahorro.",
+        "hybrid": "En lo híbrido está claro qué parte está reservada al ahorro."
+      }
+    },
+    "match-encourage": {
+      "prompt": "El ahorro recibe ánimo positivo (palabras o un match pequeño) — no solo presión.",
+      "byModel": {
+        "fixed": "Aun con modelo fijo animamos el ahorro sin comprarlo todo por el niño/a.",
+        "chores": "Pagar tareas no anula el valor de ahorrar.",
+        "hybrid": "Hay un carril claro de ánimo para ahorro/emprendimiento."
+      }
+    },
+    "chores-vs-pay": {
+      "prompt": "Tenemos claro qué es deber familiar y qué es tarea pagada.",
+      "byModel": {
+        "fixed": "Aunque no se pague cada tarea — las expectativas como socios del hogar son claras.",
+        "chores": "Hay una lista transparente de tareas y tarifas — sin regateo diario.",
+        "hybrid": "Hay una base estable más tareas bonus definidas."
+      }
+    },
+    "rules-were-agreed": {
+      "prompt": "Las reglas de la mesada se acordaron juntos — no solo se anunciaron."
+    },
+    "both-voices-heard": {
+      "prompt": "Padre/madre e hijo/a se sienten escuchados en las charlas de dinero.",
+      "byAge": {
+        "young": "El niño/a ayuda a elegir tarros y la meta.",
+        "tween": "Ambos lados opinan antes de cambiar reglas.",
+        "teen": "Hay diálogo adulto — no un sermón unidireccional."
+      }
+    },
+    "review-together": {
+      "prompt": "De vez en cuando revisamos si el monto y las reglas aún encajan."
+    },
+    "fair-when-busy": {
+      "prompt": "Aun en una semana ocupada — los acuerdos se cumplen sin castigo silencioso.",
+      "byModel": {
+        "fixed": "El monto llega a tiempo según lo acordado.",
+        "chores": "Tareas canceladas con justa causa no se vuelven castigo económico vago.",
+        "hybrid": "La base se mantiene aunque no haya bono esa semana."
+      }
+    },
+    "praise-not-only-pay": {
+      "prompt": "Los buenos hábitos también reciben elogio en palabras — no solo dinero."
+    },
+    "sibling-or-friends-pressure": {
+      "prompt": "Hablamos con honestidad de la presión de amigos/hermanos al comprar.",
+      "byAge": {
+        "young": "Explicamos por qué no compramos todo lo que tiene un amigo.",
+        "tween": "Practicamos respuestas a la presión social sobre dinero.",
+        "teen": "Hay charla abierta sobre status, marcas y presupuestos reales."
+      }
+    },
+    "impulse-pause": {
+      "prompt": "Antes de una compra espontánea hay una pausa.",
+      "byAge": {
+        "young": "A veces el deseo va a una “lista de mañana”.",
+        "tween": "Hay regla de espera para lo no urgente.",
+        "teen": "En tienda/online — pausamos antes del checkout."
+      }
+    },
+    "needs-vs-wants": {
+      "prompt": "Distinguimos necesidad de deseo sin avergonzar el sentimiento."
+    },
+    "give-back-share": {
+      "prompt": "Hay un pequeño espacio para donar/dar en el reparto."
+    },
+    "compare-prices": {
+      "prompt": "A veces comparamos un precio alternativo antes de comprar.",
+      "byAge": {
+        "young": "Comparamos dos opciones simples (más barato/más caro).",
+        "tween": "Revisamos si hay una alternativa razonable.",
+        "teen": "Comparamos precios/ofertas antes de una compra relativamente grande."
+      }
+    },
+    "digital-vs-cash": {
+      "prompt": "Entendemos que el dinero digital también “se acaba” — no solo las monedas.",
+      "byAge": {
+        "young": "Hablamos de que tarjeta/app también es dinero real.",
+        "tween": "Hay un límite claro para gasto digital si existe.",
+        "teen": "Hay transparencia básica del gasto digital sin auditorías eternas."
+      }
+    },
+    "earn-extra-ok": {
+      "prompt": "Hay una forma justa de ganar un poco más — sin convertir la casa en un mercado.",
+      "byModel": {
+        "fixed": "Un pequeño emprendimiento fuera del monto fijo está bien si se coordina.",
+        "chores": "Tareas bonus definidas de antemano — sin regateo infinito.",
+        "hybrid": "El carril de emprendimiento/bono es claro y limitado."
+      }
+    }
+  }
+}

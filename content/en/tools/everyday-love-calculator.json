@@ -1,0 +1,48 @@
+{
+  "title": "Everyday Love Calculator: Synergy with a wink",
+  "subtitle": "Pick small joys, a tiny vice, and today’s mood — get a life-synergy score with witty insights.",
+  "seoTitle": "Everyday Love Calculator | Life Synergy Score | DailyLogic",
+  "seoDescription": "The Everyday Love Calculator crosses small joys, habits, and moods into a humorous life-synergy score. Free in your browser.",
+  "heroDescription": "Life is full of small loves — morning coffee, perfect parking, silence after the kids sleep. This calculator crosses them with your habits and mood to produce a witty synergy score and life insights.",
+  "toolSlug": "love-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What the Everyday Love Calculator does",
+      "paragraphs": [
+        "Instead of a classic name-based love calculator, this tool explores everyday small loves: food and drink, home moments, odd habits, beloved objects, and lucky moments. You pick what delights you, your tiny vice, and today’s mood — and the engine produces a unique synergy score.",
+        "The score isn’t pure chance: it uses trait vectors (energy, comfort, chaos, social, indulgence) plus category and tag intersections. Results come with humorous insights you can refresh again and again.",
+        "Everything runs locally in your browser — no signup, and your picks never leave your device."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Choose what delights you from the category library, add your tiny vice, and mark today’s mood. Hit calculate and enjoy a short “common sense” animation.",
+        "After the result, request a new insight or a deeper analysis, share or copy, and optionally save the calculation. Then hop back to the rest of the tools.",
+        "Try different combos — each trio tells a different story about how you live the day-to-day."
+      ]
+    },
+    {
+      "heading": "Why small-love synergy matters",
+      "paragraphs": [
+        "Everyday happiness often comes from tiny moments, not grand events. The tool helps you notice patterns: are you chasing quiet, treats, city luck, or healthy boundaries?",
+        "Humor lets you look at habits kindly — without heavy judgment, with a wink of common sense.",
+        "Use the result as a conversation with yourself or friends: what actually fills you today, and what looks like a “vice” but is really self-care?"
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Rich library", "description": "Dozens of small loves across real-life categories." },
+    { "title": "Smart engine", "description": "Synergy scored from traits, tags, and mood — not just a lottery." },
+    { "title": "Rotating insights", "description": "Refresh insights and deep dives for more witty gems." }
+  ],
+  "faq": [
+    { "question": "Is this a romantic love calculator?", "answer": "No. It’s for everyday small loves — habits, moments, and moods — with witty insights." },
+    { "question": "Is the score random?", "answer": "It’s deterministic for your picks, with light hash-based variation — the same combo stays consistent." },
+    { "question": "Is data saved on a server?", "answer": "No. Picks and saves stay local in your browser." }
+  ]
+}

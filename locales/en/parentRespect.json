@@ -1,0 +1,499 @@
+{
+  "intro": {
+    "eyebrow": "Honoring parents — honestly",
+    "title": "Parent Respect & Connection Calculator",
+    "body": "Start with your real situation — distance, contact, life stage. Take a quick check or full depth. Get a gentle profile on presence, listening, and emotional balance. Everything stays in your browser."
+  },
+  "setup": {
+    "title": "Your situation with your parents",
+    "subtitle": "This tunes prompts and insights — not a score on your love.",
+    "distanceLabel": "How close you live",
+    "contactLabel": "How you usually stay in touch",
+    "stageLabel": "Where they are in life right now",
+    "continue": "Continue to assessment",
+    "distance": {
+      "sameArea": "Same city or very nearby",
+      "shortDrive": "A short drive away (under ~90 minutes)",
+      "farAway": "Far away — flights or long drives"
+    },
+    "contact": {
+      "daily": "Most days — calls, texts, or visits",
+      "fewWeekly": "A few times a week",
+      "weekends": "Mostly weekends or holidays",
+      "mostlyPhone": "Mostly phone/video — visits are rare"
+    },
+    "stage": {
+      "independent": "Mostly independent — active on their own",
+      "someHelp": "Some help needed — errands, health, home",
+      "caregiving": "I'm a primary caregiver or very involved"
+    }
+  },
+  "modes": {
+    "quick": "Quick check",
+    "quickMeta": "~10 questions · 2–3 minutes",
+    "full": "Full depth assessment",
+    "fullMeta": "30 questions · 8–10 minutes",
+    "backToSetup": "Back to setup"
+  },
+  "scale": {
+    "1": "Rarely / not really",
+    "2": "Seldom",
+    "3": "Mixed",
+    "4": "Mostly",
+    "5": "Consistently"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & see report",
+    "restart": "New assessment",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Honest parent-connection profile",
+    "overall": "Overall score",
+    "dimensions": "Dimensions",
+    "insights": "Insights",
+    "tips": "Practical next steps",
+    "setupSummary": "Your setup",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Parent Respect Calculator",
+    "shareText": "My parent-respect profile: {{profile}} ({{score}}%). {{insight}} | Parent Respect — DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Needs gentle rebuilding",
+      "developing": "Growing with gaps",
+      "steady": "Steady & human",
+      "strong": "Strong & honoring"
+    },
+    "dimensionLabels": {
+      "presence": "Presence",
+      "listening": "Listening",
+      "emotionalBalance": "Emotional balance"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn't copy image — download instead"
+  },
+  "profiles": {
+    "steady-honor": "Steady honor — presence you can build on",
+    "warm-bridge": "Warm bridge between your worlds",
+    "rooted-respect": "Rooted respect — quiet and real",
+    "present-enough": "Present enough — with room to deepen",
+    "learning-balance": "Learning balance — good intent, messy life",
+    "good-intent": "Good intent — now match it with rhythm",
+    "gap-to-close": "A gap to close — not a moral failure",
+    "guilt-heavy": "Guilt-heavy — time to trade shame for a plan",
+    "thin-contact": "Thin contact — connection wants a slot",
+    "rebuild-gently": "Rebuild gently — one visit, one call",
+    "pause-and-plan": "Pause and plan — honor without burnout",
+    "start-small": "Start small — respect grows in inches"
+  },
+  "insights": {
+    "dim-presence-high": "Your presence lands: they can feel you in the calendar, not only in speeches.",
+    "dim-presence-low": "Presence is the leak — not love. Pick one fixed slot they can predict.",
+    "dim-listening-high": "You listen like family: room for their story without rushing to fix.",
+    "dim-listening-low": "Listening wants practice — less advice, more curiosity on the first pass.",
+    "dim-emotionalBalance-high": "You hold boundaries and warmth together — that's mature kibbud without self-erasure.",
+    "dim-emotionalBalance-low": "Balance wobbles — guilt or resentment may be driving more than choice.",
+    "overall-strong": "The picture is strong: honoring without pretending it's effortless.",
+    "overall-steady": "Human steadiness — real care with normal blind spots.",
+    "overall-developing": "Real care, uneven habits — small rituals will move the needle.",
+    "overall-needs-care": "This asks for kindness to yourself and one concrete step this week.",
+    "distance-sameArea": "Living nearby is a gift — use it for quality, not only logistics and guilt trips.",
+    "distance-shortDrive": "A short drive can be a rhythm — batch errands with unhurried time together.",
+    "distance-farAway": "Distance makes intention visible — protect visit dates like meetings you don't cancel.",
+    "stage-independent": "They're still their own people — honor autonomy, not only worry.",
+    "stage-someHelp": "Help lands best when you ask what they want, not what you assume.",
+    "stage-caregiving": "Caregiving is heavy — respect includes protecting your own floor.",
+    "contact-daily": "Daily touch can drift into autopilot — keep one moment that's actually attentive.",
+    "contact-fewWeekly": "A few solid touchpoints beat scattered pings — make one of them undivided.",
+    "contact-weekends": "Weekend-only rhythm works if it's reliable — not only when you're free.",
+    "contact-mostlyPhone": "Phone can be real presence — voice, silence, and no multitasking count."
+  },
+  "tips": {
+    "tip-fixed-slot": "Block one recurring slot (Tuesday walk, Sunday call) — predictability is respect.",
+    "tip-voice-note": "Send a 30-second voice note when you can't talk — tone carries more than a emoji.",
+    "tip-shared-errand": "Pair a chore they need with time together — pharmacy plus coffee, not drive-by duty.",
+    "tip-two-questions": "Open with two real questions before sharing your news — let them lead.",
+    "tip-phone-walk": "Take one call on a walk without screens — they'll hear the difference.",
+    "tip-no-advice-first": "When they vent, reflect once before suggesting fixes — honor the feeling first.",
+    "tip-guilt-budget": "Set a guilt budget: one act of repair, then move to plan — shame doesn't visit.",
+    "tip-boundary-script": "Write one sentence for boundaries: \"I can't Tuesday, I can Thursday at six.\"",
+    "tip-sibling-huddle": "If siblings share load — a 20-minute huddle beats silent scorekeeping.",
+    "tip-sunday-check": "Sunday two-line check: \"What's hard this week? What would help?\"",
+    "tip-visit-ritual": "Far away? Pick a visit ritual — same meal, same photo walk — so trips feel anchored.",
+    "tip-doorstep-coffee": "Nearby? Ten-minute doorstep coffee beats a monthly marathon visit."
+  },
+  "questions": {
+    "show-up-consistently": {
+      "prompt": "When I say I'll visit or stop by, I follow through on a rhythm my parents can rely on.",
+      "byDistance": {
+        "sameArea": "When I say I'll drop by locally, I actually show up — not only in a crisis.",
+        "shortDrive": "When I plan a drive to see them, I keep a visit rhythm they can count on.",
+        "farAway": "When we set dates for a trip home, I follow through — not endless \"we'll see.\""
+      },
+      "options": {
+        "1": "I often cancel, ghost on plans, or appear only when guilt spikes",
+        "2": "I visit when it's convenient for me — they can't predict my rhythm",
+        "3": "I show up sometimes but disappear for weeks without a word",
+        "4": "I mostly keep planned visits or calls; when I slip, I reschedule clearly",
+        "5": "They know my rhythm — I show up when I say I will, near or far"
+      }
+    },
+    "small-gestures": {
+      "prompt": "I do small practical things that say \"I'm thinking of you\" — not only on holidays.",
+      "options": {
+        "1": "Caring acts happen only on birthdays or holidays — otherwise silence",
+        "2": "I mean to help but rarely follow through on small things",
+        "3": "Occasional food, photos, or fixes when I'm there or reminded",
+        "4": "Regular small acts — groceries, a link, fixing something on their phone",
+        "5": "Small gestures are part of my week; they feel seen between big events"
+      }
+    },
+    "mark-dates": {
+      "prompt": "I remember and mark what matters to them — birthdays, yahrzeit, anniversaries, medical days.",
+      "options": {
+        "1": "I forget important dates or remember only after they're hurt",
+        "2": "I remember late — a rushed text after the day passed",
+        "3": "Reminders help; I usually acknowledge on the day",
+        "4": "I mark key dates ahead and reach out with something personal",
+        "5": "Their meaningful dates live on my calendar — honored consistently"
+      }
+    },
+    "quality-over-rush": {
+      "prompt": "When we're together, they get my attention — not only my phone and a rushed exit.",
+      "byDistance": {
+        "sameArea": "On local visits, I stay long enough for real talk — not a drive-by checklist.",
+        "shortDrive": "When I drive in, I protect unhurried time — not only errands and leave.",
+        "farAway": "On rare visits home, I'm present for conversations — not just scheduling the next flight out."
+      },
+      "options": {
+        "1": "I'm on my phone or watching the clock — they feel like an interruption",
+        "2": "I squeeze them in between tasks; warmth gets the leftovers",
+        "3": "Some visits are rushed, some are good — depends on my week",
+        "4": "I usually put devices away and leave room for unplanned conversation",
+        "5": "They get unhurried time — I leave feeling connected, not just dutiful"
+      }
+    },
+    "invite-into-life": {
+      "prompt": "I invite them into my life — kids, work wins, ordinary Fridays — not only crises.",
+      "options": {
+        "1": "They hear from me mostly when I need something or when there's bad news",
+        "2": "I share logistics (kids' schedules) but not much of my inner life",
+        "3": "Sometimes I share photos or stories; often I forget to include them",
+        "4": "I regularly loop them in — meals, milestones, small wins",
+        "5": "They know my world ongoingly — inclusion is natural, not performative"
+      }
+    },
+    "follow-through-promises": {
+      "prompt": "When I promise \"I'll call,\" \"I'll fix that,\" or \"I'll take you\" — I follow through.",
+      "options": {
+        "1": "Promises slip constantly; they stop believing me",
+        "2": "I follow through half the time — they're wary now",
+        "3": "I try, but busy weeks mean broken promises without repair",
+        "4": "I usually do what I say; when I can't, I say so early",
+        "5": "My word is reliable — they don't have to chase me"
+      }
+    },
+    "help-without-being-asked": {
+      "prompt": "I notice what they need and help — without making them beg or feel like a burden.",
+      "byStage": {
+        "independent": "I offer help they might refuse — respectfully, without pushing my agenda.",
+        "someHelp": "I step in on errands, appointments, or home tasks before they're exhausted asking.",
+        "caregiving": "I share the load proactively — meds, nights, paperwork — not only when it boils over."
+      },
+      "options": {
+        "1": "I wait until they ask loudly or until someone shames me into it",
+        "2": "I help when reminded, often with sighs or delay",
+        "3": "I help sometimes; other times I assume they're fine",
+        "4": "I spot needs and offer concrete help — they can say no comfortably",
+        "5": "Anticipating needs is normal for me — dignity stays intact"
+      }
+    },
+    "stay-in-touch-busy": {
+      "prompt": "When life gets loud, I still keep a thread with my parents — not radio silence.",
+      "byDistance": {
+        "sameArea": "Even in hectic weeks nearby, I send a text or knock — not weeks of absence.",
+        "shortDrive": "When I can't drive over, I still call or video — distance isn't an excuse for silence.",
+        "farAway": "Between trips, I keep contact steady — calls, photos — not disappearing until the next flight."
+      },
+      "options": {
+        "1": "Busy seasons mean zero contact until someone guilt-trips me",
+        "2": "A random text every few weeks — they feel like an afterthought",
+        "3": "I touch base when I remember; gaps can stretch long",
+        "4": "I keep a minimum rhythm even in chaos — short but real",
+        "5": "They never wonder if I've forgotten them — thread stays alive"
+      }
+    },
+    "listen-without-fix": {
+      "prompt": "When they repeat a story or worry, I listen without immediately fixing or shutting them down.",
+      "options": {
+        "1": "I interrupt, correct, or say \"you already told me\"",
+        "2": "I listen with one eye on my phone — they feel dismissed",
+        "3": "I listen okay until I'm tired; then I rush them",
+        "4": "I let stories breathe — I reflect before offering solutions",
+        "5": "They feel heard even on repeat topics — patience is respect"
+      }
+    },
+    "ask-real-questions": {
+      "prompt": "I ask questions about their day, memories, and worries — not only yes/no check-ins.",
+      "options": {
+        "1": "Our talks are \"everything fine?\" and we move on",
+        "2": "I ask surface questions but don't follow the thread",
+        "3": "Sometimes a real question lands; often it's logistics",
+        "4": "I regularly ask what matters to them and stay curious",
+        "5": "Conversations go both ways — they feel interviewed with love, not audited"
+      }
+    },
+    "remember-details": {
+      "prompt": "I remember details they care about — names, doctors, neighbors, what they told me last time.",
+      "options": {
+        "1": "I forget what they said yesterday — they feel invisible",
+        "2": "I remember big things only; small details slip",
+        "3": "I remember when I write notes; otherwise it's hit or miss",
+        "4": "I usually pick up threads from last call — \"how did that go?\"",
+        "5": "They don't re-explain everything — I track what matters to them"
+      }
+    },
+    "patience-with-repeat": {
+      "prompt": "When they repeat themselves or move slowly, I stay patient — not sharp or mocking.",
+      "byStage": {
+        "independent": "When habits sound old-fashioned, I disagree without eye-rolls or public correction.",
+        "someHelp": "When memory or hearing slips, I repeat calmly — not \"I already said that.\"",
+        "caregiving": "In long care days, I watch my tone — fatigue isn't their fault."
+      },
+      "options": {
+        "1": "I snap, mock, or finish their sentences with irritation",
+        "2": "Patience runs out fast — they feel like a nuisance",
+        "3": "I'm patient sometimes; stress makes me sharp",
+        "4": "I breathe before reacting — tone stays respectful",
+        "5": "Slowness and repeats get grace — they feel safe with me"
+      }
+    },
+    "respect-their-pace": {
+      "prompt": "I respect their pace — meals, walks, decisions — without marching them like a project.",
+      "options": {
+        "1": "I rush them constantly — efficiency over dignity",
+        "2": "I hurry visits; they feel managed, not met",
+        "3": "Depends on my schedule — sometimes patient, sometimes pushy",
+        "4": "I adjust to their tempo most of the time",
+        "5": "Their pace sets the visit — I'm a guest in their rhythm"
+      }
+    },
+    "hear-worry-underneath": {
+      "prompt": "When they nag or criticize, I hear worry or loneliness underneath — not only the jab.",
+      "options": {
+        "1": "I fire back or go cold — every comment becomes war",
+        "2": "I dismiss them as dramatic — miss the fear below",
+        "3": "Sometimes I see the worry; often I take bait",
+        "4": "I pause and ask what's really scaring them",
+        "5": "I can translate nag into care — respond to the need, not the tone"
+      }
+    },
+    "disagree-with-honor": {
+      "prompt": "We can disagree — politics, parenting, money — without cutting them down.",
+      "options": {
+        "1": "Disagreement becomes contempt or silent punishment",
+        "2": "I \"win\" arguments and leave them small",
+        "3": "We avoid hot topics — connection thins",
+        "4": "We disagree with boundaries — no name-calling, no dredging old wounds",
+        "5": "Different views coexist — honor stays louder than debate"
+      }
+    },
+    "phone-call-presence": {
+      "prompt": "On phone or video, I'm actually there — not multitasking through their sentences.",
+      "byDistance": {
+        "sameArea": "Even when we could meet, phone calls get my full attention when we use them.",
+        "shortDrive": "On driving calls, I stay focused — or I call back when I can listen.",
+        "farAway": "Long-distance calls are main visits — I treat them like rooms, not background noise."
+      },
+      "options": {
+        "1": "I'm cooking, driving distracted, or half-listening — they notice",
+        "2": "Calls are short chores — \"what do you need?\"",
+        "3": "Good calls mix with distracted ones",
+        "4": "I usually stop other tasks for calls with them",
+        "5": "They'd say I'm present on the line — voice, silence, and all"
+      }
+    },
+    "boundaries-without-cut": {
+      "prompt": "I can set limits (time, topics, visits) without cutting them off or punishing.",
+      "options": {
+        "1": "Boundaries mean silence, blocks, or dramatic exits",
+        "2": "I say yes resentfully — then explode later",
+        "3": "Limits are fuzzy — swing between over-giving and vanishing",
+        "4": "I name limits kindly — \"not tonight, yes Thursday\"",
+        "5": "Clear boundaries and warm connection coexist"
+      }
+    },
+    "guilt-managed": {
+      "prompt": "Guilt doesn't run the whole relationship — I act from choice, not only shame.",
+      "options": {
+        "1": "I avoid them because guilt is unbearable — or I overgive until I resent",
+        "2": "Guilt drives big gestures then long disappearance",
+        "3": "Guilt and love mix — some weeks better than others",
+        "4": "I notice guilt, then choose a sane next step",
+        "5": "I honor them without self-punishment — steady, not dramatic"
+      }
+    },
+    "own-family-balance": {
+      "prompt": "I balance my partner/kids and my parents — without making either side the villain.",
+      "options": {
+        "1": "Constant war — spouse vs. parents, kids caught inside",
+        "2": "I hide visits or calls — sneakiness breeds shame",
+        "3": "Balance wobbles; holidays are minefields",
+        "4": "We negotiate time openly — some friction, some repair",
+        "5": "Family roles are talked about — respect includes my household too"
+      }
+    },
+    "crisis-show-up": {
+      "prompt": "In health scares, falls, or loss — I show up practically and emotionally.",
+      "byStage": {
+        "independent": "When a scare hits, I'm there fast — hospital, calls to siblings — without taking over their agency.",
+        "someHelp": "In ER nights or bad diagnoses, I coordinate and sit — not only send thoughts.",
+        "caregiving": "In acute crises on top of daily care, I stabilize first — then breathe with them."
+      },
+      "options": {
+        "1": "I freeze, argue with siblings, or disappear until it's over",
+        "2": "Logistics only — no bedside or emotional presence",
+        "3": "I show up unevenly — strong start, fade later",
+        "4": "I'm reliably there for the hard hours — food, calls, holding hand",
+        "5": "They know crisis means me — steady feet, open heart"
+      }
+    },
+    "no-scorekeeping": {
+      "prompt": "I don't keep a ledger of who did more — visits, money, calls — to justify pulling away.",
+      "options": {
+        "1": "I tally every sacrifice — weaponize it in fights",
+        "2": "Silent scoreboard — resentment builds quietly",
+        "3": "I scorekeep when stressed; let go when calm",
+        "4": "I notice imbalance and talk — not prosecute",
+        "5": "Giving isn't a deposit for withdrawal — respect flows"
+      }
+    },
+    "sibling-or-alone-load": {
+      "prompt": "If siblings share care — we talk load fairly; if I'm alone, I ask for help without martyrdom.",
+      "options": {
+        "1": "Sibling wars or solo martyrdom — nobody wins",
+        "2": "I carry alone and explode at family group chat",
+        "3": "Uneven load acknowledged but not fixed",
+        "4": "We divide tasks or I hire/help openly",
+        "5": "Load is named and shared — solo or with siblings"
+      }
+    },
+    "speak-needs-calmly": {
+      "prompt": "I can tell my parents what I need — time, tone, topics — calmly, not in a blow-up.",
+      "options": {
+        "1": "Needs come out as yelling or passive aggression",
+        "2": "I swallow needs until I detonate",
+        "3": "I hint; they don't understand; I give up",
+        "4": "I say \"I need…\" in plain language, usually calm",
+        "5": "Direct requests are normal — they can adjust without shame"
+      }
+    },
+    "humor-without-mock": {
+      "prompt": "We can laugh together — without sarcasm that slices or jokes at their expense.",
+      "options": {
+        "1": "Humor is mockery — they feel the sting",
+        "2": "Jokes dodge real talk — laughter as escape",
+        "3": "Warm humor sometimes; cutting humor sometimes",
+        "4": "Inside jokes and lightness — never at their dignity",
+        "5": "Laughter connects us — they feel teased with love, not targeted"
+      }
+    },
+    "accept-help-reversed": {
+      "prompt": "When they still want to give — food, money, advice — I receive with grace, not humiliation.",
+      "byStage": {
+        "independent": "When they insist on paying or hosting, I let them keep dignity — not a power fight.",
+        "someHelp": "When help flows both ways, I accept without making them feel useless.",
+        "caregiving": "Even as I care for them, I let them contribute small things that matter to them."
+      },
+      "options": {
+        "1": "I refuse everything — they feel rejected and small",
+        "2": "I take help then criticize — double message",
+        "3": "Awkward either way — take or refuse without grace",
+        "4": "I thank them and accept what keeps their pride",
+        "5": "Receiving is respect too — their giving has a place"
+      }
+    },
+    "repair-after-friction": {
+      "prompt": "After tension or a harsh visit, I know how to repair — call, apology, or reset plan.",
+      "options": {
+        "1": "Bad visits linger — nobody reaches back",
+        "2": "We pretend nothing happened — ice under the table",
+        "3": "Someone softens eventually; no clear repair",
+        "4": "I initiate repair — short call or \"can we try again?\"",
+        "5": "Friction doesn't define us — we have a path back"
+      }
+    },
+    "protect-from-burnout": {
+      "prompt": "If I'm caregiving or very involved, I protect my floor — sleep, backup, respite — so respect stays sustainable.",
+      "byStage": {
+        "independent": "I don't borrow tomorrow's energy for guilt today — pace stays human.",
+        "someHelp": "I schedule respite before I break — help is marathon, not sprint.",
+        "caregiving": "I use backup, aides, or siblings — burnout helps no one."
+      },
+      "options": {
+        "1": "Running on empty — irritable with them, ashamed with myself",
+        "2": "No backup plan — white-knuckle until collapse",
+        "3": "Some self-care; guilt calls it selfish",
+        "4": "Regular breaks and help — respect includes me",
+        "5": "Sustainable care — they get steadiness, not my wreckage"
+      }
+    },
+    "gratitude-spoken": {
+      "prompt": "I say thank you out loud — for sacrifices, recipes, babysitting, belief in me.",
+      "options": {
+        "1": "Gratitude stays unspoken — they guess or don't",
+        "2": "Thanks only on big occasions — feels formal",
+        "3": "I mean it; I forget to say it",
+        "4": "I thank them for specific things regularly",
+        "5": "Gratitude is spoken language in our relationship"
+      }
+    },
+    "future-care-talk": {
+      "prompt": "We've touched future care wishes — home, medical, money — without panic or avoidance.",
+      "byStage": {
+        "independent": "We talk wishes early — documents, values — while it's calm.",
+        "someHelp": "We update plans as needs grow — who decides what, where.",
+        "caregiving": "We revisit care plans honestly — changes, limits, dignity."
+      },
+      "options": {
+        "1": "Taboo topic — fight or shut down if raised",
+        "2": "Vague \"we'll figure it out\" — no specifics",
+        "3": "One conversation; no follow-through",
+        "4": "Some clear wishes and next steps documented",
+        "5": "Ongoing, respectful planning — fear doesn't run the room"
+      }
+    },
+    "respect-their-autonomy": {
+      "prompt": "I respect their choices — even when I'd decide differently — unless true safety is at stake.",
+      "byStage": {
+        "independent": "I don't parent my parents — advice is offered once, not enforced.",
+        "someHelp": "I support decisions they can still make — not only what eases my anxiety.",
+        "caregiving": "Dignity of choice remains — bathroom, clothes, visitors — within safety."
+      },
+      "options": {
+        "1": "I override them — \"for your own good\" becomes control",
+        "2": "Nagging until they comply — autonomy erodes",
+        "3": "Autonomy in easy areas; control when I'm scared",
+        "4": "I consult them on big moves — their voice counts",
+        "5": "Their life, their call — I walk beside, not on top"
+      }
+    }
+  }
+}

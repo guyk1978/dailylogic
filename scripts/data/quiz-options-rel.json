@@ -1,0 +1,638 @@
+{
+  "he": {
+    "talk-hard-topics": {
+      "1": "נושאים רגישים נשארים בחדר — מישהו עוזב, שותק או מתפוצץ",
+      "2": "מתחילים לדבר ומיד נסגרים ב\"לא עכשיו\" או בהאשמות",
+      "3": "לפעמים מצליחים לגעת בנושא, אבל בזהירות מוגזמת או בקיצור",
+      "4": "יודעים לפתוח שיחה קשה ולהישאר בחדר גם כשזה לא נעים",
+      "5": "נושאים כסף, משפחה ועתיד נדונים בגילוי לב — בלי בריחה ובלי להתפוצץ"
+    },
+    "listen-to-understand": {
+      "1": "בזמן שהצד השני מדבר אני כבר מכין/ה תשובה או מפריע/ה",
+      "2": "אני שומע/ת מילים, אבל לא באמת בודק/ת מה עומד מאחוריהן",
+      "3": "מקשיב/ה בסדר, אבל קל לא להתאמץ כשאני עייף/ה או לחוץ/ה",
+      "4": "בדרך כלל עוצר/ת, שואל/ת שאלה אחת, ומסכם/ת לפני שמגיב/ה",
+      "5": "אני מקשיב/ה כדי להבין את הצד שלך — גם כשאני לא מסכים/ה"
+    },
+    "repair-after-fight": {
+      "1": "אחרי ויכוח נשאר ריח רע — אף אחד לא חוזר לתקן",
+      "2": "מחכים שהזמן יעשה את שלו, בלי מילה מפורשת של חיבור",
+      "3": "מישהו מציע \"נעשה שלום\" אבל הנושא האמיתי נשאר פתוח",
+      "4": "יודעים לחזור, להתנצל או להבהיר — גם אם לא באותו יום",
+      "5": "יש לנו דרך מוכרת לתקן: מילים, מגע או שיחה שמחזירה אמון"
+    },
+    "daily-checkins": {
+      "1": "רוב הימים עוברים ב\"מה נשמע\" מעבר לדלת",
+      "2": "מדברים על לוגיסטיקה — מי מביא מה, בלי לגעת במצב רגשי",
+      "3": "לפעמים יש רגע קצר של \"איך את/ה באמת\"",
+      "4": "יש לנו הרגל יומי קטן — כוס קפה, הודעה, חיבוק לפני שינה",
+      "5": "כל יום יש לנו נקודת מגע אמיתית: איך את/ה, מה כואב, מה צריך"
+    },
+    "honest-without-cruel": {
+      "1": "אמת נאמרת כנשק — או שמסתירים הכל כדי לא לפגוע",
+      "2": "כנות יוצאת חדה; רגישות נשארת בצד",
+      "3": "מנסים לשלב, אבל לפעמים נופלים לציניות או לשתיקה",
+      "4": "אפשר להגיד דברים קשים בטון שמכבד את מי שמולי",
+      "5": "אנחנו כנים ורכים יחד — האמת יוצאת בלי להשפיל ובלי להסתיר"
+    },
+    "disagree-respect": {
+      "1": "אי-הסכמה הופכת מיד ל\"אם אהבת אותי היית...\"",
+      "2": "מישהו מרים קול או נסגר — כאילו ויכוח = בגידה",
+      "3": "יכולים לא להסכים, אבל לפעמים זה נגמר בציניות או בנקמה",
+      "4": "חלוקת דעות נשארת על הנושא — לא על הערך שלנו כזוג",
+      "5": "אפשר לחשוב אחרת ועדיין להרגיש בטוחים — בלי מבחני נאמנות"
+    },
+    "humor-in-friction": {
+      "1": "במתח הומור הופך ללעג או להימנעות מוחלטת משיחה",
+      "2": "מנסים לצחוק כדי לברוח מהנושא — וזה מכעיס",
+      "3": "לפעמים חיוך משחרר, לפעמים הוא מוריד את הכאב לתחתית",
+      "4": "יודעים לצחוק יחד בלי לבטל את מה שכואב",
+      "5": "יש לנו הומור קל שמוריד אש — בלי לזלזל ברגשות"
+    },
+    "say-needs-clearly": {
+      "1": "אני מצפה/ה שידעו מה אני צריך/ה בלי שאגיד",
+      "2": "מרמז/ה, מתרגז/ת, ואז מגיעה מריבה על \"למה לא הבנת\"",
+      "3": "לפעמים אומר/ת ישירות, לפעמים שוב נופל/ת לרמזים",
+      "4": "בדרך כלל מנסח/ת בקשה ברורה: \"אני צריך/ה ש...\"",
+      "5": "אני אומר/ת מה אני צריך/ה במילים פשוטות — בלי משחקי ניחוש"
+    },
+    "crisis-support": {
+      "1": "במשבר כל אחד נשאר לבד עם הלחץ",
+      "2": "יש עזרה לוגיסטית, אבל קשה להרגיש שמישהו באמת איתי",
+      "3": "מסייעים כשצריך, אבל לא תמיד יודעים איך לגעת רגשית",
+      "4": "בזמן קשה אחד מחזיק את השני — גם בלילות ובטלפונים",
+      "5": "בבריאות, עבודה או משפחה — אנחנו יודעים שיש גב זה לזה"
+    },
+    "stress-teamwork": {
+      "1": "בלחץ אנחנו נלחמים זה בזה על מי יותר עייף",
+      "2": "כל אחד מושך לכיוון שלו — בלי תיאום",
+      "3": "לפעמים מתחלקים, לפעמים שוכחים שאנחנו באותו צד",
+      "4": "מסכימים מי לוקח מה ומזכירים לעצמנו שאנחנו צוות",
+      "5": "תחת לחץ אנחנו מחלקים עומס ומחזקים זה את זה — לא מתחרים"
+    },
+    "bounce-after-hurt": {
+      "1": "כואב — ואז שתיקה ארוכה בלי דרך חזרה",
+      "2": "מחכים שהזמן ירפא, בלי לדבר על מה קרה",
+      "3": "מדברים סוף סוף, אבל קשה לסמוך שוב",
+      "4": "יודעים לפתוח שיחה על הפגיעה ולבנות מחדש לאט",
+      "5": "יש לנו מסלול ברור מכאב חזרה לאמון — גם כשזה לוקח זמן"
+    },
+    "money-tension": {
+      "1": "כסף = ויכוחים או הסתרות — בלי שיחה אמיתית",
+      "2": "מישהו שולט בחשבון; השני מרגיש בחוץ או חשוד",
+      "3": "מדברים כשיש משבר, לא לפני",
+      "4": "יש לנו שיחות תקופתיות על תקציב ופחדים סביב כסף",
+      "5": "מתח כספי נפתח בשקיפות — בלי חשדנות ובלי שליטה נסתרת"
+    },
+    "family-pressure": {
+      "1": "לחץ מהמשפחות הופך אותנו לשלוחים של מלחמת נאמנויות",
+      "2": "כל אחד מגן על ההורים שלו — הזוג נשאר בצד",
+      "3": "מנסים להסכים, אבל גבולות עם המשפחות מטושטשים",
+      "4": "מדברים קודם בינינו ויוצאים עם קו משותף החוצה",
+      "5": "לחץ ממשפחות המקור מנוהל כזוג — עם גבולות ברורים ויחד"
+    },
+    "health-or-hard-week": {
+      "1": "בשבוע קשה עדיין מצפים מאיתנו \"עסקים כרגיל\"",
+      "2": "מישהו קורס; השני מתרגז/ת שלא \"מחזיק/ה\"",
+      "3": "מורידים קצת ציפיות, אבל בלי לדבר על זה",
+      "4": "מתאימים שגרה — מי מביא מה, ומה יכול לחכות",
+      "5": "בעייפות או מחלה אנחנו מכוונים ציפיות ודואגים זה לזה בכוונה"
+    },
+    "trust-under-doubt": {
+      "1": "ספק קטן מפיל הכל — אין ממה לחזור",
+      "2": "כשעולה חשד, מתחילה מרדף או שתיקה מענישה",
+      "3": "יש אמון בסיסי, אבל ספקות נשארים לא מטופלים",
+      "4": "כשמשהו מרגיש לא בטוח — אנחנו מדברים ולא מנחשים",
+      "5": "גם כשיש ספק — יש בסיס אמון שאפשר לחזור אליו בשיחה"
+    },
+    "apologize-and-change": {
+      "1": "\"סליחה\" יוצאת מהיר — בלי שינוי אמיתי אחר כך",
+      "2": "מתנצלים כדי לסיים ויכוח, לא כדי לתקן דפוס",
+      "3": "יש התנצלות וניסיון, אבל אותן טעויות חוזרות",
+      "4": "אחרי סליחה יש צעד קונקרטי: מה נעשה אחרת",
+      "5": "התנצלות אצלנו מלווה בשינוי ממשי — לא רק במילים יפות"
+    },
+    "alone-time-ok": {
+      "1": "זמן לבד נתפס כעזיבה או כחשד",
+      "2": "מותר לבד, אבל עם רגשות אשם או בדיקות מצב",
+      "3": "לפעמים נוח, לפעמים מישהו נפגע ש\"נעלמת/ת\"",
+      "4": "לכל אחד יש זמן לבד מוסכם — בלי להסביר כל פעם",
+      "5": "זמן אישי מקובל בלי פגיעה ובלי חשד — אנחנו חוזרים מחובקים"
+    },
+    "friends-without-guilt": {
+      "1": "יציאה עם חברים נשמעת כמו בגידה קטנה",
+      "2": "יוצאים, אבל עם התכתבות מרגשת או ויכוח אחרי",
+      "3": "בסדר ברוב המקרים — עם רגעים של קנאה או תחושת אשם",
+      "4": "יש לנו ערבים נפרדים עם חברים — בלי לבדוק זה את זה",
+      "5": "כל אחד יוצא לחברים בלי אשמה — וחוזר בלי מבחני נאמנות"
+    },
+    "hobbies-respected": {
+      "1": "תחביבים אישיים נתפסים כבזבוז זמן על הזוג",
+      "2": "מותר, אבל עם לעג או לחץ \"בוא/י כבר הביתה\"",
+      "3": "מכבדים חלקית — כשזה לא מתנגש עם תוכניות",
+      "4": "לכל אחד יש פעילות משלו שמקבלת מקום קבוע",
+      "5": "תחומי עניין אישיים מכובדים — גם כשלא משתפים בהם"
+    },
+    "no-mind-reading": {
+      "1": "מצפים שידעו מה אנחנו חושבים בלי לומר",
+      "2": "שואלים \"מה קרה?\" ונפגעים ש\"צריך להסביר הכל\"",
+      "3": "לפעמים מבקשים בבירור, לפעמים נעלבים מחוסר ניחוש",
+      "4": "אם משהו לא ברור — שואלים, לא מנחשים ולא מענישים",
+      "5": "אין קריאת מחשבות — בקשה לבהירות היא סימן לקרבה, לא לתקלה"
+    },
+    "boundaries-held": {
+      "1": "גבול שמציבים נמחק תוך יומיים",
+      "2": "אומרים \"לא\" — ואז נכנעים כדי לשמור על שלום",
+      "3": "גבולות עובדים בחלק מהנושאים, לא בכולם",
+      "4": "מה שהסכמנו נשמר גם כשקשה לבן/בת משפחה",
+      "5": "גבולות שנקבעו מכובדים לאורך זמן — לא רק ביום ההסכמה"
+    },
+    "togetherness-not-fusion": {
+      "1": "להיות זוג אומר כמעט לא להיות אנשים נפרדים",
+      "2": "אחד מהשניים תמיד מתאים את עצמו — השני פחות",
+      "3": "יש זהות משותפת, אבל לפעמים מאבדים מי אנחנו לבד",
+      "4": "אנחנו \"אנחנו\" חזק — וגם \"אני\" ו\"את/ה\" נשמרים",
+      "5": "קרבה בלי למחוק את מי שכל אחד מאיתנו מחוץ לזוג"
+    },
+    "jealousy-handled": {
+      "1": "קנאה = בדיקות טלפון, איסורים או מריבות",
+      "2": "מדכאים את התחושה או מפוצצים בלי שיחה",
+      "3": "מדברים לפעמים, אבל נשאר חשש שלא באמת נפתר",
+      "4": "כשעולה חשש — פותחים שיחה בלי לשלוט אחד בשני",
+      "5": "קנאה או חוסר ביטחון נשארים בשיחה — לא בשליטה"
+    },
+    "future-talks": {
+      "1": "עתיד = נושא אסור או שמעורר רק מריבות",
+      "2": "מדברים בכלליות — בלי לגעת בפחדים האמיתיים",
+      "3": "יש שיחות על תוכניות, פחות על חלומות וחששות עמוקים",
+      "4": "משתפים גם מה מפחיד וגם מה מלהיב לגבי ההמשך",
+      "5": "אנחנו מדברים על העתיד בכנות — חלומות ופחדים ביחד"
+    },
+    "celebrate-wins": {
+      "1": "הצלחות של אחד עוברות בשקט — כאילו מובן מאליו",
+      "2": "אומרים \"כל הכבוד\" מכאנית וממשיכים",
+      "3": "חוגגים דברים גדולים; הקטנים נשארים בצד",
+      "4": "מסמנים הצלחות אחד של השני — גם יום טוב בעבודה",
+      "5": "אנחנו חוגגים זה את זה בקול — גם ניצחונות קטנים ביומיום"
+    },
+    "learn-from-conflict": {
+      "1": "אחרי ויכוח נשאר רק צל — שום דבר לא משתנה",
+      "2": "עושים שלום, אבל אותו נושא חוזר שוב ושוב",
+      "3": "לפעמים מבינים משהו חדש, לפעמים רק מתעייפים",
+      "4": "יוצאים ממריבה עם כלל קטן או הבנה למה לגעת אחרת",
+      "5": "מכל חיכוך נשאר משהו שלמדנו — לא רק חבטה"
+    },
+    "shared-rituals": {
+      "1": "אין לנו הרגלים משותף — רק לוגיסטיקה",
+      "2": "היה משהו פעם — עכשיו הכל נדחה",
+      "3": "יש רגע משותף מדי פעם, בלי קביעות",
+      "4": "יש לנו טקס קטן קבוע — ארוחה, הליכה או סדרה",
+      "5": "טקסים משותפים (אוכל, הליכה, ערב) מחזיקים את הקשר בשגרה"
+    },
+    "support-dreams": {
+      "1": "חלומות אישיים נתפסים כאיום על הזוג",
+      "2": "תמיכה בעיקר במילים — בפועל הכל נופל על הלוגיסטיקה",
+      "3": "מעודדים כשזה נוח; כשקשה — מתייאשים",
+      "4": "מחפשים דרך שגם החלום וגם הבית יכולים לחיות",
+      "5": "כל אחד מרגיש שיש גב לחלום האישי — גם כשזה מסובך"
+    },
+    "fair-load-home": {
+      "1": "עומס הבית נופל על אחד — והשני \"עוזר\" לפעמים",
+      "2": "יש ויכוחים על מי עשה יותר — בלי חלוקה ברורה",
+      "3": "החלוקה בערך שווה, אבל לא מתעדכנת כשהחיים משתנים",
+      "4": "בודקים מדי פעם מי מה עושה ומתקנים כשמשהו מכביד",
+      "5": "עומס הבית מרגיש הוגן — ואפשר לפתוח מחדש כשצריך"
+    },
+    "intimacy-of-ordinary": {
+      "1": "קרבה רק ב\"רגעים מיוחדים\" — השגרה יבשה",
+      "2": "עובדים ליד אחד השני, אבל לא באמת נוגעים",
+      "3": "יש רגעים חמים בשגרה, אבל הם נדירים",
+      "4": "בשעמום יומיומי יש מגע, הומור או מבט שמרגיש בית",
+      "5": "יש לנו קרבה גם ביום אפור — לא רק בשיאים רומנטיים"
+    }
+  },
+  "en": {
+    "talk-hard-topics": {
+      "1": "Sensitive topics stay locked away — someone walks out, goes silent, or blows up",
+      "2": "We start hard talks and shut down with \"not now\" or blame",
+      "3": "We touch hard topics sometimes, but tiptoe or cut them short",
+      "4": "We can open a tough conversation and stay in the room when it's uncomfortable",
+      "5": "Money, family, and future get discussed openly — without fleeing or exploding"
+    },
+    "listen-to-understand": {
+      "1": "While my partner talks, I'm already building my reply or interrupting",
+      "2": "I hear the words but rarely check what's underneath them",
+      "3": "I listen okay, but slack off when I'm tired or stressed",
+      "4": "I usually pause, ask one question, and reflect back before responding",
+      "5": "I listen to understand your side — even when I disagree"
+    },
+    "repair-after-fight": {
+      "1": "After a fight, the bad air stays — nobody comes back to repair",
+      "2": "We wait for time to pass with no clear move toward connection",
+      "3": "Someone says \"let's make up\" but the real issue stays open",
+      "4": "We know how to return, apologize, or clarify — even if not the same day",
+      "5": "We have a familiar repair path — words, touch, or talk that rebuilds trust"
+    },
+    "daily-checkins": {
+      "1": "Most days are a hallway \"how's it going\" and nothing more",
+      "2": "We coordinate logistics without touching how we really feel",
+      "3": "Now and then we get a short \"how are you, actually\"",
+      "4": "We keep a small daily habit — coffee, a text, a hug before sleep",
+      "5": "Every day we have a real touchpoint: how you are, what hurts, what you need"
+    },
+    "honest-without-cruel": {
+      "1": "Truth comes out as a weapon — or we hide everything to avoid hurt",
+      "2": "Honesty lands sharp; tenderness gets left behind",
+      "3": "We try to balance, but slip into sarcasm or silence",
+      "4": "Hard things can be said in a tone that respects the person in front of me",
+      "5": "We're honest and gentle together — truth without humiliation or hiding"
+    },
+    "disagree-respect": {
+      "1": "Disagreement quickly becomes \"if you loved me you would...\"",
+      "2": "Someone raises their voice or shuts down — as if arguing equals betrayal",
+      "3": "We can disagree, but it sometimes ends in digs or payback",
+      "4": "Different views stay on the topic — not on our worth as a couple",
+      "5": "We can think differently and still feel safe — no loyalty tests"
+    },
+    "humor-in-friction": {
+      "1": "Under tension, humor turns to mockery or we avoid talking entirely",
+      "2": "We laugh to escape the issue — and it lands as dismissive",
+      "3": "Sometimes a smile helps; sometimes it steamrolls the hurt",
+      "4": "We can laugh together without canceling what's painful",
+      "5": "We have light humor that cools heat — without belittling feelings"
+    },
+    "say-needs-clearly": {
+      "1": "I expect my partner to know what I need without me saying it",
+      "2": "I hint, get angry, and we fight about \"why didn't you get it\"",
+      "3": "Sometimes I'm direct; sometimes I fall back into hints",
+      "4": "I usually ask clearly: \"I need you to...\"",
+      "5": "I say what I need in plain words — no guessing games"
+    },
+    "crisis-support": {
+      "1": "In crisis we each carry the stress alone",
+      "2": "There's practical help, but it's hard to feel someone is truly with me",
+      "3": "We show up when pushed, but don't always know how to be emotionally present",
+      "4": "In hard times one of us holds the other — nights, calls, showing up",
+      "5": "In health, work, or family crises — we know we have each other's back"
+    },
+    "stress-teamwork": {
+      "1": "Under stress we fight about who's more exhausted",
+      "2": "We each pull our own way — without coordinating",
+      "3": "Sometimes we split tasks; sometimes we forget we're on the same side",
+      "4": "We agree who takes what and remind ourselves we're a team",
+      "5": "Under pressure we share the load and boost each other — not compete"
+    },
+    "bounce-after-hurt": {
+      "1": "When it hurts, long silence follows with no way back",
+      "2": "We wait for time to heal without talking about what happened",
+      "3": "We talk eventually, but trusting again feels shaky",
+      "4": "We can open a conversation about the hurt and rebuild slowly",
+      "5": "We have a clear path from pain back to trust — even when it takes time"
+    },
+    "money-tension": {
+      "1": "Money means fights or secrets — not real conversation",
+      "2": "One person controls the books; the other feels shut out or suspected",
+      "3": "We talk when there's a crisis, not before",
+      "4": "We have regular talks about budget and fears around money",
+      "5": "Money tension opens in transparency — without suspicion or hidden control"
+    },
+    "family-pressure": {
+      "1": "Family pressure turns us into soldiers in a loyalty war",
+      "2": "Each of us defends our parents — the couple gets sidelined",
+      "3": "We try to align, but boundaries with family stay fuzzy",
+      "4": "We talk as a couple first and go out with a shared line",
+      "5": "Pressure from families of origin is handled together — clear boundaries, united"
+    },
+    "health-or-hard-week": {
+      "1": "In a hard week we still expect \"business as usual\"",
+      "2": "One person crashes; the other gets upset they didn't \"hold it together\"",
+      "3": "We dial expectations down a bit, without naming it",
+      "4": "We adjust the routine — who covers what, and what can wait",
+      "5": "In illness or exhaustion we reset expectations and care for each other on purpose"
+    },
+    "trust-under-doubt": {
+      "1": "A little doubt topples everything — nothing to return to",
+      "2": "When suspicion rises, chasing or punishing silence starts",
+      "3": "There's basic trust, but doubts stay unaddressed",
+      "4": "When something feels off, we talk instead of guessing",
+      "5": "Even when doubt appears — there's trust we can return to in conversation"
+    },
+    "apologize-and-change": {
+      "1": "\"Sorry\" comes fast — with no real change after",
+      "2": "We apologize to end the fight, not to shift the pattern",
+      "3": "There's apology and effort, but the same mistakes repeat",
+      "4": "After sorry comes a concrete step: what we'll do differently",
+      "5": "Apology comes with real change — not just pretty words"
+    },
+    "alone-time-ok": {
+      "1": "Time alone feels like abandonment or suspicion",
+      "2": "Solo time is allowed, but with guilt or check-in texts",
+      "3": "Sometimes it's fine; sometimes someone feels hurt we \"disappeared\"",
+      "4": "We each have agreed alone time — without defending it every time",
+      "5": "Personal time is welcome without hurt or suspicion — we come back connected"
+    },
+    "friends-without-guilt": {
+      "1": "A night with friends sounds like a small betrayal",
+      "2": "We go out, but with moody texts or a fight after",
+      "3": "Mostly okay — with flashes of jealousy or guilt",
+      "4": "We have separate friend nights — without policing each other",
+      "5": "Each of us sees friends without guilt — and returns without loyalty tests"
+    },
+    "hobbies-respected": {
+      "1": "Personal hobbies feel like theft from the relationship",
+      "2": "Allowed, but with teasing or \"come home already\" pressure",
+      "3": "Partly respected — when they don't clash with plans",
+      "4": "Each of us has an activity that gets steady space",
+      "5": "Personal interests are honored — even when we don't share them"
+    },
+    "no-mind-reading": {
+      "1": "We expect each other to know our thoughts without words",
+      "2": "We ask \"what's wrong?\" and get offended that we have to explain",
+      "3": "Sometimes we ask clearly; sometimes we sulk over not being guessed",
+      "4": "If something's unclear, we ask — we don't guess or punish",
+      "5": "No mind-reading — asking for clarity is closeness, not a flaw"
+    },
+    "boundaries-held": {
+      "1": "A boundary we set is gone within two days",
+      "2": "We say \"no\" — then cave to keep the peace",
+      "3": "Boundaries work in some areas, not others",
+      "4": "What we agreed on holds even when family pushes",
+      "5": "Named boundaries stay respected over time — not just on agreement day"
+    },
+    "togetherness-not-fusion": {
+      "1": "Being a couple means barely being separate people",
+      "2": "One of us always adapts; the other less so",
+      "3": "We have \"us,\" but sometimes lose who we are alone",
+      "4": "We're a strong \"we\" — and \"I\" and \"you\" still stand",
+      "5": "Closeness without erasing who each of us is outside the couple"
+    },
+    "jealousy-handled": {
+      "1": "Jealousy means phone checks, rules, or blowups",
+      "2": "We swallow the feeling or explode without talking",
+      "3": "We talk sometimes, but the worry doesn't fully settle",
+      "4": "When insecurity flares, we open talk — not control",
+      "5": "Jealousy stays in conversation — not in controlling each other"
+    },
+    "future-talks": {
+      "1": "The future is off-limits or only starts fights",
+      "2": "We speak in generalities — not the real fears",
+      "3": "We plan logistics more than dreams and deep worries",
+      "4": "We share what scares us and what excites us about what's next",
+      "5": "We talk about the future honestly — dreams and fears together"
+    },
+    "celebrate-wins": {
+      "1": "One person's wins pass in silence — as if expected",
+      "2": "We say \"good job\" mechanically and move on",
+      "3": "Big wins get noticed; small daily ones don't",
+      "4": "We mark each other's successes — even a good day at work",
+      "5": "We celebrate each other out loud — including tiny everyday wins"
+    },
+    "learn-from-conflict": {
+      "1": "After conflict only a shadow remains — nothing changes",
+      "2": "We make peace, but the same issue returns again",
+      "3": "Sometimes we learn; sometimes we just get tired",
+      "4": "We leave a fight with a small rule or insight for next time",
+      "5": "Something learned stays from each friction — not just a bruise"
+    },
+    "shared-rituals": {
+      "1": "We have no shared habit — only logistics",
+      "2": "We used to — now everything gets postponed",
+      "3": "A shared moment happens now and then, without rhythm",
+      "4": "We keep a small fixed ritual — meal, walk, or a show",
+      "5": "Shared rituals (food, walks, evenings) hold the bond in ordinary life"
+    },
+    "support-dreams": {
+      "1": "Personal dreams feel like a threat to the couple",
+      "2": "Support is mostly words — logistics swallow the rest",
+      "3": "We cheer when it's easy; when it's hard, we fade",
+      "4": "We look for ways both the dream and home life can breathe",
+      "5": "Each of us feels backed in personal dreams — even when it's messy"
+    },
+    "fair-load-home": {
+      "1": "Home load lands on one person — the other \"helps\" sometimes",
+      "2": "We argue about who did more — with no clear split",
+      "3": "The split is roughly even, but doesn't update when life shifts",
+      "4": "We check who does what and rebalance when something's heavy",
+      "5": "Home load feels fair enough — and we can renegotiate when needed"
+    },
+    "intimacy-of-ordinary": {
+      "1": "Closeness only on \"special\" days — routine feels dry",
+      "2": "We're side by side but rarely touch or connect",
+      "3": "Warm moments in daily life happen, but they're rare",
+      "4": "In boring Tuesdays there's touch, humor, or a look that feels like home",
+      "5": "We feel close on gray days too — not only at the peaks"
+    }
+  },
+  "es": {
+    "talk-hard-topics": {
+      "1": "Los temas delicados quedan guardados — alguien se va, calla o explota",
+      "2": "Empezamos a hablar y cerramos con \"ahora no\" o con culpas",
+      "3": "A veces tocamos temas difíciles, pero con cuidado excesivo o en corto",
+      "4": "Podemos abrir una charla dura y quedarnos aunque incomode",
+      "5": "Dinero, familia y futuro se hablan con franqueza — sin huir ni explotar"
+    },
+    "listen-to-understand": {
+      "1": "Mientras mi pareja habla, ya armo la respuesta o interrumpo",
+      "2": "Oigo las palabras, pero casi no indago qué hay detrás",
+      "3": "Escucho bien, pero aflojo cuando estoy cansado/a o estresado/a",
+      "4": "Suelo pausar, hacer una pregunta y reflejar antes de responder",
+      "5": "Escucho para entender tu lado — aunque no esté de acuerdo"
+    },
+    "repair-after-fight": {
+      "1": "Después de una pelea queda mal ambiente — nadie vuelve a reparar",
+      "2": "Esperamos que pase el tiempo sin un gesto claro de acercamiento",
+      "3": "Alguien dice \"hagamos las paces\" pero lo de fondo sigue abierto",
+      "4": "Sabemos volver, pedir perdón o aclarar — aunque no sea el mismo día",
+      "5": "Tenemos una forma conocida de reparar: palabras, contacto o charla que devuelve confianza"
+    },
+    "daily-checkins": {
+      "1": "La mayoría de días es un \"¿qué tal?\" al pasar y nada más",
+      "2": "Coordinamos logística sin tocar cómo estamos de verdad",
+      "3": "De vez en cuando hay un \"¿cómo estás en serio?\" breve",
+      "4": "Tenemos un hábito diario pequeño — café, mensaje, abrazo antes de dormir",
+      "5": "Cada día hay un punto real: cómo estás, qué duele, qué necesitas"
+    },
+    "honest-without-cruel": {
+      "1": "La verdad sale como arma — o escondemos todo para no herir",
+      "2": "La honestidad pica; la ternura se queda atrás",
+      "3": "Intentamos equilibrar, pero caemos en sarcasmo o silencio",
+      "4": "Se pueden decir cosas duras con un tono que respeta a quien tengo delante",
+      "5": "Somos honestos y tiernos a la vez — verdad sin humillar ni esconder"
+    },
+    "disagree-respect": {
+      "1": "Discrepar se vuelve enseguida \"si me quisieras...\"",
+      "2": "Alguien grita o se cierra — como si discutir fuera traición",
+      "3": "Podemos no coincidir, pero a veces termina en dardos o revancha",
+      "4": "Las diferencias se quedan en el tema — no en nuestro valor como pareja",
+      "5": "Podemos pensar distinto y sentirnos seguros — sin pruebas de lealtad"
+    },
+    "humor-in-friction": {
+      "1": "Con tensión, el humor se vuelve burla o evitamos hablar del todo",
+      "2": "Reímos para escapar del tema — y se siente despectivo",
+      "3": "A veces una sonrisa ayuda; a veces aplasta el dolor",
+      "4": "Podemos reír juntos sin borrar lo que duele",
+      "5": "Tenemos humor ligero que baja la temperatura — sin menospreciar sentimientos"
+    },
+    "say-needs-clearly": {
+      "1": "Espero que sepan lo que necesito sin decirlo",
+      "2": "Insinúo, me enojo y peleamos por \"¿por qué no lo entendiste?\"",
+      "3": "A veces lo digo claro; a veces vuelvo a las indirectas",
+      "4": "Suelo pedir con claridad: \"Necesito que...\"",
+      "5": "Digo lo que necesito con palabras simples — sin adivinanzas"
+    },
+    "crisis-support": {
+      "1": "En crisis cada uno carga el estrés solo/a",
+      "2": "Hay ayuda práctica, pero cuesta sentir que alguien está de verdad conmigo",
+      "3": "Aparecemos cuando aprietan, pero no siempre sabemos estar emocionalmente",
+      "4": "En tiempos duros uno sostiene al otro — noches, llamadas, presencia",
+      "5": "En salud, trabajo o familia — sabemos que nos respaldamos"
+    },
+    "stress-teamwork": {
+      "1": "Bajo estrés peleamos por quién está más agotado/a",
+      "2": "Cada uno tira por su lado — sin coordinar",
+      "3": "A veces repartimos; a veces olvidamos que estamos del mismo lado",
+      "4": "Acordamos quién hace qué y nos recordamos que somos equipo",
+      "5": "Bajo presión repartimos carga y nos impulsamos — no competimos"
+    },
+    "bounce-after-hurt": {
+      "1": "Cuando duele, sigue un silencio largo sin camino de vuelta",
+      "2": "Esperamos que cure el tiempo sin hablar de lo ocurrido",
+      "3": "Hablamos al fin, pero confiar de nuevo se siente frágil",
+      "4": "Podemos abrir charla sobre la herida y reconstruir despacio",
+      "5": "Hay un camino claro del dolor de vuelta a la confianza — aunque tarde"
+    },
+    "money-tension": {
+      "1": "El dinero es peleas o secretos — no conversación real",
+      "2": "Uno controla las cuentas; el otro se siente fuera o sospechado",
+      "3": "Hablamos cuando hay crisis, no antes",
+      "4": "Tenemos charlas periódicas de presupuesto y miedos con el dinero",
+      "5": "La tensión económica se abre con transparencia — sin sospecha ni control oculto"
+    },
+    "family-pressure": {
+      "1": "La presión familiar nos convierte en soldados de lealtades",
+      "2": "Cada uno defiende a los suyos — la pareja queda al margen",
+      "3": "Intentamos alinearnos, pero los límites con la familia son difusos",
+      "4": "Hablamos primero entre nosotros y salimos con una línea común",
+      "5": "La presión de las familias de origen se maneja en pareja — límites claros, unidos"
+    },
+    "health-or-hard-week": {
+      "1": "En una semana dura aún esperamos \"vida normal\"",
+      "2": "Uno se derrumba; el otro se enoja porque no \"aguantó\"",
+      "3": "Bajamos expectativas un poco, sin nombrarlo",
+      "4": "Ajustamos la rutina — quién cubre qué y qué puede esperar",
+      "5": "Con enfermedad o agotamiento recalibramos expectativas y nos cuidamos a propósito"
+    },
+    "trust-under-doubt": {
+      "1": "Una duda pequeña tumba todo — no hay base a la que volver",
+      "2": "Cuando sube la sospecha, empiezan persecución o silencio castigo",
+      "3": "Hay confianza básica, pero las dudas quedan sin tratar",
+      "4": "Si algo se siente raro, hablamos en lugar de adivinar",
+      "5": "Aunque aparezca duda — hay confianza a la que volver en conversación"
+    },
+    "apologize-and-change": {
+      "1": "Sale un \"perdón\" rápido — sin cambio real después",
+      "2": "Pedimos perdón para cortar la pelea, no para cambiar el patrón",
+      "3": "Hay disculpa y esfuerzo, pero se repiten los mismos errores",
+      "4": "Después del perdón hay un paso concreto: qué haremos distinto",
+      "5": "La disculpa viene con cambio de verdad — no solo palabras bonitas"
+    },
+    "alone-time-ok": {
+      "1": "Tiempo a solas se siente como abandono o sospecha",
+      "2": "Está permitido, pero con culpa o mensajes de control",
+      "3": "A veces va bien; a veces alguien se duele de que \"desaparezco\"",
+      "4": "Cada uno tiene tiempo solo acordado — sin justificarlo siempre",
+      "5": "El tiempo personal se acepta sin herida ni sospecha — volvemos conectados"
+    },
+    "friends-without-guilt": {
+      "1": "Una noche con amigos suena a pequeña traición",
+      "2": "Salimos, pero con mensajes tensos o pelea después",
+      "3": "En general está bien — con destellos de celos o culpa",
+      "4": "Tenemos noches de amigos separadas — sin vigilar al otro",
+      "5": "Cada uno ve amigos sin culpa — y vuelve sin pruebas de lealtad"
+    },
+    "hobbies-respected": {
+      "1": "Los hobbies personales parecen robo de tiempo a la pareja",
+      "2": "Permitidos, pero con burla o presión de \"ven ya a casa\"",
+      "3": "Respetados a medias — cuando no chocan con planes",
+      "4": "Cada uno tiene una actividad con espacio fijo",
+      "5": "Los intereses personales se honran — aunque no los compartamos"
+    },
+    "no-mind-reading": {
+      "1": "Esperamos que el otro sepa lo que pensamos sin decirlo",
+      "2": "Preguntamos \"¿qué pasa?\" y nos ofendemos de tener que explicar",
+      "3": "A veces pedimos claro; a veces enfadamos por no adivinar",
+      "4": "Si algo no está claro, preguntamos — no adivinamos ni castigamos",
+      "5": "Sin leer mentes — pedir claridad es cercanía, no defecto"
+    },
+    "boundaries-held": {
+      "1": "Un límite que ponemos desaparece en dos días",
+      "2": "Decimos \"no\" — y cedemos para no pelear",
+      "3": "Los límites funcionan en algunos temas, no en todos",
+      "4": "Lo acordado se sostiene aunque la familia presione",
+      "5": "Los límites nombrados se respetan con el tiempo — no solo el día del acuerdo"
+    },
+    "togetherness-not-fusion": {
+      "1": "Ser pareja significa casi no ser personas separadas",
+      "2": "Uno siempre se adapta; el otro menos",
+      "3": "Tenemos \"nosotros\", pero a veces perdemos quiénes somos solos",
+      "4": "Somos un \"nosotros\" fuerte — y el \"yo\" y el \"tú\" siguen en pie",
+      "5": "Cercanía sin borrar quién es cada uno fuera de la pareja"
+    },
+    "jealousy-handled": {
+      "1": "Los celos significan revisar el móvil, reglas o estallidos",
+      "2": "Tragamos el sentimiento o explotamos sin hablar",
+      "3": "A veces hablamos, pero la inquietud no se calma del todo",
+      "4": "Cuando sube la inseguridad, abrimos charla — no control",
+      "5": "Celos o inseguridad se quedan en conversación — no en controlarnos"
+    },
+    "future-talks": {
+      "1": "El futuro está prohibido o solo enciende peleas",
+      "2": "Hablamos en general — no de los miedos reales",
+      "3": "Planeamos logística más que sueños y miedos profundos",
+      "4": "Compartimos qué asusta y qué ilusiona de lo que viene",
+      "5": "Hablamos del futuro con honestidad — sueños y miedos juntos"
+    },
+    "celebrate-wins": {
+      "1": "Los logros de uno pasan en silencio — como si fueran obvios",
+      "2": "Decimos \"bien hecho\" mecánico y seguimos",
+      "3": "Celebramos lo grande; lo pequeño del día a día no",
+      "4": "Marcamos los éxitos del otro — hasta un buen día en el trabajo",
+      "5": "Celebramos en voz alta — también victorias chicas del día a día"
+    },
+    "learn-from-conflict": {
+      "1": "Tras el conflicto solo queda sombra — nada cambia",
+      "2": "Hacemos las paces, pero el mismo tema vuelve",
+      "3": "A veces aprendemos; a veces solo nos cansamos",
+      "4": "Salimos de la pelea con una regla pequeña o una idea para la próxima",
+      "5": "De cada roce queda algo aprendido — no solo un golpe"
+    },
+    "shared-rituals": {
+      "1": "No tenemos hábito compartido — solo logística",
+      "2": "Antes sí — ahora todo se pospone",
+      "3": "Hay momentos juntos de vez en cuando, sin ritmo",
+      "4": "Guardamos un ritual fijo pequeño — comida, paseo o serie",
+      "5": "Rituales compartidos (comida, paseos, noches) sostienen el vínculo en lo cotidiano"
+    },
+    "support-dreams": {
+      "1": "Los sueños personales se sienten amenaza para la pareja",
+      "2": "El apoyo es sobre todo palabras — la logística se lo traga",
+      "3": "Animamos cuando es fácil; cuando es duro, aflojamos",
+      "4": "Buscamos que el sueño y la casa puedan respirar juntos",
+      "5": "Cada uno siente respaldo en sus sueños — aunque sea enredado"
+    },
+    "fair-load-home": {
+      "1": "La carga del hogar cae en uno — el otro \"ayuda\" a veces",
+      "2": "Discutimos quién hizo más — sin reparto claro",
+      "3": "El reparto es más o menos parejo, pero no se actualiza cuando cambia la vida",
+      "4": "Revisamos quién hace qué y reequilibramos cuando pesa",
+      "5": "La carga en casa se siente justa — y se puede renegociar cuando haga falta"
+    },
+    "intimacy-of-ordinary": {
+      "1": "Cercanía solo en \"días especiales\" — la rutina se seca",
+      "2": "Estamos cerca pero casi no nos tocamos ni conectamos",
+      "3": "Hay momentos cálidos en lo diario, pero son raros",
+      "4": "En un martes gris hay contacto, humor o una mirada que se siente hogar",
+      "5": "Nos sentimos cerca también en días apagados — no solo en los picos"
+    }
+  }
+}

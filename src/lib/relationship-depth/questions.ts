@@ -1,8 +1,9 @@
 import type { RelationshipQuestion } from "./types";
 
 /**
- * Question bank. Prompt + Likert labels live in locales under
- * questions.{id}.prompt and scale.*
+ * Question bank. Prompt + per-question options live in locales under
+ * questions.{id}.prompt and questions.{id}.options.{1-5}
+ * (falls back to scale.* if options missing).
  *
  * Quick mode uses questions with quick:true (10).
  * Full mode uses all 30.

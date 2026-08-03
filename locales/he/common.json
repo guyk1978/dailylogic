@@ -128,7 +128,11 @@
       "agreementIds": "סעיפי הסכם",
       "habitIds": "הרגלים",
       "recommendedAmount": "סכום מומלץ",
-      "split": "חלוקה"
+      "split": "חלוקה",
+      "recommendedMonthly": "תקציב חודשי",
+      "yearlyForecast": "תחזית שנתית",
+      "oneTimeTotal": "חד־פעמי",
+      "costs": "פילוח עלויות"
     }
   },
   "categories": {
@@ -185,6 +189,18 @@
     "pocket-money-calculator": {
       "name": "מחשבון דמי כיס",
       "description": "תוכנית דמי כיס משפחתית עם התאמה לגיל, חלוקה לחיסכון והרגלי שותפות."
+    },
+    "dog-ownership-calculator": {
+      "name": "מחשבון החזקת כלב",
+      "description": "פילוח עלויות כנה לפי גודל ואורח חיים, שאלון היערכות ותקציב חודשי מומלץ."
+    },
+    "parent-respect-calculator": {
+      "name": "מחשבון כיבוד הורים",
+      "description": "שאלון קשר וכיבוד עם מדדי נוכחות, הקשבה ואיזון רגשי — והמלצות פרקטיות."
+    },
+    "stranger-sharing-calculator": {
+      "name": "מחשבון שיתוף עם זרים",
+      "description": "גבולות חכמים בשיחת חולין: פרטיות, אלגנטיות חברתית ותחושת בטן מול זרים."
     }
   },
   "save": {

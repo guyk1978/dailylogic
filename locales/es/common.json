@@ -128,7 +128,11 @@
       "agreementIds": "Cláusulas de acuerdo",
       "habitIds": "Hábitos",
       "recommendedAmount": "Monto recomendado",
-      "split": "Reparto"
+      "split": "Reparto",
+      "recommendedMonthly": "Presupuesto mensual",
+      "yearlyForecast": "Previsión anual",
+      "oneTimeTotal": "Total único",
+      "costs": "Desglose de costes"
     }
   },
   "categories": {
@@ -185,6 +189,18 @@
     "pocket-money-calculator": {
       "name": "Calculadora de mesada",
       "description": "Plan familiar de mesada con setup por edad, reparto ahorro/gasto/donación y hábitos de sociedad."
+    },
+    "dog-ownership-calculator": {
+      "name": "Calculadora de cuidados caninos",
+      "description": "Costes honestos de tener perro según tamaño y estilo de vida, quiz de preparación y presupuesto mensual."
+    },
+    "parent-respect-calculator": {
+      "name": "Calculadora de respeto a los padres",
+      "description": "Cuestionario honesto de vínculo adulto–padres con presencia, escucha y equilibrio emocional."
+    },
+    "stranger-sharing-calculator": {
+      "name": "Calculadora de compartir con desconocidos",
+      "description": "Small talk con límites: privacidad, gracia social e instinto frente a desconocidos."
     }
   },
   "save": {

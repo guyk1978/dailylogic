@@ -39,6 +39,7 @@ import {
   type PartnershipStatus,
 } from "@/lib/business-partnership";
 import { easeOut, springSnappy } from "@/lib/motion-presets";
+import { answerOptionLabel } from "@/lib/quiz-option-label";
 import { ICON_STROKE_WIDTH } from "@/lib/tool-icons";
 
 type Phase = "setup" | "mode" | "quiz" | "result";
@@ -508,7 +509,7 @@ export function BusinessPartnershipCalculator() {
                       >
                         {value}
                       </span>
-                      {t(`scale.${value}`)}
+                      {answerOptionLabel(t, current.id, value)}
                     </button>
                   );
                 })}

@@ -158,7 +158,14 @@
   },
   "questions": {
     "decide-under-pressure": {
-      "prompt": "Under pressure we can still decide without freezing or exploding."
+      "prompt": "Under pressure we can still decide without freezing or exploding.",
+      "options": {
+        "1": "Under pressure one partner takes over or we freeze — no decision gets made",
+        "2": "We decide in the crunch, then second-guess or re-litigate it in chat",
+        "3": "We can close a call, but only after an exhausting argument",
+        "4": "We use a short loop: facts → options → timely decision",
+        "5": "Even under pressure there is a decision owner and a clear close-out rule"
+      }
     },
     "failure-ownership": {
       "prompt": "When something fails — ownership is clear, without blame games.",
@@ -168,16 +175,44 @@
         "services": "When a client project breaks — it's clear who talks to the client and who fixes inside.",
         "food": "When service/shift collapses — it's clear who pulls the rope in real time.",
         "other": "When something fails in the field — ownership and closure are clear."
+      },
+      "options": {
+        "1": "We hunt for blame first — nobody owns the failure",
+        "2": "Indirect accusations and snarky emails replace ownership",
+        "3": "Sometimes we take responsibility, sometimes we dodge it",
+        "4": "It is clear who leads the fix without a public blame show",
+        "5": "There is a failure owner plus a short postmortem without ego games"
       }
     },
     "roles-clear": {
-      "prompt": "Roles and authority between us are clear enough for day-to-day work."
+      "prompt": "Roles and authority between us are clear enough for day-to-day work.",
+      "options": {
+        "1": "Everything is \"everyone's job\" — so nothing moves",
+        "2": "We have titles but no real decision rights",
+        "3": "Most days are clear, with painful gray zones",
+        "4": "Light RACI on five critical operating processes",
+        "5": "Authorities are written and updated — including solo decision rights"
+      }
     },
     "exit-talked": {
-      "prompt": "We've talked honestly about a possible exit — not only the success dream."
+      "prompt": "We've talked honestly about a possible exit — not only the success dream.",
+      "options": {
+        "1": "Exit is taboo — talking about it \"jinxes\" the partnership",
+        "2": "We hinted once with no terms or process",
+        "3": "We discussed exit in general, no numbers or steps",
+        "4": "We agree buyout/exit principles, not yet in the contract",
+        "5": "We have an agreed exit clause (notice, valuation, payout)"
+      }
     },
     "red-lines-named": {
-      "prompt": "Red lines were named out loud (money, ethics, time) — not just \"we'll see\"."
+      "prompt": "Red lines were named out loud (money, ethics, time) — not just \"we'll see\".",
+      "options": {
+        "1": "Everything is flexible — we will see when it happens",
+        "2": "We have gut feelings but never say them out loud",
+        "3": "A few lines were said in conversation, not documented",
+        "4": "Clear red lines on money, ethics, and time",
+        "5": "Red lines are written plus what happens if crossed"
+      }
     },
     "crisis-playbook": {
       "prompt": "We know who leads in an ops crisis, even without a dramatic meeting.",
@@ -187,6 +222,13 @@
         "services": "In a major client crisis — we know who leads the call and who backs resources.",
         "food": "In a kitchen/staffing crisis — we know who closes menu/shifts immediately.",
         "other": "In an ops crisis — we know who leads without endless debate."
+      },
+      "options": {
+        "1": "In a crisis we shout, scatter, or go silent",
+        "2": "Whoever yells loudest leads the response",
+        "3": "We intuit who leads but have no backup plan",
+        "4": "There is a crisis owner and an agreed comms style",
+        "5": "We have a short playbook: who notifies, fixes, and speaks externally"
       }
     },
     "ip-or-assets-clarity": {
@@ -197,6 +239,13 @@
         "services": "It's clear who owns client relationships, methods, and materials.",
         "food": "It's clear who owns recipes, suppliers, and brand name.",
         "other": "It's clear what belongs to the partnership vs personal assets."
+      },
+      "options": {
+        "1": "We never discussed IP/assets — \"it will be fine\"",
+        "2": "Each partner holds conflicting assumptions",
+        "3": "We partially covered code, clients, or equipment",
+        "4": "We maintain an agreed list of what belongs to the partnership",
+        "5": "Ownership of IP, assets, and key relationships is in writing"
       }
     },
     "vendors-and-deps": {
@@ -207,43 +256,134 @@
         "services": "Subcontractors are approved and visible to partners.",
         "food": "Food and external service vendors are managed with partner transparency.",
         "other": "External dependencies are managed transparently between partners."
+      },
+      "options": {
+        "1": "Each partner signs vendors alone without updating the other",
+        "2": "We discover critical dependencies only when something breaks",
+        "3": "We notify after the contract is signed",
+        "4": "Critical vendors and contracts sit on the shared table",
+        "5": "Dependency list plus approval thresholds for external spend"
       }
     },
     "money-talks-honest": {
-      "prompt": "Money talks are honest — even when the numbers aren't flattering."
+      "prompt": "Money talks are honest — even when the numbers aren't flattering.",
+      "options": {
+        "1": "We avoid numbers and talk in slogans",
+        "2": "Money talks turn into personal defense",
+        "3": "We talk when forced, with no regular cadence",
+        "4": "Monthly money meeting with real numbers on the table",
+        "5": "Full transparency on burn, liabilities, and upcoming calls"
+      }
     },
     "first-money-vs-sweat": {
-      "prompt": "We align on early cash, sweat equity, and asymmetric contribution."
+      "prompt": "We align on early cash, sweat equity, and asymmetric contribution.",
+      "options": {
+        "1": "Whoever brought cash \"bought\" control without a real discussion",
+        "2": "Quiet resentment about sweat equity versus cash in",
+        "3": "We talked once with no update rules",
+        "4": "We agree how to translate time versus money contributions",
+        "5": "Written contribution model (vesting / quarterly true-up)"
+      }
     },
     "equity-feels-fair": {
-      "prompt": "Equity/profit split feels fair enough relative to actual contribution."
+      "prompt": "Equity/profit split feels fair enough relative to actual contribution.",
+      "options": {
+        "1": "The split feels like theft or punishment",
+        "2": "We nod in meetings and stay angry inside",
+        "3": "Fair enough for now, with open questions",
+        "4": "Feels fair relative to current contribution",
+        "5": "Fair plus a mechanism to revisit when roles or risk shift"
+      }
     },
     "burn-and-runway": {
-      "prompt": "There's transparency on burn and runway — no end-of-month surprises."
+      "prompt": "There's transparency on burn and runway — no end-of-month surprises.",
+      "options": {
+        "1": "We do not know how many months of runway remain",
+        "2": "Only one partner knows the numbers",
+        "3": "We have a rough picture at month-end",
+        "4": "Both partners review burn and runway together",
+        "5": "Simple dashboard plus alerts when we cross thresholds"
+      }
     },
     "salary-vs-reinvest": {
-      "prompt": "We agree when to take salary/dividends vs reinvest."
+      "prompt": "We agree when to take salary/dividends vs reinvest.",
+      "options": {
+        "1": "Each partner draws when they want — no rule",
+        "2": "Repeated fights about \"what I deserve\"",
+        "3": "An unwritten rule that shifts with mood",
+        "4": "Agreed draw policy for the current period",
+        "5": "Written rules for salary, dividends, and reinvestment"
+      }
     },
     "expense-authority": {
-      "prompt": "It's clear up to what amount one can spend alone vs must align."
+      "prompt": "It's clear up to what amount one can spend alone vs must align.",
+      "options": {
+        "1": "No threshold — spend first, explain later",
+        "2": "Vague limits that trigger fights",
+        "3": "Verbal threshold with weak enforcement",
+        "4": "Clear threshold: solo below, together above",
+        "5": "Expense authority matrix plus brief documentation"
+      }
     },
     "investor-or-debt-views": {
-      "prompt": "We're aligned on fundraising/debt — or have a process to decide."
+      "prompt": "We're aligned on fundraising/debt — or have a process to decide.",
+      "options": {
+        "1": "Fundraising or debt is off limits or blows up instantly",
+        "2": "Opposite views with no decision process",
+        "3": "We talked once with no decision framework",
+        "4": "Principles for when to raise equity or take debt",
+        "5": "Agreed decision process (data, advisor, majority/veto)"
+      }
     },
     "profit-distribution-rules": {
-      "prompt": "Profit distribution rules are written or at least explicit."
+      "prompt": "Profit distribution rules are written or at least explicit.",
+      "options": {
+        "1": "\"We will split when there is profit\" — no rules",
+        "2": "Rules change every quarter under pressure",
+        "3": "General understanding, nothing written",
+        "4": "Explicit profit rules agreed between partners",
+        "5": "Distribution policy in the agreement or an exhibit"
+      }
     },
     "disagree-then-decide": {
-      "prompt": "After disagreement we know how to close a decision and move on."
+      "prompt": "After disagreement we know how to close a decision and move on.",
+      "options": {
+        "1": "Disagreement means freeze or emotional checkout",
+        "2": "The stronger partner forces a close",
+        "3": "We decide eventually, after exhaustion",
+        "4": "Rule: disagree → decide → execute together",
+        "5": "Agreed tie-break (advisor, vote, rotation)"
+      }
     },
     "ego-in-meetings": {
-      "prompt": "Ego doesn't block good decisions — even when it's hard to swallow."
+      "prompt": "Ego doesn't block good decisions — even when it's hard to swallow.",
+      "options": {
+        "1": "Meetings are a stage for winning personally",
+        "2": "Ego often blocks a good option",
+        "3": "We usually get past ego",
+        "4": "Decisions follow facts even when hard to swallow",
+        "5": "Norm: admit mistakes and move on without theater"
+      }
     },
     "feedback-without-war": {
-      "prompt": "We can give sharp feedback without starting a world war."
+      "prompt": "We can give sharp feedback without starting a world war.",
+      "options": {
+        "1": "Feedback feels like declaring war",
+        "2": "We hint or talk behind each other's backs",
+        "3": "Direct feedback is rare and tense",
+        "4": "Short respectful feedback ritual",
+        "5": "Clear, kind feedback is a safe routine"
+      }
     },
     "deadlock-break": {
-      "prompt": "There's a deadlock breaker (tie-break / advisor / rotation) — not only hope."
+      "prompt": "There's a deadlock breaker (tie-break / advisor / rotation) — not only hope.",
+      "options": {
+        "1": "Deadlocks last weeks with no mechanism",
+        "2": "We wait it out or one side gives up from fatigue",
+        "3": "Sometimes we ask a mutual friend for advice",
+        "4": "Agreed rule to break impasse",
+        "5": "Written mechanism: deadline, mediator, binding decision"
+      }
     },
     "client-or-team-conflict": {
       "prompt": "Client/team conflict is handled as partners, not two camps.",
@@ -253,19 +393,54 @@
         "services": "When a client pushes — we align before answering, not after.",
         "food": "A customer complaint/public review is handled as one front.",
         "other": "External conflict is handled as partners, not camps."
+      },
+      "options": {
+        "1": "Each partner builds a separate camp with the client or team",
+        "2": "Contradictory messages go out externally",
+        "3": "We align after confusion already happened",
+        "4": "We align internally first, then one voice outward",
+        "5": "Agreed spokesperson plus crisis script for client/team"
       }
     },
     "apology-and-course-correct": {
-      "prompt": "Apology comes with course-correction — not only a polite email."
+      "prompt": "Apology comes with course-correction — not only a polite email.",
+      "options": {
+        "1": "Apologies are rare or purely performative",
+        "2": "Nice words with no behavior change",
+        "3": "Course correction happens sometimes, not consistently",
+        "4": "Apology plus a clear corrective step",
+        "5": "Documented course correction with follow-through"
+      }
     },
     "transparency-default": {
-      "prompt": "Transparency is the default (info, risks, mistakes) — not a reward."
+      "prompt": "Transparency is the default (info, risks, mistakes) — not a reward.",
+      "options": {
+        "1": "Information stays hidden until someone asks",
+        "2": "Selective transparency when convenient",
+        "3": "We share headlines but hide risks",
+        "4": "Default: share numbers and risks proactively",
+        "5": "Systemic transparency (shared access to critical data)"
+      }
     },
     "pace-mismatch": {
-      "prompt": "When work pace differs — we talk before frustration explodes."
+      "prompt": "When work pace differs — we talk before frustration explodes.",
+      "options": {
+        "1": "Pace gaps explode into fights or silence",
+        "2": "Accusations of \"lazy\" versus \"obsessive\"",
+        "3": "We talk about pace only when it already hurts",
+        "4": "Shared pace for deadlines and major projects",
+        "5": "Agreed work rhythm and when to speed up or slow down"
+      }
     },
     "invisible-labor": {
-      "prompt": "Invisible work (admin, follow-ups, firefighting) is recognized, not only done."
+      "prompt": "Invisible work (admin, follow-ups, firefighting) is recognized, not only done.",
+      "options": {
+        "1": "Admin, follow-ups, firefighting go unseen and unrewarded",
+        "2": "Whoever does quiet work feels invisible",
+        "3": "Some invisible work is recognized, split unevenly",
+        "4": "We discuss invisible load and rebalance work",
+        "5": "Invisible labor is defined, credited, and in contribution talks"
+      }
     },
     "who-owns-delivery": {
       "prompt": "It's clear who owns delivery — not \"everyone\" and then no one.",
@@ -275,19 +450,54 @@
         "services": "It's clear who owns client delivery and who holds the timeline.",
         "food": "It's clear who owns service-quality standards every shift.",
         "other": "It's clear who owns real delivery end to end."
+      },
+      "options": {
+        "1": "Everyone owns delivery — so no one signs off",
+        "2": "Ownership exists on wins; on failure it dissolves",
+        "3": "Clear on most projects, gaps under urgency",
+        "4": "Named delivery owner per initiative or key client",
+        "5": "End-to-end ownership in writing — SLAs and handoffs included"
       }
     },
     "time-off-without-guilt": {
-      "prompt": "We can take time off without feeling like we betrayed the partnership."
+      "prompt": "We can take time off without feeling like we betrayed the partnership.",
+      "options": {
+        "1": "Time off equals betrayal — unavailable means \"not committed\"",
+        "2": "Breaks come with guilt and ping pressure",
+        "3": "Time off is OK but needs justification and prep overload",
+        "4": "Mutual understanding that rest is part of the partnership",
+        "5": "Leave and sick time are agreed — no punishment or passive aggression"
+      }
     },
     "hiring-and-firing-views": {
-      "prompt": "We're aligned on hiring and letting go of people/contractors."
+      "prompt": "We're aligned on hiring and letting go of people/contractors.",
+      "options": {
+        "1": "Hiring/firing is ideological debate with no decision",
+        "2": "Each partner hires or fires on taste, not alignment",
+        "3": "General principles that are inconsistent in practice",
+        "4": "Agreed criteria and process for hire and separation",
+        "5": "Written HR policy — who interviews, decides, and offboards"
+      }
     },
     "communication-cadence": {
-      "prompt": "We have enough communication cadence — not only chaotic chat threads."
+      "prompt": "We have enough communication cadence — not only chaotic chat threads.",
+      "options": {
+        "1": "Only chaotic WhatsApp/Slack — no real sync",
+        "2": "Threads pile up without decision summaries",
+        "3": "Occasional meetings, no standing agenda",
+        "4": "Weekly stand-up/sync plus a clean decisions channel",
+        "5": "Defined cadence: status, decisions, and brief documentation"
+      }
     },
     "vision-still-shared": {
-      "prompt": "We still share strategic direction — or know how to realign when we diverge."
+      "prompt": "We still share strategic direction — or know how to realign when we diverge.",
+      "options": {
+        "1": "We run in different directions without discussing it",
+        "2": "Shared tagline, no real strategic alignment",
+        "3": "Vision talks happen only in crisis",
+        "4": "Quarterly alignment on direction and priorities",
+        "5": "Shared vision documented plus realignment when we diverge"
+      }
     }
   }
 }

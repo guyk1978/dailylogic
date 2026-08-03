@@ -10,6 +10,9 @@ import everydayLoveEn from "../../../content/en/tools/everyday-love-calculator.j
 import relationshipDepthEn from "../../../content/en/tools/relationship-depth-calculator.json";
 import businessPartnershipEn from "../../../content/en/tools/business-partnership-calculator.json";
 import pocketMoneyEn from "../../../content/en/tools/pocket-money-calculator.json";
+import dogOwnershipEn from "../../../content/en/tools/dog-ownership-calculator.json";
+import parentRespectEn from "../../../content/en/tools/parent-respect-calculator.json";
+import strangerSharingEn from "../../../content/en/tools/stranger-sharing-calculator.json";
 
 import budgetPlannerHe from "../../../content/he/tools/budget-planner.json";
 import recipeScalerHe from "../../../content/he/tools/recipe-scaler.json";
@@ -20,6 +23,9 @@ import everydayLoveHe from "../../../content/he/tools/everyday-love-calculator.j
 import relationshipDepthHe from "../../../content/he/tools/relationship-depth-calculator.json";
 import businessPartnershipHe from "../../../content/he/tools/business-partnership-calculator.json";
 import pocketMoneyHe from "../../../content/he/tools/pocket-money-calculator.json";
+import dogOwnershipHe from "../../../content/he/tools/dog-ownership-calculator.json";
+import parentRespectHe from "../../../content/he/tools/parent-respect-calculator.json";
+import strangerSharingHe from "../../../content/he/tools/stranger-sharing-calculator.json";
 
 import budgetPlannerEs from "../../../content/es/tools/budget-planner.json";
 import recipeScalerEs from "../../../content/es/tools/recipe-scaler.json";
@@ -30,6 +36,9 @@ import everydayLoveEs from "../../../content/es/tools/everyday-love-calculator.j
 import relationshipDepthEs from "../../../content/es/tools/relationship-depth-calculator.json";
 import businessPartnershipEs from "../../../content/es/tools/business-partnership-calculator.json";
 import pocketMoneyEs from "../../../content/es/tools/pocket-money-calculator.json";
+import dogOwnershipEs from "../../../content/es/tools/dog-ownership-calculator.json";
+import parentRespectEs from "../../../content/es/tools/parent-respect-calculator.json";
+import strangerSharingEs from "../../../content/es/tools/stranger-sharing-calculator.json";
 
 const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
   en: {
@@ -42,6 +51,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "relationship-depth-calculator": relationshipDepthEn as ToolLandingJson,
     "business-partnership-calculator": businessPartnershipEn as ToolLandingJson,
     "pocket-money-calculator": pocketMoneyEn as ToolLandingJson,
+    "dog-ownership-calculator": dogOwnershipEn as ToolLandingJson,
+    "parent-respect-calculator": parentRespectEn as ToolLandingJson,
+    "stranger-sharing-calculator": strangerSharingEn as ToolLandingJson,
   },
   he: {
     "budget-planner": budgetPlannerHe as ToolLandingJson,
@@ -53,6 +65,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "relationship-depth-calculator": relationshipDepthHe as ToolLandingJson,
     "business-partnership-calculator": businessPartnershipHe as ToolLandingJson,
     "pocket-money-calculator": pocketMoneyHe as ToolLandingJson,
+    "dog-ownership-calculator": dogOwnershipHe as ToolLandingJson,
+    "parent-respect-calculator": parentRespectHe as ToolLandingJson,
+    "stranger-sharing-calculator": strangerSharingHe as ToolLandingJson,
   },
   es: {
     "budget-planner": budgetPlannerEs as ToolLandingJson,
@@ -64,6 +79,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "relationship-depth-calculator": relationshipDepthEs as ToolLandingJson,
     "business-partnership-calculator": businessPartnershipEs as ToolLandingJson,
     "pocket-money-calculator": pocketMoneyEs as ToolLandingJson,
+    "dog-ownership-calculator": dogOwnershipEs as ToolLandingJson,
+    "parent-respect-calculator": parentRespectEs as ToolLandingJson,
+    "stranger-sharing-calculator": strangerSharingEs as ToolLandingJson,
   },
 };
 

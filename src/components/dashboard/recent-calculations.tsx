@@ -142,9 +142,14 @@ function formatInputValue(
           const prompt = firstResolved(tQuiz, promptKey) ?? questionId;
           const short =
             prompt.length > 72 ? `${prompt.slice(0, 72)}…` : prompt;
-          const scale =
-            firstResolved(tQuiz, `scale.${answer}`) ?? String(answer);
-          return `${short}: ${scale}`;
+          const option =
+            firstResolved(
+              tQuiz,
+              `questions.${questionId}.options.${answer}`,
+            ) ??
+            firstResolved(tQuiz, `scale.${answer}`) ??
+            String(answer);
+          return `${short}: ${option}`;
         })
         .join("\n");
     }
@@ -177,6 +182,28 @@ function formatInputValue(
       const save = firstResolved(tQuiz, "result.save") ?? "Save";
       const give = firstResolved(tQuiz, "result.give") ?? "Give";
       return `${spend} ${split.spend ?? "—"}% · ${save} ${split.save ?? "—"}% · ${give} ${split.give ?? "—"}%`;
+    }
+    if (key === "costs") {
+      const costs = value as {
+        monthlyTotal?: number;
+        annualTotal?: number;
+        oneTimeTotal?: number;
+        recommendedMonthly?: number;
+        yearlyForecast?: number;
+      };
+      const symbol = firstResolved(tQuiz, "currency.symbol") ?? "";
+      const parts = [
+        costs.recommendedMonthly != null
+          ? `${costs.recommendedMonthly} ${symbol}/mo`
+          : null,
+        costs.yearlyForecast != null
+          ? `${costs.yearlyForecast} ${symbol}/yr`
+          : null,
+        costs.oneTimeTotal != null
+          ? `${costs.oneTimeTotal} ${symbol} one-time`
+          : null,
+      ].filter(Boolean);
+      return parts.length > 0 ? parts.join(" · ") : "—";
     }
     try {
       return JSON.stringify(value, null, 2);
@@ -212,6 +239,15 @@ function formatInputValue(
     const num = Number(value);
     return Number.isFinite(num) ? `${num.toFixed(1)}%` : raw;
   }
+  if (
+    key === "recommendedMonthly" ||
+    key === "yearlyForecast" ||
+    key === "oneTimeTotal"
+  ) {
+    const num = Number(value);
+    const symbol = firstResolved(tQuiz, "currency.symbol") ?? "";
+    return Number.isFinite(num) ? `${num} ${symbol}`.trim() : raw;
+  }
 
   return raw;
 }
@@ -232,6 +268,10 @@ function buildDetailRows(
     "setup",
     "recommendedAmount",
     "split",
+    "recommendedMonthly",
+    "yearlyForecast",
+    "oneTimeTotal",
+    "costs",
     "friction",
     "joyId",
     "viceId",
@@ -298,7 +338,7 @@ export function RecentCalculations() {
       </div>
 
       <motion.ul
-        className="-mx-1 flex gap-3 overflow-x-auto px-1 pb-1"
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3"
         variants={staggerList}
         initial="hidden"
         animate="show"
@@ -339,9 +379,9 @@ function RecentCalculationItem({
   const displayName = getEntryDisplayName(entry);
 
   return (
-    <motion.li variants={fadeSlideUp} className="min-w-[280px] shrink-0 sm:min-w-[320px]">
+    <motion.li variants={fadeSlideUp} className="h-full min-w-0">
       <motion.div
-        className="flex flex-col gap-1 rounded-2xl bg-white p-2 shadow-md ring-1 ring-slate-100/80"
+        className="flex h-full flex-col gap-1 rounded-2xl bg-white p-2 shadow-md ring-1 ring-slate-100/80"
         whileHover={{ scale: 1.02, y: -2, boxShadow: "0 12px 20px -8px rgb(0 0 0 / 0.1)" }}
         whileTap={{ scale: 0.99 }}
         transition={{ type: "spring", stiffness: 420, damping: 28 }}
@@ -416,6 +456,9 @@ function RecentCalculationModal({
     "relationshipDepth",
     "businessPartnership",
     "pocketMoney",
+    "dogOwnership",
+    "parentRespect",
+    "strangerSharing",
   ]);
   const dir = useLocaleDirection();
   const lp = useLocalizedPath();
@@ -433,6 +476,12 @@ function RecentCalculationModal({
     t(key, { ns: "businessPartnership", ...options });
   const tPocket: TranslateFn = (key, options) =>
     t(key, { ns: "pocketMoney", ...options });
+  const tDog: TranslateFn = (key, options) =>
+    t(key, { ns: "dogOwnership", ...options });
+  const tParent: TranslateFn = (key, options) =>
+    t(key, { ns: "parentRespect", ...options });
+  const tStranger: TranslateFn = (key, options) =>
+    t(key, { ns: "strangerSharing", ...options });
 
   useEffect(() => {
     if (!open) return;
@@ -453,7 +502,14 @@ function RecentCalculationModal({
   }, [open, onClose]);
 
   const rows = entry
-    ? buildDetailRows(entry, tCommon, tLove, [tRel, tBiz, tPocket])
+    ? buildDetailRows(entry, tCommon, tLove, [
+        tRel,
+        tBiz,
+        tPocket,
+        tDog,
+        tParent,
+        tStranger,
+      ])
     : [];
   const Icon = entry ? getToolIcon(entry.toolSlug) : null;
   const displayName = entry ? getEntryDisplayName(entry) : "";

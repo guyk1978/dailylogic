@@ -1,0 +1,218 @@
+{
+  "he": {
+    "rainy-walks": {
+      "1": "ביום גשום מבטלים טיול או רק מורידים לחצר לשתי דקות",
+      "2": "יוצאים רק אם ממש חייבים, עם קיצור מקסימלי",
+      "3": "יוצאים לטיול קצר עם מעיל/מגבת — לפעמים מדלגים",
+      "4": "יש ערכת גשם ליד הדלת ויוצאים כמעט תמיד",
+      "5": "טיול אמיתי גם בגשם/קור — חלק מהשגרה, לא אופציה"
+    },
+    "daily-minutes": {
+      "1": "בקושי מוצאים רבע שעה — הכל דחוי לסוף השבוע",
+      "2": "יש חלון קצר בערב, ולעיתים זה מתבטל",
+      "3": "כ־30–45 דקות ביום, עם ימים עמוסים שנופלים",
+      "4": "שני חלונות טיול/משחק קבועים ברוב ימי השבוע",
+      "5": "זמן יומי חסום ביומן לטיולים, משחק וטיפול"
+    },
+    "vet-bill-jump": {
+      "1": "אין כרית — נסתדר בלחץ / נדחה טיפול",
+      "2": "נשען על אשראי בלי תוכנית מוכנה",
+      "3": "יש קצת חסכון כללי, לא ייעודי לווטרינר",
+      "4": "יש קופת חירום לכלב או מסגרת אשראי מוכנה",
+      "5": "יש כרית ייעודית + כלל ברור מתי פונים לווטרינר"
+    },
+    "monthly-buffer": {
+      "1": "התקציב החודשי ימתוח אותנו משמעותית",
+      "2": "נעמוד בקושי — ייפול על הוצאות אחרות",
+      "3": "אפשרי אם נהיה זהירים בחודשים הקרובים",
+      "4": "נעים בטווח נוח עם מרווח קטן",
+      "5": "הסכום נכנס לתקציב הבית בלי לדחוק צרכים אחרים"
+    },
+    "space-ok": {
+      "1": "דירת סטודיו עירונית בלי מרפסת / מרחב מוגבל מאוד",
+      "2": "דירה קטנה עם מרפסת צרה, בלי גישה קלה לפארק",
+      "3": "דירה עם מעלית ופארק/שביל במרחק סביר",
+      "4": "דירה מרווחת או בית עם גישה נוחה להליכות יומיות",
+      "5": "בית פרטי עם חצר סגורה / מרחב תנועה ומנוחה ברור"
+    },
+    "alone-plan": {
+      "1": "עדיין אין תוכנית — נראה מה קורה",
+      "2": "רק צעצוע אחד וטלפון אם יש רעש מהשכנים",
+      "3": "יש שגרת פרידה בסיסית, בלי גיבוי בימי עבודה ארוכים",
+      "4": "העשרה + דוגווקר/מטפל בימים הארוכים",
+      "5": "שגרה כתובה: פרידה מדורגת, העשרה, וגיבוי קבוע"
+    },
+    "travel-cover": {
+      "1": "אין פתרון — נאלתר ברגע האחרון",
+      "2": "מקווים למשפחה, בלי תיאום מראש",
+      "3": "יש רעיון לפנסיון/שומר, עדיין בלי הזמנה/תקציב",
+      "4": "יש רשימת גיבוי ומחיר משוער לפנסיון/דוגווקר",
+      "5": "יש מקום שמור / חוזה עם מטפל + תקציב ייעודי"
+    },
+    "years-ahead": {
+      "1": "חושבים בעיקר על החודשים הקרובים",
+      "2": "יודעים שזה לטווח ארוך, בלי לתכנן שינויי חיים",
+      "3": "דיברנו על 1–2 שנים קדימה, לא על עשור",
+      "4": "יש מחשבה על מעברים, חופשות ושינויי עבודה",
+      "5": "יש הסכמה משפחתית על מחויבות של שנים + תרחישים"
+    },
+    "training-patience": {
+      "1": "מצפים שהכלב \"יבין לבד\" מהר",
+      "2": "מתאמנים קצת ואז מתייאשים כשיש נסיגה",
+      "3": "מתאמנים כשיש זמן — בלי עקביות יומית",
+      "4": "תרגול קצר וקבוע, גם כשזה חוזר על עצמו",
+      "5": "סבלנות ועקביות מתוכננות (כולל מאלף אם צריך)"
+    },
+    "family-aligned": {
+      "1": "אין הסכמה — כל אחד חושב אחרת על כללים",
+      "2": "יש דיבורים, בלי מי אחראי למה",
+      "3": "רוב הבית מסכים, עם נקודות חיכוך",
+      "4": "יש חלוקת אחריות ברורה בין בני הבית",
+      "5": "כולם חתמו על אותם כללים: טיולים, אוכל, גבולות"
+    }
+  },
+  "en": {
+    "rainy-walks": {
+      "1": "On rainy days we cancel or just do a 2-minute yard pee break",
+      "2": "We only go out if we must — shortest possible outing",
+      "3": "Short walk with coat/towel — sometimes we skip",
+      "4": "Rain kit by the door; we go out almost every time",
+      "5": "A real walk in rain/cold is routine, not optional"
+    },
+    "daily-minutes": {
+      "1": "Barely 15 minutes — everything slips to the weekend",
+      "2": "A short evening window that often gets canceled",
+      "3": "About 30–45 minutes/day, with some missed busy days",
+      "4": "Two walk/play windows on most weekdays",
+      "5": "Daily time blocked on the calendar for walks, play, care"
+    },
+    "vet-bill-jump": {
+      "1": "No cushion — we’d scramble or delay care",
+      "2": "Rely on credit with no prepared plan",
+      "3": "Some general savings, not dog-specific",
+      "4": "Dog emergency fund or ready credit line",
+      "5": "Dedicated cushion + clear rule for when we call the vet"
+    },
+    "monthly-buffer": {
+      "1": "The monthly estimate would stretch us hard",
+      "2": "We’d manage, but other bills would suffer",
+      "3": "Doable if we’re careful for a few months",
+      "4": "Comfortable range with a small margin",
+      "5": "Fits the household budget without crowding other needs"
+    },
+    "space-ok": {
+      "1": "Urban studio with no balcony / very limited space",
+      "2": "Small flat with a narrow balcony, weak park access",
+      "3": "Apartment with elevator and a park/path nearby",
+      "4": "Roomy flat or house with easy daily walk access",
+      "5": "House with a fenced yard / clear space to move and rest"
+    },
+    "alone-plan": {
+      "1": "No plan yet — we’ll see what happens",
+      "2": "One toy and hope neighbors don’t complain",
+      "3": "Basic goodbye routine, no backup on long workdays",
+      "4": "Enrichment + walker/sitter on long days",
+      "5": "Written routine: gradual alone training, enrichment, fixed backup"
+    },
+    "travel-cover": {
+      "1": "No plan — last-minute improvisation",
+      "2": "Hope family can help, nothing booked",
+      "3": "Idea for boarding/sitter, no budget locked yet",
+      "4": "Backup list + rough boarding/walker cost",
+      "5": "Reserved spot / sitter agreement + dedicated travel budget"
+    },
+    "years-ahead": {
+      "1": "Mostly thinking about the next few months",
+      "2": "Know it’s long-term, haven’t planned life changes",
+      "3": "Talked 1–2 years ahead, not a decade",
+      "4": "Thought through moves, trips, and job changes",
+      "5": "Family agreement on multi-year commitment + scenarios"
+    },
+    "training-patience": {
+      "1": "Expect the dog to “just get it” quickly",
+      "2": "Train a bit, then quit when there’s a setback",
+      "3": "Train when we have time — inconsistent",
+      "4": "Short, steady practice even when it repeats",
+      "5": "Planned patience and consistency (trainer if needed)"
+    },
+    "family-aligned": {
+      "1": "No alignment — everyone has different rules",
+      "2": "We’ve talked, but roles are unclear",
+      "3": "Mostly aligned, with a few friction points",
+      "4": "Clear responsibility split across the household",
+      "5": "Everyone agrees on the same rules: walks, food, boundaries"
+    }
+  },
+  "es": {
+    "rainy-walks": {
+      "1": "Con lluvia cancelamos o solo 2 minutos en el patio",
+      "2": "Salimos solo si es obligatorio, lo más corto posible",
+      "3": "Paseo corto con abrigo/toalla — a veces lo saltamos",
+      "4": "Kit de lluvia en la puerta; salimos casi siempre",
+      "5": "Paseo de verdad con lluvia/frío es rutina, no opcional"
+    },
+    "daily-minutes": {
+      "1": "Apenas 15 minutos — todo se va al fin de semana",
+      "2": "Una ventana corta por la noche que a menudo se cancela",
+      "3": "Unos 30–45 min/día, con días ocupados que fallan",
+      "4": "Dos ventanas de paseo/juego la mayoría de días laborables",
+      "5": "Tiempo diario bloqueado en el calendario para paseos y cuidados"
+    },
+    "vet-bill-jump": {
+      "1": "Sin colchón — improvisaríamos o retrasaríamos cuidado",
+      "2": "Confiaríamos en crédito sin plan preparado",
+      "3": "Hay algo de ahorro general, no específico del perro",
+      "4": "Fondo de emergencia canino o línea de crédito lista",
+      "5": "Colchón dedicado + regla clara de cuándo llamar al vet"
+    },
+    "monthly-buffer": {
+      "1": "El estimado mensual nos estiraría mucho",
+      "2": "Podríamos, pero otras cuentas sufrirían",
+      "3": "Viable si somos cuidadosos unos meses",
+      "4": "Rango cómodo con un margen pequeño",
+      "5": "Entra en el presupuesto del hogar sin apretar otras necesidades"
+    },
+    "space-ok": {
+      "1": "Estudio urbano sin balcón / espacio muy limitado",
+      "2": "Piso pequeño con balcón estrecho y mal acceso a parque",
+      "3": "Piso con ascensor y parque/camino cerca",
+      "4": "Piso amplio o casa con fácil acceso a paseos diarios",
+      "5": "Casa con patio cerrado / espacio claro para moverse y descansar"
+    },
+    "alone-plan": {
+      "1": "Aún no hay plan — veremos qué pasa",
+      "2": "Un juguete y esperar que los vecinos no se quejen",
+      "3": "Rutina básica de despedida, sin respaldo en jornadas largas",
+      "4": "Enriquecimiento + paseador/cuidador en días largos",
+      "5": "Rutina escrita: soledad gradual, enriquecimiento y respaldo fijo"
+    },
+    "travel-cover": {
+      "1": "Sin plan — improvisación de última hora",
+      "2": "Esperamos a la familia, nada reservado",
+      "3": "Idea de pensión/cuidador, sin presupuesto cerrado",
+      "4": "Lista de respaldo + coste aproximado de pensión/paseador",
+      "5": "Plaza reservada / acuerdo con cuidador + presupuesto de viaje"
+    },
+    "years-ahead": {
+      "1": "Pensamos sobre todo en los próximos meses",
+      "2": "Sabemos que es largo plazo, sin planear cambios de vida",
+      "3": "Hablamos de 1–2 años, no de una década",
+      "4": "Pensamos mudanzas, viajes y cambios de trabajo",
+      "5": "Acuerdo familiar de compromiso de años + escenarios"
+    },
+    "training-patience": {
+      "1": "Esperamos que el perro “lo pille” solo y rápido",
+      "2": "Entrenamos un poco y abandonamos si hay retroceso",
+      "3": "Entrenamos cuando hay tiempo — sin constancia",
+      "4": "Práctica corta y constante aunque se repita",
+      "5": "Paciencia y constancia planificadas (entrenador si hace falta)"
+    },
+    "family-aligned": {
+      "1": "Sin alineación — cada uno tiene reglas distintas",
+      "2": "Hemos hablado, pero los roles no están claros",
+      "3": "Más o menos alineados, con algunos rozamientos",
+      "4": "Reparto claro de responsabilidades en casa",
+      "5": "Todos acuerdan las mismas reglas: paseos, comida, límites"
+    }
+  }
+}

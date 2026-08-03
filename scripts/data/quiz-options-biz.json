@@ -1,0 +1,638 @@
+{
+  "he": {
+    "decide-under-pressure": {
+      "1": "בלחץ אחד משתלט או שנינו קופאים — בלי החלטה",
+      "2": "מחליטים בלחץ, ואז מתחרטים / חוזרים על זה בוואטסאפ",
+      "3": "מצליחים לסגור, אבל אחרי ויכוח מתיש",
+      "4": "יש תהליך קצר: עובדות → אופציות → החלטה בזמן",
+      "5": "גם בלחץ יש owner להחלטה ומנגנון סגירה ברור"
+    },
+    "failure-ownership": {
+      "1": "מייד מחפשים אשמים — אף אחד לא \"owner\"",
+      "2": "יש האשמות עקיפות ומיילים ציניים",
+      "3": "לפעמים לוקחים אחריות, לפעמים מתחמקים",
+      "4": "ברור מי מוביל תיקון, בלי הצגה פומבית של האשמה",
+      "5": "יש owner לכישלון + postmortem קצר בלי משחקי אגו"
+    },
+    "roles-clear": {
+      "1": "הכול \"של כולם\" — ואז כלום לא זז",
+      "2": "יש כותרות תפקיד, בלי סמכויות אמיתיות",
+      "3": "רוב הזמן ברור, עם אזורים אפורים כואבים",
+      "4": "RACI קל ל־5 תהליכים קריטיים",
+      "5": "סמכויות כתובות ומעודכנות — גם מי מחליט לבד"
+    },
+    "exit-talked": {
+      "1": "אסור לדבר על פרידה — זה \"מביא מזל רע\"",
+      "2": "רמזנו פעם, בלי פרטים",
+      "3": "דיברנו כללי על יציאה, בלי מספרים/תהליך",
+      "4": "יש עקרונות ליציאה/Buyout, עדיין לא בחוזה",
+      "5": "יש סעיף יציאה מוסכם (הודעה, הערכה, תשלום)"
+    },
+    "red-lines-named": {
+      "1": "הכול גמיש — נראה כשיקרה",
+      "2": "יש תחושות בטן, בלי לומר בקול",
+      "3": "כמה קווים נאמרו בשיחה, בלי תיעוד",
+      "4": "קווים אדומים ברורים בכסף/אתיקה/זמן",
+      "5": "קווים אדומים כתובים + מה קורה אם חוצים"
+    },
+    "crisis-playbook": {
+      "1": "במשבר כולם צועקים / נעלמים",
+      "2": "מי שצועק חזק יותר מוביל",
+      "3": "יש הבנה אינטואיטיבית מי מוביל, בלי גיבוי",
+      "4": "יש owner למשבר + סגנון תקשורת מוסכם",
+      "5": "יש playbook קצר: מי מודיע, מי מתקן, מי מדבר החוצה"
+    },
+    "ip-or-assets-clarity": {
+      "1": "לא דיברנו — \"יהיה בסדר\"",
+      "2": "יש הנחות סותרות בראש של כל אחד",
+      "3": "דיברנו חלקית (קוד/לקוחות/ציוד)",
+      "4": "יש רשימה מוסכמת של מה שייך לשותפות",
+      "5": "בעלות על IP/נכסים/קשרים מעוגנת בכתב"
+    },
+    "vendors-and-deps": {
+      "1": "כל אחד סוגר ספקים לבד, בלי לעדכן",
+      "2": "מגלים על תלות בדיעבד כשמשהו נשבר",
+      "3": "מעבירים הודעה אחרי החתימה",
+      "4": "ספקים קריטיים על השולחן המשותף",
+      "5": "רשימת תלויות + ספי אישור לרכש חיצוני"
+    },
+    "money-talks-honest": {
+      "1": "נמנעים ממספרים — מדברים בסיסמאות",
+      "2": "שיחות כסף הופכות להגנה אישית",
+      "3": "מדברים כשחייב, בלי קצב קבוע",
+      "4": "פגישת כסף חודשית עם מספרים אמיתיים",
+      "5": "שקיפות מלאה על burn, התחייבויות והחלטות קרובות"
+    },
+    "first-money-vs-sweat": {
+      "1": "מי שהביא כסף \"קנה\" שליטה בלי דיון",
+      "2": "יש מרירות שקטה על sweat מול cash",
+      "3": "דיברנו, בלי כללי עדכון",
+      "4": "יש הסכמה איך מתרגמים זמן מול כסף",
+      "5": "מודל תרומה כתוב (vesting / עדכון רבעוני)"
+    },
+    "equity-feels-fair": {
+      "1": "החלוקה מרגישה גניבה / עונש",
+      "2": "מסכימים בפה, כועסים בפנים",
+      "3": "סביר בינתיים, עם סימני שאלה",
+      "4": "הוגן ביחס לתרומה הנוכחית",
+      "5": "הוגן + מנגנון לבדיקה מחדש כשהמצב משתנה"
+    },
+    "burn-and-runway": {
+      "1": "אין מושג כמה חודשים נשארו",
+      "2": "רק אחד יודע את המספרים",
+      "3": "יש תמונה גסה בסוף החודש",
+      "4": "שני הצדדים רואים burn/runway יחד",
+      "5": "דשבורד פשוט + התרעה כשעוברים סף"
+    },
+    "salary-vs-reinvest": {
+      "1": "כל אחד מושך מתי שצריך — בלי כלל",
+      "2": "ויכוחים חוזרים על \"מגיע לי\"",
+      "3": "יש כלל לא כתוב שמשתנה לפי מצב רוח",
+      "4": "מדיניות משיכות מוסכמת לתקופה",
+      "5": "כללי שכר/דיבידנד/השקעה חוזרת כתובים"
+    },
+    "expense-authority": {
+      "1": "אין סף — מוציאים ומספרים אחר כך",
+      "2": "סף מעורפל שגורם לריבים",
+      "3": "יש סף בעל־פה, בלי אכיפה",
+      "4": "סף ברור: מתחתיו לבד, מעליו ביחד",
+      "5": "מטריצת סמכויות הוצאה + תיעוד קצר"
+    },
+    "investor-or-debt-views": {
+      "1": "נושא אסור / מתפוצץ מיד",
+      "2": "עמדות הפוכות בלי תהליך",
+      "3": "דיברנו פעם, בלי מסגרת החלטה",
+      "4": "יש עקרונות מתי כן/לא לגייס או לקחת חוב",
+      "5": "תהליך החלטה מוסכם (נתונים, יועץ, רוב/וטו)"
+    },
+    "profit-distribution-rules": {
+      "1": "\"נחלק כשיהיה\" — בלי כללים",
+      "2": "כללים משתנים בכל רבעון לפי לחץ",
+      "3": "יש הבנה כללית, לא כתובה",
+      "4": "כללים מוסכמים במפורש בין השותפים",
+      "5": "מדיניות חלוקה כתובה בהסכם/נספח"
+    },
+    "disagree-then-decide": {
+      "1": "מחלוקת = קיפאון או נטישה רגשית",
+      "2": "סוגרים בכוח של הצד החזק",
+      "3": "בסוף מחליטים, אחרי שחיקה",
+      "4": "יש כלל: מחלוקת → החלטה → ביצוע",
+      "5": "יש שובר תקיעות מוסכם (יועץ/רוב/רוטציה)"
+    },
+    "ego-in-meetings": {
+      "1": "ישיבות הן זירת ניצחון אישי",
+      "2": "לעיתים קרובות האגו חוסם אופציה טובה",
+      "3": "מצליחים לעקוף אגו ברוב המקרים",
+      "4": "החלטות לפי עובדות, גם כשקשה לבלוע",
+      "5": "יש נורמה: מודה בטעות וממשיכים בלי תיאטרון"
+    },
+    "feedback-without-war": {
+      "1": "פידבק = הכרזת מלחמה",
+      "2": "נותנים רק ברמזים או מאחורי הגב",
+      "3": "אפשר, אבל נדיר ומתוח",
+      "4": "יש טקס פידבק קצר ומכבד",
+      "5": "פידבק חד ומדויק הוא שגרה בטוחה"
+    },
+    "deadlock-break": {
+      "1": "תקיעות נמשכות שבועות בלי מנגנון",
+      "2": "מחכים ש\"יעבור\" או שצד אחד יוותר מעייפות",
+      "3": "לפעמים מביאים חבר משותף לעצה",
+      "4": "יש כלל הכרעה מוסכם למבוי סתום",
+      "5": "מנגנון כתוב: מועד, מתווך, והחלטה מחייבת"
+    },
+    "client-or-team-conflict": {
+      "1": "כל שותף בונה מחנה נפרד מול הלקוח/צוות",
+      "2": "מסרים סותרים החוצה",
+      "3": "מיישרים בדיעבד אחרי בלבול",
+      "4": "מדברים קודם בפנים, ואז קול אחד החוצה",
+      "5": "יש דובר מוסכם + תסריט משבר ללקוח/צוות"
+    },
+    "apology-and-course-correct": {
+      "1": "התנצלות נדירה / רק כדי לסגור פינה",
+      "2": "מילים יפות בלי שינוי התנהגות",
+      "3": "לפעמים יש תיקון, לא עקבי",
+      "4": "התנצלות + צעד תיקון ברור",
+      "5": "תיקון מסלול מתועד ומעקב אחריו"
+    },
+    "transparency-default": {
+      "1": "מידע מוסתר עד שמתבקשים",
+      "2": "שקיפות סלקטיבית לפי נוחות",
+      "3": "משתפים את העיקר, מסתירים סיכונים",
+      "4": "ברירת מחדל: לשתף מספרים וסיכונים",
+      "5": "שקיפות מערכתית (גישה משותפת לנתונים קריטיים)"
+    },
+    "pace-mismatch": {
+      "1": "פערי קצב מתפוצצים בריב או בשתיקה",
+      "2": "יש האשמות על \"עצלנות\" / \"אובססיביות\"",
+      "3": "מדברים על קצב רק כשכבר כואב",
+      "4": "מגדירים קצב משותף לדדליינים ופרויקטים",
+      "5": "יש הסכמה על קצב עבודה ומתי מאיצים או מאטים"
+    },
+    "invisible-labor": {
+      "1": "אדמין/מעקב/כיבוי שריפות — לא נספרים ולא מתוגמלים",
+      "2": "מי שעושה את העבודה השקטה מרגיש לא נראה",
+      "3": "מכירים בחלק מהעבודה, בלי חלוקה שוויונית",
+      "4": "מדברים על עומס בלתי נראה ומתקנים חלוקה",
+      "5": "עבודה בלתי נראית מוגדרת, מוכרת ומשולבת בתרומה"
+    },
+    "who-owns-delivery": {
+      "1": "כולם אחראים — ובסוף אף אחד חותם על דליברי",
+      "2": "יש בעלות רק כשזה מצליח; כשכושל — הכל מתפזר",
+      "3": "ברור ברוב הפרויקטים, עם חורים בדחיפות",
+      "4": "יש owner לדליברי לכל יוזמה/לקוח מרכזי",
+      "5": "בעלות מקצה לקצה כתובה — כולל SLA ומעבר משמרות"
+    },
+    "time-off-without-guilt": {
+      "1": "חופש = בגידה — מי שלא זמין \"לא מחויב\"",
+      "2": "לוקחים הפסקה עם רגשות אשם ולחץ מווטסאפ",
+      "3": "אפשר, אבל צריך לנמק ולהפציץ לפני",
+      "4": "יש הבנה הדדית על זמן לנשום ולהתאושש",
+      "5": "חופש/מחלה מוסכמים — בלי עונש או passive-aggressive"
+    },
+    "hiring-and-firing-views": {
+      "1": "גיוס/פיטורים = ויכוח אידיאולוגי בלי החלטה",
+      "2": "כל אחד מגייס/מפטר לפי טעם, בלי יישור",
+      "3": "יש עקרונות כלליים, לא עקביים בפועל",
+      "4": "קריטריונים ותהליך מוסכמים לגיוס ופרידה",
+      "5": "מדיניות HR כתובה — מי מראיין, מי מחליט, איך מפרידים"
+    },
+    "communication-cadence": {
+      "1": "רק וואטסאפ/סלאק כאוטי — אין סינכרון אמיתי",
+      "2": "שיחות מצטברות בלי סיכום החלטות",
+      "3": "פגישה לפעמים, בלי סדר יום קבוע",
+      "4": "סטנדאפ/סינק שבועי + ערוץ החלטות מסודר",
+      "5": "קצב תקשורת מוגדר: סטטוס, החלטות, ותיעוד קצר"
+    },
+    "vision-still-shared": {
+      "1": "כל אחד רץ לכיוון אחר — בלי שיחה על זה",
+      "2": "יש סיסמה משותפת, בפועל אין יישור אסטרטגי",
+      "3": "מדברים על חזון רק כשיש משבר",
+      "4": "יש בדיקת יישור רבעונית על כיוון ועדיפויות",
+      "5": "חזון משותף מתועד + תהליך realignment כשמתפצלים"
+    }
+  },
+  "en": {
+    "decide-under-pressure": {
+      "1": "Under pressure one partner takes over or we freeze — no decision gets made",
+      "2": "We decide in the crunch, then second-guess or re-litigate it in chat",
+      "3": "We can close a call, but only after an exhausting argument",
+      "4": "We use a short loop: facts → options → timely decision",
+      "5": "Even under pressure there is a decision owner and a clear close-out rule"
+    },
+    "failure-ownership": {
+      "1": "We hunt for blame first — nobody owns the failure",
+      "2": "Indirect accusations and snarky emails replace ownership",
+      "3": "Sometimes we take responsibility, sometimes we dodge it",
+      "4": "It is clear who leads the fix without a public blame show",
+      "5": "There is a failure owner plus a short postmortem without ego games"
+    },
+    "roles-clear": {
+      "1": "Everything is \"everyone's job\" — so nothing moves",
+      "2": "We have titles but no real decision rights",
+      "3": "Most days are clear, with painful gray zones",
+      "4": "Light RACI on five critical operating processes",
+      "5": "Authorities are written and updated — including solo decision rights"
+    },
+    "exit-talked": {
+      "1": "Exit is taboo — talking about it \"jinxes\" the partnership",
+      "2": "We hinted once with no terms or process",
+      "3": "We discussed exit in general, no numbers or steps",
+      "4": "We agree buyout/exit principles, not yet in the contract",
+      "5": "We have an agreed exit clause (notice, valuation, payout)"
+    },
+    "red-lines-named": {
+      "1": "Everything is flexible — we will see when it happens",
+      "2": "We have gut feelings but never say them out loud",
+      "3": "A few lines were said in conversation, not documented",
+      "4": "Clear red lines on money, ethics, and time",
+      "5": "Red lines are written plus what happens if crossed"
+    },
+    "crisis-playbook": {
+      "1": "In a crisis we shout, scatter, or go silent",
+      "2": "Whoever yells loudest leads the response",
+      "3": "We intuit who leads but have no backup plan",
+      "4": "There is a crisis owner and an agreed comms style",
+      "5": "We have a short playbook: who notifies, fixes, and speaks externally"
+    },
+    "ip-or-assets-clarity": {
+      "1": "We never discussed IP/assets — \"it will be fine\"",
+      "2": "Each partner holds conflicting assumptions",
+      "3": "We partially covered code, clients, or equipment",
+      "4": "We maintain an agreed list of what belongs to the partnership",
+      "5": "Ownership of IP, assets, and key relationships is in writing"
+    },
+    "vendors-and-deps": {
+      "1": "Each partner signs vendors alone without updating the other",
+      "2": "We discover critical dependencies only when something breaks",
+      "3": "We notify after the contract is signed",
+      "4": "Critical vendors and contracts sit on the shared table",
+      "5": "Dependency list plus approval thresholds for external spend"
+    },
+    "money-talks-honest": {
+      "1": "We avoid numbers and talk in slogans",
+      "2": "Money talks turn into personal defense",
+      "3": "We talk when forced, with no regular cadence",
+      "4": "Monthly money meeting with real numbers on the table",
+      "5": "Full transparency on burn, liabilities, and upcoming calls"
+    },
+    "first-money-vs-sweat": {
+      "1": "Whoever brought cash \"bought\" control without a real discussion",
+      "2": "Quiet resentment about sweat equity versus cash in",
+      "3": "We talked once with no update rules",
+      "4": "We agree how to translate time versus money contributions",
+      "5": "Written contribution model (vesting / quarterly true-up)"
+    },
+    "equity-feels-fair": {
+      "1": "The split feels like theft or punishment",
+      "2": "We nod in meetings and stay angry inside",
+      "3": "Fair enough for now, with open questions",
+      "4": "Feels fair relative to current contribution",
+      "5": "Fair plus a mechanism to revisit when roles or risk shift"
+    },
+    "burn-and-runway": {
+      "1": "We do not know how many months of runway remain",
+      "2": "Only one partner knows the numbers",
+      "3": "We have a rough picture at month-end",
+      "4": "Both partners review burn and runway together",
+      "5": "Simple dashboard plus alerts when we cross thresholds"
+    },
+    "salary-vs-reinvest": {
+      "1": "Each partner draws when they want — no rule",
+      "2": "Repeated fights about \"what I deserve\"",
+      "3": "An unwritten rule that shifts with mood",
+      "4": "Agreed draw policy for the current period",
+      "5": "Written rules for salary, dividends, and reinvestment"
+    },
+    "expense-authority": {
+      "1": "No threshold — spend first, explain later",
+      "2": "Vague limits that trigger fights",
+      "3": "Verbal threshold with weak enforcement",
+      "4": "Clear threshold: solo below, together above",
+      "5": "Expense authority matrix plus brief documentation"
+    },
+    "investor-or-debt-views": {
+      "1": "Fundraising or debt is off limits or blows up instantly",
+      "2": "Opposite views with no decision process",
+      "3": "We talked once with no decision framework",
+      "4": "Principles for when to raise equity or take debt",
+      "5": "Agreed decision process (data, advisor, majority/veto)"
+    },
+    "profit-distribution-rules": {
+      "1": "\"We will split when there is profit\" — no rules",
+      "2": "Rules change every quarter under pressure",
+      "3": "General understanding, nothing written",
+      "4": "Explicit profit rules agreed between partners",
+      "5": "Distribution policy in the agreement or an exhibit"
+    },
+    "disagree-then-decide": {
+      "1": "Disagreement means freeze or emotional checkout",
+      "2": "The stronger partner forces a close",
+      "3": "We decide eventually, after exhaustion",
+      "4": "Rule: disagree → decide → execute together",
+      "5": "Agreed tie-break (advisor, vote, rotation)"
+    },
+    "ego-in-meetings": {
+      "1": "Meetings are a stage for winning personally",
+      "2": "Ego often blocks a good option",
+      "3": "We usually get past ego",
+      "4": "Decisions follow facts even when hard to swallow",
+      "5": "Norm: admit mistakes and move on without theater"
+    },
+    "feedback-without-war": {
+      "1": "Feedback feels like declaring war",
+      "2": "We hint or talk behind each other's backs",
+      "3": "Direct feedback is rare and tense",
+      "4": "Short respectful feedback ritual",
+      "5": "Clear, kind feedback is a safe routine"
+    },
+    "deadlock-break": {
+      "1": "Deadlocks last weeks with no mechanism",
+      "2": "We wait it out or one side gives up from fatigue",
+      "3": "Sometimes we ask a mutual friend for advice",
+      "4": "Agreed rule to break impasse",
+      "5": "Written mechanism: deadline, mediator, binding decision"
+    },
+    "client-or-team-conflict": {
+      "1": "Each partner builds a separate camp with the client or team",
+      "2": "Contradictory messages go out externally",
+      "3": "We align after confusion already happened",
+      "4": "We align internally first, then one voice outward",
+      "5": "Agreed spokesperson plus crisis script for client/team"
+    },
+    "apology-and-course-correct": {
+      "1": "Apologies are rare or purely performative",
+      "2": "Nice words with no behavior change",
+      "3": "Course correction happens sometimes, not consistently",
+      "4": "Apology plus a clear corrective step",
+      "5": "Documented course correction with follow-through"
+    },
+    "transparency-default": {
+      "1": "Information stays hidden until someone asks",
+      "2": "Selective transparency when convenient",
+      "3": "We share headlines but hide risks",
+      "4": "Default: share numbers and risks proactively",
+      "5": "Systemic transparency (shared access to critical data)"
+    },
+    "pace-mismatch": {
+      "1": "Pace gaps explode into fights or silence",
+      "2": "Accusations of \"lazy\" versus \"obsessive\"",
+      "3": "We talk about pace only when it already hurts",
+      "4": "Shared pace for deadlines and major projects",
+      "5": "Agreed work rhythm and when to speed up or slow down"
+    },
+    "invisible-labor": {
+      "1": "Admin, follow-ups, firefighting go unseen and unrewarded",
+      "2": "Whoever does quiet work feels invisible",
+      "3": "Some invisible work is recognized, split unevenly",
+      "4": "We discuss invisible load and rebalance work",
+      "5": "Invisible labor is defined, credited, and in contribution talks"
+    },
+    "who-owns-delivery": {
+      "1": "Everyone owns delivery — so no one signs off",
+      "2": "Ownership exists on wins; on failure it dissolves",
+      "3": "Clear on most projects, gaps under urgency",
+      "4": "Named delivery owner per initiative or key client",
+      "5": "End-to-end ownership in writing — SLAs and handoffs included"
+    },
+    "time-off-without-guilt": {
+      "1": "Time off equals betrayal — unavailable means \"not committed\"",
+      "2": "Breaks come with guilt and ping pressure",
+      "3": "Time off is OK but needs justification and prep overload",
+      "4": "Mutual understanding that rest is part of the partnership",
+      "5": "Leave and sick time are agreed — no punishment or passive aggression"
+    },
+    "hiring-and-firing-views": {
+      "1": "Hiring/firing is ideological debate with no decision",
+      "2": "Each partner hires or fires on taste, not alignment",
+      "3": "General principles that are inconsistent in practice",
+      "4": "Agreed criteria and process for hire and separation",
+      "5": "Written HR policy — who interviews, decides, and offboards"
+    },
+    "communication-cadence": {
+      "1": "Only chaotic WhatsApp/Slack — no real sync",
+      "2": "Threads pile up without decision summaries",
+      "3": "Occasional meetings, no standing agenda",
+      "4": "Weekly stand-up/sync plus a clean decisions channel",
+      "5": "Defined cadence: status, decisions, and brief documentation"
+    },
+    "vision-still-shared": {
+      "1": "We run in different directions without discussing it",
+      "2": "Shared tagline, no real strategic alignment",
+      "3": "Vision talks happen only in crisis",
+      "4": "Quarterly alignment on direction and priorities",
+      "5": "Shared vision documented plus realignment when we diverge"
+    }
+  },
+  "es": {
+    "decide-under-pressure": {
+      "1": "Bajo presión uno impone o congelamos — no hay decisión",
+      "2": "Decidimos en el apuro y luego reabrimos el debate por chat",
+      "3": "Cerramos, pero tras una discusión agotadora",
+      "4": "Proceso breve: hechos → opciones → decisión a tiempo",
+      "5": "Incluso bajo presión hay owner de la decisión y cierre claro"
+    },
+    "failure-ownership": {
+      "1": "Primero buscamos culpables — nadie asume el fallo",
+      "2": "Acusaciones indirectas y correos sarcásticos",
+      "3": "A veces asumimos, a veces evitamos",
+      "4": "Está claro quién lidera la corrección sin show de culpas",
+      "5": "Hay owner del fallo y postmortem breve sin juegos de ego"
+    },
+    "roles-clear": {
+      "1": "Todo es \"de todos\" — y nada avanza",
+      "2": "Hay títulos, pero no derechos de decisión reales",
+      "3": "Casi siempre claro, con zonas grises dolorosas",
+      "4": "RACI ligero en cinco procesos críticos",
+      "5": "Autoridades escritas y actualizadas — incluido decidir solo"
+    },
+    "exit-talked": {
+      "1": "Salir es tabú — hablarlo \"mala suerte\" a la sociedad",
+      "2": "Lo insinuamos una vez, sin términos ni proceso",
+      "3": "Hablamos de salida en general, sin cifras ni pasos",
+      "4": "Principios de buyout/salida acordados, aún fuera del contrato",
+      "5": "Cláusula de salida acordada (aviso, valoración, pago)"
+    },
+    "red-lines-named": {
+      "1": "Todo flexible — ya veremos cuando pase",
+      "2": "Límites en el instinto, nunca dichos en voz alta",
+      "3": "Algunas líneas en conversación, sin documentar",
+      "4": "Líneas rojas claras en dinero, ética y tiempo",
+      "5": "Líneas rojas escritas y qué pasa si se cruzan"
+    },
+    "crisis-playbook": {
+      "1": "En crisis gritamos, desaparecemos o nos dispersamos",
+      "2": "Manda quien grita más fuerte",
+      "3": "Intuimos quién lidera, sin plan B",
+      "4": "Hay owner de crisis y estilo de comunicación acordado",
+      "5": "Playbook breve: quién avisa, corrige y habla afuera"
+    },
+    "ip-or-assets-clarity": {
+      "1": "No hablamos de IP/activos — \"saldrá bien\"",
+      "2": "Cada socio asume cosas distintas",
+      "3": "Cubrimos en parte código, clientes o equipos",
+      "4": "Lista acordada de lo que pertenece a la sociedad",
+      "5": "Propiedad de IP, activos y relaciones clave por escrito"
+    },
+    "vendors-and-deps": {
+      "1": "Cada uno cierra proveedores sin avisar al otro",
+      "2": "Descubrimos dependencias cuando algo se rompe",
+      "3": "Avisamos después de firmar",
+      "4": "Proveedores críticos visibles para ambos",
+      "5": "Mapa de dependencias y umbrales de aprobación de gasto"
+    },
+    "money-talks-honest": {
+      "1": "Evitamos cifras y hablamos en eslóganes",
+      "2": "Las charlas de dinero se vuelven defensa personal",
+      "3": "Hablamos cuando no queda otra, sin cadencia fija",
+      "4": "Reunión mensual de dinero con cifras reales",
+      "5": "Transparencia total sobre burn, deudas y próximas decisiones"
+    },
+    "first-money-vs-sweat": {
+      "1": "Quien puso cash \"compró\" control sin discutirlo",
+      "2": "Resentimiento silencioso entre sudor y capital",
+      "3": "Hablamos una vez, sin reglas de actualización",
+      "4": "Acuerdo sobre cómo traducir tiempo versus dinero",
+      "5": "Modelo escrito de aportes (vesting / ajuste trimestral)"
+    },
+    "equity-feels-fair": {
+      "1": "El reparto se siente robo o castigo",
+      "2": "Asentimos en reunión y rabiamos por dentro",
+      "3": "Razonable por ahora, con dudas abiertas",
+      "4": "Justo respecto a la contribución actual",
+      "5": "Justo más mecanismo de revisión si cambia el riesgo o el rol"
+    },
+    "burn-and-runway": {
+      "1": "No sabemos cuántos meses de runway quedan",
+      "2": "Solo un socio conoce las cifras",
+      "3": "Imagen gruesa al cierre de mes",
+      "4": "Ambos revisan burn y runway juntos",
+      "5": "Panel simple y alertas al cruzar umbrales"
+    },
+    "salary-vs-reinvest": {
+      "1": "Cada uno retira cuando quiere — sin regla",
+      "2": "Pelear una y otra vez por \"lo que me toca\"",
+      "3": "Regla no escrita que cambia con el ánimo",
+      "4": "Política de retiros acordada para el periodo",
+      "5": "Reglas escritas de sueldo, dividendos y reinversión"
+    },
+    "expense-authority": {
+      "1": "Sin tope — se gasta y se explica después",
+      "2": "Límites vagos que generan pelea",
+      "3": "Tope verbal con poca aplicación",
+      "4": "Tope claro: solo abajo, juntos arriba",
+      "5": "Matriz de autoridad de gasto y registro breve"
+    },
+    "investor-or-debt-views": {
+      "1": "Inversión o deuda es tema prohibido o explota al toque",
+      "2": "Posturas opuestas sin proceso de decisión",
+      "3": "Hablamos una vez, sin marco de decisión",
+      "4": "Principios de cuándo levantar capital o endeudarse",
+      "5": "Proceso acordado (datos, asesor, mayoría/veto)"
+    },
+    "profit-distribution-rules": {
+      "1": "\"Repartimos cuando haya\" — sin reglas",
+      "2": "Reglas cambian cada trimestre bajo presión",
+      "3": "Entendimiento general, nada escrito",
+      "4": "Reglas de utilidades explícitas entre socios",
+      "5": "Política de reparto en el acuerdo o anexo"
+    },
+    "disagree-then-decide": {
+      "1": "Desacuerdo = parálisis o abandono emocional",
+      "2": "El socio más fuerte impone el cierre",
+      "3": "Al final decidimos, tras agotamiento",
+      "4": "Regla: desacuerdo → decisión → ejecución",
+      "5": "Desempate acordado (asesor, voto, rotación)"
+    },
+    "ego-in-meetings": {
+      "1": "Las reuniones son escenario de victoria personal",
+      "2": "El ego suele bloquear una buena opción",
+      "3": "Casi siempre superamos el ego",
+      "4": "Decidimos por hechos aunque cueste tragar",
+      "5": "Norma: reconocer error y seguir sin teatro"
+    },
+    "feedback-without-war": {
+      "1": "El feedback suena a declarar guerra",
+      "2": "Insinuamos o hablamos a espaldas",
+      "3": "Feedback directo es raro y tenso",
+      "4": "Ritual breve de feedback respetuoso",
+      "5": "Feedback claro y amable es rutina segura"
+    },
+    "deadlock-break": {
+      "1": "Bloqueos duran semanas sin mecanismo",
+      "2": "Esperamos que pase o que uno ceda por cansancio",
+      "3": "A veces pedimos consejo a un tercero común",
+      "4": "Regla acordada para romper empate",
+      "5": "Mecanismo escrito: plazo, mediador, decisión vinculante"
+    },
+    "client-or-team-conflict": {
+      "1": "Cada socio arma su bando con cliente o equipo",
+      "2": "Salen mensajes contradictorios afuera",
+      "3": "Alineamos después del caos",
+      "4": "Primero adentro, luego una sola voz afuera",
+      "5": "Portavoz acordado y guion de crisis para cliente/equipo"
+    },
+    "apology-and-course-correct": {
+      "1": "Disculpas raras o solo de fachada",
+      "2": "Palabras bonitas sin cambio de conducta",
+      "3": "Corrección a veces, sin constancia",
+      "4": "Disculpa más paso correctivo claro",
+      "5": "Corrección documentada con seguimiento"
+    },
+    "transparency-default": {
+      "1": "La info queda oculta hasta que la piden",
+      "2": "Transparencia selectiva según conveniencia",
+      "3": "Compartimos lo principal, ocultamos riesgos",
+      "4": "Por defecto: compartir cifras y riesgos",
+      "5": "Transparencia sistémica (acceso compartido a datos críticos)"
+    },
+    "pace-mismatch": {
+      "1": "Diferencias de ritmo explotan en pelea o silencio",
+      "2": "Acusaciones de \"flojo\" versus \"obsesivo\"",
+      "3": "Hablamos del ritmo solo cuando ya duele",
+      "4": "Ritmo compartido para plazos y proyectos clave",
+      "5": "Ritmo acordado y cuándo acelerar o frenar"
+    },
+    "invisible-labor": {
+      "1": "Admin, seguimiento y apagar incendios no se ven ni premian",
+      "2": "Quien hace el trabajo silencioso se siente invisible",
+      "3": "Reconocemos parte, reparto desigual",
+      "4": "Hablamos de carga invisible y rebalanceamos",
+      "5": "Trabajo invisible definido, reconocido y en la conversación de aportes"
+    },
+    "who-owns-delivery": {
+      "1": "Todos son dueños del delivery — y nadie firma",
+      "2": "Hay owner en éxitos; en fallos se dispersa",
+      "3": "Claro en la mayoría, huecos bajo presión",
+      "4": "Owner de delivery por iniciativa o cliente clave",
+      "5": "Ownership de punta a punta escrito — SLAs y handoffs incluidos"
+    },
+    "time-off-without-guilt": {
+      "1": "Descanso = traición — no disponible es \"poco comprometido\"",
+      "2": "Pausas con culpa y presión por mensajes",
+      "3": "Se puede, pero hay que justificar y sobrecargar antes",
+      "4": "Entendimiento mutuo de que descansar es parte del pacto",
+      "5": "Vacaciones y baja acordadas — sin castigo ni passive-aggressive"
+    },
+    "hiring-and-firing-views": {
+      "1": "Contratar/despedir es debate ideológico sin decisión",
+      "2": "Cada uno contrata o despide a su gusto",
+      "3": "Principios generales, inconsistentes en la práctica",
+      "4": "Criterios y proceso acordados para entrar y salir",
+      "5": "Política de RR. HH. escrita — quién entrevista, decide y offboardea"
+    },
+    "communication-cadence": {
+      "1": "Solo WhatsApp/Slack caótico — sin sync real",
+      "2": "Hilos sin resumen de decisiones",
+      "3": "Reuniones ocasionales, sin agenda fija",
+      "4": "Stand-up/sync semanal y canal de decisiones ordenado",
+      "5": "Cadencia definida: estado, decisiones y registro breve"
+    },
+    "vision-still-shared": {
+      "1": "Cada uno corre en dirección distinta sin hablarlo",
+      "2": "Eslogan común, poco alineamiento estratégico real",
+      "3": "Hablamos de visión solo en crisis",
+      "4": "Chequeo trimestral de dirección y prioridades",
+      "5": "Visión compartida documentada y realineación si divergimos"
+    }
+  }
+}

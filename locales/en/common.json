@@ -128,7 +128,11 @@
       "agreementIds": "Agreement clauses",
       "habitIds": "Habits",
       "recommendedAmount": "Recommended amount",
-      "split": "Split"
+      "split": "Split",
+      "recommendedMonthly": "Monthly budget",
+      "yearlyForecast": "Yearly forecast",
+      "oneTimeTotal": "One-time total",
+      "costs": "Cost breakdown"
     }
   },
   "categories": {
@@ -185,6 +189,18 @@
     "pocket-money-calculator": {
       "name": "Pocket Money Calculator",
       "description": "Family allowance plan with age-aware setup, spend/save/give split, and practical partnership habits."
+    },
+    "dog-ownership-calculator": {
+      "name": "Dog Care & Budget Calculator",
+      "description": "Honest dog ownership costs by size and lifestyle, plus a readiness quiz and monthly budget."
+    },
+    "parent-respect-calculator": {
+      "name": "Parent Respect Calculator",
+      "description": "Honest parent–adult connection quiz with presence, listening, and emotional-balance scores."
+    },
+    "stranger-sharing-calculator": {
+      "name": "Stranger Sharing Calculator",
+      "description": "Boundary-smart small talk: privacy guard, social grace, and gut instinct with strangers."
     }
   },
   "save": {

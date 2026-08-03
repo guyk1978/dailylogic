@@ -1,0 +1,357 @@
+{
+  "show-up-consistently": {
+    "prompt": "Cuando digo que voy a visitar o pasar, cumplo un ritmo en el que mis padres pueden confiar.",
+    "byDistance": {
+      "sameArea": "Cuando digo que paso por casa cerca, de verdad aparece — no solo en crisis.",
+      "shortDrive": "Cuando planeo manejar a verlos, mantengo un ritmo de visitas previsible.",
+      "farAway": "Cuando fijamos fechas para ir, cumplo — no un \"ya veremos\" eterno."
+    },
+    "options": {
+        "1": "Cancelo, desaparezco de los planes o aparezco solo cuando me come la culpa",
+      "2": "Visito cuando me conviene — no pueden prever mi ritmo",
+      "3": "Aparezco a veces pero me ausento semanas sin avisar",
+      "4": "Casi siempre cumplo visitas o llamadas; si fallo, reprogramo claro",
+      "5": "Conocen mi ritmo — llego cuando digo, cerca o lejos"
+    }
+  },
+  "small-gestures": {
+    "prompt": "Hago gestos pequeños y prácticos que dicen \"pienso en ustedes\" — no solo en fiestas.",
+    "options": {
+      "1": "Detalles solo en cumpleaños o fiestas — el resto, silencio",
+      "2": "Quiero ayudar pero casi nunca termino lo pequeño",
+      "3": "Comida, fotos o arreglos de vez en cuando si estoy ahí o me recuerdan",
+      "4": "Gestos frecuentes — mandado, enlace, arreglar algo en su celular",
+      "5": "Los gestos pequeños son parte de mi semana; se sienten vistos entre eventos grandes"
+    }
+  },
+  "mark-dates": {
+    "prompt": "Recuerdo y marco lo que les importa — cumpleaños, aniversarios de duelo, bodas, citas médicas.",
+    "options": {
+      "1": "Olvido fechas clave o recuerdo solo cuando ya dolió",
+      "2": "Recuerdo tarde — mensaje apurado cuando el día pasó",
+      "3": "Los recordatorios ayudan; suelo saludar el mismo día",
+      "4": "Marco fechas clave antes y escribo algo personal",
+      "5": "Sus fechas importantes viven en mi calendario — las honro siempre"
+    }
+  },
+  "quality-over-rush": {
+    "prompt": "Cuando estamos juntos, tienen mi atención — no solo el celular y una salida apurada.",
+    "byDistance": {
+      "sameArea": "En visitas locales me quedo el tiempo de una charla real — no paso exprés de lista.",
+      "shortDrive": "Cuando manejo a verlos, protejo tiempo sin prisa — no solo mandados e irme.",
+      "farAway": "En visitas raras estoy en la conversación — no solo agendo el próximo vuelo."
+    },
+    "options": {
+      "1": "Celular o reloj — se sienten interrupción",
+      "2": "Los meto entre tareas; el cariño queda en sobras",
+      "3": "Visitas apuradas y otras buenas — según mi semana",
+      "4": "Suelo guardar pantallas y dejar charla libre",
+      "5": "Tienen tiempo sin prisa — me voy conectado, no solo cumpliendo"
+    }
+  },
+  "invite-into-life": {
+    "prompt": "Los invito a mi vida — hijos, logros laborales, viernes normales — no solo crisis.",
+    "options": {
+      "1": "Me escuchan sobre todo cuando necesito algo o hay malas noticias",
+      "2": "Comparto logística (horarios de niños) poco de mi vida interior",
+      "3": "A veces fotos o historias; muchas veces olvido incluirlos",
+      "4": "Los meto seguido — comidas, hitos, victorias chicas",
+      "5": "Conocen mi mundo de corrido — incluirlos es natural, no teatro"
+    }
+  },
+  "follow-through-promises": {
+    "prompt": "Cuando prometo \"llamo\", \"lo arreglo\" o \"te llevo\" — cumplo.",
+    "options": {
+      "1": "Las promesas se caen siempre; dejaron de creerme",
+      "2": "Cumplo la mitad — ahora desconfían",
+      "3": "Lo intento, pero semanas ocupadas = promesas rotas sin reparar",
+      "4": "Casi siempre hago lo que digo; si no puedo, aviso temprano",
+      "5": "Mi palabra es firme — no tienen que perseguirme"
+    }
+  },
+  "help-without-being-asked": {
+    "prompt": "Noto qué necesitan y ayudo — sin que supliquen o se sientan carga.",
+    "byStage": {
+      "independent": "Ofrezco ayuda que pueden rechazar — con respeto, sin imponer mi agenda.",
+      "someHelp": "Entro en mandados, citas o casa antes de que se agoten pidiendo.",
+      "caregiving": "Comparto carga con iniciativa — medicinas, noches, papeles — no solo cuando revienta."
+    },
+    "options": {
+      "1": "Espero a que griten pidiendo o a que alguien me avergüence",
+      "2": "Ayudo si me recuerdan, a menudo con suspiro o demora",
+      "3": "Ayudo a veces; otras asumo que están bien",
+      "4": "Veo necesidades y ofrezco ayuda concreta — pueden decir no cómodo",
+      "5": "Anticipar necesidades es normal — la dignidad queda intacta"
+    }
+  },
+  "stay-in-touch-busy": {
+    "prompt": "Cuando la vida se pone fuerte, sigo un hilo con mis padres — no silencio total.",
+    "byDistance": {
+      "sameArea": "En semanas locas cerca mando mensaje o toco puerta — no semanas ausente.",
+      "shortDrive": "Si no puedo manejar, igual llamo o video — la distancia no excusa silencio.",
+      "farAway": "Entre viajes contacto estable — llamadas, fotos — no desaparezco hasta el próximo vuelo."
+    },
+    "options": {
+      "1": "Temporadas ocupadas = cero contacto hasta que alguien me culpe",
+      "2": "Mensaje random cada semanas — se sienten idea de último momento",
+      "3": "Escribo cuando me acuerdo; los huecos se alargan",
+      "4": "Guardo un ritmo mínimo en caos — corto pero real",
+      "5": "Nunca dudan si los olvidé — el hilo sigue vivo"
+    }
+  },
+  "listen-without-fix": {
+    "prompt": "Si repiten historia o preocupación, escucho sin arreglar al instante ni cerrarlos.",
+    "options": {
+      "1": "Interrumpo, corrijo o \"ya me contaste\"",
+      "2": "Escucho con un ojo en el celular — se sienten desestimados",
+      "3": "Escucho bien hasta cansarme; luego apuro",
+      "4": "Dejo respirar la historia — reflejo antes de soluciones",
+      "5": "Se sienten escuchados aunque repitan — paciencia es respeto"
+    }
+  },
+  "ask-real-questions": {
+    "prompt": "Pregunto por su día, recuerdos y miedos — no solo \"¿todo bien?\".",
+    "options": {
+      "1": "Charlamos \"¿qué tal?\" y seguimos",
+      "2": "Preguntas de superficie sin seguir el hilo",
+      "3": "A veces cae una pregunta real; mucho es logística",
+      "4": "Pregunto seguido qué les importa y sigo curioso",
+      "5": "Conversación de ida y vuelta — entrevista con amor, no auditoría"
+    }
+  },
+  "remember-details": {
+    "prompt": "Recuerdo detalles que les importan — nombres, médicos, vecinos, lo que dijeron la última vez.",
+    "options": {
+      "1": "Olvido lo de ayer — se sienten invisibles",
+      "2": "Recuerdo solo lo grande; se escapan detalles",
+      "3": "Recuerdo si anoto; si no, es suerte",
+      "4": "Retomo hilos — \"¿cómo salió eso?\"",
+      "5": "No repiten todo — sigo lo que les importa"
+    }
+  },
+  "patience-with-repeat": {
+    "prompt": "Si se repiten o van lento, mantengo paciencia — sin filo ni burla.",
+    "byStage": {
+      "independent": "Si sus hábitos suenan \"antiguos\", discrepo sin ojos en blanco ni corrección pública.",
+      "someHelp": "Si falla memoria u oído, repito con calma — no \"ya te dije\".",
+      "caregiving": "En días largos de cuidado, cuido el tono — el cansancio no es culpa de ellos."
+    },
+    "options": {
+      "1": "Exploto, me burlo o termino sus frases irritado",
+      "2": "La paciencia se acaba rápido — se sienten estorbo",
+      "3": "Paciente a veces; el estrés me afila",
+      "4": "Respiro antes de reaccionar — tono respetuoso",
+      "5": "Lentitud y repeticiones reciben gracia — se sienten seguros conmigo"
+    }
+  },
+  "respect-their-pace": {
+    "prompt": "Respeto su ritmo — comidas, caminatas, decisiones — sin empujarlos como proyecto.",
+    "options": {
+      "1": "Los apuro siempre — eficiencia sobre dignidad",
+      "2": "Visita exprés; se sienten administrados, no encontrados",
+      "3": "Depende de mi agenda — a veces paciente, a veces empujo",
+      "4": "Me adapto a su tempo casi siempre",
+      "5": "Su ritmo marca la visita — soy invitado en su compás"
+    }
+  },
+  "hear-worry-underneath": {
+    "prompt": "Si regañan o critican, escucho miedo o soledad debajo — no solo el pinchazo.",
+    "options": {
+      "1": "Respondo a gritos o me enfrío — todo comentario es guerra",
+      "2": "Los tacho de dramáticos — pierdo el miedo de fondo",
+      "3": "A veces veo la preocupación; a menudo muerdo el anzuelo",
+      "4": "Pauso y pregunto qué asusta de verdad",
+      "5": "Traduzco regaño en cuidado — respondo a la necesidad, no al tono"
+    }
+  },
+  "disagree-with-honor": {
+    "prompt": "Podemos discrepar — política, crianza, dinero — sin humillarlos.",
+    "options": {
+      "1": "La discordia es desprecio o castigo silencioso",
+      "2": "\"Gano\" discusiones y los dejo chicos",
+      "3": "Evitamos temas calientes — se adelgaza el vínculo",
+      "4": "Discrepamos con límites — sin insultos ni viejos rencores",
+      "5": "Conviven miradas distintas — el honor pesa más que el debate"
+    }
+  },
+  "phone-call-presence": {
+    "prompt": "En teléfono o video estoy de verdad — no multitarea mientras hablan.",
+    "byDistance": {
+      "sameArea": "Aunque pudiéramos vernos, las llamadas tienen mi atención plena.",
+      "shortDrive": "Si llamo manejando, me concentro — o devuelvo cuando puedo escuchar.",
+      "farAway": "Las llamadas lejanas son visitas — las trato como sala, no ruido de fondo."
+    },
+    "options": {
+      "1": "Cocino, manejo distraído o medio escucho — lo notan",
+      "2": "Llamadas cortas de trámite — \"¿qué necesitan?\"",
+      "3": "Buenas llamadas mezcladas con distraídas",
+      "4": "Suelo parar tareas para llamadas con ellos",
+      "5": "Dirían que estoy presente en la línea — voz, silencio y todo"
+    }
+  },
+  "boundaries-without-cut": {
+    "prompt": "Pongo límites (tiempo, temas, visitas) sin cortarlos ni castigar.",
+    "options": {
+      "1": "Límites = silencio, bloqueo o salidas dramáticas",
+      "2": "Digo sí con resentimiento — exploto después",
+      "3": "Límites borrosos — oscilo entre dar de más y desaparecer",
+      "4": "Nombro límites con cariño — \"esta noche no, el jueves sí\"",
+      "5": "Límites claros y conexión cálida juntos"
+    }
+  },
+  "guilt-managed": {
+    "prompt": "La culpa no manda toda la relación — actúo por elección, no solo vergüenza.",
+    "options": {
+      "1": "Evito porque la culpa aplasta — o doy de más hasta resentir",
+      "2": "Culpa impulsa gestos grandes y luego desaparezco",
+      "3": "Culpa y amor se mezclan — semanas mejores y peores",
+      "4": "Noto culpa y elijo un paso sensato",
+      "5": "Los honro sin castigarme — estable, no teatral"
+    }
+  },
+  "own-family-balance": {
+    "prompt": "Equilibro pareja/hijos y padres — sin hacer villano a ningún lado.",
+    "options": {
+      "1": "Guerra constante — pareja vs. padres, hijos en medio",
+      "2": "Escondo visitas o llamadas — el secreto cría vergüenza",
+      "3": "El equilibrio tambalea; fiestas son minas",
+      "4": "Negociamos tiempo en abierto — roce y reparación",
+      "5": "Hablamos roles — el respeto incluye mi hogar"
+    }
+  },
+  "crisis-show-up": {
+    "prompt": "En sustos de salud, caídas o duelo — aparece práctico y emocionalmente.",
+    "byStage": {
+      "independent": "En un susto llego rápido — hospital, hermanos — sin quitarles agencia.",
+      "someHelp": "En noches de urgencias o mal diagnóstico coordino y me quedo — no solo \"pensando en ustedes\".",
+      "caregiving": "En crisis aguda sobre cuidado diario — estabilizo primero, luego respiro con ellos."
+    },
+    "options": {
+      "1": "Me paralizo, peleo con hermanos o desaparezco hasta que pase",
+      "2": "Solo logística — nada de cama o presencia emocional",
+      "3": "Aparezco irregular — fuerte al inicio, me apago",
+      "4": "Estoy en horas duras — comida, llamadas, tomar la mano",
+      "5": "En crisis saben que soy yo — pies firmes, corazón abierto"
+    }
+  },
+  "no-scorekeeping": {
+    "prompt": "No llevo cuenta de quién hizo más — visitas, dinero, llamadas — para justificar alejarme.",
+    "options": {
+      "1": "Sumo cada sacrificio — lo uso en peleas",
+      "2": "Marcador silencioso — resentimiento crece",
+      "3": "Cuento cuando estreso; suelto cuando calmo",
+      "4": "Veo desbalance y hablo — no proceso",
+      "5": "Dar no es depósito para retirar — el respeto fluye"
+    }
+  },
+  "sibling-or-alone-load": {
+    "prompt": "Si hermanos comparten — hablamos carga justa; si estoy solo — pido ayuda sin martirio.",
+    "options": {
+      "1": "Guerras entre hermanos o martirio solo — nadie gana",
+      "2": "Cargo solo y exploto en el chat familiar",
+      "3": "Carga desigual reconocida pero no arreglada",
+      "4": "Dividimos tareas o contrato ayuda abierto",
+      "5": "La carga se nombra y comparte — solo o con hermanos"
+    }
+  },
+  "speak-needs-calmly": {
+    "prompt": "Puedo decir a mis padres qué necesito — tiempo, tono, temas — con calma, no en estallido.",
+    "options": {
+      "1": "Necesidades salen en gritos o passive-aggressive",
+      "2": "Trago hasta explotar",
+      "3": "Insinúo; no entienden; me rindo",
+      "4": "Digo \"necesito…\" claro, casi siempre calmado",
+      "5": "Pedir directo es normal — pueden ajustar sin vergüenza"
+    }
+  },
+  "humor-without-mock": {
+    "prompt": "Podemos reír juntos — sin sarcasmo que corta ni chistes a su costa.",
+    "options": {
+      "1": "El humor es burla — sienten el pinchazo",
+      "2": "Chistes evitan charla real — risa como escape",
+      "3": "Humor cálido a veces; filoso otras",
+      "4": "Chistes internos y ligereza — nunca contra su dignidad",
+      "5": "La risa conecta — bromas con amor, no blanco"
+    }
+  },
+  "accept-help-reversed": {
+    "prompt": "Si aún quieren dar — comida, dinero, consejo — recibo con gracia, no humillación.",
+    "byStage": {
+      "independent": "Si insisten en pagar o hospedar — dejo que guarden dignidad, sin pelea de poder.",
+      "someHelp": "Si la ayuda va y viene — acepto sin hacerlos sentir inútiles.",
+      "caregiving": "Aunque los cuide — dejo que aporten cosas pequeñas que les importan."
+    },
+    "options": {
+      "1": "Rechazo todo — se sienten desechados y chicos",
+      "2": "Acepto y luego critico — doble mensaje",
+      "3": "Incómodo aceptar o rechazar sin gracia",
+      "4": "Agradezco y acepto lo que cuida su orgullo",
+      "5": "Recibir también es respeto — su dar tiene lugar"
+    }
+  },
+  "repair-after-friction": {
+    "prompt": "Tras tensión o visita dura — sé reparar: llamada, disculpa o plan nuevo.",
+    "options": {
+      "1": "Visitas malas quedan — nadie vuelve a acercarse",
+      "2": "Fingimos que no pasó — hielo debajo",
+      "3": "Alguien afloja al fin; no hay reparación clara",
+      "4": "Inicio reparación — llamada corta o \"¿lo intentamos de nuevo?\"",
+      "5": "La fricción no nos define — hay camino de vuelta"
+    }
+  },
+  "protect-from-burnout": {
+    "prompt": "Si cuido o estoy muy metido — protejo mi piso: sueño, respaldo, respiro — para sostener el respeto.",
+    "byStage": {
+      "independent": "No quemo el mañana por culpa hoy — ritmo humano.",
+      "someHelp": "Programo respiro antes de quebrar — ayudar es maratón, no sprint.",
+      "caregiving": "Uso respaldo, ayudas o hermanos — el burnout no ayuda a nadie."
+    },
+    "options": {
+      "1": "Vacío total — irritable con ellos, avergonzado conmigo",
+      "2": "Sin plan B — aguanto hasta colapsar",
+      "3": "Algo de autocuidado; la culpa lo llama egoísmo",
+      "4": "Pausas y ayuda regular — el respeto me incluye",
+      "5": "Cuidado sostenible — ellos reciben estabilidad, no mi ruina"
+    }
+  },
+  "gratitude-spoken": {
+    "prompt": "Digo gracias en voz alta — por sacrificios, recetas, cuidar niños, creer en mí.",
+    "options": {
+      "1": "Gratitud sin decir — adivinan o no",
+      "2": "Gracias solo en grandes fechas — suena formal",
+      "3": "Lo siento; olvido decirlo",
+      "4": "Agradezco cosas concretas seguido",
+      "5": "Gracias es idioma hablado entre nosotros"
+    }
+  },
+  "future-care-talk": {
+    "prompt": "Tocamos deseos de cuidado futuro — hogar, médico, dinero — sin pánico ni evasión.",
+    "byStage": {
+      "independent": "Hablamos deseos temprano — documentos, valores — con calma.",
+      "someHelp": "Actualizamos planes al crecer necesidades — quién decide qué, dónde.",
+      "caregiving": "Revisamos planes de cuidado con honestidad — cambios, límites, dignidad."
+    },
+    "options": {
+      "1": "Tabú — pelea o cierre si se menciona",
+      "2": "\"Ya veremos\" vago — sin detalles",
+      "3": "Una charla; sin seguimiento",
+      "4": "Deseos claros y pasos documentados",
+      "5": "Planificación continua y respetuosa — el miedo no manda la sala"
+    }
+  },
+  "respect-their-autonomy": {
+    "prompt": "Respeto sus decisiones — aunque elegiría distinto — salvo riesgo real de seguridad.",
+    "byStage": {
+      "independent": "No \"crío\" a mis padres — consejo una vez, no imposición.",
+      "someHelp": "Apoyo decisiones que aún pueden tomar — no solo lo que calma mi ansiedad.",
+      "caregiving": "Queda dignidad de elegir — baño, ropa, visitas — dentro de lo seguro."
+    },
+    "options": {
+      "1": "Los piso — \"por tu bien\" se vuelve control",
+      "2": "Regaño hasta que ceden — se erosiona autonomía",
+      "3": "Autonomía en lo fácil; control cuando asusto",
+      "4": "Los consulto en cambios grandes — su voz cuenta",
+      "5": "Su vida, su decisión — camino al lado, no encima"
+    }
+  }
+}

@@ -3,6 +3,7 @@ import type { BusinessQuestion } from "./types";
 /**
  * Question bank. Default prompts + optional industry variants live in locales:
  * questions.{id}.prompt
+ * questions.{id}.options.{1-5}
  * questions.{id}.byIndustry.{industry}
  */
 export const BUSINESS_QUESTIONS: BusinessQuestion[] = [

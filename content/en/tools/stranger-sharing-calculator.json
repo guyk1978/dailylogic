@@ -1,0 +1,48 @@
+{
+  "title": "Stranger Sharing Calculator: small talk vs oversharing",
+  "subtitle": "Smart boundaries in casual chats — on flights, in queues, at networking, or in DMs.",
+  "seoTitle": "Stranger Conversation & Privacy Calculator | DailyLogic",
+  "seoDescription": "Free stranger-sharing calculator by place, counterpart, and goal. Quick or 30-question deep quiz with specific answers, privacy score, and practical tips — in your browser.",
+  "heroDescription": "Small talk can be pleasant — or reveal too much. This tool helps mark the line between warmth and oversharing, tuned to the scene and who you’re talking to.",
+  "toolSlug": "stranger-sharing-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "You set where the chat happens, who the other person is, and your goal — then pick a quick or full quiz.",
+        "Questions cover real dilemmas: work crises, politics, prying questions, and gut checks.",
+        "The report scores privacy guard, social grace, and gut instinct — with practical tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill the setup, choose quiz length, and answer with a clear progress bar.",
+        "Save to history (Expand on the home grid) or download a result card.",
+        "Use the result as a compass — not a verdict on your personality."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "Oversharing often comes from politeness or silence-filling — not malice.",
+        "Scene-aware guidance beats one-size-fits-all rules.",
+        "Clear boundaries protect privacy without killing a pleasant conversation."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Scene-tuned", "description": "Place, counterpart, and goal shape the questions." },
+    { "title": "Two lengths", "description": "Quick boundary check or full social dynamics." },
+    { "title": "Witty tips", "description": "Elegant exits, detail filters, and warm guardrails." }
+  ],
+  "faq": [
+    { "question": "Does this mean being cold?", "answer": "No. The goal is warmth with a fence — not disconnection." },
+    { "question": "What if I already overshared?", "answer": "The report helps spot patterns and practice elegant exits next time." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

@@ -1,0 +1,515 @@
+{
+  "intro": {
+    "eyebrow": "Charla ligera, límites claros",
+    "title": "Calculadora de lo que compartes con desconocidos",
+    "body": "¿Cuánto revelas a alguien que acabas de conocer — en un vuelo, en la fila, en un evento o por mensajes? Elige el escenario y con quién hablas. Obtén un perfil ingenioso y consciente de la privacidad. Todo queda en tu navegador."
+  },
+  "setup": {
+    "title": "Define el escenario",
+    "subtitle": "Esto ajusta algunas preguntas e ideas — no es una calificación de tu personalidad.",
+    "placeLabel": "Dónde suele pasar",
+    "counterpartLabel": "Con quién hablas",
+    "goalLabel": "Qué intentas lograr",
+    "continue": "Continuar a la evaluación",
+    "place": {
+      "flight": "Vuelo largo o compañero de tren",
+      "queue": "Fila, sala de espera o viaje compartido",
+      "networking": "Evento, conferencia o networking laboral",
+      "socialOnline": "Apps, mensajes directos o grupos en línea"
+    },
+    "counterpart": {
+      "pleasant": "Amable y fácil — sin presionar",
+      "prying": "Curioso rápido — muchas preguntas personales",
+      "professional": "Colega, cliente o contacto del sector"
+    },
+    "goal": {
+      "survivePolitely": "Salir del paso sin incomodidad",
+      "warmButGuarded": "Ser cercano, guardar lo privado",
+      "checkBoundaries": "Probar si esta persona se siente segura"
+    }
+  },
+  "modes": {
+    "quick": "Revisión rápida",
+    "quickMeta": "~10 preguntas · 2–3 minutos",
+    "full": "Evaluación completa",
+    "fullMeta": "30 preguntas · 8–10 minutos",
+    "backToSetup": "Volver a la configuración"
+  },
+  "scale": {
+    "1": "Zona de riesgo",
+    "2": "Filtraciones",
+    "3": "Mixto",
+    "4": "Sólido",
+    "5": "Reservado y amable"
+  },
+  "actions": {
+    "start": "Empezar",
+    "next": "Siguiente",
+    "back": "Atrás",
+    "finish": "Terminar y ver informe",
+    "restart": "Nueva evaluación",
+    "changeMode": "Cambiar modo",
+    "newInsight": "Otra idea",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Tu perfil de lo que compartes con desconocidos",
+    "overall": "Puntuación general",
+    "dimensions": "Dimensiones",
+    "insights": "Ideas",
+    "tips": "Filtros prácticos",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · Calculadora de lo que compartes con desconocidos",
+    "shareText": "Mi perfil de lo que comparto con desconocidos: {{profile}} ({{score}}%). {{insight}} | Stranger Sharing — DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Los filtros necesitan un reinicio",
+      "developing": "Aprendiendo la línea",
+      "steady": "Mayormente estable",
+      "strong": "Fuerte y con calle"
+    },
+    "dimensionLabels": {
+      "privacyGuard": "Protección de privacidad",
+      "socialGrace": "Gracia social",
+      "gutInstinct": "Instinto"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No se pudo copiar la imagen — prueba descargar"
+  },
+  "profiles": {
+    "graceful-guard": "Guardián elegante — cercano sin el expediente",
+    "warm-fence": "Cerca cálida — invitas, pero la bóveda cerrada",
+    "street-smart-kind": "Amable con calle — encanto con cerrojo",
+    "mostly-steady": "Mayormente estable — algún exceso, recuperación rápida",
+    "learning-filters": "Aprendiendo filtros — estás actualizando la configuración",
+    "polite-and-aware": "Educado y consciente — charla ligera, límites inteligentes",
+    "leaky-edges": "Bordes porosos — la amabilidad va más rápido que la cautela",
+    "people-pleaser-risk": "Riesgo de complacer — sí antes de pensar",
+    "silence-filler": "Relleno del silencio — pagas con datos personales",
+    "overshare-alert": "Alerta de exceso — el archivo está abierto",
+    "rebuild-filters": "Reconstruir filtros — no vergüenza, solo ajustes",
+    "pause-before-speak": "Pausa antes de hablar — la boca va delante"
+  },
+  "insights": {
+    "dim-privacyGuard-high": "Tu protección de privacidad es fuerte: compartes temas, no expedientes. Mantén eso — la calidez no exige pruebas.",
+    "dim-privacyGuard-low": "Los detalles se escapan antes de decidir si los merecen. Practica la regla de tres capas antes del próximo chat.",
+    "dim-socialGrace-high": "Navegas charlas incómodas con gracia — salidas, giros y amabilidad sin interrogatorio.",
+    "dim-socialGrace-low": "Las conversaciones se traban o se cierran de golpe. Una pregunta puente gana a un portazo.",
+    "dim-gutInstinct-high": "Notas cambios de ambiente — halagos, presión, público — y ajustas antes del arrepentimiento.",
+    "dim-gutInstinct-low": "Anulas el \"no\" interior para ser amable. La cortesía no es consentimiento a cada pregunta.",
+    "overall-strong": "En conjunto compartes como un adulto en una fiesta: conectado, con límites, recuperable si resbalas.",
+    "overall-steady": "Estás en terreno humano intermedio — buenos instintos con algunos hábitos por afinar.",
+    "overall-developing": "Habilidad social real, pero tus filtros van detrás de tu amabilidad.",
+    "overall-needs-care": "Este patrón pide un reinicio suave: una regla esta semana, no un cambio de personalidad.",
+    "place-flight": "Las charlas con el compañero de asiento son cautivas y acogedoras — perfectas para historias, arriesgadas para rutinas y empleadores.",
+    "place-queue": "La charla en la sala de espera parece fugaz; los desconocidos igual recuerdan nombres, colegios de los hijos y quejas.",
+    "place-networking": "Los eventos premian la calidez — y castigan sesiones de terapia accidental y chismes de clientes.",
+    "place-socialOnline": "El ritmo en línea difumina la intimidad. Responder lento es una ventaja, no mala educación.",
+    "counterpart-pleasant": "La energía amable baja las defensas — ese es el punto, no prueba de que sean familia.",
+    "counterpart-prying": "Preguntas personales rápidas no son intimidad — son recolección de datos con sonrisa.",
+    "counterpart-professional": "El contexto profesional añade permanencia: lo que dices puede seguirte después del aperitivo.",
+    "goal-survivePolitely": "Salir del paso con educación aún permite límites — no debes una autobiografía por cortesía.",
+    "goal-warmButGuarded": "Cálido + reservado es el punto dulce: se sienten vistos, tu vida sigue siendo tuya.",
+    "goal-checkBoundaries": "Probar límites es inteligente — observa si respetan un no suave."
+  },
+  "tips": {
+    "tip-three-layer-rule": "Regla de tres capas: capa 1 = clima/tipo de trabajo; capa 2 = sentimientos en general; capa 3 = nombres, números, direcciones — solo para personas de confianza.",
+    "tip-swap-detail-for-theme": "Cambia detalle por tema: \"Trimestre duro en el trabajo\" mejor que nombrar jefe, proyecto y sueldo.",
+    "tip-no-names-numbers": "Sin nombres, sin números: evita calles exactas, colegios, pistas de cuentas y \"me encuentras @…\"",
+    "tip-bridge-question": "Pregunta puente: \"¿Qué te metió en eso?\" avanza la charla sin que regales datos.",
+    "tip-bathroom-exit": "Salida al baño / recarga: pausas físicas cierran charlas sin juicio sobre tus límites.",
+    "tip-agree-and-steer": "Acepta y redirige: \"Totalmente — hablando de viajes, ¿a dónde volverías?\"",
+    "tip-body-check": "Chequeo corporal: pecho apretado o ganas de contarlo todo = pausa, respira, acorta la siguiente frase.",
+    "tip-delay-answer": "Retrasa la respuesta: \"Hmm, déjame pensar\" gana tiempo — no debes autobiografía al instante.",
+    "tip-curiosity-tax": "Impuesto a la curiosidad: si hacen tres preguntas personales sin compartir, ve genérico.",
+    "tip-post-chat-debrief": "Debrief post-charla: dos minutos — ¿qué dije que preferiría no repetir? Ajusta un hábito.",
+    "tip-online-slow": "Lento en línea: más espacio entre respuestas entrena el ritmo correcto — la urgencia suele ser artificial.",
+    "tip-public-volume": "Volumen público: si extraños podrían repetirlo, baja el detalle — los oídos viajan."
+  },
+  "questions": {
+    "work-crisis-share": {
+      "prompt": "Cuando un desconocido pregunta por el trabajo, dejo fuera los detalles de crisis.",
+      "byPlace": {
+        "flight": "Cuando mi compañero de asiento pregunta qué hago y cómo va, no descargo una crisis laboral.",
+        "queue": "Cuando alguien en la fila pregunta por el estrés del trabajo, no nombro jefes, despidos ni drama de RR. HH.",
+        "networking": "En un evento, cuando indagan problemas de la empresa, me quedo en lo temático — no casos concretos.",
+        "socialOnline": "En mensajes sobre trabajo, no pego drama de Slack, capturas ni desahogos identificables."
+      },
+      "options": {
+        "1": "Describo el colapso completo — nombres, correos, quién tiene la culpa",
+        "2": "Desahogo detalles hasta notar que cambia su cara",
+        "3": "Mezclo estrés general con un detalle que luego quisiera no haber dicho",
+        "4": "Digo que ha sido duro pero sin nombres ni política interna",
+        "5": "Ofrezco un tema en una línea y redirijo — sin expediente"
+      }
+    },
+    "family-drama-line": {
+      "prompt": "Cuando sale la familia con un desconocido, no importo drama en vivo.",
+      "options": {
+        "1": "Cuento toda la saga — quién dijo qué, quién no habla con quién",
+        "2": "Comparto suficiente para que puedan chismear con precisión después",
+        "3": "Desahogo una historia caliente y luego me siento raro",
+        "4": "Menciono \"cosas de familia\" sin reparto ni cronología",
+        "5": "Me quedo vago o positivo — el drama se queda en casa"
+      }
+    },
+    "money-health-details": {
+      "prompt": "Cuando salen dinero o salud en charla ligera, guardo números y diagnósticos.",
+      "options": {
+        "1": "Comparto sueldos, deudas, resultados de pruebas o medicamentos por nombre",
+        "2": "Suelto números o nombres de clínicas antes de pensar",
+        "3": "Comparto a veces cuando el ambiente parece seguro",
+        "4": "Hablo en términos generales — \"año apretado\", \"manejo una condición\"",
+        "5": "Redirijo o me quedo en lo superficial — no es su historial que leer"
+      }
+    },
+    "location-routines": {
+      "prompt": "Evito dar a desconocidos un mapa de mi vida diaria.",
+      "byPlace": {
+        "flight": "En un vuelo, no comparto barrio, horarios de gym o rutas para recoger a los hijos.",
+        "queue": "Mientras espero, no describo dónde vivo, cuándo estoy solo en casa ni mi patrón de commute.",
+        "networking": "En eventos, no doy cruces de mi casa ni \"siempre estoy en X los martes\".",
+        "socialOnline": "En línea, no publico ni digo rutinas que fijen dónde estoy y cuándo."
+      },
+      "options": {
+        "1": "Describo hábitos de dirección exacta — rutas, horarios, quién está en casa cuándo",
+        "2": "Menciono mi zona y sitios habituales sin que pregunten",
+        "3": "Comparto si parecen amables o tenemos algo en común",
+        "4": "Digo una región amplia o \"afueras\" — sin horario",
+        "5": "Dejo ubicación y rutinas fuera de la mesa con desconocidos"
+      }
+    },
+    "kids-school-info": {
+      "prompt": "Cuando salen hijos o escuela, protejo sus identificadores.",
+      "options": {
+        "1": "Nombro colegios, profesores, equipos y dónde quedamos después de clase",
+        "2": "Comparto suficiente para que alguien ubique a mi hijo en una multitud",
+        "3": "Presumo con detalles y luego me pregunto si fue demasiado",
+        "4": "Hablo de edades o intereses sin nombres de colegio ni horarios",
+        "5": "Mantengo a los hijos genéricos — o evito detalles por completo"
+      }
+    },
+    "passwords-or-accounts": {
+      "prompt": "Nunca trato la charla con desconocidos como soporte técnico de mis cuentas.",
+      "options": {
+        "1": "He insinuado contraseñas, códigos de recuperación o trucos de acceso",
+        "2": "Describo preguntas de seguridad o \"cómo recuerdo contraseñas\"",
+        "3": "Bromeo sobre malos hábitos de contraseña con ejemplos reales",
+        "4": "Digo que uso un gestor — sin demos ni pantallas",
+        "5": "Lo de cuentas queda en cero detalle — no es lección con desconocidos"
+      }
+    },
+    "photos-and-screens": {
+      "prompt": "No muestro a desconocidos mi galería ni pantallas sensibles.",
+      "byPlace": {
+        "flight": "En un vuelo, no giro pantalla o fotos hacia el compañero de asiento.",
+        "queue": "En sala de espera, mantengo chats y fotos inclinados lejos de vecinos.",
+        "networking": "En un evento, no paso el teléfono con hilos de clientes visibles.",
+        "socialOnline": "No envío capturas identificables ni volcados de fotos a contactos nuevos en línea."
+      },
+      "options": {
+        "1": "Desplazo fotos o mensajes donde cualquiera puede leer",
+        "2": "Muestro \"una foto linda\" con direcciones, hijos o chats de trabajo",
+        "3": "Comparto pantallas cuando piden — parece más rápido que explicar",
+        "4": "Describo el contenido en voz alta; el teléfono sigue privado",
+        "5": "Pantallas y galerías cerradas — desconocidos no tienen tour"
+      }
+    },
+    "ex-and-intimacy": {
+      "prompt": "Cuando salen relaciones o intimidad, mantengo charlas con desconocidos PG y privadas.",
+      "options": {
+        "1": "Comparto historias explícitas o drama identificable de ex",
+        "2": "Nombro exes y repaso escenas íntimas por la reacción",
+        "3": "Cuento de más cuando vino o ambiente parecen amistad",
+        "4": "Me quedo general — \"citas raras últimamente\" — sin minuto a minuto",
+        "5": "Declino o giro — mi vida amorosa no es contenido de compañero de asiento"
+      }
+    },
+    "exit-politics": {
+      "prompt": "Cuando necesito irme de una conversación, salgo sin espiral de culpa.",
+      "byCounterpart": {
+        "pleasant": "Cuando un desconocido amable sigue charlando, me voy con amabilidad — no atrapado por su calidez.",
+        "prying": "Cuando alguien insiste con preguntas, salgo sin disculparme por tener límites.",
+        "professional": "Cuando un contacto me monopoliza, me voy con una línea profesional limpia."
+      },
+      "options": {
+        "1": "Me quedo demasiado y luego desaparezco o miento mal",
+        "2": "Espero hasta irritarme y me voy de golpe",
+        "3": "Insinúo que debo irme pero sigo respondiendo una pregunta más",
+        "4": "Uso una línea clara — baño, llamada, siguiente sesión — y me voy",
+        "5": "Salgo pronto y cálido: gracias, lo disfruté, tengo que irme"
+      }
+    },
+    "deflect-personal-q": {
+      "prompt": "Cuando preguntan algo demasiado personal, desvío sin confesión.",
+      "byCounterpart": {
+        "pleasant": "Cuando un desconocido amable pregunta dónde vivo o si estoy soltero, respondo ligero — no completo.",
+        "prying": "Cuando alguien indiscreto presiona por sueldo, relación o dirección, bloqueo sin debatir.",
+        "professional": "Cuando un contacto laboral hace preguntas personales, redirijo a terreno apropiado."
+      },
+      "options": {
+        "1": "Respondo porque parece maleducado no hacerlo — y me arrepiento",
+        "2": "Respondo a medias e intento retractarme incómodo",
+        "3": "A veces bromeo; otras veces suelto todo",
+        "4": "Uso un no suave o respuesta vaga — \"por la ciudad\", \"semana complicada\"",
+        "5": "Redirijo limpio: \"Aún lo estoy viendo — ¿y tú?\""
+      }
+    },
+    "match-their-depth": {
+      "prompt": "Igualo la profundidad del desconocido — no comparto de menos ni inundo para seguir el ritmo.",
+      "options": {
+        "1": "Descargo cosas pesadas de la vida porque ellos compartieron primero",
+        "2": "Escalo intimidad más rápido de lo que la relación mereció",
+        "3": "Los reflejo exacto — incluso cuando debería quedarme superficial",
+        "4": "Me quedo medio paso más ligero que su profundidad",
+        "5": "Elijo mi capa a propósito — no copiar-pegar intimidad"
+      }
+    },
+    "change-topic-smooth": {
+      "prompt": "Cuando un tema se calienta demasiado, giro sin ponerlo raro.",
+      "options": {
+        "1": "Me congelo o suelto \"no hablemos de eso\" — silencio incómodo",
+        "2": "Cierro y la charla muere",
+        "3": "Cambio de tema de golpe sin puente",
+        "4": "Reconozco y giro — \"Pesado — ¿qué te trae por aquí hoy?\"",
+        "5": "Dirijo con pregunta puente — suave y amable"
+      }
+    },
+    "humor-without-overshare": {
+      "prompt": "Uso humor sin convertir mi vida en su entretenimiento.",
+      "options": {
+        "1": "Mis historias más graciosas son también las más identificables",
+        "2": "Me ridiculizo con detalles que desconocidos no deberían guardar",
+        "3": "Cuento historias \"tenías que estar\" que igual revelan demasiado",
+        "4": "Mantengo chistes genéricos — sin nombres ni direcciones",
+        "5": "Soy gracioso en temas, no en mi archivo privado"
+      }
+    },
+    "end-conversation-kind": {
+      "prompt": "Puedo cerrar una charla con amabilidad sin abrir un capítulo personal nuevo.",
+      "byPlace": {
+        "flight": "Antes de aterrizar, cierro charla con el compañero sin intercambiar contactos que no quiero.",
+        "queue": "Cuando me toca, salgo de la charla en fila sin contar de más para despedirme.",
+        "networking": "Dejo una conversación en evento con cierre claro — no confesional de madrugada.",
+        "socialOnline": "Cierro un hilo de mensajes sin soltar un último secreto \"ya que estamos charlando\"."
+      },
+      "options": {
+        "1": "Las despedidas se vuelven excesos — \"en fin mi ex…\"",
+        "2": "Doy mi número o redes para escapar y luego temo los pings",
+        "3": "Me quedo y añado un detalle personal innecesario",
+        "4": "Cierro cálido con una frase simple y me voy",
+        "5": "Termino limpio: gratitud, sin datos nuevos"
+      }
+    },
+    "networking-vs-therapy": {
+      "prompt": "En eventos profesionales, hago networking — no trato desconocidos como mi terapeuta.",
+      "byCounterpart": {
+        "pleasant": "Aun con un desconocido amable en un evento, no convierto charla de carrera en descarga de trauma.",
+        "prying": "Cuando alguien en un evento busca chisme, no lo premio con secretos del trabajo.",
+        "professional": "Con tipo cliente o colega, mantengo charla apropiada — logros y temas, no confesiones."
+      },
+      "options": {
+        "1": "Descargo miedo laboral, estrés matrimonial o salud a un contacto nuevo",
+        "2": "Comparto suciedad interna de la empresa para conectar",
+        "3": "Resbalo a desahogo personal cuando cambia alcohol o ambiente",
+        "4": "Me quedo profesional-amable — sector, personal ligero",
+        "5": "Mantengo el carril claro: conectar, no confesar"
+      }
+    },
+    "online-dm-pace": {
+      "prompt": "Con contactos nuevos en línea, marco el ritmo de intimidad — no mejores amigos al instante.",
+      "byPlace": {
+        "flight": "Si intercambiamos redes con el compañero de asiento, no trato el primer hilo como diario.",
+        "queue": "Si intercambiamos usuarios esperando, marco mensajes — no vida entera antes de habernos ganado confianza.",
+        "networking": "Tras seguimiento online de evento, mantengo profundidad profesional hasta que la confianza sea real.",
+        "socialOnline": "En mensajes nuevos, no igualo su historia de vida en la primera hora — marco respuestas y profundidad."
+      },
+      "options": {
+        "1": "Envío ensayos personales largos a quien acabo de emparejar",
+        "2": "Comparto ubicación, horario o fotos antes de vernos o verificar",
+        "3": "Igualo su velocidad aunque mi instinto diga más lento",
+        "4": "Respondo más corto y lento hasta que crezca la confianza",
+        "5": "Trato mensajes como puerta de entrada — tocar, no mudarse"
+      }
+    },
+    "body-says-no": {
+      "prompt": "Cuando mi cuerpo dice \"no compartas eso\", escucho antes de abrir la boca.",
+      "options": {
+        "1": "Ignoro pecho apretado / náusea y hablo igual para ser amable",
+        "2": "Noto la sensación después de haberlo dicho",
+        "3": "A veces pauso; a veces gana complacer",
+        "4": "Pauso y acorto lo que iba a decir",
+        "5": "Trato señales corporales como stop duro — redirijo o salgo"
+      }
+    },
+    "too-many-questions": {
+      "prompt": "Cuando aceleran las preguntas, freno el flujo de datos.",
+      "byCounterpart": {
+        "pleasant": "Cuando alguien amable lanza preguntas personales en ráfaga, no respondo todas.",
+        "prying": "Cuando alguien me entrevista, lo nombro y voy vago — o me voy.",
+        "professional": "Cuando un contacto laboral cruza a interrogatorio personal, pongo límite sin quemar puentes."
+      },
+      "options": {
+        "1": "Respondo Q&A personal rápido como concurso",
+        "2": "Me siento maleducado diciendo no, así que alimento la curiosidad",
+        "3": "Respondo algunas, esquivo otras — filtro inconsistente",
+        "4": "Respondo una, luego puente hacia ellos o tema neutral",
+        "5": "Freno: \"Volvamos — apenas nos conocemos\""
+      }
+    },
+    "flattery-for-info": {
+      "prompt": "Cuando halagos vienen con preguntas, no cambio secretos por cumplidos.",
+      "options": {
+        "1": "Los cumplidos me aflojan — comparto cosas que nunca compartiría",
+        "2": "Me siento especial y cuento de más para mantener el elogio",
+        "3": "A veces lo noto después",
+        "4": "Agradezco y mantengo respuestas genéricas",
+        "5": "Trato encanto + preguntas como patrón — datos mínimos"
+      }
+    },
+    "alcohol-loosens": {
+      "prompt": "Cuando hay copas, mantengo los mismos filtros — no privacidad más ruidosa.",
+      "options": {
+        "1": "Happy hour se vuelve confesionario — compañeros, exes, dinero",
+        "2": "Con una copa ya muestro fotos o desahogo",
+        "3": "Estoy más suelto pero intento frenarme a mitad de historia",
+        "4": "Bebo socialmente y mantengo historias temáticas",
+        "5": "El alcohol no tiene acceso de admin a mi vida"
+      }
+    },
+    "recording-or-audience": {
+      "prompt": "Cuando otros pueden escuchar o grabar, reduzco el detalle.",
+      "byPlace": {
+        "flight": "En avión, asumo que filas cercanas oyen — bajo voz y detalle.",
+        "queue": "En filas públicas, no trato temas sensibles a todo volumen.",
+        "networking": "En eventos con micrófonos o cámaras, no digo lo que lamentaría en un clip.",
+        "socialOnline": "En grupos o lives, no comparto lo que querría privado en mensaje directo."
+      },
+      "options": {
+        "1": "Comparto cosas sensibles fuerte o en micrófonos calientes",
+        "2": "Olvido teléfonos apuntándome o historias que se repiten",
+        "3": "Bajo la voz solo cuando alguien mira",
+        "4": "Reviso tamaño de audiencia y bajo detalle de forma proactiva",
+        "5": "Asumo oídos y cámaras — detalle bajo por defecto"
+      }
+    },
+    "follow-up-contact": {
+      "prompt": "Cuando piden seguir en contacto, elijo canales donde puedo poner límites de verdad.",
+      "byCounterpart": {
+        "pleasant": "Cuando un desconocido amable quiere mi número, ofrezco un nivel que me sirve ignorar.",
+        "prying": "Cuando alguien indiscreto presiona Instagram o WhatsApp, declino o solo perfil público.",
+        "professional": "Cuando un contacto laboral hace seguimiento, uso canales profesionales — no mezcla personal."
+      },
+      "options": {
+        "1": "Doy teléfono/redes principales a casi todos",
+        "2": "Digo sí a seguimientos que ya temo",
+        "3": "Doy contacto y luego silencio — desordenado",
+        "4": "Ofrezco LinkedIn o email en lugar de personal si no estoy seguro",
+        "5": "Decido antes de compartir: ¿quiero a esta persona en mi bolsillo?"
+      }
+    },
+    "share-to-fill-silence": {
+      "prompt": "Cuando cae el silencio, no pago con historias privadas.",
+      "options": {
+        "1": "El silencio me paniquea — confieso o cuento de más para llenarlo",
+        "2": "Cuento historias pesadas porque el silencio parece maleducado",
+        "3": "A veces aguanto el silencio; a veces suelto todo",
+        "4": "Les pregunto algo o comento el entorno",
+        "5": "El silencio está bien — no compro comodidad con datos"
+      }
+    },
+    "regret-after-chat": {
+      "prompt": "Después de charlas con desconocidos, rara vez pienso \"¿por qué dije eso?\"",
+      "options": {
+        "1": "A menudo repaso conversaciones con vergüenza — compartí demasiado",
+        "2": "El arrepentimiento llega semanal tras charla ligera",
+        "3": "Mixto — algunas charlas bien, otras me persiguen",
+        "4": "Ajuste ocasional, no patrón",
+        "5": "Salgo de charlas bien — con límites y amabilidad"
+      }
+    },
+    "third-party-gossip": {
+      "prompt": "Cuando sale chisme de otra persona, no echo leña ni datos privados.",
+      "options": {
+        "1": "Comparto suciedad que no debería — nombres e historias que no son mías",
+        "2": "\"Solo desahogo\" de compañeros o amigos con desconocidos",
+        "3": "Escucho y añado un detalle que no debería",
+        "4": "Me quedo neutral o cambio de tema",
+        "5": "No cambio privacidad ajena por conexión"
+      }
+    },
+    "professional-secrets": {
+      "prompt": "No filtro secretos de trabajo a desconocidos — ni casuales.",
+      "byCounterpart": {
+        "pleasant": "Aun con compañero de asiento amable, no comparto productos no lanzados ni cifras internas.",
+        "prying": "Cuando pescan secretos de empresa, no muerdo el anzuelo — amable o no.",
+        "professional": "Con pares del sector, guardo NDAs y confianza del cliente — charla ligera no es autorización."
+      },
+      "options": {
+        "1": "He compartido plazos confidenciales, clientes o drama interno",
+        "2": "Insinúo cosas bajo NDA para sonar importante",
+        "3": "Comparto cuando parece \"off the record\" — no lo es",
+        "4": "Hablo solo de conocimiento público",
+        "5": "Secretos de trabajo se quedan en el trabajo — desconocidos cero palanca"
+      }
+    },
+    "emotional-dump": {
+      "prompt": "Cuando estoy estresado, no descargo en alguien que no puede sostenerlo.",
+      "options": {
+        "1": "Lloro o descargo trauma en compañeros de asiento, conductores o mensajes nuevos",
+        "2": "Trato cualquier oyente como terapia gratis",
+        "3": "Desahogo bordes de emociones grandes — y luego me siento expuesto",
+        "4": "Reconozco estrés brevemente y redirijo",
+        "5": "Emociones pesadas van a personas elegidas — no desconocidos al azar"
+      }
+    },
+    "ask-before-advise": {
+      "prompt": "Cuando desconocidos comparten problemas, no aplasto con consejos — ni reflejo con mi drama.",
+      "options": {
+        "1": "Supero con mi historia más grande o los arreglo sin que pidan",
+        "2": "Doy consejos largos a quien quería charla ligera",
+        "3": "Escucho y resbalo a mi propio exceso",
+        "4": "Reflejo una vez y pregunto si quieren ideas",
+        "5": "Igualo energía: empatía, no tomar el control ni intercambio de confesiones"
+      }
+    },
+    "public-place-volume": {
+      "prompt": "En público, mantengo temas sensibles a un volumen que desconocidos no deberían heredar.",
+      "byPlace": {
+        "flight": "En vuelo, no trato crisis médicas, legales o de pareja a volumen de asiento.",
+        "queue": "En fila llena, no narro llamadas privadas o peleas en voz alta.",
+        "networking": "En bar de hotel de evento, recuerdo que mesas se solapan — detalle bajo.",
+        "socialOnline": "En comentarios o stories públicos, no publico lo que pertenece a chat privado."
+      },
+      "options": {
+        "1": "Desconocidos podrían citar mi llamada o pelea",
+        "2": "Hablo de dinero, salud o sexo donde todos oyen",
+        "3": "Bajo la voz solo cuando me avergüenzo directamente",
+        "4": "Me aparto o bajo voz en partes sensibles",
+        "5": "Público = poco detalle — guarda profundidad para espacio privado"
+      }
+    },
+    "leave-with-dignity": {
+      "prompt": "Cuando una charla se pone incómoda, me voy sin sobre-explicar mi vida.",
+      "options": {
+        "1": "Me quedo y cuento de más para justificar irme — empeora",
+        "2": "Desaparezco a mitad de charla sin palabra",
+        "3": "Invento excusas que añaden datos personales nuevos",
+        "4": "Uso salida simple — educada, firme, mínima info",
+        "5": "Salgo limpio: límite sin autobiografía"
+      }
+    }
+  }
+}

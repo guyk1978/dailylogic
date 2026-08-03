@@ -32,6 +32,7 @@ import {
   type RelationshipProfile,
 } from "@/lib/relationship-depth";
 import { easeOut, springSnappy } from "@/lib/motion-presets";
+import { answerOptionLabel } from "@/lib/quiz-option-label";
 import { ICON_STROKE_WIDTH } from "@/lib/tool-icons";
 
 type Phase = "intro" | "quiz" | "result";
@@ -356,7 +357,7 @@ export function RelationshipDepth() {
                       >
                         {value}
                       </span>
-                      {t(`scale.${value}`)}
+                      {answerOptionLabel(t, current.id, value)}
                     </button>
                   );
                 })}

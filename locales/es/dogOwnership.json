@@ -1,0 +1,313 @@
+{
+  "intro": {
+    "eyebrow": "Tener perro sin sorpresas",
+    "title": "Calculadora de cuidados y presupuesto canino",
+    "body": "Define el perfil del perro y tu estilo de vida, mira un desglose honesto de costes, haz un quiz corto de preparación — y obtén presupuesto mensual, previsión anual y consejos. Todo queda en el navegador."
+  },
+  "setup": {
+    "title": "Contexto del perro y el hogar",
+    "subtitle": "Estas elecciones dan forma a la estimación y los consejos.",
+    "sizeLabel": "Tamaño del perro",
+    "ageLabel": "Edad del perro",
+    "aloneLabel": "Tiempo solo en casa",
+    "groomingLabel": "Peluquería / aseo",
+    "trainingLabel": "Presupuesto de adiestramiento",
+    "continue": "Continuar al desglose de costes",
+    "size": {
+      "small": "Pequeño · hasta ~10 kg",
+      "medium": "Mediano · ~10–25 kg",
+      "large": "Grande · 25+ kg"
+    },
+    "age": {
+      "puppy": "Cachorro",
+      "adult": "Adulto",
+      "senior": "Senior"
+    },
+    "alone": {
+      "homeMostly": "Casi siempre hay alguien en casa",
+      "mixed": "A veces solo unas horas",
+      "aloneOften": "Solo muchas horas la mayoría de días"
+    },
+    "grooming": {
+      "low": "Pelo corto / aseo en casa",
+      "regular": "Necesita peluquería cada pocos meses"
+    },
+    "training": {
+      "none": "Sin presupuesto de adiestramiento ahora",
+      "planned": "Planeamos un curso / varias sesiones",
+      "active": "Adiestramiento continuo / entrenador"
+    }
+  },
+  "costs": {
+    "title": "Desglose estimado de costes",
+    "subtitle": "Estimación educativa de mercado medio — no es un presupuesto formal.",
+    "monthly": "Mensual recurrente",
+    "annual": "Anual / periódico",
+    "oneTime": "Único (nuevos adoptantes)",
+    "monthlyTotal": "Total mensual",
+    "annualTotal": "Total periódico anual",
+    "oneTimeTotal": "Total único",
+    "continueQuiz": "Continuar al quiz de preparación",
+    "back": "Volver al contexto",
+    "lines": {
+      "food": "Comida de calidad",
+      "treats": "Premios",
+      "flea": "Antiparásitos",
+      "emergency": "Fondo de emergencia / seguro",
+      "walker": "Paseador / cuidado en soledad",
+      "training": "Adiestramiento continuo",
+      "vaccines": "Vacunas",
+      "vetCheck": "Revisiones veterinarias",
+      "grooming": "Peluquería",
+      "consumables": "Consumibles (bolsas, juguetes…)",
+      "gear": "Equipo básico (cama, comederos, transportín…)",
+      "spayNeuter": "Esterilización",
+      "chip": "Microchip y registro",
+      "trainingStart": "Arranque de adiestramiento",
+      "puppyYear": "Extra del primer año (cachorro)"
+    }
+  },
+  "quiz": {
+    "title": "Quiz de preparación · sentido común",
+    "subtitle": "10 preguntas cortas sobre tiempo, presupuesto y espacio."
+  },
+  "scale": {
+    "1": "Casi nunca / en absoluto",
+    "2": "Rara vez",
+    "3": "A veces",
+    "4": "Habitualmente",
+    "5": "Casi siempre / definitivamente"
+  },
+  "currency": {
+    "symbol": "€",
+    "code": "EUR"
+  },
+  "actions": {
+    "next": "Siguiente",
+    "back": "Atrás",
+    "finish": "Terminar y ver informe",
+    "restart": "Cálculo nuevo",
+    "changeSetup": "Cambiar contexto",
+    "newInsight": "Otra idea",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Presupuesto y preparación canina",
+    "readiness": "Índice de preparación",
+    "monthly": "Presupuesto mensual recomendado",
+    "yearly": "Previsión anual recurrente",
+    "oneTime": "Inversión única estimada",
+    "amount": "{{amount}} {{symbol}}",
+    "note": "Guía educativa — confirma precios locales de vet/proveedores.",
+    "breakdown": "Desglose rápido",
+    "dimensions": "Indicadores de preparación",
+    "insights": "Ideas",
+    "tips": "Consejos de ahorro inteligente",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · Calculadora canina",
+    "shareText": "Nuestro presupuesto canino: {{monthly}} {{symbol}}/mes · {{yearly}} {{symbol}}/año · preparación {{score}}% | DailyLogic",
+    "resultSummary": "{{profile}} · {{monthly}} {{symbol}}/mes · {{yearly}} {{symbol}}/año · {{score}}%",
+    "bands": {
+      "needs-care": "Aún no estáis listos",
+      "developing": "En camino — quedan huecos",
+      "steady": "Listos con mantenimiento",
+      "strong": "Listos y estables"
+    },
+    "dimensionLabels": {
+      "timeReadiness": "Disponibilidad de tiempo",
+      "budgetBuffer": "Colchón presupuestario",
+      "spaceLifestyle": "Espacio y estilo de vida",
+      "commitment": "Compromiso a largo plazo"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No se pudo copiar la imagen — descárgala"
+  },
+  "profiles": {
+    "ready-pack": "Listos para la manada — con disciplina presupuestaria",
+    "steady-guardian": "Guardián canino estable",
+    "budget-aware": "Conscientes del coste — eso es fuerza",
+    "almost-ready": "Casi listos — un ajuste más",
+    "learning-owner": "Aprendiendo a ser buenos dueños",
+    "solid-base": "Buena base para empezar",
+    "gap-check": "Huecos a cerrar antes de adoptar",
+    "plan-first": "Primero plan — luego adopción",
+    "pace-yourself": "Sin prisas — ritmo sostenible",
+    "pause-and-prep": "Pausa y preparación",
+    "not-yet": "Aún no es el momento",
+    "build-buffer": "Primero construid un colchón de emergencia"
+  },
+  "insights": {
+    "dim-timeReadiness-high": "Hay buena disponibilidad de tiempo — proteged los paseos en días duros.",
+    "dim-timeReadiness-low": "El tiempo es el cuello de botella. Planificad turnos/paseador antes.",
+    "dim-budgetBuffer-high": "Hay conciencia de fondo de emergencia — salva mascotas y cuentas.",
+    "dim-budgetBuffer-low": "Sin colchón veterinario, cada sorpresa es crisis. Empezad un tarro pequeño.",
+    "dim-spaceLifestyle-high": "Casa y rutina parecen compatibles — revisad en jornadas largas.",
+    "dim-spaceLifestyle-low": "Espacio/soledad aún desalineados. Enriqueced el entorno o cambiad horarios.",
+    "dim-commitment-high": "Pensáis a largo plazo — un perro no se muda como un mueble.",
+    "dim-commitment-low": "El compromiso de años necesita plan para viajes, mudanzas y cambios.",
+    "overall-strong": "La imagen es estable — fijad presupuesto mensual y revisad cada trimestre.",
+    "overall-steady": "Buena base con puntos blandos — cerrad un hueco esta semana.",
+    "overall-developing": "Hay ganas, pero los huecos son grandes. Simplificad antes de adoptar.",
+    "overall-needs-care": "Las señales dicen: preparaos más. Esperar es mejor que arriesgar.",
+    "size-small": "Perro pequeño: comida más barata, pero vet/peluquería también suman.",
+    "size-medium": "Mediano: equilibrad comida, actividad y colchón de emergencia.",
+    "size-large": "Grande: comida, medicinas y vet cuestan más — presupuestad en consecuencia.",
+    "age-puppy": "Cachorro: el primer año es más caro (vacunas, adiestramiento, equipo).",
+    "age-adult": "Adulto: costes más estables — mantened prevención y revisiones.",
+    "age-senior": "Senior: el seguimiento médico sube — el colchón importa más.",
+    "alone-homeMostly": "Hay presencia en casa — gran activo para calma y hábitos.",
+    "alone-mixed": "Soledad mixta: rutina de despedida + enriquecimiento reducen ansiedad.",
+    "alone-aloneOften": "Solo mucho: paseador/cuidador/pensión es presupuesto — no lujo."
+  },
+  "tips": {
+    "tip-walk-blocks": "Bloquead dos ventanas fijas de paseo como reuniones inaplazables.",
+    "tip-rain-kit": "Kit de lluvia junto a la puerta baja la resistencia a salir.",
+    "tip-shared-shifts": "Apuntad turnos familiares por escrito — no en chats caóticos.",
+    "tip-emergency-jar": "Apartad cada mes un fondo vet — aunque sea poco.",
+    "tip-buy-bulk": "Comprad comida de calidad con cabeza (volumen/suscripción).",
+    "tip-preventive-care": "La prevención sale más barata que la urgencia.",
+    "tip-enrichment": "Juguetes de comida y enriquecimiento reducen destrozos en soledad.",
+    "tip-alone-routine": "Practicad despedidas cortas antes de una jornada completa.",
+    "tip-neighbor-plan": "Tened un plan con vecinos/familia antes de necesitarlo.",
+    "tip-10-year-view": "Preguntad: ¿podemos sostener esto en 5–10 años?",
+    "tip-boarding-list": "Lista de pensión/paseador de respaldo antes del primer viaje.",
+    "tip-vet-relationship": "Elegid un vet fijo — la continuidad ahorra.",
+    "tip-track-month": "Seguid un mes real de gastos — luego actualizad el presupuesto.",
+    "tip-groom-diy": "Entre peluquerías: el cepillado regular baja nudos y coste.",
+    "tip-food-quality": "No escatiméis en la comida base — ahorrad en marcas de lujo innecesarias."
+  },
+  "questions": {
+    "rainy-walks": {
+      "prompt": "En días de lluvia/frío — aún tenemos tiempo y ganas de un paseo de verdad.",
+      "options": {
+        "1": "Con lluvia cancelamos o solo 2 minutos en el patio",
+        "2": "Salimos solo si es obligatorio, lo más corto posible",
+        "3": "Paseo corto con abrigo/toalla — a veces lo saltamos",
+        "4": "Kit de lluvia en la puerta; salimos casi siempre",
+        "5": "Paseo de verdad con lluvia/frío es rutina, no opcional"
+      }
+    },
+    "daily-minutes": {
+      "prompt": "Tenemos minutos diarios para paseos, juego y cuidados — no solo “luego”.",
+      "bySize": {
+        "small": "Hay tiempo diario de paseo/juego también para un perro pequeño estimulable.",
+        "medium": "Hay tiempo diario suficiente para un perro mediano.",
+        "large": "Hay tiempo diario serio para paseos más largos con un perro grande."
+      },
+      "options": {
+        "1": "Apenas 15 minutos — todo se va al fin de semana",
+        "2": "Una ventana corta por la noche que a menudo se cancela",
+        "3": "Unos 30–45 min/día, con días ocupados que fallan",
+        "4": "Dos ventanas de paseo/juego la mayoría de días laborables",
+        "5": "Tiempo diario bloqueado en el calendario para paseos y cuidados"
+      }
+    },
+    "vet-bill-jump": {
+      "prompt": "Si una factura vet sube de golpe — tenemos un plan (colchón/crédito) sin pánico.",
+      "options": {
+        "1": "Sin colchón — improvisaríamos o retrasaríamos cuidado",
+        "2": "Confiaríamos en crédito sin plan preparado",
+        "3": "Hay algo de ahorro general, no específico del perro",
+        "4": "Fondo de emergencia canino o línea de crédito lista",
+        "5": "Colchón dedicado + regla clara de cuándo llamar al vet"
+      }
+    },
+    "monthly-buffer": {
+      "prompt": "Podemos cubrir el presupuesto mensual estimado sin tensar el resto del hogar.",
+      "options": {
+        "1": "El estimado mensual nos estiraría mucho",
+        "2": "Podríamos, pero otras cuentas sufrirían",
+        "3": "Viable si somos cuidadosos unos meses",
+        "4": "Rango cómodo con un margen pequeño",
+        "5": "Entra en el presupuesto del hogar sin apretar otras necesidades"
+      }
+    },
+    "space-ok": {
+      "prompt": "El espacio de casa/entorno encaja para movimiento y descanso del perro.",
+      "bySize": {
+        "small": "Hay un rincón seguro y espacio suficiente para un perro pequeño.",
+        "medium": "Casa y patio/entorno encajan con un perro mediano.",
+        "large": "Hay espacio y movimiento para un perro grande — no solo un salón justo."
+      },
+      "options": {
+        "1": "Estudio urbano sin balcón / espacio muy limitado",
+        "2": "Piso pequeño con balcón estrecho y mal acceso a parque",
+        "3": "Piso con ascensor y parque/camino cerca",
+        "4": "Piso amplio o casa con fácil acceso a paseos diarios",
+        "5": "Casa con patio cerrado / espacio claro para moverse y descansar"
+      }
+    },
+    "alone-plan": {
+      "prompt": "Tenemos un plan claro para cuando el perro está solo (rutina, enriquecimiento, ayuda).",
+      "options": {
+        "1": "Aún no hay plan — veremos qué pasa",
+        "2": "Un juguete y esperar que los vecinos no se quejen",
+        "3": "Rutina básica de despedida, sin respaldo en jornadas largas",
+        "4": "Enriquecimiento + paseador/cuidador en días largos",
+        "5": "Rutina escrita: soledad gradual, enriquecimiento y respaldo fijo"
+      }
+    },
+    "travel-cover": {
+      "prompt": "Para viajes hay pensión/cuidador o presupuesto — no improvisación de última hora.",
+      "options": {
+        "1": "Sin plan — improvisación de última hora",
+        "2": "Esperamos a la familia, nada reservado",
+        "3": "Idea de pensión/cuidador, sin presupuesto cerrado",
+        "4": "Lista de respaldo + coste aproximado de pensión/paseador",
+        "5": "Plaza reservada / acuerdo con cuidador + presupuesto de viaje"
+      }
+    },
+    "years-ahead": {
+      "prompt": "Pensamos en años vista — no solo en los primeros meses bonitos.",
+      "byAge": {
+        "puppy": "Estamos listos para el compromiso largo también después de la etapa cachorro.",
+        "adult": "Vemos los próximos años con el perro como parte de la vida normal.",
+        "senior": "Estamos listos para seguimiento médico y cambios con la edad."
+      },
+      "options": {
+        "1": "Pensamos sobre todo en los próximos meses",
+        "2": "Sabemos que es largo plazo, sin planear cambios de vida",
+        "3": "Hablamos de 1–2 años, no de una década",
+        "4": "Pensamos mudanzas, viajes y cambios de trabajo",
+        "5": "Acuerdo familiar de compromiso de años + escenarios"
+      }
+    },
+    "training-patience": {
+      "prompt": "Tenemos paciencia para adiestrar con constancia — aunque no “pegue” al momento.",
+      "byAge": {
+        "puppy": "Listos para invertir tiempo en adiestrar cachorros (accidentes incluidos).",
+        "adult": "Listos para trabajar hábitos también con un adulto.",
+        "senior": "Entendemos que cambiar hábitos en seniors pide suavidad."
+      },
+      "options": {
+        "1": "Esperamos que el perro “lo pille” solo y rápido",
+        "2": "Entrenamos un poco y abandonamos si hay retroceso",
+        "3": "Entrenamos cuando hay tiempo — sin constancia",
+        "4": "Práctica corta y constante aunque se repita",
+        "5": "Paciencia y constancia planificadas (entrenador si hace falta)"
+      }
+    },
+    "family-aligned": {
+      "prompt": "Todos en casa están alineados sobre reglas, cuidados y responsabilidad.",
+      "options": {
+        "1": "Sin alineación — cada uno tiene reglas distintas",
+        "2": "Hemos hablado, pero los roles no están claros",
+        "3": "Más o menos alineados, con algunos rozamientos",
+        "4": "Reparto claro de responsabilidades en casa",
+        "5": "Todos acuerdan las mismas reglas: paseos, comida, límites"
+      }
+    }
+  }
+}

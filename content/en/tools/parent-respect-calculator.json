@@ -1,0 +1,48 @@
+{
+  "title": "Parent Respect Calculator: family connection with common sense",
+  "subtitle": "Short setup, quick or full quiz, and a connection score with practical tips for presence, listening, and balance.",
+  "seoTitle": "Parent Respect Calculator | Family Bond Tips | DailyLogic",
+  "seoDescription": "Free parent-respect calculator by distance, contact pattern, and parents’ life stage. Quick or 30-question deep quiz with specific answers, connection score, and tips — in your browser.",
+  "heroDescription": "Honoring parents isn’t only good intentions — it’s presence, listening, and balance with your own life. This tool helps you review the bond honestly and suggest small steps that work.",
+  "toolSlug": "parent-respect-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "You set living distance, contact pattern, and parents’ stage — then choose a quick or full quiz.",
+        "Questions and answers are specific to adult-child dilemmas — not a generic scale.",
+        "The report shows a connection score (presence, listening, emotional balance), insights, and practical tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill the setup, pick quiz length, and answer with a clear progress bar.",
+        "Save to history (Expand on the home grid) or download a result card.",
+        "Use the result as a conversation compass — not a verdict."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "A good bond is built from small steady acts more than rare grand gestures.",
+        "Balance between your life and your parents reduces burnout and chronic guilt.",
+        "Tuning to distance and stage prevents unrealistic expectations."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Tuned setup", "description": "Distance, contact, and stage shape the questions." },
+    { "title": "Two lengths", "description": "Quick check or a deeper family assessment." },
+    { "title": "Practical tips", "description": "Small steps for presence, listening, and balance." }
+  ],
+  "faq": [
+    { "question": "Does this judge me?", "answer": "No. It’s a common-sense alignment tool — without shame." },
+    { "question": "What if parents need caregiving?", "answer": "There’s a path tuned for caregiving/help stages, including burnout and boundaries." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

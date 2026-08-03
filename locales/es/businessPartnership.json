@@ -158,7 +158,14 @@
   },
   "questions": {
     "decide-under-pressure": {
-      "prompt": "Bajo presión aún podemos decidir sin congelarnos ni explotar."
+      "prompt": "Bajo presión aún podemos decidir sin congelarnos ni explotar.",
+      "options": {
+        "1": "Bajo presión uno impone o congelamos — no hay decisión",
+        "2": "Decidimos en el apuro y luego reabrimos el debate por chat",
+        "3": "Cerramos, pero tras una discusión agotadora",
+        "4": "Proceso breve: hechos → opciones → decisión a tiempo",
+        "5": "Incluso bajo presión hay owner de la decisión y cierre claro"
+      }
     },
     "failure-ownership": {
       "prompt": "Cuando algo falla — la responsabilidad es clara, sin culpas.",
@@ -168,16 +175,44 @@
         "services": "Cuando un proyecto se rompe — está claro quién habla al cliente y quién corrige.",
         "food": "Cuando el servicio se cae — está claro quién tira de la cuerda en tiempo real.",
         "other": "Cuando algo falla en campo — la responsabilidad y el cierre son claros."
+      },
+      "options": {
+        "1": "Primero buscamos culpables — nadie asume el fallo",
+        "2": "Acusaciones indirectas y correos sarcásticos",
+        "3": "A veces asumimos, a veces evitamos",
+        "4": "Está claro quién lidera la corrección sin show de culpas",
+        "5": "Hay owner del fallo y postmortem breve sin juegos de ego"
       }
     },
     "roles-clear": {
-      "prompt": "Los roles y la autoridad entre nosotros son lo bastante claros."
+      "prompt": "Los roles y la autoridad entre nosotros son lo bastante claros.",
+      "options": {
+        "1": "Todo es \"de todos\" — y nada avanza",
+        "2": "Hay títulos, pero no derechos de decisión reales",
+        "3": "Casi siempre claro, con zonas grises dolorosas",
+        "4": "RACI ligero en cinco procesos críticos",
+        "5": "Autoridades escritas y actualizadas — incluido decidir solo"
+      }
     },
     "exit-talked": {
-      "prompt": "Hablamos con honestidad de una posible salida — no solo del éxito."
+      "prompt": "Hablamos con honestidad de una posible salida — no solo del éxito.",
+      "options": {
+        "1": "Salir es tabú — hablarlo \"mala suerte\" a la sociedad",
+        "2": "Lo insinuamos una vez, sin términos ni proceso",
+        "3": "Hablamos de salida en general, sin cifras ni pasos",
+        "4": "Principios de buyout/salida acordados, aún fuera del contrato",
+        "5": "Cláusula de salida acordada (aviso, valoración, pago)"
+      }
     },
     "red-lines-named": {
-      "prompt": "Hay líneas rojas dichas en voz alta (dinero, ética, tiempo)."
+      "prompt": "Hay líneas rojas dichas en voz alta (dinero, ética, tiempo).",
+      "options": {
+        "1": "Todo flexible — ya veremos cuando pase",
+        "2": "Límites en el instinto, nunca dichos en voz alta",
+        "3": "Algunas líneas en conversación, sin documentar",
+        "4": "Líneas rojas claras en dinero, ética y tiempo",
+        "5": "Líneas rojas escritas y qué pasa si se cruzan"
+      }
     },
     "crisis-playbook": {
       "prompt": "Sabemos quién lidera en una crisis operativa.",
@@ -187,6 +222,13 @@
         "services": "En crisis de cliente grande — sabemos quién lidera la llamada y quién respalda.",
         "food": "En crisis de cocina/personal — sabemos quién cierra menú/turnos al momento.",
         "other": "En crisis operativa — sabemos quién lidera sin debate infinito."
+      },
+      "options": {
+        "1": "En crisis gritamos, desaparecemos o nos dispersamos",
+        "2": "Manda quien grita más fuerte",
+        "3": "Intuimos quién lidera, sin plan B",
+        "4": "Hay owner de crisis y estilo de comunicación acordado",
+        "5": "Playbook breve: quién avisa, corrige y habla afuera"
       }
     },
     "ip-or-assets-clarity": {
@@ -197,6 +239,13 @@
         "services": "Está claro quién posee relaciones de cliente, métodos y materiales.",
         "food": "Está claro quién posee recetas, proveedores y marca.",
         "other": "Está claro qué es de la sociedad y qué es activo personal."
+      },
+      "options": {
+        "1": "No hablamos de IP/activos — \"saldrá bien\"",
+        "2": "Cada socio asume cosas distintas",
+        "3": "Cubrimos en parte código, clientes o equipos",
+        "4": "Lista acordada de lo que pertenece a la sociedad",
+        "5": "Propiedad de IP, activos y relaciones clave por escrito"
       }
     },
     "vendors-and-deps": {
@@ -207,43 +256,134 @@
         "services": "Los subcontratistas están aprobados y visibles para los socios.",
         "food": "Proveedores de comida y servicios se gestionan con transparencia.",
         "other": "Las dependencias externas se gestionan con transparencia."
+      },
+      "options": {
+        "1": "Cada uno cierra proveedores sin avisar al otro",
+        "2": "Descubrimos dependencias cuando algo se rompe",
+        "3": "Avisamos después de firmar",
+        "4": "Proveedores críticos visibles para ambos",
+        "5": "Mapa de dependencias y umbrales de aprobación de gasto"
       }
     },
     "money-talks-honest": {
-      "prompt": "Las conversaciones de dinero son honestas — también con números duros."
+      "prompt": "Las conversaciones de dinero son honestas — también con números duros.",
+      "options": {
+        "1": "Evitamos cifras y hablamos en eslóganes",
+        "2": "Las charlas de dinero se vuelven defensa personal",
+        "3": "Hablamos cuando no queda otra, sin cadencia fija",
+        "4": "Reunión mensual de dinero con cifras reales",
+        "5": "Transparencia total sobre burn, deudas y próximas decisiones"
+      }
     },
     "first-money-vs-sweat": {
-      "prompt": "Alineamos cash inicial, sweat equity y aportes asimétricos."
+      "prompt": "Alineamos cash inicial, sweat equity y aportes asimétricos.",
+      "options": {
+        "1": "Quien puso cash \"compró\" control sin discutirlo",
+        "2": "Resentimiento silencioso entre sudor y capital",
+        "3": "Hablamos una vez, sin reglas de actualización",
+        "4": "Acuerdo sobre cómo traducir tiempo versus dinero",
+        "5": "Modelo escrito de aportes (vesting / ajuste trimestral)"
+      }
     },
     "equity-feels-fair": {
-      "prompt": "El split se siente lo bastante justo frente al aporte real."
+      "prompt": "El split se siente lo bastante justo frente al aporte real.",
+      "options": {
+        "1": "El reparto se siente robo o castigo",
+        "2": "Asentimos en reunión y rabiamos por dentro",
+        "3": "Razonable por ahora, con dudas abiertas",
+        "4": "Justo respecto a la contribución actual",
+        "5": "Justo más mecanismo de revisión si cambia el riesgo o el rol"
+      }
     },
     "burn-and-runway": {
-      "prompt": "Hay transparencia de burn y runway — sin sorpresas de fin de mes."
+      "prompt": "Hay transparencia de burn y runway — sin sorpresas de fin de mes.",
+      "options": {
+        "1": "No sabemos cuántos meses de runway quedan",
+        "2": "Solo un socio conoce las cifras",
+        "3": "Imagen gruesa al cierre de mes",
+        "4": "Ambos revisan burn y runway juntos",
+        "5": "Panel simple y alertas al cruzar umbrales"
+      }
     },
     "salary-vs-reinvest": {
-      "prompt": "Acordamos cuándo sacar salario/dividendos y cuándo reinvertir."
+      "prompt": "Acordamos cuándo sacar salario/dividendos y cuándo reinvertir.",
+      "options": {
+        "1": "Cada uno retira cuando quiere — sin regla",
+        "2": "Pelear una y otra vez por \"lo que me toca\"",
+        "3": "Regla no escrita que cambia con el ánimo",
+        "4": "Política de retiros acordada para el periodo",
+        "5": "Reglas escritas de sueldo, dividendos y reinversión"
+      }
     },
     "expense-authority": {
-      "prompt": "Está claro hasta qué monto se gasta solo y cuándo hay que alinear."
+      "prompt": "Está claro hasta qué monto se gasta solo y cuándo hay que alinear.",
+      "options": {
+        "1": "Sin tope — se gasta y se explica después",
+        "2": "Límites vagos que generan pelea",
+        "3": "Tope verbal con poca aplicación",
+        "4": "Tope claro: solo abajo, juntos arriba",
+        "5": "Matriz de autoridad de gasto y registro breve"
+      }
     },
     "investor-or-debt-views": {
-      "prompt": "Hay alineación sobre captación/deuda — o un proceso para decidir."
+      "prompt": "Hay alineación sobre captación/deuda — o un proceso para decidir.",
+      "options": {
+        "1": "Inversión o deuda es tema prohibido o explota al toque",
+        "2": "Posturas opuestas sin proceso de decisión",
+        "3": "Hablamos una vez, sin marco de decisión",
+        "4": "Principios de cuándo levantar capital o endeudarse",
+        "5": "Proceso acordado (datos, asesor, mayoría/veto)"
+      }
     },
     "profit-distribution-rules": {
-      "prompt": "Las reglas de reparto de beneficios están explícitas."
+      "prompt": "Las reglas de reparto de beneficios están explícitas.",
+      "options": {
+        "1": "\"Repartimos cuando haya\" — sin reglas",
+        "2": "Reglas cambian cada trimestre bajo presión",
+        "3": "Entendimiento general, nada escrito",
+        "4": "Reglas de utilidades explícitas entre socios",
+        "5": "Política de reparto en el acuerdo o anexo"
+      }
     },
     "disagree-then-decide": {
-      "prompt": "Tras un desacuerdo sabemos cerrar una decisión y seguir."
+      "prompt": "Tras un desacuerdo sabemos cerrar una decisión y seguir.",
+      "options": {
+        "1": "Desacuerdo = parálisis o abandono emocional",
+        "2": "El socio más fuerte impone el cierre",
+        "3": "Al final decidimos, tras agotamiento",
+        "4": "Regla: desacuerdo → decisión → ejecución",
+        "5": "Desempate acordado (asesor, voto, rotación)"
+      }
     },
     "ego-in-meetings": {
-      "prompt": "El ego no bloquea buenas decisiones — aunque cueste."
+      "prompt": "El ego no bloquea buenas decisiones — aunque cueste.",
+      "options": {
+        "1": "Las reuniones son escenario de victoria personal",
+        "2": "El ego suele bloquear una buena opción",
+        "3": "Casi siempre superamos el ego",
+        "4": "Decidimos por hechos aunque cueste tragar",
+        "5": "Norma: reconocer error y seguir sin teatro"
+      }
     },
     "feedback-without-war": {
-      "prompt": "Podemos dar feedback duro sin convertir eso en una guerra."
+      "prompt": "Podemos dar feedback duro sin convertir eso en una guerra.",
+      "options": {
+        "1": "El feedback suena a declarar guerra",
+        "2": "Insinuamos o hablamos a espaldas",
+        "3": "Feedback directo es raro y tenso",
+        "4": "Ritual breve de feedback respetuoso",
+        "5": "Feedback claro y amable es rutina segura"
+      }
     },
     "deadlock-break": {
-      "prompt": "Hay un mecanismo anti-bloqueo — no solo esperanza."
+      "prompt": "Hay un mecanismo anti-bloqueo — no solo esperanza.",
+      "options": {
+        "1": "Bloqueos duran semanas sin mecanismo",
+        "2": "Esperamos que pase o que uno ceda por cansancio",
+        "3": "A veces pedimos consejo a un tercero común",
+        "4": "Regla acordada para romper empate",
+        "5": "Mecanismo escrito: plazo, mediador, decisión vinculante"
+      }
     },
     "client-or-team-conflict": {
       "prompt": "El conflicto con cliente/equipo se gestiona como socios, no bandos.",
@@ -253,19 +393,54 @@
         "services": "Cuando un cliente presiona — alineamos antes de responder.",
         "food": "Una queja/reseña pública se gestiona como un solo frente.",
         "other": "El conflicto externo se gestiona como socios, no bandos."
+      },
+      "options": {
+        "1": "Cada socio arma su bando con cliente o equipo",
+        "2": "Salen mensajes contradictorios afuera",
+        "3": "Alineamos después del caos",
+        "4": "Primero adentro, luego una sola voz afuera",
+        "5": "Portavoz acordado y guion de crisis para cliente/equipo"
       }
     },
     "apology-and-course-correct": {
-      "prompt": "La disculpa viene con corrección de rumbo — no solo un mail educado."
+      "prompt": "La disculpa viene con corrección de rumbo — no solo un mail educado.",
+      "options": {
+        "1": "Disculpas raras o solo de fachada",
+        "2": "Palabras bonitas sin cambio de conducta",
+        "3": "Corrección a veces, sin constancia",
+        "4": "Disculpa más paso correctivo claro",
+        "5": "Corrección documentada con seguimiento"
+      }
     },
     "transparency-default": {
-      "prompt": "La transparencia es el default — no un premio."
+      "prompt": "La transparencia es el default — no un premio.",
+      "options": {
+        "1": "La info queda oculta hasta que la piden",
+        "2": "Transparencia selectiva según conveniencia",
+        "3": "Compartimos lo principal, ocultamos riesgos",
+        "4": "Por defecto: compartir cifras y riesgos",
+        "5": "Transparencia sistémica (acceso compartido a datos críticos)"
+      }
     },
     "pace-mismatch": {
-      "prompt": "Cuando el ritmo difiere — hablamos antes de que explote."
+      "prompt": "Cuando el ritmo difiere — hablamos antes de que explote.",
+      "options": {
+        "1": "Diferencias de ritmo explotan en pelea o silencio",
+        "2": "Acusaciones de \"flojo\" versus \"obsesivo\"",
+        "3": "Hablamos del ritmo solo cuando ya duele",
+        "4": "Ritmo compartido para plazos y proyectos clave",
+        "5": "Ritmo acordado y cuándo acelerar o frenar"
+      }
     },
     "invisible-labor": {
-      "prompt": "El trabajo invisible se reconoce, no solo se hace."
+      "prompt": "El trabajo invisible se reconoce, no solo se hace.",
+      "options": {
+        "1": "Admin, seguimiento y apagar incendios no se ven ni premian",
+        "2": "Quien hace el trabajo silencioso se siente invisible",
+        "3": "Reconocemos parte, reparto desigual",
+        "4": "Hablamos de carga invisible y rebalanceamos",
+        "5": "Trabajo invisible definido, reconocido y en la conversación de aportes"
+      }
     },
     "who-owns-delivery": {
       "prompt": "Está claro quién posee el delivery — no \"todos\" y luego nadie.",
@@ -275,19 +450,54 @@
         "services": "Está claro quién posee el delivery al cliente y el timeline.",
         "food": "Está claro quién posee el estándar de servicio en cada turno.",
         "other": "Está claro quién posee el delivery real de punta a punta."
+      },
+      "options": {
+        "1": "Todos son dueños del delivery — y nadie firma",
+        "2": "Hay owner en éxitos; en fallos se dispersa",
+        "3": "Claro en la mayoría, huecos bajo presión",
+        "4": "Owner de delivery por iniciativa o cliente clave",
+        "5": "Ownership de punta a punta escrito — SLAs y handoffs incluidos"
       }
     },
     "time-off-without-guilt": {
-      "prompt": "Podemos tomarnos un descanso sin sentir traición a la sociedad."
+      "prompt": "Podemos tomarnos un descanso sin sentir traición a la sociedad.",
+      "options": {
+        "1": "Descanso = traición — no disponible es \"poco comprometido\"",
+        "2": "Pausas con culpa y presión por mensajes",
+        "3": "Se puede, pero hay que justificar y sobrecargar antes",
+        "4": "Entendimiento mutuo de que descansar es parte del pacto",
+        "5": "Vacaciones y baja acordadas — sin castigo ni passive-aggressive"
+      }
     },
     "hiring-and-firing-views": {
-      "prompt": "Hay alineación sobre contratar y despedir."
+      "prompt": "Hay alineación sobre contratar y despedir.",
+      "options": {
+        "1": "Contratar/despedir es debate ideológico sin decisión",
+        "2": "Cada uno contrata o despide a su gusto",
+        "3": "Principios generales, inconsistentes en la práctica",
+        "4": "Criterios y proceso acordados para entrar y salir",
+        "5": "Política de RR. HH. escrita — quién entrevista, decide y offboardea"
+      }
     },
     "communication-cadence": {
-      "prompt": "Hay una cadencia de comunicación suficiente — no solo chats caóticos."
+      "prompt": "Hay una cadencia de comunicación suficiente — no solo chats caóticos.",
+      "options": {
+        "1": "Solo WhatsApp/Slack caótico — sin sync real",
+        "2": "Hilos sin resumen de decisiones",
+        "3": "Reuniones ocasionales, sin agenda fija",
+        "4": "Stand-up/sync semanal y canal de decisiones ordenado",
+        "5": "Cadencia definida: estado, decisiones y registro breve"
+      }
     },
     "vision-still-shared": {
-      "prompt": "Aún compartimos dirección estratégica — o sabemos realinear."
+      "prompt": "Aún compartimos dirección estratégica — o sabemos realinear.",
+      "options": {
+        "1": "Cada uno corre en dirección distinta sin hablarlo",
+        "2": "Eslogan común, poco alineamiento estratégico real",
+        "3": "Hablamos de visión solo en crisis",
+        "4": "Chequeo trimestral de dirección y prioridades",
+        "5": "Visión compartida documentada y realineación si divergimos"
+      }
     }
   }
 }

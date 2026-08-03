@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de respeto a los padres: vínculo familiar con sentido común",
+  "subtitle": "Contexto breve, cuestionario rápido o completo, e índice de vínculo con consejos prácticos de presencia, escucha y equilibrio.",
+  "seoTitle": "Calculadora de respeto a los padres | Vínculo familiar | DailyLogic",
+  "seoDescription": "Calculadora gratuita de respeto a los padres según distancia, contacto y etapa vital. Cuestionario rápido o 30 preguntas con respuestas concretas, índice de vínculo y consejos.",
+  "heroDescription": "Honrar a los padres no es solo buena intención: es presencia, escucha y equilibrio con tu propia vida. Esta herramienta ayuda a revisar el vínculo con honestidad y proponer pasos pequeños que funcionan.",
+  "toolSlug": "parent-respect-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Defines distancia, patrón de contacto y etapa de los padres — luego eliges cuestionario rápido o completo.",
+        "Preguntas y respuestas específicas a dilemas adulto-hijo — no una escala genérica.",
+        "El informe muestra un índice de vínculo (presencia, escucha, equilibrio emocional), ideas y consejos prácticos."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa el contexto, elige la longitud y responde con barra de progreso clara.",
+        "Guarda en el historial (Expand en la portada) o descarga la tarjeta.",
+        "Usa el resultado como brújula de conversación — no como veredicto."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "Un buen vínculo se construye con actos pequeños y constantes más que con gestos raros.",
+        "Equilibrar tu vida y a tus padres reduce burnout y culpa crónica.",
+        "Ajustar por distancia y etapa evita expectativas irreales."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Contexto afinado", "description": "Distancia, contacto y etapa dan forma a las preguntas." },
+    { "title": "Dos longitudes", "description": "Chequeo rápido o evaluación familiar profunda." },
+    { "title": "Consejos prácticos", "description": "Pasos pequeños de presencia, escucha y equilibrio." }
+  ],
+  "faq": [
+    { "question": "¿Esto me juzga?", "answer": "No. Es una herramienta de alineación con sentido común — sin vergüenza." },
+    { "question": "¿Y si los padres necesitan cuidados?", "answer": "Hay un camino afinado a etapas de ayuda/cuidado, incluyendo burnout y límites." },
+    { "question": "¿Los datos van a un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}

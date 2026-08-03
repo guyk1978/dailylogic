@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de cuidados y presupuesto canino",
+  "subtitle": "Desglose mensual, anual y único + quiz corto de preparación y presupuesto recomendado.",
+  "seoTitle": "Calculadora de costes de tener perro | Presupuesto | DailyLogic",
+  "seoDescription": "Calculadora gratuita de presupuesto canino por tamaño, edad y estilo de vida. Comida, vet, peluquería, adiestramiento + quiz de preparación y previsión anual.",
+  "heroDescription": "Un perro es amor — y presupuesto. Obtén una estimación honesta de costes recurrentes, anuales y únicos, y comprueba si el hogar está listo en tiempo y colchón de emergencia.",
+  "toolSlug": "dog-ownership-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Defines tamaño, edad, soledad, peluquería y adiestramiento — y ves un desglose realista.",
+        "Un quiz corto comprueba tiempo, presupuesto, espacio y compromiso.",
+        "El informe muestra presupuesto mensual, previsión anual, ideas y consejos de ahorro."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa el contexto, revisa costes y responde 10 preguntas de preparación.",
+        "Guarda en el historial (Expand) o descarga la tarjeta de resultado.",
+        "Usa la estimación como guía de planificación — no como presupuesto formal."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "Las sorpresas caras suelen venir del vet y de la soledad — no de la comida.",
+        "Ajustar por tamaño y edad evita estimaciones erróneas.",
+        "Un pequeño colchón mensual protege a la mascota y las finanzas."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Desglose claro", "description": "Mensual, anual y único según el perfil." },
+    { "title": "Preparación honesta", "description": "10 preguntas de tiempo, presupuesto y espacio." },
+    { "title": "Presupuesto recomendado", "description": "Mensual + previsión anual y consejos." }
+  ],
+  "faq": [
+    { "question": "¿Los montos son exactos en mi zona?", "answer": "Son estimaciones educativas. Confirma precios locales de vet y proveedores." },
+    { "question": "¿Debo adoptar tras calcular?", "answer": "No. El objetivo es prepararse con honestidad — a veces toca esperar." },
+    { "question": "¿Los datos van a un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}

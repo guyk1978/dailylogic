@@ -1,0 +1,48 @@
+{
+  "title": "Dog Care & Budget Calculator: real ownership costs",
+  "subtitle": "Monthly, annual, and one-time breakdown plus a short readiness quiz and recommended budget.",
+  "seoTitle": "Dog Ownership Cost Calculator | Budget & Readiness | DailyLogic",
+  "seoDescription": "Free dog care budget calculator by size, age, and lifestyle. Food, vet, grooming, training breakdown plus readiness quiz and yearly forecast — in your browser.",
+  "heroDescription": "A dog is love — and a budget. Get an honest estimate of recurring, annual, and one-time costs, then check whether your home is ready on time and emergency cushion.",
+  "toolSlug": "dog-ownership-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "FinanceApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "You set size, age, alone time, grooming, and training — then get a realistic cost breakdown.",
+        "A short readiness quiz checks time, budget, space, and commitment.",
+        "The report shows a recommended monthly budget, yearly forecast, insights, and smart savings tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill the setup, review costs, then answer 10 readiness questions.",
+        "Save to history (Expand on the home page) or download a result card.",
+        "Treat the estimate as planning guidance — not a formal quote."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "Most expensive surprises come from vet care and alone-time coverage — not food.",
+        "Size and age tuning prevents wrong estimates that lead to unready adoptions.",
+        "A small monthly emergency cushion protects pets and finances."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Clear breakdown", "description": "Monthly, annual, and one-time by dog profile." },
+    { "title": "Honest readiness", "description": "10 questions on time, budget, and space." },
+    { "title": "Recommended budget", "description": "Monthly + yearly forecast and savings tips." }
+  ],
+  "faq": [
+    { "question": "Are amounts exact for my area?", "answer": "They’re educational mid-market estimates. Check local vet and supplier prices." },
+    { "question": "Do I have to adopt after calculating?", "answer": "No. The goal is honest prep — sometimes the answer is wait." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

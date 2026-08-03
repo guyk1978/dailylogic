@@ -3,11 +3,14 @@ import {
   BriefcaseBusiness,
   ChefHat,
   Coins,
+  Dog,
   Heart,
   HeartHandshake,
+  MessageCircle,
   PieChart,
   PiggyBank,
   ShoppingBasket,
+  Users,
   type LucideIcon,
 } from "lucide-react";
 import type { ToolSlug } from "@/lib/tools-registry";
@@ -25,6 +28,9 @@ export const TOOL_ICONS: Record<ToolSlug, LucideIcon> = {
   "relationship-depth": HeartHandshake,
   "business-partnership-calculator": BriefcaseBusiness,
   "pocket-money-calculator": PiggyBank,
+  "dog-ownership-calculator": Dog,
+  "parent-respect-calculator": Users,
+  "stranger-sharing-calculator": MessageCircle,
 };
 
 export function getToolIcon(slug: ToolSlug): LucideIcon {

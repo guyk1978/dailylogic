@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de compartir con desconocidos: small talk vs oversharing",
+  "subtitle": "Límites inteligentes en charlas casuales — en vuelos, colas, networking o DMs.",
+  "seoTitle": "Calculadora de privacidad con desconocidos | DailyLogic",
+  "seoDescription": "Calculadora gratuita de límites al hablar con desconocidos según lugar, interlocutor y objetivo. Cuestionario rápido o 30 preguntas con respuestas concretas y consejos.",
+  "heroDescription": "El small talk puede ser agradable — o revelar demasiado. Esta herramienta ayuda a marcar la línea entre calidez y exceso de confianza, según la escena y con quién hablas.",
+  "toolSlug": "stranger-sharing-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Defines dónde ocurre la charla, quién es la otra persona y tu objetivo — luego eliges cuestionario rápido o completo.",
+        "Las preguntas cubren dilemas reales: crisis laboral, política, preguntas invasivas e instinto.",
+        "El informe puntúa guardia de privacidad, gracia social e instinto — con consejos prácticos."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa el contexto, elige la longitud y responde con barra de progreso clara.",
+        "Guarda en el historial (Expand en la portada) o descarga la tarjeta.",
+        "Usa el resultado como brújula — no como veredicto de personalidad."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "El oversharing suele venir de cortesía o de llenar silencios — no de mala fe.",
+        "Una guía según la escena supera reglas genéricas.",
+        "Un límite claro protege la privacidad sin matar una conversación agradable."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Escena afinada", "description": "Lugar, interlocutor y objetivo dan forma a las preguntas." },
+    { "title": "Dos longitudes", "description": "Chequeo rápido o dinámica social completa." },
+    { "title": "Consejos con ingenio", "description": "Salidas elegantes, filtros de detalle y calidez con límite." }
+  ],
+  "faq": [
+    { "question": "¿Esto implica ser frío?", "answer": "No. El objetivo es calidez con frontera — no desconexión." },
+    { "question": "¿Y si ya compartí de más?", "answer": "El informe ayuda a ver patrones y practicar salidas elegantes la próxima vez." },
+    { "question": "¿Los datos van a un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}

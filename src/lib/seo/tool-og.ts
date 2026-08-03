@@ -42,6 +42,9 @@ export const TOOL_OG_EMOJI: Record<ToolSlug, string> = {
   "relationship-depth": "🤝",
   "business-partnership-calculator": "📑",
   "pocket-money-calculator": "🪙",
+  "dog-ownership-calculator": "🐕",
+  "parent-respect-calculator": "👨‍👩‍👧",
+  "stranger-sharing-calculator": "🗣️",
 };
 
 export function toolOgImagePath(locale: string, slug: string): string {

@@ -111,94 +111,304 @@
   },
   "questions": {
     "talk-hard-topics": {
-      "prompt": "Cuando surge un tema sensible (dinero, familia, futuro) — podemos hablar sin huir ni explotar."
+      "prompt": "Cuando surge un tema sensible (dinero, familia, futuro) — podemos hablar sin huir ni explotar.",
+      "options": {
+        "1": "Los temas delicados quedan guardados — alguien se va, calla o explota",
+        "2": "Empezamos a hablar y cerramos con \"ahora no\" o con culpas",
+        "3": "A veces tocamos temas difíciles, pero con cuidado excesivo o en corto",
+        "4": "Podemos abrir una charla dura y quedarnos aunque incomode",
+        "5": "Dinero, familia y futuro se hablan con franqueza — sin huir ni explotar"
+      }
     },
     "listen-to-understand": {
-      "prompt": "Cuando mi pareja habla — escucho para entender, no solo para responder."
+      "prompt": "Cuando mi pareja habla — escucho para entender, no solo para responder.",
+      "options": {
+        "1": "Mientras mi pareja habla, ya armo la respuesta o interrumpo",
+        "2": "Oigo las palabras, pero casi no indago qué hay detrás",
+        "3": "Escucho bien, pero aflojo cuando estoy cansado/a o estresado/a",
+        "4": "Suelo pausar, hacer una pregunta y reflejar antes de responder",
+        "5": "Escucho para entender tu lado — aunque no esté de acuerdo"
+      }
     },
     "repair-after-fight": {
-      "prompt": "Tras una pelea, sabemos volver y reparar — aunque tarde un poco."
+      "prompt": "Tras una pelea, sabemos volver y reparar — aunque tarde un poco.",
+      "options": {
+        "1": "Después de una pelea queda mal ambiente — nadie vuelve a reparar",
+        "2": "Esperamos que pase el tiempo sin un gesto claro de acercamiento",
+        "3": "Alguien dice \"hagamos las paces\" pero lo de fondo sigue abierto",
+        "4": "Sabemos volver, pedir perdón o aclarar — aunque no sea el mismo día",
+        "5": "Tenemos una forma conocida de reparar: palabras, contacto o charla que devuelve confianza"
+      }
     },
     "daily-checkins": {
-      "prompt": "Tenemos pequeños chequeos diarios, no solo un “¿qué tal?” automático."
+      "prompt": "Tenemos pequeños chequeos diarios, no solo un “¿qué tal?” automático.",
+      "options": {
+        "1": "La mayoría de días es un \"¿qué tal?\" al pasar y nada más",
+        "2": "Coordinamos logística sin tocar cómo estamos de verdad",
+        "3": "De vez en cuando hay un \"¿cómo estás en serio?\" breve",
+        "4": "Tenemos un hábito diario pequeño — café, mensaje, abrazo antes de dormir",
+        "5": "Cada día hay un punto real: cómo estás, qué duele, qué necesitas"
+      }
     },
     "honest-without-cruel": {
-      "prompt": "Podemos ser honestos sin humillar, y tiernos sin ocultar."
+      "prompt": "Podemos ser honestos sin humillar, y tiernos sin ocultar.",
+      "options": {
+        "1": "La verdad sale como arma — o escondemos todo para no herir",
+        "2": "La honestidad pica; la ternura se queda atrás",
+        "3": "Intentamos equilibrar, pero caemos en sarcasmo o silencio",
+        "4": "Se pueden decir cosas duras con un tono que respeta a quien tengo delante",
+        "5": "Somos honestos y tiernos a la vez — verdad sin humillar ni esconder"
+      }
     },
     "disagree-respect": {
-      "prompt": "Podemos disentir sin convertir eso en una prueba de lealtad."
+      "prompt": "Podemos disentir sin convertir eso en una prueba de lealtad.",
+      "options": {
+        "1": "Discrepar se vuelve enseguida \"si me quisieras...\"",
+        "2": "Alguien grita o se cierra — como si discutir fuera traición",
+        "3": "Podemos no coincidir, pero a veces termina en dardos o revancha",
+        "4": "Las diferencias se quedan en el tema — no en nuestro valor como pareja",
+        "5": "Podemos pensar distinto y sentirnos seguros — sin pruebas de lealtad"
+      }
     },
     "humor-in-friction": {
-      "prompt": "Incluso en la fricción a veces usamos humor sano que baja el fuego sin borrar el dolor."
+      "prompt": "Incluso en la fricción a veces usamos humor sano que baja el fuego sin borrar el dolor.",
+      "options": {
+        "1": "Con tensión, el humor se vuelve burla o evitamos hablar del todo",
+        "2": "Reímos para escapar del tema — y se siente despectivo",
+        "3": "A veces una sonrisa ayuda; a veces aplasta el dolor",
+        "4": "Podemos reír juntos sin borrar lo que duele",
+        "5": "Tenemos humor ligero que baja la temperatura — sin menospreciar sentimientos"
+      }
     },
     "say-needs-clearly": {
-      "prompt": "Puedo pedir lo que necesito en vez de insinuar y enfadarme después."
+      "prompt": "Puedo pedir lo que necesito en vez de insinuar y enfadarme después.",
+      "options": {
+        "1": "Espero que sepan lo que necesito sin decirlo",
+        "2": "Insinúo, me enojo y peleamos por \"¿por qué no lo entendiste?\"",
+        "3": "A veces lo digo claro; a veces vuelvo a las indirectas",
+        "4": "Suelo pedir con claridad: \"Necesito que...\"",
+        "5": "Digo lo que necesito con palabras simples — sin adivinanzas"
+      }
     },
     "crisis-support": {
-      "prompt": "En una crisis (salud, trabajo, familia) — sentimos que tenemos la espalda del otro."
+      "prompt": "En una crisis (salud, trabajo, familia) — sentimos que tenemos la espalda del otro.",
+      "options": {
+        "1": "En crisis cada uno carga el estrés solo/a",
+        "2": "Hay ayuda práctica, pero cuesta sentir que alguien está de verdad conmigo",
+        "3": "Aparecemos cuando aprietan, pero no siempre sabemos estar emocionalmente",
+        "4": "En tiempos duros uno sostiene al otro — noches, llamadas, presencia",
+        "5": "En salud, trabajo o familia — sabemos que nos respaldamos"
+      }
     },
     "stress-teamwork": {
-      "prompt": "Bajo estrés actuamos más como equipo que como dos rivales cansados."
+      "prompt": "Bajo estrés actuamos más como equipo que como dos rivales cansados.",
+      "options": {
+        "1": "Bajo estrés peleamos por quién está más agotado/a",
+        "2": "Cada uno tira por su lado — sin coordinar",
+        "3": "A veces repartimos; a veces olvidamos que estamos del mismo lado",
+        "4": "Acordamos quién hace qué y nos recordamos que somos equipo",
+        "5": "Bajo presión repartimos carga y nos impulsamos — no competimos"
+      }
     },
     "bounce-after-hurt": {
-      "prompt": "Cuando hay herida — hay camino de vuelta a la confianza, no solo silencio largo."
+      "prompt": "Cuando hay herida — hay camino de vuelta a la confianza, no solo silencio largo.",
+      "options": {
+        "1": "Cuando duele, sigue un silencio largo sin camino de vuelta",
+        "2": "Esperamos que cure el tiempo sin hablar de lo ocurrido",
+        "3": "Hablamos al fin, pero confiar de nuevo se siente frágil",
+        "4": "Podemos abrir charla sobre la herida y reconstruir despacio",
+        "5": "Hay un camino claro del dolor de vuelta a la confianza — aunque tarde"
+      }
     },
     "money-tension": {
-      "prompt": "La tensión por dinero se abre en conversación, no solo en sospecha."
+      "prompt": "La tensión por dinero se abre en conversación, no solo en sospecha.",
+      "options": {
+        "1": "El dinero es peleas o secretos — no conversación real",
+        "2": "Uno controla las cuentas; el otro se siente fuera o sospechado",
+        "3": "Hablamos cuando hay crisis, no antes",
+        "4": "Tenemos charlas periódicas de presupuesto y miedos con el dinero",
+        "5": "La tensión económica se abre con transparencia — sin sospecha ni control oculto"
+      }
     },
     "family-pressure": {
-      "prompt": "La presión de las familias de origen se gestiona en pareja, no como guerra de lealtades."
+      "prompt": "La presión de las familias de origen se gestiona en pareja, no como guerra de lealtades.",
+      "options": {
+        "1": "La presión familiar nos convierte en soldados de lealtades",
+        "2": "Cada uno defiende a los suyos — la pareja queda al margen",
+        "3": "Intentamos alinearnos, pero los límites con la familia son difusos",
+        "4": "Hablamos primero entre nosotros y salimos con una línea común",
+        "5": "La presión de las familias de origen se maneja en pareja — límites claros, unidos"
+      }
     },
     "health-or-hard-week": {
-      "prompt": "En una semana dura ajustamos expectativas en vez de exigir “negocio habitual”."
+      "prompt": "En una semana dura ajustamos expectativas en vez de exigir “negocio habitual”.",
+      "options": {
+        "1": "En una semana dura aún esperamos \"vida normal\"",
+        "2": "Uno se derrumba; el otro se enoja porque no \"aguantó\"",
+        "3": "Bajamos expectativas un poco, sin nombrarlo",
+        "4": "Ajustamos la rutina — quién cubre qué y qué puede esperar",
+        "5": "Con enfermedad o agotamiento recalibramos expectativas y nos cuidamos a propósito"
+      }
     },
     "trust-under-doubt": {
-      "prompt": "Aunque aparezca la duda — hay una base de confianza a la que volver."
+      "prompt": "Aunque aparezca la duda — hay una base de confianza a la que volver.",
+      "options": {
+        "1": "Una duda pequeña tumba todo — no hay base a la que volver",
+        "2": "Cuando sube la sospecha, empiezan persecución o silencio castigo",
+        "3": "Hay confianza básica, pero las dudas quedan sin tratar",
+        "4": "Si algo se siente raro, hablamos en lugar de adivinar",
+        "5": "Aunque aparezca duda — hay confianza a la que volver en conversación"
+      }
     },
     "apologize-and-change": {
-      "prompt": "Una disculpa en nosotros viene con intento de cambio, no solo con palabras bonitas."
+      "prompt": "Una disculpa en nosotros viene con intento de cambio, no solo con palabras bonitas.",
+      "options": {
+        "1": "Sale un \"perdón\" rápido — sin cambio real después",
+        "2": "Pedimos perdón para cortar la pelea, no para cambiar el patrón",
+        "3": "Hay disculpa y esfuerzo, pero se repiten los mismos errores",
+        "4": "Después del perdón hay un paso concreto: qué haremos distinto",
+        "5": "La disculpa viene con cambio de verdad — no solo palabras bonitas"
+      }
     },
     "alone-time-ok": {
-      "prompt": "El tiempo a solas se acepta sin ofensa ni sospecha."
+      "prompt": "El tiempo a solas se acepta sin ofensa ni sospecha.",
+      "options": {
+        "1": "Tiempo a solas se siente como abandono o sospecha",
+        "2": "Está permitido, pero con culpa o mensajes de control",
+        "3": "A veces va bien; a veces alguien se duele de que \"desaparezco\"",
+        "4": "Cada uno tiene tiempo solo acordado — sin justificarlo siempre",
+        "5": "El tiempo personal se acepta sin herida ni sospecha — volvemos conectados"
+      }
     },
     "friends-without-guilt": {
-      "prompt": "Podemos ver amigos por separado sin una pequeña sensación de traición."
+      "prompt": "Podemos ver amigos por separado sin una pequeña sensación de traición.",
+      "options": {
+        "1": "Una noche con amigos suena a pequeña traición",
+        "2": "Salimos, pero con mensajes tensos o pelea después",
+        "3": "En general está bien — con destellos de celos o culpa",
+        "4": "Tenemos noches de amigos separadas — sin vigilar al otro",
+        "5": "Cada uno ve amigos sin culpa — y vuelve sin pruebas de lealtad"
+      }
     },
     "hobbies-respected": {
-      "prompt": "Los hobbies e intereses personales reciben respeto, aunque no se compartan."
+      "prompt": "Los hobbies e intereses personales reciben respeto, aunque no se compartan.",
+      "options": {
+        "1": "Los hobbies personales parecen robo de tiempo a la pareja",
+        "2": "Permitidos, pero con burla o presión de \"ven ya a casa\"",
+        "3": "Respetados a medias — cuando no chocan con planes",
+        "4": "Cada uno tiene una actividad con espacio fijo",
+        "5": "Los intereses personales se honran — aunque no los compartamos"
+      }
     },
     "no-mind-reading": {
-      "prompt": "No esperamos telepatía — ni nos ofendemos cuando alguien pide claridad."
+      "prompt": "No esperamos telepatía — ni nos ofendemos cuando alguien pide claridad.",
+      "options": {
+        "1": "Esperamos que el otro sepa lo que pensamos sin decirlo",
+        "2": "Preguntamos \"¿qué pasa?\" y nos ofendemos de tener que explicar",
+        "3": "A veces pedimos claro; a veces enfadamos por no adivinar",
+        "4": "Si algo no está claro, preguntamos — no adivinamos ni castigamos",
+        "5": "Sin leer mentes — pedir claridad es cercanía, no defecto"
+      }
     },
     "boundaries-held": {
-      "prompt": "Los límites que nombramos se sostienen, no se borran a los dos días."
+      "prompt": "Los límites que nombramos se sostienen, no se borran a los dos días.",
+      "options": {
+        "1": "Un límite que ponemos desaparece en dos días",
+        "2": "Decimos \"no\" — y cedemos para no pelear",
+        "3": "Los límites funcionan en algunos temas, no en todos",
+        "4": "Lo acordado se sostiene aunque la familia presione",
+        "5": "Los límites nombrados se respetan con el tiempo — no solo el día del acuerdo"
+      }
     },
     "togetherness-not-fusion": {
-      "prompt": "Nuestro “juntos” no exige borrar quiénes somos por separado."
+      "prompt": "Nuestro “juntos” no exige borrar quiénes somos por separado.",
+      "options": {
+        "1": "Ser pareja significa casi no ser personas separadas",
+        "2": "Uno siempre se adapta; el otro menos",
+        "3": "Tenemos \"nosotros\", pero a veces perdemos quiénes somos solos",
+        "4": "Somos un \"nosotros\" fuerte — y el \"yo\" y el \"tú\" siguen en pie",
+        "5": "Cercanía sin borrar quién es cada uno fuera de la pareja"
+      }
     },
     "jealousy-handled": {
-      "prompt": "Los celos o la inseguridad se tratan en conversación, no con control."
+      "prompt": "Los celos o la inseguridad se tratan en conversación, no con control.",
+      "options": {
+        "1": "Los celos significan revisar el móvil, reglas o estallidos",
+        "2": "Tragamos el sentimiento o explotamos sin hablar",
+        "3": "A veces hablamos, pero la inquietud no se calma del todo",
+        "4": "Cuando sube la inseguridad, abrimos charla — no control",
+        "5": "Celos o inseguridad se quedan en conversación — no en controlarnos"
+      }
     },
     "future-talks": {
-      "prompt": "Hablamos del futuro con honestidad — sueños y miedos."
+      "prompt": "Hablamos del futuro con honestidad — sueños y miedos.",
+      "options": {
+        "1": "El futuro está prohibido o solo enciende peleas",
+        "2": "Hablamos en general — no de los miedos reales",
+        "3": "Planeamos logística más que sueños y miedos profundos",
+        "4": "Compartimos qué asusta y qué ilusiona de lo que viene",
+        "5": "Hablamos del futuro con honestidad — sueños y miedos juntos"
+      }
     },
     "celebrate-wins": {
-      "prompt": "Nos celebramos también en victorias cotidianas pequeñas."
+      "prompt": "Nos celebramos también en victorias cotidianas pequeñas.",
+      "options": {
+        "1": "Los logros de uno pasan en silencio — como si fueran obvios",
+        "2": "Decimos \"bien hecho\" mecánico y seguimos",
+        "3": "Celebramos lo grande; lo pequeño del día a día no",
+        "4": "Marcamos los éxitos del otro — hasta un buen día en el trabajo",
+        "5": "Celebramos en voz alta — también victorias chicas del día a día"
+      }
     },
     "learn-from-conflict": {
-      "prompt": "Tras un conflicto queda algo aprendido — no solo un rasguño."
+      "prompt": "Tras un conflicto queda algo aprendido — no solo un rasguño.",
+      "options": {
+        "1": "Tras el conflicto solo queda sombra — nada cambia",
+        "2": "Hacemos las paces, pero el mismo tema vuelve",
+        "3": "A veces aprendemos; a veces solo nos cansamos",
+        "4": "Salimos de la pelea con una regla pequeña o una idea para la próxima",
+        "5": "De cada roce queda algo aprendido — no solo un golpe"
+      }
     },
     "shared-rituals": {
-      "prompt": "Tenemos rituales compartidos pequeños (comida, paseo, serie) que sostienen el vínculo."
+      "prompt": "Tenemos rituales compartidos pequeños (comida, paseo, serie) que sostienen el vínculo.",
+      "options": {
+        "1": "No tenemos hábito compartido — solo logística",
+        "2": "Antes sí — ahora todo se pospone",
+        "3": "Hay momentos juntos de vez en cuando, sin ritmo",
+        "4": "Guardamos un ritual fijo pequeño — comida, paseo o serie",
+        "5": "Rituales compartidos (comida, paseos, noches) sostienen el vínculo en lo cotidiano"
+      }
     },
     "support-dreams": {
-      "prompt": "Cada uno siente apoyo a los sueños personales — aunque la logística sea dura."
+      "prompt": "Cada uno siente apoyo a los sueños personales — aunque la logística sea dura.",
+      "options": {
+        "1": "Los sueños personales se sienten amenaza para la pareja",
+        "2": "El apoyo es sobre todo palabras — la logística se lo traga",
+        "3": "Animamos cuando es fácil; cuando es duro, aflojamos",
+        "4": "Buscamos que el sueño y la casa puedan respirar juntos",
+        "5": "Cada uno siente respaldo en sus sueños — aunque sea enredado"
+      }
     },
     "fair-load-home": {
-      "prompt": "La carga del hogar se siente suficientemente justa, y se puede renegociar."
+      "prompt": "La carga del hogar se siente suficientemente justa, y se puede renegociar.",
+      "options": {
+        "1": "La carga del hogar cae en uno — el otro \"ayuda\" a veces",
+        "2": "Discutimos quién hizo más — sin reparto claro",
+        "3": "El reparto es más o menos parejo, pero no se actualiza cuando cambia la vida",
+        "4": "Revisamos quién hace qué y reequilibramos cuando pesa",
+        "5": "La carga en casa se siente justa — y se puede renegociar cuando haga falta"
+      }
     },
     "intimacy-of-ordinary": {
-      "prompt": "Hay intimidad entre nosotros también en lo ordinario aburrido — no solo en los picos."
+      "prompt": "Hay intimidad entre nosotros también en lo ordinario aburrido — no solo en los picos.",
+      "options": {
+        "1": "Cercanía solo en \"días especiales\" — la rutina se seca",
+        "2": "Estamos cerca pero casi no nos tocamos ni conectamos",
+        "3": "Hay momentos cálidos en lo diario, pero son raros",
+        "4": "En un martes gris hay contacto, humor o una mirada que se siente hogar",
+        "5": "Nos sentimos cerca también en días apagados — no solo en los picos"
+      }
     }
   }
 }

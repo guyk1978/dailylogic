@@ -1,0 +1,313 @@
+{
+  "intro": {
+    "eyebrow": "Dog ownership without surprises",
+    "title": "Dog Care & Budget Calculator",
+    "body": "Set your dog and lifestyle profile, see an honest cost breakdown, take a short readiness quiz — then get a monthly budget, yearly forecast, and smart tips. Everything stays in the browser."
+  },
+  "setup": {
+    "title": "Dog & home background",
+    "subtitle": "These choices shape the estimate and advice.",
+    "sizeLabel": "Dog size",
+    "ageLabel": "Dog age",
+    "aloneLabel": "Time alone at home",
+    "groomingLabel": "Grooming needs",
+    "trainingLabel": "Training budget",
+    "continue": "Continue to cost breakdown",
+    "size": {
+      "small": "Small · up to ~10 kg / 22 lb",
+      "medium": "Medium · ~10–25 kg / 22–55 lb",
+      "large": "Large · 25+ kg / 55+ lb"
+    },
+    "age": {
+      "puppy": "Puppy",
+      "adult": "Adult",
+      "senior": "Senior"
+    },
+    "alone": {
+      "homeMostly": "Someone home most of the time",
+      "mixed": "Sometimes alone a few hours",
+      "aloneOften": "Alone many hours most days"
+    },
+    "grooming": {
+      "low": "Short coat / home grooming",
+      "regular": "Needs a groomer every few months"
+    },
+    "training": {
+      "none": "No training budget for now",
+      "planned": "Planning a course / a few sessions",
+      "active": "Ongoing training / trainer"
+    }
+  },
+  "costs": {
+    "title": "Estimated cost breakdown",
+    "subtitle": "Educational mid-market estimate — not a quote. Adapt to your area.",
+    "monthly": "Monthly recurring",
+    "annual": "Annual / periodic",
+    "oneTime": "One-time (new adopters)",
+    "monthlyTotal": "Monthly total",
+    "annualTotal": "Annual periodic total",
+    "oneTimeTotal": "One-time total",
+    "continueQuiz": "Continue to readiness quiz",
+    "back": "Back to setup",
+    "lines": {
+      "food": "Quality food",
+      "treats": "Treats",
+      "flea": "Flea & tick prevention",
+      "emergency": "Emergency fund / insurance set-aside",
+      "walker": "Dog walker / alone-time care",
+      "training": "Ongoing training",
+      "vaccines": "Vaccines",
+      "vetCheck": "Vet checkups",
+      "grooming": "Grooming",
+      "consumables": "Consumables (bags, toys…)",
+      "gear": "Starter gear (bed, bowls, crate…)",
+      "spayNeuter": "Spay / neuter",
+      "chip": "Microchip & registration",
+      "trainingStart": "Training kickoff",
+      "puppyYear": "First-year puppy add-on"
+    }
+  },
+  "quiz": {
+    "title": "Readiness quiz · common sense",
+    "subtitle": "10 short questions on time, budget, and space."
+  },
+  "scale": {
+    "1": "Almost never / not at all",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Usually",
+    "5": "Almost always / definitely"
+  },
+  "currency": {
+    "symbol": "$",
+    "code": "USD"
+  },
+  "actions": {
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & get report",
+    "restart": "New calculation",
+    "changeSetup": "Change setup",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Dog budget & readiness",
+    "readiness": "Readiness score",
+    "monthly": "Recommended monthly budget",
+    "yearly": "Yearly run-rate forecast",
+    "oneTime": "Estimated one-time outlay",
+    "amount": "{{amount}} {{symbol}}",
+    "note": "Educational guide — check local vet/supplier prices.",
+    "breakdown": "Quick breakdown",
+    "dimensions": "Readiness scores",
+    "insights": "Insights",
+    "tips": "Smart savings tips",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Dog Care Calculator",
+    "shareText": "Our dog budget: {{monthly}} {{symbol}}/mo · {{yearly}} {{symbol}}/yr · readiness {{score}}% | Dog calculator — DailyLogic",
+    "resultSummary": "{{profile}} · {{monthly}} {{symbol}}/mo · {{yearly}} {{symbol}}/yr · {{score}}%",
+    "bands": {
+      "needs-care": "Not ready yet",
+      "developing": "Getting there — gaps remain",
+      "steady": "Ready with upkeep",
+      "strong": "Ready and steady"
+    },
+    "dimensionLabels": {
+      "timeReadiness": "Time availability",
+      "budgetBuffer": "Budget cushion",
+      "spaceLifestyle": "Space & lifestyle",
+      "commitment": "Long-term commitment"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn’t copy image — download instead"
+  },
+  "profiles": {
+    "ready-pack": "Pack-ready — with budget discipline",
+    "steady-guardian": "Steady dog guardian",
+    "budget-aware": "Cost-aware — that’s a strength",
+    "almost-ready": "Almost ready — one more alignment",
+    "learning-owner": "Learning to be a good owner",
+    "solid-base": "Solid base to start from",
+    "gap-check": "Gaps to close before adopting",
+    "plan-first": "Plan first — adopt later",
+    "pace-yourself": "Don’t rush — build a sustainable pace",
+    "pause-and-prep": "Pause and prepare",
+    "not-yet": "Not the right time yet",
+    "build-buffer": "Build an emergency buffer first"
+  },
+  "insights": {
+    "dim-timeReadiness-high": "Time availability looks solid — protect walk routines on hard days.",
+    "dim-timeReadiness-low": "Time is the bottleneck. Plan shifts/a walker before the dog arrives.",
+    "dim-budgetBuffer-high": "Emergency-budget awareness is strong — that saves pets and bank accounts.",
+    "dim-budgetBuffer-low": "Without a vet cushion, every surprise becomes a crisis. Start a small jar now.",
+    "dim-spaceLifestyle-high": "Home and routine look compatible — recheck on long workdays.",
+    "dim-spaceLifestyle-low": "Space/alone-time still misaligned. Enrich the environment or change the schedule.",
+    "dim-commitment-high": "You’re thinking long-term — dogs don’t move like furniture.",
+    "dim-commitment-low": "Multi-year commitment needs a plan for travel, moves, and life changes.",
+    "overall-strong": "The picture is stable — lock a monthly budget and review quarterly.",
+    "overall-steady": "Good base with soft spots — close one gap this week.",
+    "overall-developing": "Willingness is there; gaps are still large. Simplify before adopting.",
+    "overall-needs-care": "Signals say: prepare more. Waiting beats risking the dog’s welfare.",
+    "size-small": "Small dogs: cheaper food, but vet/grooming still add up.",
+    "size-medium": "Medium dogs: balance food, activity, and an emergency cushion.",
+    "size-large": "Large dogs: food, meds, and vet travel cost more — budget accordingly.",
+    "age-puppy": "Puppies: year one is pricier (vaccines, training, gear) — expect it.",
+    "age-adult": "Adults: steadier costs — keep prevention and annual checkups.",
+    "age-senior": "Seniors: medical follow-up rises — an emergency cushion matters more.",
+    "alone-homeMostly": "Someone home often — a big asset for calm and habits.",
+    "alone-mixed": "Mixed alone time: a goodbye routine + enrichment cuts anxiety and damage.",
+    "alone-aloneOften": "Alone a lot: walker/sitter/boarding is budget — not a luxury."
+  },
+  "tips": {
+    "tip-walk-blocks": "Block two fixed walk windows like unmissable meetings.",
+    "tip-rain-kit": "A rain kit by the door (coat/towel) lowers ‘not today’ resistance.",
+    "tip-shared-shifts": "Write family walk shifts down — not chaotic chat threads.",
+    "tip-emergency-jar": "Auto-set aside a monthly vet fund — even a small amount helps.",
+    "tip-buy-bulk": "Buy quality food smartly (bulk/subscriptions) without cutting nutrition.",
+    "tip-preventive-care": "Prevention (parasites, teeth, weight) beats emergency bills.",
+    "tip-enrichment": "Food puzzles and enrichment reduce destruction when alone.",
+    "tip-alone-routine": "Practice short departures before a full workday.",
+    "tip-neighbor-plan": "Have a neighbor/family backup before you need it.",
+    "tip-10-year-view": "Ask: can we sustain this in 5–10 years?",
+    "tip-boarding-list": "Keep a boarding/walker backup list before the first trip.",
+    "tip-vet-relationship": "Pick a regular vet — continuity beats expensive guessing.",
+    "tip-track-month": "Track one real month of spend — then update the budget.",
+    "tip-groom-diy": "Between groomer visits: regular brushing cuts mats and cost.",
+    "tip-food-quality": "Don’t cheap out on core food — save on unnecessary luxury brands."
+  },
+  "questions": {
+    "rainy-walks": {
+      "prompt": "On rainy/cold days — we still have time and willingness for a real walk.",
+      "options": {
+        "1": "On rainy days we cancel or just do a 2-minute yard pee break",
+        "2": "We only go out if we must — shortest possible outing",
+        "3": "Short walk with coat/towel — sometimes we skip",
+        "4": "Rain kit by the door; we go out almost every time",
+        "5": "A real walk in rain/cold is routine, not optional"
+      }
+    },
+    "daily-minutes": {
+      "prompt": "We have daily minutes for walks, play, and care — not only “later”.",
+      "bySize": {
+        "small": "We have daily time for walks/play even for a small, stim-hungry dog.",
+        "medium": "We have enough daily time for a medium dog’s walks and activity.",
+        "large": "We have serious daily time for longer walks with a large dog."
+      },
+      "options": {
+        "1": "Barely 15 minutes — everything slips to the weekend",
+        "2": "A short evening window that often gets canceled",
+        "3": "About 30–45 minutes/day, with some missed busy days",
+        "4": "Two walk/play windows on most weekdays",
+        "5": "Daily time blocked on the calendar for walks, play, care"
+      }
+    },
+    "vet-bill-jump": {
+      "prompt": "If a vet bill suddenly jumps — we have a plan (cushion/credit) without panic.",
+      "options": {
+        "1": "No cushion — we’d scramble or delay care",
+        "2": "Rely on credit with no prepared plan",
+        "3": "Some general savings, not dog-specific",
+        "4": "Dog emergency fund or ready credit line",
+        "5": "Dedicated cushion + clear rule for when we call the vet"
+      }
+    },
+    "monthly-buffer": {
+      "prompt": "We can cover the estimated monthly budget without straining the rest of the household.",
+      "options": {
+        "1": "The monthly estimate would stretch us hard",
+        "2": "We’d manage, but other bills would suffer",
+        "3": "Doable if we’re careful for a few months",
+        "4": "Comfortable range with a small margin",
+        "5": "Fits the household budget without crowding other needs"
+      }
+    },
+    "space-ok": {
+      "prompt": "Home/area space fits a dog for movement and rest.",
+      "bySize": {
+        "small": "There’s a safe corner and enough space for a small dog.",
+        "medium": "Home and yard/area fit a medium dog.",
+        "large": "There’s enough space and movement for a large dog — not only a cramped living room."
+      },
+      "options": {
+        "1": "Urban studio with no balcony / very limited space",
+        "2": "Small flat with a narrow balcony, weak park access",
+        "3": "Apartment with elevator and a park/path nearby",
+        "4": "Roomy flat or house with easy daily walk access",
+        "5": "House with a fenced yard / clear space to move and rest"
+      }
+    },
+    "alone-plan": {
+      "prompt": "We have a clear plan for alone time (routine, enrichment, help).",
+      "options": {
+        "1": "No plan yet — we’ll see what happens",
+        "2": "One toy and hope neighbors don’t complain",
+        "3": "Basic goodbye routine, no backup on long workdays",
+        "4": "Enrichment + walker/sitter on long days",
+        "5": "Written routine: gradual alone training, enrichment, fixed backup"
+      }
+    },
+    "travel-cover": {
+      "prompt": "For trips we have boarding/sitter coverage or budget — not last-minute improvisation.",
+      "options": {
+        "1": "No plan — last-minute improvisation",
+        "2": "Hope family can help, nothing booked",
+        "3": "Idea for boarding/sitter, no budget locked yet",
+        "4": "Backup list + rough boarding/walker cost",
+        "5": "Reserved spot / sitter agreement + dedicated travel budget"
+      }
+    },
+    "years-ahead": {
+      "prompt": "We’re thinking years ahead — not only the cute first months.",
+      "byAge": {
+        "puppy": "We’re ready for long commitment after the puppy phase too.",
+        "adult": "We see the coming years with the dog as part of normal life.",
+        "senior": "We’re ready for medical follow-up and age-related changes."
+      },
+      "options": {
+        "1": "Mostly thinking about the next few months",
+        "2": "Know it’s long-term, haven’t planned life changes",
+        "3": "Talked 1–2 years ahead, not a decade",
+        "4": "Thought through moves, trips, and job changes",
+        "5": "Family agreement on multi-year commitment + scenarios"
+      }
+    },
+    "training-patience": {
+      "prompt": "We have patience for training and consistency — even when it doesn’t stick immediately.",
+      "byAge": {
+        "puppy": "We’re ready to invest time in puppy training (accidents included).",
+        "adult": "We’re ready to work on habits with an adult dog too.",
+        "senior": "We understand habit change in seniors needs gentleness."
+      },
+      "options": {
+        "1": "Expect the dog to “just get it” quickly",
+        "2": "Train a bit, then quit when there’s a setback",
+        "3": "Train when we have time — inconsistent",
+        "4": "Short, steady practice even when it repeats",
+        "5": "Planned patience and consistency (trainer if needed)"
+      }
+    },
+    "family-aligned": {
+      "prompt": "Everyone at home is aligned on rules, care, and responsibility.",
+      "options": {
+        "1": "No alignment — everyone has different rules",
+        "2": "We’ve talked, but roles are unclear",
+        "3": "Mostly aligned, with a few friction points",
+        "4": "Clear responsibility split across the household",
+        "5": "Everyone agrees on the same rules: walks, food, boundaries"
+      }
+    }
+  }
+}

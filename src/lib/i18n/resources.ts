@@ -15,6 +15,9 @@ import enLoveCalculator from "../../../locales/en/loveCalculator.json";
 import enRelationshipDepth from "../../../locales/en/relationshipDepth.json";
 import enBusinessPartnership from "../../../locales/en/businessPartnership.json";
 import enPocketMoney from "../../../locales/en/pocketMoney.json";
+import enDogOwnership from "../../../locales/en/dogOwnership.json";
+import enParentRespect from "../../../locales/en/parentRespect.json";
+import enStrangerSharing from "../../../locales/en/strangerSharing.json";
 import es from "../../../locales/es/common.json";
 import esBudgetPlanner from "../../../locales/es/budgetPlanner.json";
 import esIngredients from "../../../locales/es/ingredients.json";
@@ -27,6 +30,9 @@ import esLoveCalculator from "../../../locales/es/loveCalculator.json";
 import esRelationshipDepth from "../../../locales/es/relationshipDepth.json";
 import esBusinessPartnership from "../../../locales/es/businessPartnership.json";
 import esPocketMoney from "../../../locales/es/pocketMoney.json";
+import esDogOwnership from "../../../locales/es/dogOwnership.json";
+import esParentRespect from "../../../locales/es/parentRespect.json";
+import esStrangerSharing from "../../../locales/es/strangerSharing.json";
 import he from "../../../locales/he/common.json";
 import heBudgetPlanner from "../../../locales/he/budgetPlanner.json";
 import heIngredients from "../../../locales/he/ingredients.json";
@@ -39,6 +45,9 @@ import heLoveCalculator from "../../../locales/he/loveCalculator.json";
 import heRelationshipDepth from "../../../locales/he/relationshipDepth.json";
 import heBusinessPartnership from "../../../locales/he/businessPartnership.json";
 import hePocketMoney from "../../../locales/he/pocketMoney.json";
+import heDogOwnership from "../../../locales/he/dogOwnership.json";
+import heParentRespect from "../../../locales/he/parentRespect.json";
+import heStrangerSharing from "../../../locales/he/strangerSharing.json";
 
 export const localeResources = {
   en: {
@@ -53,6 +62,9 @@ export const localeResources = {
     relationshipDepth: enRelationshipDepth,
     businessPartnership: enBusinessPartnership,
     pocketMoney: enPocketMoney,
+    dogOwnership: enDogOwnership,
+    parentRespect: enParentRespect,
+    strangerSharing: enStrangerSharing,
     ingredients: enIngredients,
   },
   he: {
@@ -67,6 +79,9 @@ export const localeResources = {
     relationshipDepth: heRelationshipDepth,
     businessPartnership: heBusinessPartnership,
     pocketMoney: hePocketMoney,
+    dogOwnership: heDogOwnership,
+    parentRespect: heParentRespect,
+    strangerSharing: heStrangerSharing,
     ingredients: heIngredients,
   },
   es: {
@@ -81,6 +96,9 @@ export const localeResources = {
     relationshipDepth: esRelationshipDepth,
     businessPartnership: esBusinessPartnership,
     pocketMoney: esPocketMoney,
+    dogOwnership: esDogOwnership,
+    parentRespect: esParentRespect,
+    strangerSharing: esStrangerSharing,
     ingredients: esIngredients,
   },
 } satisfies Record<
@@ -97,6 +115,9 @@ export const localeResources = {
     relationshipDepth: typeof enRelationshipDepth;
     businessPartnership: typeof enBusinessPartnership;
     pocketMoney: typeof enPocketMoney;
+    dogOwnership: typeof enDogOwnership;
+    parentRespect: typeof enParentRespect;
+    strangerSharing: typeof enStrangerSharing;
     ingredients: typeof enIngredients;
   }
 >;

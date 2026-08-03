@@ -1,0 +1,515 @@
+{
+  "intro": {
+    "eyebrow": "Small talk, big boundaries",
+    "title": "Stranger Sharing Calculator",
+    "body": "How much do you reveal to someone you just met — on a flight, in a queue, at a mixer, or in DMs? Pick the scene and who you're talking to. Get a witty, privacy-smart profile. Everything stays in your browser."
+  },
+  "setup": {
+    "title": "Set the scene",
+    "subtitle": "This tunes a few questions and insights — not a grade on your personality.",
+    "placeLabel": "Where this usually happens",
+    "counterpartLabel": "Who you're talking to",
+    "goalLabel": "What you're trying to do",
+    "continue": "Continue to assessment",
+    "place": {
+      "flight": "Long flight or train seatmate",
+      "queue": "Line, waiting room, or shared ride",
+      "networking": "Mixer, conference, or work event",
+      "socialOnline": "Apps, DMs, or online groups"
+    },
+    "counterpart": {
+      "pleasant": "Friendly and easy — not pushy",
+      "prying": "Curious fast — lots of personal questions",
+      "professional": "Colleague, client, or industry contact"
+    },
+    "goal": {
+      "survivePolitely": "Get through it without awkwardness",
+      "warmButGuarded": "Be warm, keep private things private",
+      "checkBoundaries": "Test whether this person feels safe"
+    }
+  },
+  "modes": {
+    "quick": "Quick check",
+    "quickMeta": "~10 questions · 2–3 minutes",
+    "full": "Full assessment",
+    "fullMeta": "30 questions · 8–10 minutes",
+    "backToSetup": "Back to setup"
+  },
+  "scale": {
+    "1": "Oops zone",
+    "2": "Leaky",
+    "3": "Mixed",
+    "4": "Solid",
+    "5": "Guarded & kind"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish & see report",
+    "restart": "New assessment",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Your stranger-sharing profile",
+    "overall": "Overall score",
+    "dimensions": "Dimensions",
+    "insights": "Insights",
+    "tips": "Practical filters",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · Stranger Sharing Calculator",
+    "shareText": "My stranger-sharing profile: {{profile}} ({{score}}%). {{insight}} | Stranger Sharing — DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Filters need a reset",
+      "developing": "Learning the line",
+      "steady": "Mostly steady",
+      "strong": "Strong & street-smart"
+    },
+    "dimensionLabels": {
+      "privacyGuard": "Privacy guard",
+      "socialGrace": "Social grace",
+      "gutInstinct": "Gut instinct"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn't copy image — try download instead"
+  },
+  "profiles": {
+    "graceful-guard": "Graceful guard — warm without the dossier",
+    "warm-fence": "Warm fence — invite in, lock the vault",
+    "street-smart-kind": "Street-smart kind — charm with a deadbolt",
+    "mostly-steady": "Mostly steady — occasional overshare, quick recovery",
+    "learning-filters": "Learning filters — you're updating the settings",
+    "polite-and-aware": "Polite and aware — small talk, smart limits",
+    "leaky-edges": "Leaky edges — kindness outpacing caution",
+    "people-pleaser-risk": "People-pleaser risk — yes before you think",
+    "silence-filler": "Silence filler — you pay with personal data",
+    "overshare-alert": "Overshare alert — the archive is open",
+    "rebuild-filters": "Rebuild filters — not shame, just settings",
+    "pause-before-speak": "Pause before speak — your mouth runs ahead"
+  },
+  "insights": {
+    "dim-privacyGuard-high": "Your privacy guard is strong: you share themes, not case files. Keep that — warmth doesn't require proof.",
+    "dim-privacyGuard-low": "Details slip out before you've decided they're earned. Practice the three-layer rule before the next chat.",
+    "dim-socialGrace-high": "You navigate awkward chats with grace — exits, pivots, and kindness without interrogation.",
+    "dim-socialGrace-low": "Conversations stall or snap shut. A bridge question beats a hard door slam.",
+    "dim-gutInstinct-high": "You notice vibe shifts — flattery, pressure, audience — and adjust before regret hits.",
+    "dim-gutInstinct-low": "You override the inner \"nope\" to be nice. Politeness isn't consent to every question.",
+    "overall-strong": "Overall you're sharing like an adult at a party: connected, bounded, recoverable if you slip.",
+    "overall-steady": "You're in human middle ground — good instincts with a few habits to tighten.",
+    "overall-developing": "Real social skill, but your filter updates lag behind your friendliness.",
+    "overall-needs-care": "This pattern asks for a gentle reset: one rule this week, not a personality overhaul.",
+    "place-flight": "Seatmate chats are captive and cozy — perfect for stories, risky for routines and employers.",
+    "place-queue": "Waiting-room talk feels fleeting; strangers still remember names, kids' schools, and complaints.",
+    "place-networking": "Mixers reward warmth — and punish accidental therapy sessions and client gossip.",
+    "place-socialOnline": "Online pace blurs intimacy. Slow replies are a feature, not rudeness.",
+    "counterpart-pleasant": "Friendly energy lowers guards — that's the point, not proof they're family.",
+    "counterpart-prying": "Fast personal questions aren't intimacy — they're data collection with a smile.",
+    "counterpart-professional": "Professional context adds permanence: what you say may follow you past the appetizer.",
+    "goal-survivePolitely": "Surviving politely still allows boundaries — you don't owe a memoir for politeness.",
+    "goal-warmButGuarded": "Warm + guarded is the sweet spot: they feel seen, your life stays yours.",
+    "goal-checkBoundaries": "Testing boundaries is smart — watch whether they respect a soft no."
+  },
+  "tips": {
+    "tip-three-layer-rule": "Three-layer rule: layer 1 = weather/work genre; layer 2 = feelings in general; layer 3 = names, numbers, addresses — only for trusted people.",
+    "tip-swap-detail-for-theme": "Swap detail for theme: \"Rough quarter at work\" beats naming your boss, project, and salary.",
+    "tip-no-names-numbers": "No names, no numbers: skip exact streets, schools, account hints, and \"you can find me @…\"",
+    "tip-bridge-question": "Bridge question: \"What got you into that?\" moves talk forward without you donating facts.",
+    "tip-bathroom-exit": "Bathroom / refill exit: physical breaks end chats without a trial about your boundaries.",
+    "tip-agree-and-steer": "Agree and steer: \"Totally — speaking of travel, anywhere you'd go again?\"",
+    "tip-body-check": "Body check: tight chest or urge to overshare = pause, breathe, shorten your next sentence.",
+    "tip-delay-answer": "Delay answer: \"Hmm, let me think\" buys time — you don't owe instant autobiography.",
+    "tip-curiosity-tax": "Curiosity tax: if they ask three personal questions without sharing back, go generic.",
+    "tip-post-chat-debrief": "Post-chat debrief: two minutes — what did I say I'd rather not repeat? Adjust one habit.",
+    "tip-online-slow": "Online slow: longer gaps between replies train the right pace — urgency is often artificial.",
+    "tip-public-volume": "Public volume: if strangers could repeat it, lower the detail — ears travel."
+  },
+  "questions": {
+    "work-crisis-share": {
+      "prompt": "When a stranger asks about work, I keep crisis details off the table.",
+      "byPlace": {
+        "flight": "When my seatmate asks what I do and how it's going, I don't unload a workplace crisis.",
+        "queue": "When someone in line asks about my job stress, I don't name bosses, layoffs, or HR drama.",
+        "networking": "At a mixer, when someone probes my company troubles, I stay thematic — not case-specific.",
+        "socialOnline": "In DMs about work, I don't paste in Slack drama, screenshots, or identifiable rants."
+      },
+      "options": {
+        "1": "I describe the full meltdown — names, emails, who's wrong",
+        "2": "I vent specifics until I notice their face change",
+        "3": "I mix general stress with one detail I later wish I'd kept",
+        "4": "I say it's been rough but keep names and internal politics out",
+        "5": "I offer a one-line theme and redirect — no dossier"
+      }
+    },
+    "family-drama-line": {
+      "prompt": "When family comes up with a stranger, I don't import live drama.",
+      "options": {
+        "1": "I tell the whole saga — who said what, who's not speaking",
+        "2": "I share enough that they could gossip accurately later",
+        "3": "I vent one hot story, then feel weird about it",
+        "4": "I mention \"family stuff\" without cast lists or timelines",
+        "5": "I stay vague or positive — drama stays at home"
+      }
+    },
+    "money-health-details": {
+      "prompt": "When money or health surfaces in small talk, I keep numbers and diagnoses private.",
+      "options": {
+        "1": "I share salaries, debt, test results, or meds by name",
+        "2": "I drop numbers or clinic names before I think",
+        "3": "I share sometimes when the mood feels safe",
+        "4": "I speak in general terms — \"tight year,\" \"managing a condition\"",
+        "5": "I redirect or keep it surface — not their chart to read"
+      }
+    },
+    "location-routines": {
+      "prompt": "I avoid giving strangers a map of my daily life.",
+      "byPlace": {
+        "flight": "On a flight, I don't share my neighborhood, gym times, or kid pickup routes.",
+        "queue": "While waiting, I don't describe where I live, when I'm home alone, or my commute pattern.",
+        "networking": "At events, I don't hand out my home cross-streets or \"I'm always at X on Tuesdays.\"",
+        "socialOnline": "Online, I don't post or say routines that pin down where I am when."
+      },
+      "options": {
+        "1": "I describe exact address habits — routes, schedules, who's home when",
+        "2": "I mention my area and regular spots without being asked",
+        "3": "I share if they seem nice or we have something in common",
+        "4": "I say a broad region or \"suburbs\" — no schedule",
+        "5": "I keep location and routines off the table with strangers"
+      }
+    },
+    "kids-school-info": {
+      "prompt": "When kids or school come up, I protect their identifiers.",
+      "options": {
+        "1": "I name schools, teachers, teams, and where we hang after class",
+        "2": "I share enough that someone could spot my kid in a crowd",
+        "3": "I brag with details, then wonder if that was too much",
+        "4": "I talk about ages or interests without school names or schedules",
+        "5": "I keep kids generic — or skip specifics entirely"
+      }
+    },
+    "passwords-or-accounts": {
+      "prompt": "I never treat stranger chat like IT support for my accounts.",
+      "options": {
+        "1": "I've hinted at passwords, recovery codes, or login tricks",
+        "2": "I describe security questions or \"how I remember passwords\"",
+        "3": "I joke about bad password habits with real examples",
+        "4": "I say I use a manager — no demos, no screens",
+        "5": "Account talk stays zero-detail — not a teachable moment with strangers"
+      }
+    },
+    "photos-and-screens": {
+      "prompt": "I don't show strangers my phone gallery or sensitive screens.",
+      "byPlace": {
+        "flight": "On a flight, I don't turn my screen or photos toward the seatmate.",
+        "queue": "In a waiting room, I keep chats and photos angled away from neighbors.",
+        "networking": "At a event, I don't pass my phone around with client threads visible.",
+        "socialOnline": "I don't send identifying screenshots or photo dumps to new online contacts."
+      },
+      "options": {
+        "1": "I scroll photos or messages where anyone can read along",
+        "2": "I show \"one cute pic\" that includes addresses, kids, or work chats",
+        "3": "I share screens when asked — feels faster than explaining",
+        "4": "I describe content verbally; phone stays private",
+        "5": "Screens and galleries stay closed — strangers don't get the tour"
+      }
+    },
+    "ex-and-intimacy": {
+      "prompt": "When relationships or intimacy come up, I keep stranger chats PG and private.",
+      "options": {
+        "1": "I share explicit stories or identifying ex drama",
+        "2": "I name exes and replay intimate scenes for reaction",
+        "3": "I overshare when wine or vibe makes it feel like friendship",
+        "4": "I stay general — \"dating's weird lately\" — no play-by-play",
+        "5": "I decline or pivot — my love life isn't seatmate content"
+      }
+    },
+    "exit-politics": {
+      "prompt": "When I need to leave a conversation, I exit without a guilt spiral.",
+      "byCounterpart": {
+        "pleasant": "When a nice stranger keeps chatting, I leave kindly — not trapped by their warmth.",
+        "prying": "When someone digs in with questions, I exit without apologizing for having boundaries.",
+        "professional": "When a contact monopolizes me, I leave with a clean professional line."
+      },
+      "options": {
+        "1": "I stay too long, then ghost or lie badly later",
+        "2": "I wait until I'm annoyed and leave abruptly",
+        "3": "I hint I should go but keep answering one more question",
+        "4": "I use a clear line — bathroom, call, next session — and go",
+        "5": "I exit early and warm: thanks, enjoyed it, gotta run"
+      }
+    },
+    "deflect-personal-q": {
+      "prompt": "When someone asks something too personal, I deflect without a confession.",
+      "byCounterpart": {
+        "pleasant": "When a friendly stranger asks where I live or if I'm single, I answer lightly — not fully.",
+        "prying": "When a prying person pushes for salary, relationship, or address, I block without debating.",
+        "professional": "When a work contact asks personal questions, I redirect to business-appropriate ground."
+      },
+      "options": {
+        "1": "I answer because it feels rude not to — then regret it",
+        "2": "I answer half, then try to walk it back awkwardly",
+        "3": "I joke away sometimes; other times I spill",
+        "4": "I use a soft no or vague answer — \"around town,\" \"complicated week\"",
+        "5": "I redirect cleanly: \"Still figuring that out — how about you?\""
+      }
+    },
+    "match-their-depth": {
+      "prompt": "I match a stranger's depth — I don't under-share or flood to keep pace.",
+      "options": {
+        "1": "I dump heavy life stuff because they shared first",
+        "2": "I escalate intimacy faster than the relationship earned",
+        "3": "I mirror them exactly — even when I should stay shallow",
+        "4": "I stay one half-step lighter than their depth",
+        "5": "I choose my layer deliberately — not copy-paste intimacy"
+      }
+    },
+    "change-topic-smooth": {
+      "prompt": "When a topic gets too hot, I pivot without making it weird.",
+      "options": {
+        "1": "I freeze or snap \"let's not talk about that\" — awkward silence",
+        "2": "I shut down and the chat dies",
+        "3": "I change subject abruptly with no bridge",
+        "4": "I acknowledge and pivot — \"Heavy — what brought you here today?\"",
+        "5": "I steer with a bridge question — smooth and kind"
+      }
+    },
+    "humor-without-overshare": {
+      "prompt": "I use humor without turning my life into their entertainment.",
+      "options": {
+        "1": "My funniest stories are also my most identifying",
+        "2": "I roast myself with details strangers shouldn't store",
+        "3": "I tell \"you had to be there\" stories that still reveal too much",
+        "4": "I keep jokes generic — no names, no addresses",
+        "5": "I'm funny on themes, not on my private file"
+      }
+    },
+    "end-conversation-kind": {
+      "prompt": "I can end a chat kindly without opening a new personal chapter.",
+      "byPlace": {
+        "flight": "Before landing, I wrap seatmate talk without trading contacts I don't want.",
+        "queue": "When my turn comes, I exit the line chat without oversharing to say goodbye.",
+        "networking": "I leave a mixer conversation with a clear close — not a late-night confessional.",
+        "socialOnline": "I end a DM thread without dumping one last secret \"since we're chatting.\""
+      },
+      "options": {
+        "1": "Goodbyes become overshares — \"anyway my ex…\"",
+        "2": "I give my number or socials to escape, then dread pings",
+        "3": "I linger and add one unnecessary personal detail",
+        "4": "I close warm with a simple line and go",
+        "5": "I end clean: gratitude, no new data"
+      }
+    },
+    "networking-vs-therapy": {
+      "prompt": "At professional events, I network — I don't treat strangers like my therapist.",
+      "byCounterpart": {
+        "pleasant": "Even with a kind stranger at an event, I don't turn career chat into trauma dump.",
+        "prying": "When someone at a mixer digs for dirt, I don't reward it with workplace secrets.",
+        "professional": "With a client or colleague type, I keep talk appropriate — wins and themes, not confessions."
+      },
+      "options": {
+        "1": "I unload career fear, marriage stress, or health on a new contact",
+        "2": "I share internal company dirt to bond",
+        "3": "I slide into personal venting when alcohol or vibe shifts",
+        "4": "I stay professional-friendly — industry talk, light personal",
+        "5": "I keep the lane clear: connect, don't confess"
+      }
+    },
+    "online-dm-pace": {
+      "prompt": "With new online contacts, I pace intimacy — not instant best friends.",
+      "byPlace": {
+        "flight": "If a seatmate and I swap socials, I don't treat the first DM thread like a diary.",
+        "queue": "If we traded handles while waiting, I pace messages — no life story before we've earned it.",
+        "networking": "After an event follow-up online, I keep depth professional until trust is real.",
+        "socialOnline": "In new DMs, I don't match their life story in the first hour — I pace replies and depth."
+      },
+      "options": {
+        "1": "I send long personal essays to people I just matched with",
+        "2": "I share location, schedule, or photos before we've met or verified",
+        "3": "I mirror their speed even when my gut says slow down",
+        "4": "I reply shorter and slower until trust builds",
+        "5": "I treat DMs like a front door — knock, don't move in"
+      }
+    },
+    "body-says-no": {
+      "prompt": "When my body says \"don't share that,\" I listen before my mouth opens.",
+      "options": {
+        "1": "I ignore tight chest / nausea and talk anyway to be nice",
+        "2": "I notice the feeling after I've already said it",
+        "3": "I sometimes pause; sometimes people-please wins",
+        "4": "I pause and shorten what I was about to say",
+        "5": "I treat body signals as a hard stop — redirect or exit"
+      }
+    },
+    "too-many-questions": {
+      "prompt": "When question speed picks up, I slow the data flow.",
+      "byCounterpart": {
+        "pleasant": "When a friendly person asks rapid-fire personal stuff, I don't answer every one.",
+        "prying": "When someone interviews me, I name it and go vague — or leave.",
+        "professional": "When a work contact crosses into personal interrogation, I boundary without burning bridges."
+      },
+      "options": {
+        "1": "I answer a rapid personal Q&A like a game show",
+        "2": "I feel rude saying no, so I feed the curiosity",
+        "3": "I answer some, dodge some — inconsistent filter",
+        "4": "I answer one, then bridge to them or a neutral topic",
+        "5": "I slow down: \"Let's back up — we're just meeting\""
+      }
+    },
+    "flattery-for-info": {
+      "prompt": "When flattery comes with questions, I don't trade secrets for compliments.",
+      "options": {
+        "1": "Compliments loosen me — I share things I'd never share otherwise",
+        "2": "I feel special and over-disclose to keep the praise coming",
+        "3": "I notice sometimes after the fact",
+        "4": "I thank them and keep answers generic",
+        "5": "I treat charm + questions as a pattern — minimal data"
+      }
+    },
+    "alcohol-loosens": {
+      "prompt": "When drinks are involved, I keep the same filters — not louder privacy.",
+      "options": {
+        "1": "Happy hour turns into tell-all — coworkers, exes, money",
+        "2": "One drink in and I'm showing photos or venting",
+        "3": "I'm looser but try to catch myself mid-story",
+        "4": "I drink socially and keep stories thematic",
+        "5": "Alcohol doesn't get admin access to my life"
+      }
+    },
+    "recording-or-audience": {
+      "prompt": "When others might overhear or record, I shrink the detail.",
+      "byPlace": {
+        "flight": "On a plane, I assume rows nearby hear — I keep voice and detail down.",
+        "queue": "In public lines, I don't discuss sensitive topics at full volume.",
+        "networking": "At events with mics or cameras, I don't say what I'd regret on a clip.",
+        "socialOnline": "In group chats or lives, I don't share what I'd want private in DM."
+      },
+      "options": {
+        "1": "I share sensitive stuff loudly or on hot mics",
+        "2": "I forget phones pointed at me or stories being retold",
+        "3": "I quiet down only after someone glances over",
+        "4": "I check audience size and lower detail proactively",
+        "5": "I assume ears and cameras — default to low detail"
+      }
+    },
+    "follow-up-contact": {
+      "prompt": "When someone asks to stay in touch, I choose channels I can actually boundary.",
+      "byCounterpart": {
+        "pleasant": "When a nice stranger wants my number, I offer a level I'm OK ignoring.",
+        "prying": "When a prying person pushes for Instagram or WhatsApp, I decline or use a public handle only.",
+        "professional": "When a work contact follows up, I use professional channels — not personal bleed."
+      },
+      "options": {
+        "1": "I give primary phone/socials to almost everyone",
+        "2": "I say yes to follow-ups I already dread",
+        "3": "I give contact info then mute — messy",
+        "4": "I offer LinkedIn or email instead of personal when unsure",
+        "5": "I decide before sharing: do I want this person in my pocket?"
+      }
+    },
+    "share-to-fill-silence": {
+      "prompt": "When silence hits, I don't pay with private stories.",
+      "options": {
+        "1": "Silence panics me — I confess or overshare to fill it",
+        "2": "I tell heavy stories because quiet feels rude",
+        "3": "Sometimes I weather silence; sometimes I spill",
+        "4": "I ask them something or comment on the setting",
+        "5": "Silence is fine — I don't buy comfort with data"
+      }
+    },
+    "regret-after-chat": {
+      "prompt": "After stranger chats, I rarely think \"why did I say that?\"",
+      "options": {
+        "1": "I often replay conversations with cringe — too much shared",
+        "2": "Regret hits weekly after small talk",
+        "3": "Mixed — some chats fine, some haunt me",
+        "4": "Occasional tweak, not a pattern",
+        "5": "I leave chats feeling OK — bounded and kind"
+      }
+    },
+    "third-party-gossip": {
+      "prompt": "When gossip about someone else comes up, I don't add fuel or private facts.",
+      "options": {
+        "1": "I share dirt I shouldn't — names and stories that aren't mine",
+        "2": "I \"just vent\" about coworkers or friends to strangers",
+        "3": "I listen and add one detail I shouldn't",
+        "4": "I stay neutral or change subject",
+        "5": "I don't trade other people's privacy for bonding"
+      }
+    },
+    "professional-secrets": {
+      "prompt": "I don't leak work secrets to strangers — even casual ones.",
+      "byCounterpart": {
+        "pleasant": "Even with a friendly seatmate, I don't share unreleased products or internal numbers.",
+        "prying": "When someone fishes for company secrets, I don't bite — pleasant or not.",
+        "professional": "With industry peers, I keep NDAs and client trust — small talk isn't clearance."
+      },
+      "options": {
+        "1": "I've shared confidential timelines, clients, or internal drama",
+        "2": "I hint at things under NDA to sound important",
+        "3": "I share when it feels \"off the record\" — it isn't",
+        "4": "I speak in public knowledge only",
+        "5": "Work secrets stay at work — strangers get zero leverage"
+      }
+    },
+    "emotional-dump": {
+      "prompt": "When I'm stressed, I don't unload on someone who can't hold it.",
+      "options": {
+        "1": "I cry or trauma-dump on seatmates, drivers, or new DMs",
+        "2": "I treat any listener like free therapy",
+        "3": "I vent edges of big feelings — then feel exposed",
+        "4": "I acknowledge stress briefly and redirect",
+        "5": "Heavy feelings go to chosen people — not random strangers"
+      }
+    },
+    "ask-before-advise": {
+      "prompt": "When strangers share problems, I don't bulldoze with advice — or mirror with my drama.",
+      "options": {
+        "1": "I one-up with my bigger story or fix them unprompted",
+        "2": "I give long advice to someone who wanted small talk",
+        "3": "I listen, then slip into my own overshare",
+        "4": "I reflect once and ask if they want ideas",
+        "5": "I match energy: empathy, not takeover or confession swap"
+      }
+    },
+    "public-place-volume": {
+      "prompt": "In public, I keep sensitive topics at a volume strangers shouldn't inherit.",
+      "byPlace": {
+        "flight": "On a flight, I don't discuss medical, legal, or relationship crises at seat volume.",
+        "queue": "In a crowded line, I don't narrate private calls or fights aloud.",
+        "networking": "At a hotel bar event, I remember tables overlap — detail stays low.",
+        "socialOnline": "In public comments or stories, I don't post what belongs in a private chat."
+      },
+      "options": {
+        "1": "Strangers could quote my phone call or argument",
+        "2": "I discuss money, health, or sex where everyone hears",
+        "3": "I quiet down only when directly embarrassed",
+        "4": "I step aside or lower voice for sensitive bits",
+        "5": "Public = low detail — save depth for private space"
+      }
+    },
+    "leave-with-dignity": {
+      "prompt": "When a chat turns uncomfortable, I leave without over-explaining my life.",
+      "options": {
+        "1": "I stay and overshare to justify leaving — makes it worse",
+        "2": "I ghost mid-chat without a word",
+        "3": "I make excuses that add new personal facts",
+        "4": "I use a simple out — polite, firm, minimal info",
+        "5": "I exit clean: boundary without autobiography"
+      }
+    }
+  }
+}

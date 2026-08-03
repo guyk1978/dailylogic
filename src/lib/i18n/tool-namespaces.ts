@@ -11,6 +11,9 @@ export const TOOL_I18N_NAMESPACE = {
   "relationship-depth": "relationshipDepth",
   "business-partnership-calculator": "businessPartnership",
   "pocket-money-calculator": "pocketMoney",
+  "dog-ownership-calculator": "dogOwnership",
+  "parent-respect-calculator": "parentRespect",
+  "stranger-sharing-calculator": "strangerSharing",
 } as const satisfies Record<ToolSlug, string>;
 
 export type ToolI18nNamespace = (typeof TOOL_I18N_NAMESPACE)[ToolSlug];

@@ -11,7 +11,10 @@ export type ToolSlug =
   | "love-calculator"
   | "relationship-depth"
   | "business-partnership-calculator"
-  | "pocket-money-calculator";
+  | "pocket-money-calculator"
+  | "dog-ownership-calculator"
+  | "parent-respect-calculator"
+  | "stranger-sharing-calculator";
 
 export interface ToolMeta {
   slug: ToolSlug;
@@ -168,6 +171,48 @@ export const toolsRegistry: ToolEntry[] = [
     loadComponent: () =>
       import("@/components/tools/pocket-money").then((m) => ({
         default: m.PocketMoneyCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "dog-ownership-calculator",
+      name: "Dog Care & Budget Calculator",
+      description:
+        "Honest dog ownership costs by size and lifestyle, plus a readiness quiz and monthly budget.",
+      category: "life",
+      tags: ["dog", "pet", "budget", "vet", "ownership"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/dog-ownership").then((m) => ({
+        default: m.DogOwnershipCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "parent-respect-calculator",
+      name: "Parent Respect Calculator",
+      description:
+        "Honest parent–adult connection quiz with presence, listening, and emotional-balance scores.",
+      category: "life",
+      tags: ["family", "parents", "respect", "connection", "balance"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/parent-respect").then((m) => ({
+        default: m.ParentRespectCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "stranger-sharing-calculator",
+      name: "Stranger Sharing Calculator",
+      description:
+        "Boundary-smart small talk quiz: privacy guard, social grace, and gut instinct with strangers.",
+      category: "life",
+      tags: ["privacy", "social", "boundaries", "small-talk", "oversharing"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/stranger-sharing").then((m) => ({
+        default: m.StrangerSharingCalculator,
       })),
   },
 ];

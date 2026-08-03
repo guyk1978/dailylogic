@@ -1,0 +1,47 @@
+{
+  "title": "Physical Health & Vitality Calculator",
+  "subtitle": "Body metrics, a short lifestyle check, and everyday tips — in plain language.",
+  "seoTitle": "Physical Health & Vitality Calculator | DailyLogic",
+  "seoDescription": "Free physical vitality calculator: height, weight, activity, sleep, and nutrition plus a short quiz. BMI, energy estimates, and practical tips — in your browser.",
+  "heroDescription": "A simple snapshot of energy, recovery, and activity — with clear numbers and small tips you can use today.",
+  "toolSlug": "physical-health-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "HealthApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "You enter height, weight, age, sex, activity, sleep, and nutrition — and get metrics like BMI and energy estimates.",
+        "A short quiz covers daytime energy, water, strength, and recovery.",
+        "The report shows a vitality score, a clear breakdown, and small tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill in your details, answer the short quiz, and view the report.",
+        "Save to history (expand on the home grid) or download a result card.",
+        "Use the result as a compass — not a medical diagnosis."
+      ]
+    },
+    {
+      "heading": "Important to know",
+      "paragraphs": [
+        "This tool is for inspiration and enrichment only and does not replace certified medical advice.",
+        "The metrics are common everyday estimates — not a clinical diagnosis."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Simple inputs", "description": "Height, weight, and activity — without unnecessary complexity." },
+    { "title": "Short quiz", "description": "About 10 questions on energy, water, and recovery." },
+    { "title": "Practical tips", "description": "Small steps you can try today." }
+  ],
+  "faq": [
+    { "question": "Is this a medical diagnosis?", "answer": "No. It's everyday common-sense support — not a substitute for professional care." },
+    { "question": "What does BMI mean here?", "answer": "It's a common helper number. It doesn't tell your whole health story." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

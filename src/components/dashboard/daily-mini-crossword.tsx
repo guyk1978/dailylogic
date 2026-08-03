@@ -28,6 +28,10 @@ import {
 import { ICON_STROKE_WIDTH, getToolIcon } from "@/lib/tool-icons";
 import { easeOut, springPop } from "@/lib/motion-presets";
 import {
+  ElapsedTimerBadge,
+  EstimatedTimeBadge,
+} from "@/components/estimated-time-badge";
+import {
   cellKey,
   DAILY_CROSSWORD_STORAGE_KEY,
   extractTypedLetter,
@@ -109,8 +113,32 @@ export function DailyMiniCrossword() {
   const [activeCell, setActiveCell] = useState<{ row: number; col: number } | null>(
     null,
   );
+  const [elapsedSeconds, setElapsedSeconds] = useState(0);
+  const sessionStartedAtRef = useRef<number | null>(null);
   const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
   const syncedKeyRef = useRef("");
+
+  // Live elapsed timer while the puzzle is open and unsolved.
+  useEffect(() => {
+    if (!ready || solved) return;
+    if (sessionStartedAtRef.current === null) {
+      sessionStartedAtRef.current = Date.now();
+      setElapsedSeconds(0);
+    }
+    const tick = () => {
+      const started = sessionStartedAtRef.current ?? Date.now();
+      setElapsedSeconds(Math.floor((Date.now() - started) / 1000));
+    };
+    tick();
+    const id = window.setInterval(tick, 1000);
+    return () => window.clearInterval(id);
+  }, [ready, solved]);
+
+  // Reset timer when the daily puzzle / locale identity changes.
+  useEffect(() => {
+    sessionStartedAtRef.current = null;
+    setElapsedSeconds(0);
+  }, [dateKey, puzzle.id, locale]);
 
   // Sync from storage once hydrated; reset when day or locale changes.
   useEffect(() => {
@@ -314,9 +342,18 @@ export function DailyMiniCrossword() {
             </p>
           </div>
         </div>
-        <p className="rounded-full bg-white/80 px-3 py-1 text-xs font-semibold text-slate-500 ring-1 ring-slate-200/70">
-          {t("crossword.underMinute")}
-        </p>
+        {ready && !solved ? (
+          <ElapsedTimerBadge
+            seconds={elapsedSeconds}
+            tone="sky"
+            ariaLabel={t("crossword.elapsedLabel")}
+          />
+        ) : (
+          <EstimatedTimeBadge
+            label={t("crossword.underMinute")}
+            tone="neutral"
+          />
+        )}
       </div>
 
       <AnimatePresence mode="wait">

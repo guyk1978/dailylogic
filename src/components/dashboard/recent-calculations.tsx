@@ -205,6 +205,66 @@ function formatInputValue(
       ].filter(Boolean);
       return parts.length > 0 ? parts.join(" · ") : "—";
     }
+    if (key === "metrics") {
+      const metrics = value as {
+        bmi?: number;
+        bmiBand?: string;
+        bmr?: number;
+        tdee?: number;
+        sleepBand?: string;
+      };
+      const bmiLabel = firstResolved(tQuiz, "metrics.bmi") ?? "BMI";
+      const bmrLabel = firstResolved(tQuiz, "metrics.bmr") ?? "BMR";
+      const tdeeLabel = firstResolved(tQuiz, "metrics.tdee") ?? "TDEE";
+      const band =
+        metrics.bmiBand != null
+          ? (firstResolved(tQuiz, `metrics.bmiBand.${metrics.bmiBand}`) ??
+            metrics.bmiBand)
+          : "";
+      const parts = [
+        metrics.bmi != null
+          ? `${bmiLabel} ${metrics.bmi}${band ? ` (${band})` : ""}`
+          : null,
+        metrics.bmr != null ? `${bmrLabel} ${metrics.bmr}` : null,
+        metrics.tdee != null ? `${tdeeLabel} ${metrics.tdee}` : null,
+      ].filter(Boolean);
+      return parts.length > 0 ? parts.join(" · ") : "—";
+    }
+    if (key === "lines") {
+      return (value as { activityId?: string; minutes?: number; kcal?: number }[])
+        .map((line) => {
+          const name = line.activityId
+            ? (firstResolved(tQuiz, `activities.items.${line.activityId}`) ??
+              line.activityId)
+            : "—";
+          const kcal =
+            line.kcal != null
+              ? (firstResolved(tQuiz, "result.kcal")?.replace(
+                  "{{value}}",
+                  String(line.kcal),
+                ) ?? `${line.kcal} kcal`)
+              : "";
+          return `${name}: ${line.minutes ?? "—"} min · ${kcal}`;
+        })
+        .join("\n");
+    }
+    if (key === "profile" && value && typeof value === "object") {
+      const profile = value as {
+        weightKg?: number;
+        age?: number;
+        sex?: string;
+      };
+      const sexLabel = profile.sex
+        ? (firstResolved(tQuiz, `profile.sex${profile.sex === "female" ? "Female" : "Male"}`) ??
+          profile.sex)
+        : null;
+      const parts = [
+        profile.weightKg != null ? `${profile.weightKg} kg` : null,
+        profile.age != null ? String(profile.age) : null,
+        sexLabel,
+      ].filter(Boolean);
+      return parts.length > 0 ? parts.join(" · ") : "—";
+    }
     try {
       return JSON.stringify(value, null, 2);
     } catch {
@@ -280,6 +340,11 @@ function buildDetailRows(
     "rightId",
     "weeklyIds",
     "dimensions",
+    "metrics",
+    "lines",
+    "totalKcal",
+    "totalMinutes",
+    "bmr",
     "insightIds",
     "tipIds",
     "agreementIds",
@@ -459,6 +524,9 @@ function RecentCalculationModal({
     "dogOwnership",
     "parentRespect",
     "strangerSharing",
+    "mentalHealth",
+    "physicalHealth",
+    "calorieBurn",
   ]);
   const dir = useLocaleDirection();
   const lp = useLocalizedPath();
@@ -482,6 +550,12 @@ function RecentCalculationModal({
     t(key, { ns: "parentRespect", ...options });
   const tStranger: TranslateFn = (key, options) =>
     t(key, { ns: "strangerSharing", ...options });
+  const tMental: TranslateFn = (key, options) =>
+    t(key, { ns: "mentalHealth", ...options });
+  const tPhysical: TranslateFn = (key, options) =>
+    t(key, { ns: "physicalHealth", ...options });
+  const tCalorie: TranslateFn = (key, options) =>
+    t(key, { ns: "calorieBurn", ...options });
 
   useEffect(() => {
     if (!open) return;
@@ -509,6 +583,9 @@ function RecentCalculationModal({
         tDog,
         tParent,
         tStranger,
+        tMental,
+        tPhysical,
+        tCalorie,
       ])
     : [];
   const Icon = entry ? getToolIcon(entry.toolSlug) : null;

@@ -14,7 +14,10 @@ export type ToolSlug =
   | "pocket-money-calculator"
   | "dog-ownership-calculator"
   | "parent-respect-calculator"
-  | "stranger-sharing-calculator";
+  | "stranger-sharing-calculator"
+  | "mental-health-calculator"
+  | "physical-health-calculator"
+  | "calorie-burn-calculator";
 
 export interface ToolMeta {
   slug: ToolSlug;
@@ -213,6 +216,48 @@ export const toolsRegistry: ToolEntry[] = [
     loadComponent: () =>
       import("@/components/tools/stranger-sharing").then((m) => ({
         default: m.StrangerSharingCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "mental-health-calculator",
+      name: "Mental Health & Resilience Calculator",
+      description:
+        "A calm, plain-language check on stress, energy, and personal space — with practical everyday tips.",
+      category: "life",
+      tags: ["wellbeing", "stress", "energy", "balance", "resilience"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/mental-health").then((m) => ({
+        default: m.MentalHealthCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "physical-health-calculator",
+      name: "Physical Health & Vitality Calculator",
+      description:
+        "Body metrics, lifestyle check, and a plain vitality score with practical everyday tips.",
+      category: "life",
+      tags: ["health", "fitness", "bmi", "energy", "vitality"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/physical-health").then((m) => ({
+        default: m.PhysicalHealthCalculator,
+      })),
+  },
+  {
+    meta: {
+      slug: "calorie-burn-calculator",
+      name: "Calorie Burn Calculator",
+      description:
+        "Multi-activity calorie burn estimate: pick several workouts, add minutes, get a combined total and breakdown.",
+      category: "life",
+      tags: ["fitness", "calories", "workout", "met", "exercise"],
+    },
+    loadComponent: () =>
+      import("@/components/tools/calorie-burn").then((m) => ({
+        default: m.CalorieBurnCalculator,
       })),
   },
 ];

@@ -4,8 +4,11 @@ import {
   ChefHat,
   Coins,
   Dog,
+  Flame,
   Heart,
   HeartHandshake,
+  HeartPulse,
+  Activity,
   MessageCircle,
   PieChart,
   PiggyBank,
@@ -31,6 +34,9 @@ export const TOOL_ICONS: Record<ToolSlug, LucideIcon> = {
   "dog-ownership-calculator": Dog,
   "parent-respect-calculator": Users,
   "stranger-sharing-calculator": MessageCircle,
+  "mental-health-calculator": HeartPulse,
+  "physical-health-calculator": Activity,
+  "calorie-burn-calculator": Flame,
 };
 
 export function getToolIcon(slug: ToolSlug): LucideIcon {

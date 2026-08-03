@@ -13,6 +13,9 @@ import pocketMoneyEn from "../../../content/en/tools/pocket-money-calculator.jso
 import dogOwnershipEn from "../../../content/en/tools/dog-ownership-calculator.json";
 import parentRespectEn from "../../../content/en/tools/parent-respect-calculator.json";
 import strangerSharingEn from "../../../content/en/tools/stranger-sharing-calculator.json";
+import mentalHealthEn from "../../../content/en/tools/mental-health-calculator.json";
+import physicalHealthEn from "../../../content/en/tools/physical-health-calculator.json";
+import calorieBurnEn from "../../../content/en/tools/calorie-burn-calculator.json";
 
 import budgetPlannerHe from "../../../content/he/tools/budget-planner.json";
 import recipeScalerHe from "../../../content/he/tools/recipe-scaler.json";
@@ -26,6 +29,9 @@ import pocketMoneyHe from "../../../content/he/tools/pocket-money-calculator.jso
 import dogOwnershipHe from "../../../content/he/tools/dog-ownership-calculator.json";
 import parentRespectHe from "../../../content/he/tools/parent-respect-calculator.json";
 import strangerSharingHe from "../../../content/he/tools/stranger-sharing-calculator.json";
+import mentalHealthHe from "../../../content/he/tools/mental-health-calculator.json";
+import physicalHealthHe from "../../../content/he/tools/physical-health-calculator.json";
+import calorieBurnHe from "../../../content/he/tools/calorie-burn-calculator.json";
 
 import budgetPlannerEs from "../../../content/es/tools/budget-planner.json";
 import recipeScalerEs from "../../../content/es/tools/recipe-scaler.json";
@@ -39,6 +45,9 @@ import pocketMoneyEs from "../../../content/es/tools/pocket-money-calculator.jso
 import dogOwnershipEs from "../../../content/es/tools/dog-ownership-calculator.json";
 import parentRespectEs from "../../../content/es/tools/parent-respect-calculator.json";
 import strangerSharingEs from "../../../content/es/tools/stranger-sharing-calculator.json";
+import mentalHealthEs from "../../../content/es/tools/mental-health-calculator.json";
+import physicalHealthEs from "../../../content/es/tools/physical-health-calculator.json";
+import calorieBurnEs from "../../../content/es/tools/calorie-burn-calculator.json";
 
 const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
   en: {
@@ -54,6 +63,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "dog-ownership-calculator": dogOwnershipEn as ToolLandingJson,
     "parent-respect-calculator": parentRespectEn as ToolLandingJson,
     "stranger-sharing-calculator": strangerSharingEn as ToolLandingJson,
+    "mental-health-calculator": mentalHealthEn as ToolLandingJson,
+    "physical-health-calculator": physicalHealthEn as ToolLandingJson,
+    "calorie-burn-calculator": calorieBurnEn as ToolLandingJson,
   },
   he: {
     "budget-planner": budgetPlannerHe as ToolLandingJson,
@@ -68,6 +80,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "dog-ownership-calculator": dogOwnershipHe as ToolLandingJson,
     "parent-respect-calculator": parentRespectHe as ToolLandingJson,
     "stranger-sharing-calculator": strangerSharingHe as ToolLandingJson,
+    "mental-health-calculator": mentalHealthHe as ToolLandingJson,
+    "physical-health-calculator": physicalHealthHe as ToolLandingJson,
+    "calorie-burn-calculator": calorieBurnHe as ToolLandingJson,
   },
   es: {
     "budget-planner": budgetPlannerEs as ToolLandingJson,
@@ -82,6 +97,9 @@ const registry: Record<AppLocale, Record<string, ToolLandingJson>> = {
     "dog-ownership-calculator": dogOwnershipEs as ToolLandingJson,
     "parent-respect-calculator": parentRespectEs as ToolLandingJson,
     "stranger-sharing-calculator": strangerSharingEs as ToolLandingJson,
+    "mental-health-calculator": mentalHealthEs as ToolLandingJson,
+    "physical-health-calculator": physicalHealthEs as ToolLandingJson,
+    "calorie-burn-calculator": calorieBurnEs as ToolLandingJson,
   },
 };
 

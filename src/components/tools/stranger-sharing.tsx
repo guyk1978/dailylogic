@@ -14,8 +14,10 @@ import {
   Shield,
   Sparkles,
 } from "lucide-react";
+import { EstimatedTimeBadge } from "@/components/estimated-time-badge";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { usePrivateToolStats } from "@/hooks/use-private-tool-stats";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
@@ -167,11 +169,15 @@ export function StrangerSharingCalculator() {
 
   useCalculationRestore("stranger-sharing-calculator", handleRestore);
 
+  const { trackStart, trackAnswer, trackComplete, trackSetupChoice } =
+    usePrivateToolStats("stranger-sharing-calculator");
+
   const patchSetup = <K extends keyof StrangerSetup>(
     key: K,
     value: StrangerSetup[K],
   ) => {
     setSetup((prev) => ({ ...prev, [key]: value }));
+    trackSetupChoice(String(key), String(value));
   };
 
   const startQuiz = (nextMode: StrangerMode) => {
@@ -183,6 +189,7 @@ export function StrangerSharingCalculator() {
     setPhase("quiz");
     setInsightOffset(0);
     setSaveName("");
+    trackStart({ mode: nextMode });
   };
 
   const selectAnswer = (value: LikertValue) => {
@@ -192,15 +199,18 @@ export function StrangerSharingCalculator() {
 
   const goNext = () => {
     if (!current || answers[current.id] === undefined || !setupReady) return;
+    const committed = answers[current.id]!;
+    trackAnswer(current.id, committed);
     if (index >= total - 1) {
       const analyzed = analyzeStrangerSharing(mode, setup, {
         ...answers,
-        [current.id]: answers[current.id]!,
+        [current.id]: committed,
       });
       if (analyzed) {
         setProfile(analyzed);
         setPhase("result");
         setInsightOffset(0);
+        trackComplete({ mode, outcome: analyzed.profileId });
       }
       return;
     }
@@ -817,7 +827,9 @@ function ModeCard({
         {icon}
       </span>
       <p className="text-base font-semibold text-slate-900">{title}</p>
-      <p className="mt-1 text-sm text-slate-500">{meta}</p>
+      <div className="mt-2">
+        <EstimatedTimeBadge label={meta} tone="sky" />
+      </div>
     </button>
   );
 }

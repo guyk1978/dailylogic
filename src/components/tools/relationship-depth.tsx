@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { usePrivateToolStats } from "@/hooks/use-private-tool-stats";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
@@ -117,6 +118,9 @@ export function RelationshipDepth() {
 
   useCalculationRestore("relationship-depth", handleRestore);
 
+  const { trackStart, trackAnswer, trackComplete } =
+    usePrivateToolStats("relationship-depth");
+
   const selectAnswer = (value: LikertValue) => {
     if (!current) return;
     setAnswers((prev) => ({ ...prev, [current.id]: value }));
@@ -124,15 +128,18 @@ export function RelationshipDepth() {
 
   const goNext = () => {
     if (!current || answers[current.id] === undefined) return;
+    const committed = answers[current.id]!;
+    trackAnswer(current.id, committed);
     if (index >= total - 1) {
       const analyzed = analyzeRelationship(mode, {
         ...answers,
-        [current.id]: answers[current.id]!,
+        [current.id]: committed,
       });
       if (analyzed) {
         setProfile(analyzed);
         setPhase("result");
         setInsightOffset(0);
+        trackComplete({ mode, outcome: analyzed.profileId });
       }
       return;
     }
@@ -155,6 +162,7 @@ export function RelationshipDepth() {
     setPhase("quiz");
     setInsightOffset(0);
     setSaveName("");
+    trackStart({ mode: nextMode });
   };
 
   const restart = () => {

@@ -1,0 +1,280 @@
+{
+  "intro": {
+    "eyebrow": "Cuerpo, energía y hábitos",
+    "title": "Calculadora de salud física y vitalidad",
+    "body": "Indica unos datos sencillos — altura, peso, actividad, sueño y alimentación — y responde un cuestionario breve. Obtienes una puntuación de vitalidad, métricas claras y pasos pequeños que puedes probar. Todo queda en tu navegador. Es una herramienta de inspiración, no sustituye el consejo médico."
+  },
+  "setup": {
+    "title": "Datos de partida y métricas",
+    "subtitle": "Números sencillos que ayudan a dibujar un panorama — no una etiqueta.",
+    "heightLabel": "Altura",
+    "weightLabel": "Peso",
+    "ageLabel": "Edad",
+    "sexLabel": "Sexo",
+    "activityLabel": "Actividad física por semana",
+    "sleepLabel": "Horas de sueño de media",
+    "nutritionLabel": "Calidad de la alimentación diaria",
+    "heightUnit": "cm",
+    "weightUnit": "kg",
+    "sleepUnit": "horas",
+    "ageValue": "Edad {{age}}",
+    "continue": "Continuar al cuestionario breve",
+    "sex": {
+      "female": "Mujer",
+      "male": "Hombre"
+    },
+    "activity": {
+      "sedentary": "Sedentario — poco o ningún ejercicio",
+      "light": "Ligera — una o dos veces por semana",
+      "regular": "Regular — 3–4 veces por semana",
+      "intense": "Intensa — muy activo/a o deportista"
+    },
+    "nutrition": {
+      "needsWork": "Necesita mejorar bastante",
+      "mixed": "Mixta — días buenos y lagunas",
+      "mostlyGood": "En general buena",
+      "strong": "Estable y nutritiva"
+    }
+  },
+  "metrics": {
+    "bmi": "Índice de masa corporal",
+    "bmr": "Gasto energético en reposo",
+    "tdee": "Estimación diaria total",
+    "kcal": "{{value}} kcal",
+    "bmrHint": "Estimación básica con una fórmula habitual",
+    "tdeeHint": "Incluye el nivel de actividad que elegiste",
+    "bmiBand": {
+      "under": "Por debajo del rango habitual",
+      "healthy": "Dentro del rango habitual",
+      "high": "Por encima del rango habitual",
+      "higher": "Más alto — conviene prestar atención"
+    }
+  },
+  "actions": {
+    "next": "Siguiente",
+    "back": "Anterior",
+    "finish": "Terminar e informe",
+    "restart": "Nueva evaluación",
+    "newInsight": "Otra idea",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Puntuación de vitalidad física",
+    "overall": "Puntuación global",
+    "metrics": "Métricas",
+    "dimensions": "Desglose",
+    "insights": "Ideas",
+    "tips": "Pasos pequeños",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · calculadora de salud física",
+    "shareText": "Mi vitalidad: {{profile}} ({{score}}%). {{insight}} | DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · IMC {{bmi}}",
+    "bands": {
+      "needs-care": "Necesita refuerzo ahora",
+      "developing": "En camino — hay margen",
+      "steady": "Estable la mayoría de días",
+      "strong": "Fuerte y vital"
+    },
+    "dimensionLabels": {
+      "energyBalance": "Balance energético",
+      "recoveryQuality": "Calidad de recuperación",
+      "activityRhythm": "Ritmo de actividad"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No pudimos copiar — prueba a descargar"
+  },
+  "profiles": {
+    "vital-steady": "Vitalidad estable — buena base para el día a día",
+    "active-balanced": "Activo/a y equilibrado/a — buen ritmo",
+    "strong-foundation": "Base sólida — conviene mantenerla",
+    "mostly-vital": "En general vital — con margen de mejora",
+    "building-habits": "Construyendo hábitos — paso a paso",
+    "solid-enough": "Bastante estable — puedes subir el ritmo con suavidad",
+    "needs-rhythm": "Hace falta más ritmo diario",
+    "tired-edges": "Al límite del cansancio — el cuerpo pide descanso",
+    "light-move-start": "Empezar con movimiento suave",
+    "reset-gently": "Reiniciar con calma — sin extremos",
+    "sleep-first": "Primero el sueño — luego lo demás",
+    "one-habit-week": "Un hábito esta semana basta"
+  },
+  "insights": {
+    "dim-energyBalance-high": "Tu energía diaria se ve bastante estable — comida, agua y ritmo ayudan.",
+    "dim-energyBalance-low": "La energía se agota rápido. Comidas regulares y agua a lo largo del día marcan la diferencia.",
+    "dim-recoveryQuality-high": "La recuperación te funciona — el sueño y el descanso apoyan al cuerpo.",
+    "dim-recoveryQuality-low": "El cuerpo no se recupera lo suficiente. Media hora más de sueño suele valer más que otro entreno.",
+    "dim-activityRhythm-high": "Tienes un buen ritmo de movimiento. La constancia importa más que ir al máximo.",
+    "dim-activityRhythm-low": "Falta movimiento regular. Diez minutos de caminata la mayoría de días ganan a un plan perfecto que no ocurre.",
+    "overall-strong": "En conjunto el cuerpo recibe buen apoyo — puedes afinar sin romper la rutina.",
+    "overall-steady": "Un estado razonable y humano — fortalezas claras y algunos hábitos por reforzar.",
+    "overall-developing": "Hay conciencia, pero la rutina aún no sostiene todo. Un paso pequeño mejor que una revolución.",
+    "overall-needs-care": "El cuerpo pide alivio y orden. Empieza por una cosa — sueño o movimiento suave.",
+    "bmi-under": "La masa corporal está por debajo del rango habitual. Asegúrate de comer lo suficiente — y consulta a un profesional si hace falta.",
+    "bmi-healthy": "La masa corporal está en el rango habitual — un buen punto de partida, no toda la historia de la salud.",
+    "bmi-high": "La masa corporal está por encima del rango habitual. Movimiento regular y alimentación estable ayudan más que dietas extremas.",
+    "bmi-higher": "La masa corporal es más alta. Pasos pequeños y constantes — y acompañamiento profesional si puedes.",
+    "sleep-short": "El sueño es corto para la mayoría. Afecta energía, ánimo y recuperación.",
+    "sleep-fair": "El sueño casi alcanza — un poco más puede marcar la diferencia.",
+    "sleep-good": "Las horas de sueño se ven bien. Mantén una ventana de sueño fija.",
+    "sleep-long": "Sueño muy largo — a veces está bien, a veces señal de cansancio acumulado.",
+    "activity-sedentary": "Poco movimiento a la semana. Empieza pequeño — escaleras, caminar o estiramientos.",
+    "activity-light": "Hay movimiento ligero. Añadir un día fijo puede cambiar cómo te sientes.",
+    "activity-regular": "Actividad regular — uno de los hábitos más fuertes para la salud.",
+    "activity-intense": "Carga de entrenamiento alta. Los días de descanso y el sueño importan igual.",
+    "nutrition-needsWork": "La alimentación pide refuerzo. Una comida equilibrada al día es un buen comienzo.",
+    "nutrition-mixed": "Alimentación mixta — días buenos y lagunas. La constancia pequeña gana.",
+    "nutrition-mostlyGood": "La mayoría de días la comida te apoya. Mantén eso también en días de mucha carga.",
+    "nutrition-strong": "Alimentación estable — excelente base para energía y recuperación."
+  },
+  "tips": {
+    "tip-water-bottle": "Botella de agua cerca hoy — tres recargas antes de la tarde.",
+    "tip-protein-breakfast": "Desayuno con proteína (huevo, yogur, queso) ayuda a estabilizar la energía.",
+    "tip-walk-after-lunch": "Diez minutos de caminata después de comer — fácil y activa.",
+    "tip-earlier-bed": "Veinte minutos antes a la cama esta semana — sin pantallas en la cama.",
+    "tip-screen-off": "Pantallas apagadas media hora antes de dormir — ayuda a conciliar el sueño.",
+    "tip-rest-day": "Un día de descanso planificado esta semana — aunque sientas que \"debes\" entrenar.",
+    "tip-ten-minute-move": "Diez minutos de movimiento hoy: caminar, estirar o subir escaleras.",
+    "tip-stairs-choice": "Elige escaleras en lugar del ascensor una vez al día — cuenta.",
+    "tip-calendar-workout": "Bloquea un entreno corto en el calendario como una cita — y luego solo preséntate.",
+    "tip-weekly-check": "Una vez por semana: ¿cómo van energía, sueño y movimiento? Una frase sola.",
+    "tip-sleep-window": "Fija una ventana de sueño estable siete días — también el fin de semana.",
+    "tip-outdoor-light": "Diez minutos de luz natural por la mañana — ayuda al ritmo del sueño y la alerta."
+  },
+  "questions": {
+    "daytime-energy": {
+      "prompt": "A mitad del día tengo energía suficiente para funcionar sin hundirme.",
+      "options": {
+        "1": "Me hundo casi todos los días",
+        "2": "La mayoría de días muy cansado/a después del mediodía",
+        "3": "A veces bien, a veces vacío/a",
+        "4": "La mayoría de días me las arreglo razonablemente",
+        "5": "Energía estable durante casi todo el día"
+      }
+    },
+    "water-habit": {
+      "prompt": "Bebo suficiente agua en el día — no solo café.",
+      "options": {
+        "1": "Casi no bebo agua",
+        "2": "Solo cuando tengo mucha sed",
+        "3": "A veces me acuerdo",
+        "4": "La mayoría de días bebo cantidad razonable",
+        "5": "El agua es un hábito fijo"
+      }
+    },
+    "afternoon-slump": {
+      "prompt": "El bajón de la tarde no me deja fuera de juego del todo.",
+      "options": {
+        "1": "Después del mediodía no funciono",
+        "2": "Bajón fuerte la mayoría de días",
+        "3": "Hay bajón pero puedo seguir",
+        "4": "Bajón leve que sé gestionar",
+        "5": "Casi sin bajón — o sé evitarlo"
+      }
+    },
+    "steady-meals": {
+      "prompt": "No salto comidas hasta que el hambre es extrema.",
+      "options": {
+        "1": "Paso horas largas sin comer con frecuencia",
+        "2": "A menudo olvido comer",
+        "3": "A veces ordenado/a, a veces no",
+        "4": "La mayoría de días hay un ritmo de comidas razonable",
+        "5": "Como con regularidad también en días ocupados"
+      }
+    },
+    "wake-feeling": {
+      "prompt": "Por la mañana me despierto con ganas de empezar el día.",
+      "bySleep": {
+        "short": "Con mi sueño corto — aún logro levantarme sin sentirme destrozado/a del todo.",
+        "fair": "Con las horas de sueño actuales — la mañana se siente viable.",
+        "good": "Con buenas horas de sueño — me levanto relativamente listo/a.",
+        "long": "Incluso tras dormir mucho — compruebo si la mañana se siente de verdad fresca."
+      },
+      "options": {
+        "1": "Me levanto destrozado/a casi siempre",
+        "2": "Muy difícil arrancar",
+        "3": "A veces bien",
+        "4": "La mayoría de mañanas razonables",
+        "5": "Me levanto con energía bastante buena"
+      }
+    },
+    "sore-recovery": {
+      "prompt": "Tras un esfuerzo — el cuerpo se recupera en un tiempo razonable.",
+      "byActivity": {
+        "sedentary": "Incluso tras un esfuerzo pequeño (escaleras, caminar) — no quedo hecho polvo días.",
+        "light": "Tras actividad ligera — vuelvo a mí sin dolor que dura.",
+        "regular": "Entre entrenamientos — hay recuperación suficiente.",
+        "intense": "Entre entrenamientos intensos — doy tiempo al cuerpo para recuperarse."
+      },
+      "options": {
+        "1": "Dolor o agotamiento duran días",
+        "2": "Me recupero demasiado lento",
+        "3": "A veces rápido, a veces no",
+        "4": "La mayoría de veces vuelvo a tiempo",
+        "5": "Buena recuperación y constante"
+      }
+    },
+    "rest-day-respect": {
+      "prompt": "Sé dar al cuerpo un día de descanso sin culpa.",
+      "byActivity": {
+        "sedentary": "Al empezar a moverte — el descanso también cuenta, no es fracaso.",
+        "light": "Entre días activos — hay espacio para descansar sin presión.",
+        "regular": "En rutina de entrenos — hay días de descanso planificados.",
+        "intense": "Incluso con mucha carga — el descanso forma parte del entrenamiento."
+      },
+      "options": {
+        "1": "Descanso = culpa fuerte",
+        "2": "Me cuesta descansar aunque lo necesite",
+        "3": "A veces lo logro",
+        "4": "La mayoría del tiempo respeto el descanso",
+        "5": "Descanso planificado y sin drama"
+      }
+    },
+    "move-most-days": {
+      "prompt": "La mayoría de días de la semana tengo algo de movimiento — aunque sea breve.",
+      "byActivity": {
+        "sedentary": "Aunque no vaya al gimnasio — hay un poco de movimiento diario (caminar, escaleras).",
+        "light": "Además de 1–2 entrenos — también hay movimiento cotidiano ligero.",
+        "regular": "Entre entrenos regulares — no quedo del todo sedentario/a.",
+        "intense": "Además de entrenar — un día normal también incluye algo de movimiento."
+      },
+      "options": {
+        "1": "Casi ningún movimiento",
+        "2": "Solo cuando hay entreno formal",
+        "3": "A veces me muevo, a veces no",
+        "4": "La mayoría de días hay algo de movimiento",
+        "5": "El movimiento es parte fija de la rutina"
+      }
+    },
+    "strength-feel": {
+      "prompt": "Siento que tengo fuerza física básica para las tareas del día a día.",
+      "options": {
+        "1": "Todo se siente demasiado pesado",
+        "2": "Poca fuerza la mayoría de días",
+        "3": "Varía según el día",
+        "4": "La mayoría del tiempo tengo fuerza razonable",
+        "5": "Me siento fuerte y estable en el día a día"
+      }
+    },
+    "chronic-fatigue-edge": {
+      "prompt": "La fatiga persistente no domina todo mi día.",
+      "options": {
+        "1": "Fatiga fuerte casi todo el tiempo",
+        "2": "Fatiga intensa la mayoría de días",
+        "3": "Hay días duros y días normales",
+        "4": "Fatiga gestionada — no se apodera",
+        "5": "Cansancio normal y equilibrado"
+      }
+    }
+  }
+}

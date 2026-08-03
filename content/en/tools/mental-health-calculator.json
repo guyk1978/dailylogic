@@ -1,0 +1,48 @@
+{
+  "title": "Resilience & Balance Calculator: stress, energy, personal space",
+  "subtitle": "A plain, gentle check-in — no heavy jargon, with small steps for today.",
+  "seoTitle": "Everyday Resilience & Balance Calculator | DailyLogic",
+  "seoDescription": "Free resilience calculator by period load, fatigue, and focus. Quick or 30-question deep quiz with specific answers and practical tips — in your browser.",
+  "heroDescription": "Stress, tiredness, and quiet don't need complicated language. This tool helps you see where you stand — and suggests small steps that feel human.",
+  "toolSlug": "mental-health-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "You set the season you're in, how tired you feel, and what's on your mind — then pick a quick or full quiz.",
+        "Questions cover pressure, rest, boundaries, and quiet — in everyday language.",
+        "The report shows a balance score, short insights, and small practical tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill the setup, choose quiz length, and answer with a clear progress bar.",
+        "Save to history (expand on the home grid) or download a result card.",
+        "Use the result as a gentle compass — not a label."
+      ]
+    },
+    {
+      "heading": "Why it matters",
+      "paragraphs": [
+        "It's easy to miss rising stress and fatigue until they grow.",
+        "Plain language makes patterns easier to see without panic.",
+        "One small step today beats a perfect plan waiting for tomorrow."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Clean language", "description": "No heavy clinical jargon or awkward translations." },
+    { "title": "Two lengths", "description": "A quick check or a full ~30-question assessment." },
+    { "title": "Practical tips", "description": "Small recommendations that feel doable today." }
+  ],
+  "faq": [
+    { "question": "Is this a medical diagnosis?", "answer": "No. It's everyday common-sense support — not a substitute for professional care." },
+    { "question": "What if my score is low?", "answer": "It's a signal to pause and pick one small step — not a verdict on who you are." },
+    { "question": "Is data stored on a server?", "answer": "No. Everything runs and saves locally in the browser." }
+  ]
+}

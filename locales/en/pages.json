@@ -149,7 +149,7 @@
       "disclaimer": {
         "title": "Disclaimer",
         "paragraphs": [
-          "DailyLogic tools and articles are provided for general informational purposes only. They do not constitute financial, legal, tax, medical, or other professional advice.",
+          "Use of this site and calculators is free, voluntary, and intended solely for inspiration and enrichment. The tools and insights do not constitute certified professional advice (medical, psychological, legal, or financial), are not the final word, and do not replace expert consultation or intervention. The site assumes no liability for the use of its outputs.",
           "We strive for accuracy, but we do not guarantee that results are error-free or suitable for your specific situation. Always verify important decisions independently or with a qualified professional."
         ]
       },
@@ -266,6 +266,47 @@
           "For legal details, see our Privacy Policy. To reach the team directly, visit the Contact page."
         ]
       }
+    }
+  },
+  "adminStats": {
+    "metaTitle": "Private stats (local)",
+    "metaDescription": "Local anonymous dashboard for tool usage stats — stored in this browser only.",
+    "badge": "Local admin",
+    "title": "Private tool statistics",
+    "description": "Overview of opens, quiz starts, and completions — on this device only, with no names and nothing sent to a server.",
+    "privacyNote": "Data is fully anonymous and kept in localStorage under a key separate from calculation history.",
+    "updatedAt": "Last updated: {{value}}",
+    "toolsActive": "{{count}} tools with activity",
+    "loading": "Loading local data…",
+    "kpi": {
+      "opens": "Tool opens",
+      "started": "Quiz starts",
+      "completed": "Completions",
+      "completionRate": "Completion rate"
+    },
+    "actions": {
+      "download": "Download JSON",
+      "refresh": "Refresh",
+      "reset": "Reset data",
+      "resetConfirm": "Click again to confirm",
+      "resetFinal": "Delete permanently?"
+    },
+    "table": {
+      "title": "Breakdown by tool",
+      "subtitle": "Click a tool name to expand popular answers.",
+      "tool": "Tool",
+      "opens": "Opens",
+      "started": "Starts",
+      "completed": "Done",
+      "rate": "Rate",
+      "topAnswers": "Top answers"
+    },
+    "detail": {
+      "modes": "Modes",
+      "outcomes": "Outcomes",
+      "answered": "{{count}} answers",
+      "topOption": "Top: {{option}} ({{count}})",
+      "noAnswers": "No answers recorded yet."
     }
   }
 }

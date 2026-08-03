@@ -7,6 +7,9 @@
     "footer": "All tools run locally in your browser.",
     "metaDescription": "Focused tools for life, home, and personal management — all in your browser."
   },
+  "disclaimer": {
+    "text": "Use of this site and calculators is free, voluntary, and intended solely for inspiration and enrichment. The tools and insights do not constitute certified professional advice (medical, psychological, legal, or financial), are not the final word, and do not replace expert consultation or intervention. The site assumes no liability for the use of its outputs."
+  },
   "header": {
     "backHome": "Back to Home"
   },
@@ -65,7 +68,8 @@
     "badge": "Daily puzzle",
     "title": "Daily Mini-Crossword",
     "description": "Today’s theme: {{theme}} — solve it in under a minute.",
-    "underMinute": "< 1 min",
+    "underMinute": "~1 min",
+    "elapsedLabel": "Elapsed time",
     "across": "Across",
     "down": "Down",
     "liveHint": "Letters turn green when correct, red when wrong.",
@@ -132,7 +136,13 @@
       "recommendedMonthly": "Monthly budget",
       "yearlyForecast": "Yearly forecast",
       "oneTimeTotal": "One-time total",
-      "costs": "Cost breakdown"
+      "costs": "Cost breakdown",
+      "metrics": "Body metrics",
+      "lines": "Activities",
+      "totalKcal": "Total calories",
+      "totalMinutes": "Total minutes",
+      "bmr": "Resting energy estimate",
+      "profile": "Profile"
     }
   },
   "categories": {
@@ -201,6 +211,18 @@
     "stranger-sharing-calculator": {
       "name": "Stranger Sharing Calculator",
       "description": "Boundary-smart small talk: privacy guard, social grace, and gut instinct with strangers."
+    },
+    "mental-health-calculator": {
+      "name": "Resilience & Balance Calculator",
+      "description": "A plain-language check on stress, energy, and personal space — with small practical tips."
+    },
+    "physical-health-calculator": {
+      "name": "Physical Health & Vitality Calculator",
+      "description": "Body metrics, a short lifestyle check, and a vitality score with everyday tips."
+    },
+    "calorie-burn-calculator": {
+      "name": "Calorie Burn Calculator",
+      "description": "Multi-select activities, minutes for each, and a combined burn estimate with a clear breakdown."
     }
   },
   "save": {

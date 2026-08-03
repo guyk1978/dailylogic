@@ -1,11 +1,13 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import { PrivateStatsBeacon } from "@/components/analytics/private-stats-beacon";
 import { ToolPageMotion } from "@/components/layout/tool-page-motion";
 import { ToolJsonLd } from "@/components/seo/tool-json-ld";
 import { ToolSeoContent } from "@/components/seo/tool-seo-content";
 import { ShareToolButton } from "@/components/tools/share-tool-button";
 import { ToolRenderer } from "@/components/tool-renderer";
+import { LegalDisclaimer } from "@/components/legal-disclaimer";
 import { useTranslatedCategories, useTranslatedTool } from "@/hooks/use-translated-tools";
 import { useToolSeo } from "@/hooks/use-tool-seo";
 import { getToolBySlug, type ToolSlug } from "@/lib/tools-registry";
@@ -28,6 +30,7 @@ export function ToolPageContent({ slug }: { slug: ToolSlug }) {
 
   return (
     <main className="mx-auto max-w-3xl px-6 pb-20 pt-10">
+      <PrivateStatsBeacon toolSlug={slug} />
       {seo && <ToolJsonLd landing={seo} pageUrl={pageUrl} />}
 
       <ToolPageMotion>
@@ -50,6 +53,7 @@ export function ToolPageContent({ slug }: { slug: ToolSlug }) {
 
         <div className="rounded-2xl bg-white p-6 shadow-md sm:p-8">
           <ToolRenderer slug={slug} />
+          <LegalDisclaimer compact />
         </div>
 
         {seo?.sections && <ToolSeoContent sections={seo.sections} />}

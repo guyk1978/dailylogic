@@ -1,0 +1,48 @@
+{
+  "title": "Calculadora de resiliencia y equilibrio: estrés, energía y espacio personal",
+  "subtitle": "Una revisión sencilla y cercana — sin jerga pesada, con pasos pequeños para hoy.",
+  "seoTitle": "Calculadora de resiliencia y equilibrio | DailyLogic",
+  "seoDescription": "Calculadora gratuita de resiliencia según carga del período, cansancio y foco. Cuestionario rápido o 30 preguntas con respuestas concretas y consejos prácticos.",
+  "heroDescription": "El estrés, el cansancio y la calma no necesitan un lenguaje complicado. Esta herramienta ayuda a ver dónde estás — y sugiere pasos pequeños que se sienten humanos.",
+  "toolSlug": "mental-health-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "LifestyleApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Defines el momento, el cansancio y lo que ocupa tu mente — luego eliges cuestionario rápido o completo.",
+        "Las preguntas cubren presión, descanso, límites y quietud — en lenguaje cotidiano.",
+        "El informe muestra un índice de equilibrio, ideas breves y consejos prácticos."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa el contexto, elige la longitud y responde con barra de progreso clara.",
+        "Guarda en el historial (ampliar en la portada) o descarga la tarjeta.",
+        "Usa el resultado como brújula suave — no como etiqueta."
+      ]
+    },
+    {
+      "heading": "Por qué importa",
+      "paragraphs": [
+        "Es fácil pasar por alto el cansancio y la presión hasta que crecen.",
+        "Un lenguaje sencillo ayuda a ver patrones sin alarma.",
+        "Un paso pequeño hoy vale más que un plan perfecto para mañana."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Lenguaje limpio", "description": "Sin jerga clínica pesada ni traducciones torpes." },
+    { "title": "Dos longitudes", "description": "Chequeo rápido o evaluación completa de ~30 preguntas." },
+    { "title": "Consejos prácticos", "description": "Recomendaciones pequeñas que se pueden hacer hoy." }
+  ],
+  "faq": [
+    { "question": "¿Es un diagnóstico médico?", "answer": "No. Es apoyo de sentido común diario — no sustituye la atención profesional." },
+    { "question": "¿Y si el resultado es bajo?", "answer": "Es una señal para parar un poco y elegir un paso pequeño — no un juicio sobre quién eres." },
+    { "question": "¿Los datos van a un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}

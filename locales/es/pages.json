@@ -149,7 +149,7 @@
       "disclaimer": {
         "title": "Descargo de responsabilidad",
         "paragraphs": [
-          "Las herramientas y artículos de Lógica diaria se ofrecen solo con fines informativos generales. No constituyen asesoramiento financiero, legal, fiscal, médico u otro profesional.",
+          "El uso de este sitio y sus calculadoras es gratuito, voluntario y está destinado únicamente a la inspiración y el enriquecimiento. Las herramientas y perspectivas no constituyen asesoramiento profesional certificado (médico, psicológico, legal o financiero), no son la última palabra y no reemplazan la consulta o intervención de expertos. El sitio no asume ninguna responsabilidad por el uso de los resultados.",
           "Buscamos la precisión, pero no garantizamos que los resultados estén libres de errores o sean adecuados para tu situación específica. Verifica siempre las decisiones importantes de forma independiente o con un profesional cualificado."
         ]
       },
@@ -266,6 +266,47 @@
           "Para detalles legales, consulta nuestra Política de privacidad. Para contactar al equipo directamente, visita la página de Contacto."
         ]
       }
+    }
+  },
+  "adminStats": {
+    "metaTitle": "Estadísticas privadas (local)",
+    "metaDescription": "Panel anónimo local de uso de herramientas — solo en este navegador.",
+    "badge": "Admin local",
+    "title": "Estadísticas privadas de herramientas",
+    "description": "Resumen de aperturas, inicios de cuestionarios y finalizaciones — solo en este dispositivo, sin nombres y sin envío a un servidor.",
+    "privacyNote": "Los datos son totalmente anónimos y se guardan en localStorage con una clave distinta del historial de cálculos.",
+    "updatedAt": "Última actualización: {{value}}",
+    "toolsActive": "{{count}} herramientas con actividad",
+    "loading": "Cargando datos locales…",
+    "kpi": {
+      "opens": "Aperturas",
+      "started": "Inicios",
+      "completed": "Finalizaciones",
+      "completionRate": "Tasa de finalización"
+    },
+    "actions": {
+      "download": "Descargar JSON",
+      "refresh": "Actualizar",
+      "reset": "Restablecer datos",
+      "resetConfirm": "Pulsa otra vez para confirmar",
+      "resetFinal": "¿Borrar definitivamente?"
+    },
+    "table": {
+      "title": "Desglose por herramienta",
+      "subtitle": "Pulsa el nombre de una herramienta para ver las respuestas más frecuentes.",
+      "tool": "Herramienta",
+      "opens": "Aperturas",
+      "started": "Inicios",
+      "completed": "Hecho",
+      "rate": "Tasa",
+      "topAnswers": "Respuestas top"
+    },
+    "detail": {
+      "modes": "Modos",
+      "outcomes": "Resultados",
+      "answered": "{{count}} respuestas",
+      "topOption": "Top: {{option}} ({{count}})",
+      "noAnswers": "Aún no hay respuestas registradas."
     }
   }
 }

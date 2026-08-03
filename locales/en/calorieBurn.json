@@ -1,0 +1,91 @@
+{
+  "intro": {
+    "badge": "Fitness & energy",
+    "title": "Calorie Burn Calculator",
+    "description": "Pick several activities, add minutes for each, and get a combined burn estimate with a clear breakdown."
+  },
+  "profile": {
+    "title": "Your basics",
+    "subtitle": "Weight, age, and sex help personalize the estimate — nothing fancy.",
+    "weight": "Weight",
+    "weightUnitKg": "kg",
+    "weightUnitLb": "lb",
+    "age": "Age",
+    "sex": "Sex",
+    "sexFemale": "Female",
+    "sexMale": "Male",
+    "bmrHint": "Resting energy estimate (for context only)",
+    "bmrValue": "{{value}} kcal/day",
+    "continue": "Continue to activities",
+    "edit": "Edit details"
+  },
+  "activities": {
+    "title": "Choose activities",
+    "subtitle": "Select as many as you like — run, lift, walk, or mix them in one session.",
+    "duration": "Duration (minutes)",
+    "minutes": "min",
+    "selected": "{{count}} selected",
+    "calculate": "Calculate burn",
+    "back": "Back",
+    "needOne": "Pick at least one activity with a duration.",
+    "categories": {
+      "cardio": "Cardio",
+      "strength": "Strength",
+      "mindBody": "Mind & body",
+      "daily": "Everyday",
+      "sport": "Sports"
+    },
+    "items": {
+      "walking": "Easy walk",
+      "briskWalk": "Brisk walk",
+      "jogging": "Jogging",
+      "running": "Running",
+      "cycling": "Cycling",
+      "swimming": "Swimming",
+      "jumpRope": "Jump rope",
+      "hiit": "HIIT intervals",
+      "strength": "Strength training",
+      "yoga": "Yoga",
+      "pilates": "Pilates",
+      "dance": "Dancing",
+      "hiking": "Hiking",
+      "rowing": "Rowing",
+      "stairs": "Stairs",
+      "housework": "Active housework",
+      "soccer": "Soccer",
+      "basketball": "Basketball",
+      "tennis": "Tennis",
+      "elliptical": "Elliptical"
+    }
+  },
+  "result": {
+    "badge": "Session summary",
+    "title": "Total calorie burn",
+    "totalLabel": "Estimated total",
+    "kcal": "{{value}} kcal",
+    "totalMinutes": "{{minutes}} min total",
+    "perMinute": "~{{value}} kcal/min on average",
+    "breakdownTitle": "Breakdown by activity",
+    "lineMeta": "{{minutes}} min · MET {{met}} · ~{{perMin}} kcal/min",
+    "tipsTitle": "Small routine tips",
+    "tips": {
+      "mix": "Mixing cardio and strength across the week keeps things balanced without overloading one system.",
+      "recover": "After a hard effort, leave room to recover — sleep, water, and an easier day.",
+      "consistency": "A steady half-hour most days usually beats rare all-out sessions.",
+      "listen": "These numbers are for inspiration. If something hurts or feels off, stop and check with a professional."
+    },
+    "recalculate": "Recalculate",
+    "changeActivities": "Change activities",
+    "shareText": "I burned about {{total}} kcal across {{count}} activities ({{minutes}} min) | DailyLogic",
+    "resultSummary": "{{total}} kcal · {{count}} activities · {{minutes}} min",
+    "copy": "Copy text",
+    "copied": "Copied",
+    "share": "Share",
+    "downloadCard": "Download card",
+    "cardBusy": "Preparing card…",
+    "backHome": "Back to tools"
+  },
+  "card": {
+    "footer": "Estimate for inspiration only · DailyLogic"
+  }
+}

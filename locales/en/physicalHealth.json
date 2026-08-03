@@ -1,0 +1,280 @@
+{
+  "intro": {
+    "eyebrow": "Body, energy, and lifestyle",
+    "title": "Physical health and vitality calculator",
+    "body": "Enter a few simple details — height, weight, activity, sleep, and nutrition — and answer a short questionnaire. You get a vitality score, clear metrics, and small tips you can try. Everything stays in your browser. This is a tool for inspiration, not a substitute for medical advice."
+  },
+  "setup": {
+    "title": "Background data and metrics",
+    "subtitle": "Straightforward numbers that help paint a picture — not a label.",
+    "heightLabel": "Height",
+    "weightLabel": "Weight",
+    "ageLabel": "Age",
+    "sexLabel": "Sex",
+    "activityLabel": "Physical activity per week",
+    "sleepLabel": "Average hours of sleep",
+    "nutritionLabel": "Day-to-day eating quality",
+    "heightUnit": "cm",
+    "weightUnit": "kg",
+    "sleepUnit": "hours",
+    "ageValue": "Age {{age}}",
+    "continue": "Continue to the short questionnaire",
+    "sex": {
+      "female": "Female",
+      "male": "Male"
+    },
+    "activity": {
+      "sedentary": "Mostly sedentary — little or no exercise",
+      "light": "Light — once or twice a week",
+      "regular": "Regular — 3–4 times a week",
+      "intense": "Intense — very active or athletic"
+    },
+    "nutrition": {
+      "needsWork": "Needs meaningful improvement",
+      "mixed": "Mixed — good days and gaps",
+      "mostlyGood": "Mostly good",
+      "strong": "Steady and nourishing"
+    }
+  },
+  "metrics": {
+    "bmi": "Body mass index",
+    "bmr": "Resting energy expenditure",
+    "tdee": "Total daily estimate",
+    "kcal": "{{value}} kcal",
+    "bmrHint": "Basic estimate using a common formula",
+    "tdeeHint": "Includes the activity level you chose",
+    "bmiBand": {
+      "under": "Below the usual range",
+      "healthy": "Within the usual range",
+      "high": "Above the usual range",
+      "higher": "Higher — worth paying attention"
+    }
+  },
+  "actions": {
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish and report",
+    "restart": "New assessment",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Physical vitality score",
+    "overall": "Overall score",
+    "metrics": "Metrics",
+    "dimensions": "Breakdown",
+    "insights": "Insights",
+    "tips": "Small steps",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · physical health calculator",
+    "shareText": "My vitality score: {{profile}} ({{score}}%). {{insight}} | DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · BMI {{bmi}}",
+    "bands": {
+      "needs-care": "Needs support now",
+      "developing": "In progress — room to grow",
+      "steady": "Steady most days",
+      "strong": "Strong and vital"
+    },
+    "dimensionLabels": {
+      "energyBalance": "Energy balance",
+      "recoveryQuality": "Recovery quality",
+      "activityRhythm": "Activity rhythm"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn’t copy — try downloading instead"
+  },
+  "profiles": {
+    "vital-steady": "Steady vitality — a good base for daily life",
+    "active-balanced": "Active and balanced — right pace",
+    "strong-foundation": "Strong foundation — worth keeping",
+    "mostly-vital": "Mostly vital — with room to improve",
+    "building-habits": "Building habits — step by step",
+    "solid-enough": "Solid enough — you can gently pick up the pace",
+    "needs-rhythm": "Needs more daily rhythm",
+    "tired-edges": "Running on tired — your body is asking for rest",
+    "light-move-start": "Start with gentle movement",
+    "reset-gently": "Reset gently — no extremes",
+    "sleep-first": "Sleep first — then everything else",
+    "one-habit-week": "One habit this week is enough"
+  },
+  "insights": {
+    "dim-energyBalance-high": "Your daily energy looks fairly steady — food, water, and pace all help.",
+    "dim-energyBalance-low": "Energy runs out fast. Regular meals and water through the day make a big difference.",
+    "dim-recoveryQuality-high": "Recovery is working for you — sleep and rest support your body.",
+    "dim-recoveryQuality-low": "Your body isn’t recovering enough. An extra half hour of sleep often beats another workout.",
+    "dim-activityRhythm-high": "You have a good movement rhythm. Consistency matters more than going all out.",
+    "dim-activityRhythm-low": "Regular movement is missing. Ten minutes of walking most days beats a perfect plan that never happens.",
+    "overall-strong": "Overall your body gets good support — you can fine-tune without breaking your routine.",
+    "overall-steady": "A reasonable, human place — clear strengths and a few habits to strengthen.",
+    "overall-developing": "You’re aware, but the routine doesn’t hold everything yet. A small step beats a revolution.",
+    "overall-needs-care": "Your body is asking for ease and order. Start with one thing — sleep or gentle movement.",
+    "bmi-under": "Body mass is below the usual range. Make sure you’re eating enough — and talk to a professional if you need to.",
+    "bmi-healthy": "Body mass is in the usual range — a comfortable starting point, not the whole story on health.",
+    "bmi-high": "Body mass is above the usual range. Steady movement and eating help more than extreme diets.",
+    "bmi-higher": "Body mass is on the higher side. Small, consistent steps — and professional support if you can.",
+    "sleep-short": "Sleep is short for most people. It affects energy, mood, and recovery.",
+    "sleep-fair": "Sleep is almost enough — a little more can make a difference.",
+    "sleep-good": "Your sleep hours look good. Keep a consistent sleep window.",
+    "sleep-long": "Very long sleep — sometimes that’s fine, sometimes a sign of built-up fatigue.",
+    "activity-sedentary": "Little movement each week. Start small — stairs, walking, or stretching.",
+    "activity-light": "You have some light movement. Adding one fixed day can change how you feel.",
+    "activity-regular": "Regular activity — one of the strongest habits for health.",
+    "activity-intense": "High training load. Rest days and sleep matter just as much.",
+    "nutrition-needsWork": "Eating could use a boost. One balanced meal a day is a good start.",
+    "nutrition-mixed": "Mixed eating — good days and gaps. Small consistency wins.",
+    "nutrition-mostlyGood": "Most days your food supports you. Keep that up on busy days too.",
+    "nutrition-strong": "Steady eating — a great base for energy and recovery."
+  },
+  "tips": {
+    "tip-water-bottle": "Keep a water bottle nearby today — three refills before evening.",
+    "tip-protein-breakfast": "Breakfast with protein (egg, yogurt, cheese) helps steady energy.",
+    "tip-walk-after-lunch": "Ten minutes of walking after a meal — easy and energizing.",
+    "tip-earlier-bed": "Go to bed twenty minutes earlier this week — no screens in bed.",
+    "tip-screen-off": "Turn off screens half an hour before sleep — helps you fall asleep faster.",
+    "tip-rest-day": "Plan one rest day this week — even if you feel you “should” train.",
+    "tip-ten-minute-move": "Ten minutes of movement today: walk, stretch, or take the stairs.",
+    "tip-stairs-choice": "Choose stairs over the elevator once a day — it counts.",
+    "tip-calendar-workout": "Block a short workout on your calendar like a meeting — then just show up.",
+    "tip-weekly-check": "Once a week: how are energy, sleep, and movement? One sentence only.",
+    "tip-sleep-window": "Set a steady sleep window for seven days — weekends included.",
+    "tip-outdoor-light": "Ten minutes of daylight in the morning — helps sleep rhythm and alertness."
+  },
+  "questions": {
+    "daytime-energy": {
+      "prompt": "Midday I have enough energy to get through without crashing.",
+      "options": {
+        "1": "I crash almost every day",
+        "2": "Most days very tired after noon",
+        "3": "Sometimes fine, sometimes empty",
+        "4": "Most days I manage reasonably well",
+        "5": "Steady energy for most of the day"
+      }
+    },
+    "water-habit": {
+      "prompt": "I drink enough water during the day — not just coffee.",
+      "options": {
+        "1": "I hardly drink water",
+        "2": "Only when very thirsty",
+        "3": "I remember sometimes",
+        "4": "Most days I drink a reasonable amount",
+        "5": "Water is a steady habit"
+      }
+    },
+    "afternoon-slump": {
+      "prompt": "An afternoon slump doesn’t shut me down completely.",
+      "options": {
+        "1": "After noon I can’t function",
+        "2": "Strong slump most days",
+        "3": "There’s a slump but I can push through",
+        "4": "Mild slump I know how to handle",
+        "5": "Almost no slump — or I know how to prevent it"
+      }
+    },
+    "steady-meals": {
+      "prompt": "I don’t skip meals until hunger is extreme.",
+      "options": {
+        "1": "I regularly go long hours without eating",
+        "2": "I often forget to eat",
+        "3": "Sometimes organized, sometimes not",
+        "4": "Most days I have a reasonable meal rhythm",
+        "5": "I eat regularly even on busy days"
+      }
+    },
+    "wake-feeling": {
+      "prompt": "In the morning I wake up feeling ready to start the day.",
+      "bySleep": {
+        "short": "With my short sleep — I still manage to get up without feeling totally wrecked.",
+        "fair": "With my current sleep hours — mornings feel doable.",
+        "good": "With good sleep hours — I wake up relatively ready.",
+        "long": "Even after long sleep — I check whether mornings actually feel refreshed."
+      },
+      "options": {
+        "1": "I wake up wrecked almost always",
+        "2": "Very hard to get going",
+        "3": "Sometimes okay",
+        "4": "Most mornings are reasonable",
+        "5": "I wake up with fairly good energy"
+      }
+    },
+    "sore-recovery": {
+      "prompt": "After effort — my body recovers in a reasonable time.",
+      "byActivity": {
+        "sedentary": "Even after small effort (stairs, walking) — I’m not wiped out for days.",
+        "light": "After light activity — I bounce back without lasting soreness.",
+        "regular": "Between workouts — recovery is enough.",
+        "intense": "Between intense workouts — I give my body time to recover."
+      },
+      "options": {
+        "1": "Pain or exhaustion lasts for days",
+        "2": "I recover too slowly",
+        "3": "Sometimes fast, sometimes not",
+        "4": "Most of the time I’m back on track in time",
+        "5": "Good, consistent recovery"
+      }
+    },
+    "rest-day-respect": {
+      "prompt": "I can give my body a rest day without guilt.",
+      "byActivity": {
+        "sedentary": "When you start moving — rest is part of the picture too, not failure.",
+        "light": "Between active days — there’s room to rest without pressure.",
+        "regular": "In a training routine — rest days are planned.",
+        "intense": "Even with a heavy load — rest is part of training."
+      },
+      "options": {
+        "1": "Rest = strong guilt",
+        "2": "Hard to rest even when I need it",
+        "3": "Sometimes I manage",
+        "4": "Most of the time I honor rest",
+        "5": "Planned rest, no drama"
+      }
+    },
+    "move-most-days": {
+      "prompt": "Most days of the week I get some movement — even if brief.",
+      "byActivity": {
+        "sedentary": "Even without a gym — there’s a little daily movement (walking, stairs).",
+        "light": "Beyond 1–2 workouts — there’s everyday light movement too.",
+        "regular": "Between regular workouts — I’m not fully sedentary.",
+        "intense": "Beyond training — a normal day still includes some movement."
+      },
+      "options": {
+        "1": "Almost no movement at all",
+        "2": "Only when there’s a formal workout",
+        "3": "Sometimes I move, sometimes not",
+        "4": "Most days there’s some movement",
+        "5": "Movement is a regular part of my routine"
+      }
+    },
+    "strength-feel": {
+      "prompt": "I feel I have basic physical strength for everyday tasks.",
+      "options": {
+        "1": "Everything feels too heavy",
+        "2": "Weak most days",
+        "3": "Varies by day",
+        "4": "Most of the time I have reasonable strength",
+        "5": "I feel strong and steady day to day"
+      }
+    },
+    "chronic-fatigue-edge": {
+      "prompt": "Ongoing fatigue doesn’t run my whole day.",
+      "options": {
+        "1": "Heavy fatigue almost all the time",
+        "2": "Strong fatigue most days",
+        "3": "Hard days and normal days mix",
+        "4": "Fatigue is managed — it doesn’t take over",
+        "5": "Normal, balanced tiredness"
+      }
+    }
+  }
+}

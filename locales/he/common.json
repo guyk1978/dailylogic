@@ -3,9 +3,12 @@
     "name": "לוגיקה יומית",
     "tagline": "כלים לבית ולחיים",
     "heroCaption": "כלים לבית ולחיים",
-    "heroDescription": "כלים מעשיים לתקציב, בישול, קניות והחלטות יומיומיות — הכל רץ מקומית בדפדפן שלך.",
-    "footer": "כל הכלים רצים מקומית בדפדפן שלך.",
+    "heroDescription": "כלים מעשיים לתקציב, בישול, קניות והחלטות יומיומיות — הכל רץ מקומית בדפדפן שלכם.",
+    "footer": "כל הכלים רצים מקומית בדפדפן שלכם.",
     "metaDescription": "כלים ממוקדים לניהול הבית, החיים והכסף — הכל בדפדפן."
+  },
+  "disclaimer": {
+    "text": "השימוש באתר ובמחשבונים נעשה חינם, מרצון טוב ולמטרות השראה והעשרה בלבד. הכלים והתובנות אינם מהווים ייעוץ מקצועי מוסמך (רפואי, נפשי, משפטי או פיננסי), אינם המילה האחרונה, ואינם באים להחליף התערבות או חוות דעת של מומחים. אין האתר נושא באחריות כלשהי לתוצאות השימוש."
   },
   "header": {
     "backHome": "חזרה לדף הבית"
@@ -23,7 +26,7 @@
     "desktopStep1": "פתחו את האתר ב־Chrome, ב־Edge או בדפדפן דומה.",
     "desktopStep2": "חפשו את אייקון ההתקנה בשורת הכתובת, או פתחו את תפריט הדפדפן (⋮).",
     "desktopStep3": "בחרו \"התקנת אפליקציה\" ואשרו.",
-    "installNow": "התקן עכשיו",
+    "installNow": "התקינו עכשיו",
     "gotIt": "הבנתי",
     "close": "סגירה"
   },
@@ -46,35 +49,36 @@
   },
   "dashboard": {
     "searchLabel": "חיפוש כלים",
-    "searchPlaceholder": "חפש לפי שם, קטגוריה או תג…",
+    "searchPlaceholder": "חיפוש לפי שם, קטגוריה או תג…",
     "noToolsTitle": "לא נמצאו כלים",
-    "noToolsHint": "נסה שם או קטגוריה אחרים.",
-    "toolsTitle": "הכלים שלך",
+    "noToolsHint": "נסו שם או קטגוריה אחרים.",
+    "toolsTitle": "הכלים שלכם",
     "toolsDescription": "בחרו כלי והתחילו — הכל נשאר בדפדפן שלכם.",
     "toolsCount": "{{count}} כלים",
     "openTool": "פתיחה",
-    "favoritesTitle": "המועדפים שלך",
-    "favoritesDescription": "גישה מהירה לכלים שאתה משתמש בהם הכי הרבה",
+    "favoritesTitle": "המועדפים שלכם",
+    "favoritesDescription": "גישה מהירה לכלים שאתם משתמשים בהם הכי הרבה",
     "results_one": "תוצאה {{count}}",
     "results_other": "{{count}} תוצאות",
-    "addFavorite": "הוסף {{name}} למועדפים",
-    "removeFavorite": "הסר {{name}} מהמועדפים",
+    "addFavorite": "הוספת {{name}} למועדפים",
+    "removeFavorite": "הסרת {{name}} מהמועדפים",
     "loading": "טוען…"
   },
   "crossword": {
     "badge": "חידה יומית",
     "title": "תשבץ יומי קצר",
     "description": "נושא היום: {{theme}} — פתרו בפחות מדקה.",
-    "underMinute": "< דקה",
+    "underMinute": "כדקה אחת",
+    "elapsedLabel": "זמן שחלף",
     "across": "אופקי",
     "down": "אנכי",
     "liveHint": "אות נכונה נצבעת בירוק, שגויה באדום.",
     "hintsTitle": "רמזים",
-    "showHint": "הצג רמז {{number}}",
-    "hideHint": "הסתר רמז {{number}}",
+    "showHint": "הצגת רמז {{number}}",
+    "hideHint": "הסתרת רמז {{number}}",
     "successTitle": "כל הכבוד — התשבץ נפתר!",
     "successDescription": "מוכנים לכלי היומי? עברו אליו והמשיכו את הנושא בפועל.",
-    "cta": "עבור לכלי היומי: {{tool}}",
+    "cta": "מעבר לכלי היומי: {{tool}}",
     "gridLabel": "רשת התשבץ",
     "cellLabel": "שורה {{row}}, עמודה {{col}}",
     "themes": {
@@ -87,10 +91,10 @@
   },
   "recent": {
     "title": "חישובים אחרונים",
-    "description": "המשך מאיפה שהפסקת",
-    "clearAll": "נקה הכל",
-    "delete": "מחק {{name}}",
-    "expand": "הצג הכל",
+    "description": "המשיכו מאיפה שהפסקתם",
+    "clearAll": "ניקוי הכל",
+    "delete": "מחיקת {{name}}",
+    "expand": "הצגת הכל",
     "close": "סגירה",
     "expandedCaption": "תוצאה שמורה",
     "resultLabel": "סיכום התוצאה",
@@ -132,7 +136,13 @@
       "recommendedMonthly": "תקציב חודשי",
       "yearlyForecast": "תחזית שנתית",
       "oneTimeTotal": "חד־פעמי",
-      "costs": "פילוח עלויות"
+      "costs": "פילוח עלויות",
+      "metrics": "מדדי גוף",
+      "lines": "פעילויות",
+      "totalKcal": "סה״כ קלוריות",
+      "totalMinutes": "סה״כ דקות",
+      "bmr": "חילוף חומרים במנוחה",
+      "profile": "פרופיל"
     }
   },
   "categories": {
@@ -146,7 +156,7 @@
     },
     "shopping": {
       "label": "קניות חכמות",
-      "description": "השוואת מחירים וקניות חכמות"
+      "description": "השוואת מחירים ובחירות משתלמות"
     },
     "life": {
       "label": "חיים יומיומיים",
@@ -156,23 +166,23 @@
   "tools": {
     "budget-simple": {
       "name": "מתכנן תקציב",
-      "description": "תכנון חודשי אסטרטגי עם ניתוח פערים והחלטות מונחות משתמש."
+      "description": "תקציב חודשי ברור עם ניתוח פערים ופשרות שאתם בוחרים."
     },
     "time-value": {
       "name": "לעשות או להעביר",
-      "description": "מטריצת החלטה: לעשות בעצמכם מול שכירת מקצוען."
+      "description": "להחליט אם לעשות בעצמכם או לשכור מקצוען — לפי זמן, כסף וסיכון."
     },
     "tip-split": {
       "name": "עוזר טיפ חכם",
-      "description": "המלצות טיפ לפי הקשר וחלוקת חשבון."
+      "description": "המלצת טיפ לפי חוויית השירות, וחלוקת חשבון בין כולם."
     },
     "recipe-adjuster": {
       "name": "מדרג מתכונים",
-      "description": "הגדל או הקטן מתכונים במהירות."
+      "description": "הגדילו או הקטינו מתכונים במהירות."
     },
     "unit-compare": {
       "name": "עוזר קניות חכם",
-      "description": "השווה מחיר ליחידה ובנה רשימת קניות."
+      "description": "השוו מחיר ליחידה ובנו רשימת קניות."
     },
     "love-calculator": {
       "name": "מחשבון אהבה לחיים",
@@ -201,18 +211,30 @@
     "stranger-sharing-calculator": {
       "name": "מחשבון שיתוף עם זרים",
       "description": "גבולות חכמים בשיחת חולין: פרטיות, אלגנטיות חברתית ותחושת בטן מול זרים."
+    },
+    "mental-health-calculator": {
+      "name": "מחשבון חוסן ואיזון",
+      "description": "בדיקה פשוטה של לחץ, אנרגיה ומרחב אישי — עם טיפים קטנים להיגיון בריא."
+    },
+    "physical-health-calculator": {
+      "name": "מחשבון בריאות גופנית",
+      "description": "מדדי גוף, שאלון אורח חיים וציון חיוניות — עם טיפים יומיומיים פשוטים."
+    },
+    "calorie-burn-calculator": {
+      "name": "מחשבון שרפת קלוריות",
+      "description": "בחירה מרובה של פעילויות, משך לכל אחת, וסכום מצרפי עם פילוח ברור."
     }
   },
   "save": {
-    "optionalLabel": "אופציונלי: שמור חישוב זה",
-    "namePlaceholder": "תן שם לחישוב…",
-    "saveButton": "שמור",
+    "optionalLabel": "אופציונלי: שמירת החישוב",
+    "namePlaceholder": "תנו שם לחישוב…",
+    "saveButton": "שמירה",
     "saved": "נשמר!"
   },
   "notFound": {
     "title": "הכלי לא נמצא",
     "description": "הכלי הזה לא קיים ברשימה.",
-    "browseTools": "עיין בכלים",
+    "browseTools": "עיינו בכלים",
     "toolMetaTitle": "הכלי לא נמצא",
     "articleMetaTitle": "המאמר לא נמצא"
   },
@@ -238,29 +260,29 @@
     "breadcrumbLabel": "ניווט",
     "toolGuide": "מדריך לכלי",
     "whyUseCaption": "למה להשתמש בכלי",
-    "whyUseTitle": "קבלו החלטות בבהירות",
+    "whyUseTitle": "החלטות ברורות יותר",
     "faqCaption": "שאלות נפוצות",
     "faqTitle": "שאלות ותשובות",
-    "useCasesCaption": "מקרי שימוש",
-    "useCasesTitle": "למדו להפיק את המירב מהכלי",
+    "useCasesCaption": "מתי זה שימושי",
+    "useCasesTitle": "איך להפיק מהכלי יותר",
     "useCasesDescription": "מדריכים מעשיים ותרחישים יומיומיים שמשתלבים עם {{title}}.",
     "readyTitle": "מוכנים לנסות בעצמכם?",
-    "readyDescription": "קפצו ישר ל-{{toolName}} החי — הקלטים נשארים בדפדפן שלכם.",
-    "openTool": "פתחו {{toolName}}",
+    "readyDescription": "עברו ישר ל־{{toolName}} — הקלטים נשארים בדפדפן שלכם.",
+    "openTool": "פתחו את {{toolName}}",
     "browseAllTools": "עיינו בכל הכלים",
-    "launchTool": "הפעילו {{toolName}}",
+    "launchTool": "הפעילו את {{toolName}}",
     "toolsIndexCaption": "מדריכי כלים",
     "toolsIndexTitle": "גלו את כלי לוגיקה יומית",
-    "toolsIndexDescription": "מדריכים ברורים וממוקדים לכל כלי — מה הוא עושה, מתי להשתמש, ואיך להתחיל.",
-    "viewGuide": "צפו במדריך ←",
+    "toolsIndexDescription": "מדריכים קצרים לכל כלי — מה הוא עושה, מתי להשתמש, ואיך להתחיל.",
+    "viewGuide": "למדריך ←",
     "fromBlogCaption": "מהבלוג",
-    "fromBlogTitle": "מדריכים מעשיים ומקרי שימוש",
-    "viewAllArticles": "צפו בכל המאמרים"
+    "fromBlogTitle": "מדריכים מעשיים ותרחישים",
+    "viewAllArticles": "לכל המאמרים"
   },
   "consent": {
     "caption": "פרטיות",
     "title": "עוגיות ואנליטיקה",
-    "description": "לוגיקה יומית משתמשת בעוגיות ובאנליטיקה (Google Analytics) כדי להבין כיצד מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. הקלט שלכם בכלים תמיד נשאר בדפדפן. אנא אשרו כדי להמשיך להשתמש באתר.",
+    "description": "לוגיקה יומית משתמשת בעוגיות ובאנליטיקה (Google Analytics) כדי להבין איך מבקרים משתמשים באתר ולתמוך בפרסום באמצעות Google AdSense. מה שמזינים בכלים תמיד נשאר בדפדפן. אשרו כדי להמשיך.",
     "accept": "אישור",
     "deny": "דחייה"
   },
@@ -283,6 +305,6 @@
     "item_other": "{{count}} פריטים",
     "hour_one": "שעה {{count}}",
     "hour_other": "{{count}} שעות",
-    "removeNamed": "הסר {{name}}"
+    "removeNamed": "הסרת {{name}}"
   }
 }

@@ -1,0 +1,91 @@
+{
+  "intro": {
+    "badge": "Fitness y energía",
+    "title": "Calculadora de calorías quemadas",
+    "description": "Elige varias actividades, indica los minutos de cada una y obtén una estimación combinada con un desglose claro."
+  },
+  "profile": {
+    "title": "Tus datos básicos",
+    "subtitle": "Peso, edad y sexo ayudan a personalizar la estimación — sin complicaciones.",
+    "weight": "Peso",
+    "weightUnitKg": "kg",
+    "weightUnitLb": "lb",
+    "age": "Edad",
+    "sex": "Sexo",
+    "sexFemale": "Mujer",
+    "sexMale": "Hombre",
+    "bmrHint": "Estimación de energía en reposo (solo orientativa)",
+    "bmrValue": "{{value}} kcal/día",
+    "continue": "Seguir a actividades",
+    "edit": "Editar datos"
+  },
+  "activities": {
+    "title": "Elige actividades",
+    "subtitle": "Marca todas las que quieras — correr, fuerza, caminar o combinarlas en una sola sesión.",
+    "duration": "Duración (minutos)",
+    "minutes": "min",
+    "selected": "{{count}} seleccionadas",
+    "calculate": "Calcular quema",
+    "back": "Atrás",
+    "needOne": "Elige al menos una actividad con duración.",
+    "categories": {
+      "cardio": "Cardio",
+      "strength": "Fuerza",
+      "mindBody": "Cuerpo y mente",
+      "daily": "Cotidianas",
+      "sport": "Deportes"
+    },
+    "items": {
+      "walking": "Caminata suave",
+      "briskWalk": "Caminata rápida",
+      "jogging": "Trote",
+      "running": "Carrera",
+      "cycling": "Ciclismo",
+      "swimming": "Natación",
+      "jumpRope": "Saltar a la cuerda",
+      "hiit": "Intervalos HIIT",
+      "strength": "Entrenamiento de fuerza",
+      "yoga": "Yoga",
+      "pilates": "Pilates",
+      "dance": "Baile",
+      "hiking": "Senderismo",
+      "rowing": "Remo",
+      "stairs": "Escaleras",
+      "housework": "Tareas domésticas activas",
+      "soccer": "Fútbol",
+      "basketball": "Baloncesto",
+      "tennis": "Tenis",
+      "elliptical": "Elíptica"
+    }
+  },
+  "result": {
+    "badge": "Resumen de la sesión",
+    "title": "Calorías quemadas en total",
+    "totalLabel": "Total estimado",
+    "kcal": "{{value}} kcal",
+    "totalMinutes": "{{minutes}} min en total",
+    "perMinute": "~{{value}} kcal/min de media",
+    "breakdownTitle": "Desglose por actividad",
+    "lineMeta": "{{minutes}} min · MET {{met}} · ~{{perMin}} kcal/min",
+    "tipsTitle": "Consejos breves para la rutina",
+    "tips": {
+      "mix": "Combinar cardio y fuerza a lo largo de la semana equilibra el esfuerzo sin sobrecargar un solo sistema.",
+      "recover": "Tras un esfuerzo intenso, deja espacio para recuperarte: sueño, agua y un día más suave.",
+      "consistency": "Media hora constante la mayoría de días suele superar sesiones extremas de vez en cuando.",
+      "listen": "Estos números son orientativos. Si algo duele o no se siente bien, para y consulta a un profesional."
+    },
+    "recalculate": "Recalcular",
+    "changeActivities": "Cambiar actividades",
+    "shareText": "Quemé unas {{total}} kcal en {{count}} actividades ({{minutes}} min) | DailyLogic",
+    "resultSummary": "{{total}} kcal · {{count}} actividades · {{minutes}} min",
+    "copy": "Copiar texto",
+    "copied": "Copiado",
+    "share": "Compartir",
+    "downloadCard": "Descargar tarjeta",
+    "cardBusy": "Preparando tarjeta…",
+    "backHome": "Volver a herramientas"
+  },
+  "card": {
+    "footer": "Estimación solo orientativa · DailyLogic"
+  }
+}

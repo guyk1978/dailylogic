@@ -18,6 +18,9 @@ import enPocketMoney from "../../../locales/en/pocketMoney.json";
 import enDogOwnership from "../../../locales/en/dogOwnership.json";
 import enParentRespect from "../../../locales/en/parentRespect.json";
 import enStrangerSharing from "../../../locales/en/strangerSharing.json";
+import enMentalHealth from "../../../locales/en/mentalHealth.json";
+import enPhysicalHealth from "../../../locales/en/physicalHealth.json";
+import enCalorieBurn from "../../../locales/en/calorieBurn.json";
 import es from "../../../locales/es/common.json";
 import esBudgetPlanner from "../../../locales/es/budgetPlanner.json";
 import esIngredients from "../../../locales/es/ingredients.json";
@@ -33,6 +36,9 @@ import esPocketMoney from "../../../locales/es/pocketMoney.json";
 import esDogOwnership from "../../../locales/es/dogOwnership.json";
 import esParentRespect from "../../../locales/es/parentRespect.json";
 import esStrangerSharing from "../../../locales/es/strangerSharing.json";
+import esMentalHealth from "../../../locales/es/mentalHealth.json";
+import esPhysicalHealth from "../../../locales/es/physicalHealth.json";
+import esCalorieBurn from "../../../locales/es/calorieBurn.json";
 import he from "../../../locales/he/common.json";
 import heBudgetPlanner from "../../../locales/he/budgetPlanner.json";
 import heIngredients from "../../../locales/he/ingredients.json";
@@ -48,6 +54,9 @@ import hePocketMoney from "../../../locales/he/pocketMoney.json";
 import heDogOwnership from "../../../locales/he/dogOwnership.json";
 import heParentRespect from "../../../locales/he/parentRespect.json";
 import heStrangerSharing from "../../../locales/he/strangerSharing.json";
+import heMentalHealth from "../../../locales/he/mentalHealth.json";
+import hePhysicalHealth from "../../../locales/he/physicalHealth.json";
+import heCalorieBurn from "../../../locales/he/calorieBurn.json";
 
 export const localeResources = {
   en: {
@@ -65,6 +74,9 @@ export const localeResources = {
     dogOwnership: enDogOwnership,
     parentRespect: enParentRespect,
     strangerSharing: enStrangerSharing,
+    mentalHealth: enMentalHealth,
+    physicalHealth: enPhysicalHealth,
+    calorieBurn: enCalorieBurn,
     ingredients: enIngredients,
   },
   he: {
@@ -82,6 +94,9 @@ export const localeResources = {
     dogOwnership: heDogOwnership,
     parentRespect: heParentRespect,
     strangerSharing: heStrangerSharing,
+    mentalHealth: heMentalHealth,
+    physicalHealth: hePhysicalHealth,
+    calorieBurn: heCalorieBurn,
     ingredients: heIngredients,
   },
   es: {
@@ -99,6 +114,9 @@ export const localeResources = {
     dogOwnership: esDogOwnership,
     parentRespect: esParentRespect,
     strangerSharing: esStrangerSharing,
+    mentalHealth: esMentalHealth,
+    physicalHealth: esPhysicalHealth,
+    calorieBurn: esCalorieBurn,
     ingredients: esIngredients,
   },
 } satisfies Record<
@@ -118,6 +136,9 @@ export const localeResources = {
     dogOwnership: typeof enDogOwnership;
     parentRespect: typeof enParentRespect;
     strangerSharing: typeof enStrangerSharing;
+    mentalHealth: typeof enMentalHealth;
+    physicalHealth: typeof enPhysicalHealth;
+    calorieBurn: typeof enCalorieBurn;
     ingredients: typeof enIngredients;
   }
 >;

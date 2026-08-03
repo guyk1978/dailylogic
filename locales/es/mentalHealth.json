@@ -1,0 +1,491 @@
+{
+  "intro": {
+    "eyebrow": "Calma, carga y equilibrio",
+    "title": "Comprobación diaria de resiliencia y equilibrio",
+    "body": "Un espacio breve para ver cómo te va con la presión, el cansancio y la energía — en lenguaje sencillo, sin etiquetas pesadas. Elige dónde estás ahora, responde con honestidad y recibe ideas pequeñas que puedes usar hoy. Todo se queda en tu navegador."
+  },
+  "setup": {
+    "title": "Cómo se ve este momento de tu vida",
+    "subtitle": "Esto orienta las preguntas y consejos — no es una nota sobre quién eres.",
+    "periodLabel": "Carga de este periodo",
+    "fatigueLabel": "Cansancio físico y mental",
+    "focusLabel": "Qué ocupa tu cabeza ahora",
+    "continue": "Continuar al cuestionario",
+    "period": {
+      "highPressure": "Mucha presión en el trabajo o los estudios",
+      "routine": "Rutina normal, con altibajos",
+      "transition": "Un tiempo de cambios y transiciones"
+    },
+    "fatigue": {
+      "rested": "Dormí bien y tengo energía",
+      "midweek": "Cansancio típico de mitad de semana",
+      "wornDown": "Sensación de agotamiento que dura"
+    },
+    "focus": {
+      "timePressure": "Presión de tiempo y listas interminables",
+      "futureWorry": "Preocupaciones por el futuro",
+      "taskPile": "Montón de tareas y obligaciones",
+      "seekingQuiet": "Busco un poco de calma y equilibrio"
+    }
+  },
+  "modes": {
+    "quick": "Revisión rápida",
+    "quickMeta": "~10 preguntas · 2–3 min",
+    "full": "Revisión completa",
+    "fullMeta": "30 preguntas · 7–8 min",
+    "backToSetup": "Volver a ajustes"
+  },
+  "scale": {
+    "1": "Muy lejos de esto",
+    "2": "Rara vez",
+    "3": "A veces",
+    "4": "La mayoría del tiempo",
+    "5": "Casi siempre"
+  },
+  "actions": {
+    "start": "Empezar",
+    "next": "Siguiente",
+    "back": "Anterior",
+    "finish": "Terminar e informe",
+    "restart": "Nueva revisión",
+    "changeMode": "Cambiar modo",
+    "newInsight": "Otra idea",
+    "share": "Compartir",
+    "copied": "¡Copiado!",
+    "backToTools": "Volver a herramientas",
+    "downloadCard": "Descargar tarjeta",
+    "copyCard": "Copiar tarjeta",
+    "copyText": "Copiar texto"
+  },
+  "progress": {
+    "label": "Pregunta {{current}} de {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Instantánea de equilibrio y resiliencia",
+    "overall": "Puntuación global",
+    "dimensions": "Áreas",
+    "insights": "Ideas",
+    "tips": "Pasos pequeños para hoy",
+    "cardTitle": "Tarjeta de resultado",
+    "cardFooter": "dailylogic.app · comprobación de resiliencia y equilibrio",
+    "shareText": "Mi equilibrio: {{profile}} ({{score}}%). {{insight}} | DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Necesito más espacio ahora",
+      "developing": "En camino — hay margen",
+      "steady": "Estable la mayoría de días",
+      "strong": "Fuerte y con los pies en la tierra"
+    },
+    "dimensionLabels": {
+      "stressBalance": "Manejo de la presión",
+      "restEnergy": "Descanso y energía",
+      "personalSpace": "Espacio personal y calma"
+    }
+  },
+  "card": {
+    "saved": "Tarjeta descargada",
+    "copied": "Tarjeta copiada",
+    "copyFailed": "No pudimos copiar — prueba descargar"
+  },
+  "profiles": {
+    "steady-harbor": "Puerto estable — tienes ancla incluso en días cargados",
+    "gentle-strength": "Fuerza suave — te cuidas sin drama",
+    "balanced-pace": "Ritmo equilibrado — sabes cuándo bajar el paso",
+    "mostly-steady": "Mayormente estable — con algunos días flojos",
+    "learning-rest": "Aprendiendo a descansar — es parte del trabajo",
+    "holding-on-well": "Aguantas bien — aunque la carga sea alta",
+    "thin-reserves": "Reservas bajas — el cuerpo pide descanso",
+    "too-many-plates": "Demasiados platos en el aire",
+    "quiet-needed": "Necesito más calma de lo habitual",
+    "ask-for-space": "Hora de pedir espacio",
+    "rebuild-gently": "Reconstruir con suavidad — un paso",
+    "one-step-today": "Un paso hoy basta"
+  },
+  "insights": {
+    "dim-stressBalance-high": "Partes la presión en trozos pequeños en lugar de dejar que se escape. Eso es resiliencia de verdad.",
+    "dim-stressBalance-low": "La presión ocupa mucho espacio. Una regla pequeña — una tarea a la vez — puede bajar el ruido.",
+    "dim-restEnergy-high": "Sabes recargarte. Mantén eso, sobre todo en días cargados.",
+    "dim-restEnergy-low": "La energía está más baja de lo que la cabeza pide. Un descanso corto y a propósito vale más que una lista larga.",
+    "dim-personalSpace-high": "Tienes un límite suave pero claro. Protege la calma sin cortar a la gente.",
+    "dim-personalSpace-low": "Es fácil ceder espacio personal para complacer. Media hora tuya no es un lujo.",
+    "overall-strong": "En conjunto navegas la carga como adulto: con cuidado, sin hundirte en cada ola.",
+    "overall-steady": "Un buen lugar humano — fortalezas claras y algunos hábitos que conviene reforzar.",
+    "overall-developing": "Hay conciencia, pero la carga aún manda. Un paso pequeño gana a un plan perfecto.",
+    "overall-needs-care": "Cuerpo y mente piden alivio. No es fracaso — es señal para frenar un poco.",
+    "period-highPressure": "En un periodo de mucha presión, los límites se desgastan rápido. Recorta lo que puedas, aunque sea una sola tarea.",
+    "period-routine": "En la rutina es fácil ignorar el cansancio pequeño hasta que crece. Revisa tu energía a mitad de semana.",
+    "period-transition": "Los cambios drenan energía aunque sean positivos. Date tiempo para adaptarte sin correr.",
+    "fatigue-rested": "Tienes buena base de energía — úsala con cabeza, no hasta vaciar.",
+    "fatigue-midweek": "El cansancio de mitad de semana es normal. Acostarte un poco antes hoy vale más que otro café.",
+    "fatigue-wornDown": "El agotamiento pide menos empuje, no más. Pide ayuda con una cosa esta semana.",
+    "focus-timePressure": "La presión de tiempo alimenta la prisa. Para diez minutos a planificar — ahorra una hora de lío.",
+    "focus-futureWorry": "Las preocupaciones por el futuro roban el presente. Escribe tres en papel — y vuelve a lo que puedes hacer hoy.",
+    "focus-taskPile": "Un montón de tareas parece una montaña. Elige solo tres para hoy y deja el resto en espera.",
+    "focus-seekingQuiet": "Buscar calma es señal sana. Protégela como una cita importante."
+  },
+  "tips": {
+    "tip-ten-minute-box": "Caja de diez minutos: pon un temporizador, una sola cosa, y luego para a respirar.",
+    "tip-write-three-worries": "Escribe tres preocupaciones en papel. Lo que puedes hacer hoy — márcalo. El resto espera a mañana.",
+    "tip-one-task-rule": "Regla de una tarea: hasta terminar la actual — no abres otra pestaña ni lista.",
+    "tip-earlier-lights-out": "Apagar luces veinte minutos antes esta semana — sin móvil en la cama.",
+    "tip-short-walk": "Un paseo de diez minutos sin auriculares. Mover el cuerpo también mueve la cabeza.",
+    "tip-water-and-sit": "Un vaso de agua y cinco minutos sentado sin pantalla — antes de volver a la lista.",
+    "tip-protect-half-hour": "Media hora esta semana reservada para ti en el calendario — como una reunión que no cancelas.",
+    "tip-soft-no-script": "Una frase para decir no con suavidad: \"Esta semana tengo la agenda llena — hablamos la próxima.\"",
+    "tip-phone-away-meal": "Una comida al día sin móvil en la mesa.",
+    "tip-evening-close": "Ritual de cierre: tres cosas que hiciste, una para mañana, y móvil lejos de la cama.",
+    "tip-ask-one-favor": "Pide ayuda con una cosa pequeña esta semana — un recado, una tarea o una hora de calma en casa.",
+    "tip-tiny-joy-today": "Planifica una alegría pequeña para hoy: buen café, una canción favorita o cinco minutos al sol."
+  },
+  "questions": {
+    "pressure-without-spiral": {
+      "prompt": "Cuando sube la presión — consigo parar antes de que todo se enrede.",
+      "byPeriod": {
+        "highPressure": "En este periodo de mucha presión — paro antes de que se convierta en un lío grande.",
+        "routine": "En un día normal cargado — no dejo que una presión pequeña se vuelva tormenta.",
+        "transition": "Entre cambios — mantengo la cabeza clara aunque todo se mueva."
+      },
+      "options": {
+        "1": "Todo se enreda rápido y pierdo el rumbo",
+        "2": "Casi siempre me arrastra la presión",
+        "3": "A veces paro, a veces me arrastra",
+        "4": "Suelo parar y elegir un solo paso",
+        "5": "Paro, respiro y lo parto en pasos pequeños"
+      }
+    },
+    "one-thing-at-a-time": {
+      "prompt": "Trabajo en una cosa a la vez en lugar de saltar entre todo.",
+      "options": {
+        "1": "Todo abierto a la vez — cabeza llena",
+        "2": "Intento varias cosas juntas y me agoto",
+        "3": "A veces concentrado, a veces disperso",
+        "4": "Casi siempre una cosa y luego la siguiente",
+        "5": "Puertas cerradas — una cosa hasta terminar"
+      }
+    },
+    "worry-about-tomorrow": {
+      "prompt": "Las preocupaciones por el futuro no me roban todo el día de hoy.",
+      "byFocus": {
+        "timePressure": "Aunque haya presión de tiempo — las preocupaciones no se comen toda mi capacidad hoy.",
+        "futureWorry": "Cuando el futuro inquieta — aún puedo hacer algo útil hoy.",
+        "taskPile": "Aunque haya montón de tareas — no dejo que preocupaciones lejanas me callen.",
+        "seekingQuiet": "Cuando busco calma — las preocupaciones no se apoderan de todo el espacio."
+      },
+      "options": {
+        "1": "El futuro ocupa casi todo el día",
+        "2": "Muchas horas se van en preocuparse",
+        "3": "A veces lo controlo, a veces vuelvo al presente",
+        "4": "Me doy cuenta y vuelvo a una tarea pequeña",
+        "5": "Me preocupo un rato y vuelvo a lo que puedo hacer ahora"
+      }
+    },
+    "work-study-cutoff": {
+      "prompt": "Tengo una hora en la que el trabajo o los estudios terminan por hoy.",
+      "byPeriod": {
+        "highPressure": "Aunque sea un periodo de presión — hay un final claro del día.",
+        "routine": "En la rutina — sé cuándo acaba el día y no sigo sin fin.",
+        "transition": "Aunque haya transiciones — no dejo que el trabajo se trague toda la tarde."
+      },
+      "options": {
+        "1": "No hay fin del día — siempre algo más",
+        "2": "Termino muy tarde casi todos los días",
+        "3": "A veces paro, a veces se alarga",
+        "4": "Hay una hora aproximada y lo intento",
+        "5": "Cierro a tiempo y paso al modo casa"
+      }
+    },
+    "catch-thought-loops": {
+      "prompt": "Cuando un pensamiento da vueltas — me doy cuenta y lo freno.",
+      "options": {
+        "1": "El bucle corre horas antes de que me dé cuenta",
+        "2": "Me doy cuenta demasiado tarde",
+        "3": "A veces lo pillo, a veces no",
+        "4": "Lo pillo y me paso a algo concreto",
+        "5": "Lo pillo pronto y elijo otro pensamiento o acción"
+      }
+    },
+    "ask-for-help-early": {
+      "prompt": "Cuando pesa mucho — pido ayuda antes de que reviente.",
+      "options": {
+        "1": "Espero hasta que no queda otra",
+        "2": "Solo pido en crisis",
+        "3": "A veces pronto, a veces tarde",
+        "4": "Pido cuando siento que sube la carga",
+        "5": "Pido pronto y claro — sin disculparme de más"
+      }
+    },
+    "accept-imperfect-day": {
+      "prompt": "Un día que no salió perfecto sigue contando como día normal para mí.",
+      "options": {
+        "1": "Día imperfecto = fracaso",
+        "2": "Me cuesta perdonarme los huecos",
+        "3": "A veces acepto, a veces me endurezco",
+        "4": "La mayoría de días acepto \"suficientemente bien\"",
+        "5": "Cierro el día con amabilidad — aunque falte algo"
+      }
+    },
+    "name-what-weighs": {
+      "prompt": "Puedo poner palabras a lo que me pesa ahora.",
+      "options": {
+        "1": "Solo una sensación pesada sin nombre",
+        "2": "Me cuesta expresarlo",
+        "3": "A veces consigo nombrarlo",
+        "4": "Puedo decir en breve qué pesa",
+        "5": "Lo digo claro — a mí mismo o a alguien cercano"
+      }
+    },
+    "pause-before-react": {
+      "prompt": "Antes de una respuesta brusca — me tomo un momento.",
+      "options": {
+        "1": "Reacciono al instante y luego me arrepiento",
+        "2": "Casi nunca pauso",
+        "3": "A veces paro",
+        "4": "Casi siempre respiro antes de contestar",
+        "5": "Paro a propósito y elijo una respuesta más calmada"
+      }
+    },
+    "leave-work-at-work": {
+      "prompt": "Por la tarde — el trabajo no manda en cada conversación y cada pensamiento.",
+      "byPeriod": {
+        "highPressure": "Aunque sea periodo de presión — la tarde no es solo trabajo.",
+        "routine": "Tras un día normal — consigo dejar el trabajo a un lado.",
+        "transition": "Aunque haya transiciones — queda sitio para otras cosas por la tarde."
+      },
+      "options": {
+        "1": "Trabajo en todas partes — hasta en la mesa",
+        "2": "Me cuesta apagar",
+        "3": "A veces consigo soltarlo",
+        "4": "Casi todas las tardes hay separación razonable",
+        "5": "Cierro y paso la cabeza a casa"
+      }
+    },
+    "sleep-protect": {
+      "prompt": "Protejo las horas de sueño en lugar de retrasarlas sin fin.",
+      "byFatigue": {
+        "rested": "Cuando tengo energía — aún no cambio sueño por más pantalla.",
+        "midweek": "A mitad de semana — intento no recortar sueño sin motivo.",
+        "wornDown": "Cuando estoy agotado — trato el sueño como prioridad, no capricho."
+      },
+      "options": {
+        "1": "El sueño siempre se pospone",
+        "2": "Casi siempre me acuesto demasiado tarde",
+        "3": "A veces lo cuido, a veces no",
+        "4": "Casi todas las noches tengo hora razonable",
+        "5": "Cuido el sueño como una cita importante"
+      }
+    },
+    "small-recharge": {
+      "prompt": "Tengo formas pequeñas de recargar energía durante el día.",
+      "options": {
+        "1": "Sigo hasta vaciarme",
+        "2": "Solo recuerdo descansar cuando ya caigo",
+        "3": "A veces hago una pausa corta",
+        "4": "Tengo unos hábitos breves que ayudan",
+        "5": "Planifico pausas pequeñas de antemano"
+      }
+    },
+    "meals-and-water": {
+      "prompt": "No salto comida ni agua cuando sube la carga.",
+      "options": {
+        "1": "Olvido comer y beber horas",
+        "2": "Salto a menudo",
+        "3": "A veces me acuerdo",
+        "4": "Casi todos los días como y bebo suficiente",
+        "5": "Cuido el cuerpo incluso en días cargados"
+      }
+    },
+    "move-a-little": {
+      "prompt": "Me muevo un poco en el día — aunque sea un paseo corto.",
+      "options": {
+        "1": "Casi no me muevo",
+        "2": "Solo cuando toca",
+        "3": "A veces",
+        "4": "Casi todos los días hay algo de movimiento",
+        "5": "Movimiento regular, aunque breve, forma parte del día"
+      }
+    },
+    "screen-wind-down": {
+      "prompt": "Antes de dormir — bajo pantallas en lugar de quedarme hasta el último segundo.",
+      "byFatigue": {
+        "rested": "Aunque me sienta bien — no dejo que la pantalla robe el final del día.",
+        "midweek": "Con cansancio de mitad de semana — intento no \"despertarme\" ante pantalla de noche.",
+        "wornDown": "Cuando estoy agotado — sé que pantalla tarde empeora el cansancio."
+      },
+      "options": {
+        "1": "Pantalla hasta que se cierran los ojos",
+        "2": "Casi nunca bajo antes de dormir",
+        "3": "A veces me aparto",
+        "4": "Casi todas las noches hay ventana sin pantalla",
+        "5": "Tengo hábito fijo de bajar pantallas antes de dormir"
+      }
+    },
+    "weekend-recover": {
+      "prompt": "En el fin de semana tengo al menos un poco de tiempo que me devuelve fuerzas.",
+      "options": {
+        "1": "Fin de semana tan cargado como la semana",
+        "2": "Casi no hay recuperación",
+        "3": "Hay momentos cortos",
+        "4": "Hay un bloque de tiempo que me restaura",
+        "5": "Planifico la recuperación a propósito"
+      }
+    },
+    "say-no-to-extra": {
+      "prompt": "Cuando no tengo hueco — sé decir no a cosas extra.",
+      "options": {
+        "1": "Siempre digo sí y luego caigo",
+        "2": "Me cuesta mucho rechazar",
+        "3": "A veces lo consigo",
+        "4": "Casi siempre sé elegir",
+        "5": "Digo no con claridad y sin culpa grande"
+      }
+    },
+    "energy-honest-check": {
+      "prompt": "Soy honesto conmigo sobre cuánta fuerza tengo hoy.",
+      "byFatigue": {
+        "rested": "Aunque sea un buen día — no finjo tener más de lo que tengo.",
+        "midweek": "A mitad de semana — admito cuando hay menos fuerza.",
+        "wornDown": "Cuando estoy agotado — no finjo que todo está bien."
+      },
+      "options": {
+        "1": "Ignoro el cansancio por completo",
+        "2": "Empujo aunque no haya fuerza",
+        "3": "A veces lo admito, a veces no",
+        "4": "Casi todos los días sé dónde estoy",
+        "5": "Reviso energía y ajusto el día"
+      }
+    },
+    "stop-when-tired": {
+      "prompt": "Cuando el cuerpo dice basta — escucho en lugar de empujar un poco más.",
+      "options": {
+        "1": "Empujo hasta caer",
+        "2": "Casi siempre ignoro la señal",
+        "3": "A veces paro",
+        "4": "Casi siempre bajo el ritmo cuando hace falta",
+        "5": "Paro a tiempo y doy descanso"
+      }
+    },
+    "keep-morning-gentle": {
+      "prompt": "Mi mañana no empieza en carrera en cuanto abro los ojos.",
+      "options": {
+        "1": "Carrera y listas al instante",
+        "2": "Casi todas las mañanas presionadas",
+        "3": "A veces tranquilo",
+        "4": "Hay unos minutos de calma",
+        "5": "Tengo un ritual matinal pequeño y tranquilo"
+      }
+    },
+    "protect-quiet-time": {
+      "prompt": "Tengo tiempo de calma reservado — aunque sea corto.",
+      "byFocus": {
+        "timePressure": "Aunque haya presión de tiempo — tengo un rincón breve de calma.",
+        "futureWorry": "Aunque haya preocupaciones — reservo un momento de calma.",
+        "taskPile": "Aunque haya tareas — no renuncio del todo a la calma.",
+        "seekingQuiet": "Cuando busco equilibrio — de verdad protejo el tiempo de calma."
+      },
+      "options": {
+        "1": "Nada de calma",
+        "2": "Solo por casualidad",
+        "3": "A veces",
+        "4": "Hay una ventana corta habitual",
+        "5": "La calma está protegida en mi calendario"
+      }
+    },
+    "soft-no-without-guilt": {
+      "prompt": "Puedo decir no sin sentir culpa horas después.",
+      "options": {
+        "1": "No = culpa pesada",
+        "2": "Rechazo y luego me arrepiento mucho",
+        "3": "A veces sin culpa",
+        "4": "Casi siempre bien con el rechazo",
+        "5": "No claro y tranquilo — sin drama interior"
+      }
+    },
+    "people-energy-guard": {
+      "prompt": "Noto quién me vacía y quién me llena — y me ajusto.",
+      "options": {
+        "1": "Me quedo en todo aunque me vacíen",
+        "2": "Me doy cuenta tarde",
+        "3": "A veces limito el contacto",
+        "4": "Elijo con quién gastar fuerzas",
+        "5": "Cuido a quien me llena y reduzco lo que vacía"
+      }
+    },
+    "finish-without-rush": {
+      "prompt": "Termino cosas sin ir siempre al límite corriendo.",
+      "options": {
+        "1": "Todo a última hora y con prisa",
+        "2": "Casi siempre con afán",
+        "3": "A veces tranquilo",
+        "4": "Casi siempre a ritmo razonable",
+        "5": "Planifico antes y termino con relativa calma"
+      }
+    },
+    "news-and-noise-limit": {
+      "prompt": "Limito noticias y ruido digital cuando pesan.",
+      "options": {
+        "1": "Pegado al ruido todo el día",
+        "2": "Me cuesta bajar",
+        "3": "A veces recorto",
+        "4": "Tengo límites claros",
+        "5": "Elijo cuándo y qué consumir — a propósito"
+      }
+    },
+    "talk-to-someone-safe": {
+      "prompt": "Cuando pesa — tengo al menos una persona con quien hablar con honestidad.",
+      "options": {
+        "1": "Nadie con quien hablar",
+        "2": "Me cuesta acercarme",
+        "3": "A veces comparto",
+        "4": "Hay una persona en quien confiar",
+        "5": "Sé acercarme pronto a alguien seguro"
+      }
+    },
+    "celebrate-small-wins": {
+      "prompt": "Noto cosas pequeñas que salieron bien — no solo lo que falta.",
+      "options": {
+        "1": "Solo veo lo que no alcancé",
+        "2": "Rara vez marco un logro",
+        "3": "A veces",
+        "4": "Casi todos los días encuentro algo pequeño",
+        "5": "Cierro el día con al menos una cosa buena"
+      }
+    },
+    "room-to-breathe": {
+      "prompt": "Tengo momentos en el día en que respiro de verdad — no solo corro.",
+      "byFocus": {
+        "timePressure": "Aunque haya presión de tiempo — hay un momento para respirar de verdad.",
+        "futureWorry": "Aunque haya preocupaciones — paro a respirar, no solo a pensar.",
+        "taskPile": "Entre tareas — dejo una ventanita para respirar.",
+        "seekingQuiet": "Cuando busco calma — respiro de verdad en lugar de seguir corriendo."
+      },
+      "options": {
+        "1": "Ningún momento así",
+        "2": "Solo al final del día si acaso",
+        "3": "A veces",
+        "4": "Hay unas paradas cortas",
+        "5": "Meto momentos de respiración en el día"
+      }
+    },
+    "plan-tiny-joy": {
+      "prompt": "Planifico algo pequeño que me hace bien — no solo tareas.",
+      "options": {
+        "1": "Solo tareas en la lista",
+        "2": "Olvido por completo la alegría",
+        "3": "A veces me acuerdo",
+        "4": "Casi todos los días hay algo pequeño",
+        "5": "Encajo una alegría pequeña como tarea importante"
+      }
+    },
+    "evening-close-ritual": {
+      "prompt": "Al final del día tengo forma de cerrar — no solo caer en la cama.",
+      "options": {
+        "1": "Caigo en la cama sin cerrar",
+        "2": "Casi nunca hay ritual",
+        "3": "A veces",
+        "4": "Hay cierre breve casi todos los días",
+        "5": "Ritual fijo y simple que termina el día"
+      }
+    }
+  }
+}

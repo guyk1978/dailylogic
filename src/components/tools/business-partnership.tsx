@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { usePrivateToolStats } from "@/hooks/use-private-tool-stats";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
@@ -164,11 +165,15 @@ export function BusinessPartnershipCalculator() {
 
   useCalculationRestore("business-partnership-calculator", handleRestore);
 
+  const { trackStart, trackAnswer, trackComplete, trackSetupChoice } =
+    usePrivateToolStats("business-partnership-calculator");
+
   const patchSetup = <K extends keyof BusinessSetup>(
     key: K,
     value: BusinessSetup[K],
   ) => {
     setSetup((prev) => ({ ...prev, [key]: value }));
+    trackSetupChoice(String(key), String(value));
   };
 
   const startQuiz = (nextMode: BusinessMode) => {
@@ -180,6 +185,7 @@ export function BusinessPartnershipCalculator() {
     setPhase("quiz");
     setInsightOffset(0);
     setSaveName("");
+    trackStart({ mode: nextMode });
   };
 
   const selectAnswer = (value: LikertValue) => {
@@ -189,15 +195,18 @@ export function BusinessPartnershipCalculator() {
 
   const goNext = () => {
     if (!current || answers[current.id] === undefined || !setupReady) return;
+    const committed = answers[current.id]!;
+    trackAnswer(current.id, committed);
     if (index >= total - 1) {
       const analyzed = analyzeBusinessPartnership(mode, setup, {
         ...answers,
-        [current.id]: answers[current.id]!,
+        [current.id]: committed,
       });
       if (analyzed) {
         setProfile(analyzed);
         setPhase("result");
         setInsightOffset(0);
+        trackComplete({ mode, outcome: analyzed.profileId });
       }
       return;
     }

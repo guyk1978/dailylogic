@@ -1,33 +1,33 @@
 {
-  "toolName": "מקנה מתכון",
+  "toolName": "מדרג מתכונים",
   "loading": "טוען מתכון שמור…",
   "yield": {
-    "original": "תפוקה מקורית",
-    "target": "תפוקה יעד",
+    "original": "מספר מנות מקורי",
+    "target": "מספר מנות רצוי",
     "originalPlaceholder": "למשל 4 מנות",
     "targetPlaceholder": "למשל 10 מנות"
   },
   "adjustmentFactor": {
     "label": "מקדם התאמה",
-    "scalingBy": "הגדלה ב-{{factor}}"
+    "scalingBy": "הגדלה ב־{{factor}}"
   },
   "combobox": {
     "label": "מרכיב",
-    "placeholder": "חפש בין 200+ מרכיבים…",
-    "noResults": "לא נמצאו מרכיבים — נסה חיפוש אחר",
+    "placeholder": "חיפוש בין 200+ מרכיבים…",
+    "noResults": "לא נמצאו מרכיבים — נסו חיפוש אחר",
     "selectedMeta": "{{category}} · {{unit}}",
-    "addCustom": "הוסף \"{{name}}\"",
-    "addCustomHint": "יישמר למתכונים הבאים במכשיר זה"
+    "addCustom": "הוספת \"{{name}}\"",
+    "addCustomHint": "יישמר למתכונים הבאים במכשיר הזה"
   },
   "ingredients": {
     "sectionTitle": "מרכיבים",
-    "addIngredient": "+ הוסף מרכיב",
+    "addIngredient": "+ הוספת מרכיב",
     "category": "קטגוריה",
     "originalAmount": "כמות מקורית",
     "unit": "יחידה",
     "scaled": "מותאם",
-    "remove": "הסר",
-    "removeAriaLabel": "הסר מרכיב",
+    "remove": "הסרה",
+    "removeAriaLabel": "הסרת מרכיב",
     "amountPlaceholder": "0",
     "item_one": "פריט",
     "item_other": "פריטים"
@@ -63,19 +63,19 @@
     "pieces": "יחידה"
   },
   "compiledRecipe": {
-    "title": "מתכון מותאם מקובץ",
+    "title": "מתכון מותאם מוכן",
     "servingsFactor": "{{targetYield}} מנות · {{factor}}",
     "copyHeader": "{{title}} ({{servingsFactor}})",
-    "viewFullRecipe": "הצג מתכון מלא",
-    "copyFullRecipe": "העתק מתכון",
+    "viewFullRecipe": "הצגת מתכון מלא",
+    "copyFullRecipe": "העתקת מתכון",
     "copied": "הועתק!",
-    "close": "סגור"
+    "close": "סגירה"
   },
   "emptyState": {
-    "invalidYields": "הזן תפוקות תקינות כדי לחשב את מקדם ההגדלה."
+    "invalidYields": "הזינו מספרי מנות תקינים כדי לחשב את מקדם ההגדלה."
   },
   "actions": {
     "reset": "איפוס"
   },
-  "resultSummary": "הגדלה ב-{{factor}} · {{count}} מרכיבים"
+  "resultSummary": "הגדלה ב־{{factor}} · {{count}} מרכיבים"
 }

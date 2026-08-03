@@ -7,6 +7,9 @@
     "footer": "Todas las herramientas funcionan localmente en tu navegador.",
     "metaDescription": "Herramientas enfocadas para la vida, el hogar y las finanzas — todo en tu navegador."
   },
+  "disclaimer": {
+    "text": "El uso de este sitio y sus calculadoras es gratuito, voluntario y está destinado únicamente a la inspiración y el enriquecimiento. Las herramientas y perspectivas no constituyen asesoramiento profesional certificado (médico, psicológico, legal o financiero), no son la última palabra y no reemplazan la consulta o intervención de expertos. El sitio no asume ninguna responsabilidad por el uso de los resultados."
+  },
   "header": {
     "backHome": "Volver al inicio"
   },
@@ -65,7 +68,8 @@
     "badge": "Acertijo diario",
     "title": "Mini crucigrama diario",
     "description": "Tema de hoy: {{theme}} — resuélvelo en menos de un minuto.",
-    "underMinute": "< 1 min",
+    "underMinute": "~1 min de lectura",
+    "elapsedLabel": "Tiempo transcurrido",
     "across": "Horizontal",
     "down": "Vertical",
     "liveHint": "Las letras se ponen verdes si son correctas y rojas si no.",
@@ -132,7 +136,13 @@
       "recommendedMonthly": "Presupuesto mensual",
       "yearlyForecast": "Previsión anual",
       "oneTimeTotal": "Total único",
-      "costs": "Desglose de costes"
+      "costs": "Desglose de costes",
+      "metrics": "Métricas corporales",
+      "lines": "Actividades",
+      "totalKcal": "Calorías totales",
+      "totalMinutes": "Minutos totales",
+      "bmr": "Estimación en reposo",
+      "profile": "Perfil"
     }
   },
   "categories": {
@@ -201,6 +211,18 @@
     "stranger-sharing-calculator": {
       "name": "Calculadora de compartir con desconocidos",
       "description": "Small talk con límites: privacidad, gracia social e instinto frente a desconocidos."
+    },
+    "mental-health-calculator": {
+      "name": "Calculadora de resiliencia y equilibrio",
+      "description": "Una revisión sencilla de estrés, energía y espacio personal — con consejos prácticos."
+    },
+    "physical-health-calculator": {
+      "name": "Calculadora de salud física y vitalidad",
+      "description": "Métricas corporales, chequeo de hábitos y puntuación de vitalidad con consejos cotidianos."
+    },
+    "calorie-burn-calculator": {
+      "name": "Calculadora de calorías quemadas",
+      "description": "Varias actividades a la vez, minutos para cada una y un total estimado con desglose claro."
     }
   },
   "save": {

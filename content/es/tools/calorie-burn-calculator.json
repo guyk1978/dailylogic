@@ -1,0 +1,65 @@
+{
+  "title": "Calculadora de calorías quemadas — varias actividades",
+  "subtitle": "Elige varias actividades, indica minutos para cada una y obtén un total estimado con desglose.",
+  "seoTitle": "Calculadora de calorías por actividad | DailyLogic",
+  "seoDescription": "Calculadora gratuita de calorías quemadas: elige carrera, caminata, fuerza, natación y más, añade minutos y ve un total combinado con desglose claro.",
+  "heroDescription": "¿Sesión mixta? Marca todo lo que hiciste, añade minutos y mira las calorías totales — y el aporte de cada actividad.",
+  "toolSlug": "calorie-burn-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "HealthApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace la calculadora",
+      "paragraphs": [
+        "Introduce peso, edad y sexo para una estimación más personal.",
+        "Selecciona varias actividades y define la duración de cada una.",
+        "Obtén un total estimado de calorías, un desglose y consejos breves."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa tus datos, elige actividades, indica minutos y calcula.",
+        "Guarda en el historial o descarga una tarjeta de resultado.",
+        "Usa los números como brújula — no como medida médica."
+      ]
+    },
+    {
+      "heading": "Importante",
+      "paragraphs": [
+        "Esta herramienta es solo orientativa y no sustituye consejo médico o nutricional.",
+        "El cálculo usa valores MET habituales — una estimación, no una medición de laboratorio."
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Selección múltiple",
+      "description": "Varias actividades en una sesión — sin calcular cada una por separado."
+    },
+    {
+      "title": "Desglose claro",
+      "description": "Ve cuánto aportó cada actividad al total."
+    },
+    {
+      "title": "Consejos prácticos",
+      "description": "Ideas pequeñas para un mix semanal más inteligente."
+    }
+  ],
+  "faq": [
+    {
+      "question": "¿Es tan preciso como un pulsómetro?",
+      "answer": "No. Es una estimación por MET y peso — útil para planificar, no una medición personal."
+    },
+    {
+      "question": "¿Puedo combinar actividades?",
+      "answer": "Sí. Esa es la idea — un total combinado con desglose por actividad."
+    },
+    {
+      "question": "¿Es consejo médico?",
+      "answer": "No. Solo inspiración cotidiana."
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { LegalDisclaimer } from "@/components/legal-disclaimer";
 import { useTranslation } from "@/lib/i18n/provider";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
 import { INFO_PAGES } from "@/lib/info-pages";
@@ -35,7 +36,8 @@ export function SiteFooter() {
             </Link>
           ))}
         </nav>
-        <p className="mt-6 text-center text-xs text-slate-400">{t("common:app.footer")}</p>
+        <LegalDisclaimer className="mx-auto mt-6 max-w-3xl text-center" />
+        <p className="mt-4 text-center text-xs text-slate-400">{t("common:app.footer")}</p>
         <p className="mt-2 text-center text-xs text-slate-400">
           {t("pages:footer.copyright", { year })}
         </p>

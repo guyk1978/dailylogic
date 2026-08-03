@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import { CalculationSavePanel } from "@/components/tools/calculation-save-panel";
 import { useCalculationRestore } from "@/hooks/use-calculation-restore";
+import { usePrivateToolStats } from "@/hooks/use-private-tool-stats";
 import { useLocaleDirection } from "@/hooks/use-locale-direction";
 import { useLocalStorage } from "@/hooks/use-local-storage";
 import { useLocalizedPath } from "@/hooks/use-localized-path";
@@ -380,6 +381,9 @@ export function LoveCalculator() {
 
   useCalculationRestore("love-calculator", handleRestore);
 
+  const { trackStart, trackAnswer, trackComplete } =
+    usePrivateToolStats("love-calculator");
+
   useEffect(() => {
     if (phase !== "computing") return;
     setComputingStep(0);
@@ -415,6 +419,7 @@ export function LoveCalculator() {
           setInsightSalt(0);
           setDeepMode(false);
           setPhase("result");
+          trackComplete({ mode, outcome: result.band });
           return;
         }
 
@@ -440,6 +445,7 @@ export function LoveCalculator() {
           setUsedInsights([firstInsight]);
           setInsightSalt(0);
           setPhase("result");
+          trackComplete({ mode, outcome: result.relation });
           return;
         }
 
@@ -461,6 +467,7 @@ export function LoveCalculator() {
         setUsedInsights([result.summaryId]);
         setInsightSalt(0);
         setPhase("result");
+        trackComplete({ mode, outcome: result.summaryId });
       }, stepMs * computeSteps.length + 180),
     );
     return () => timers.forEach((id) => window.clearTimeout(id));
@@ -475,6 +482,7 @@ export function LoveCalculator() {
     weeklyIds,
     computeSteps.length,
     timeOfDay,
+    trackComplete,
   ]);
 
   const selectInput = (id: string) => {
@@ -501,6 +509,19 @@ export function LoveCalculator() {
 
   const runCalculate = () => {
     if (!canCalculate) return;
+    trackStart({ mode });
+    if (mode === "classic" && joyId && viceId && moodId) {
+      trackAnswer("joy", joyId);
+      trackAnswer("vice", viceId);
+      trackAnswer("mood", moodId);
+    } else if (mode === "matchup" && leftId && rightId) {
+      trackAnswer("left", leftId);
+      trackAnswer("right", rightId);
+    } else if (mode === "weekly") {
+      weeklyIds.forEach((id, index) => {
+        trackAnswer(`weekly-${index + 1}`, id);
+      });
+    }
     setPhase("computing");
   };
 

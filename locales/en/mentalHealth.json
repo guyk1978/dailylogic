@@ -1,0 +1,491 @@
+{
+  "intro": {
+    "eyebrow": "Calm, load, and balance",
+    "title": "Daily resilience and balance check",
+    "body": "A short space to see how you're doing with pressure, tiredness, and energy — in plain language, without heavy labels. Choose where you are now, answer honestly, and get small insights you can use today. Everything stays in your browser."
+  },
+  "setup": {
+    "title": "What this stretch of life looks like",
+    "subtitle": "This shapes the questions and tips — not a score on who you are.",
+    "periodLabel": "Life load right now",
+    "fatigueLabel": "Physical and mental tiredness",
+    "focusLabel": "What's taking up headspace",
+    "continue": "Continue to check-in",
+    "period": {
+      "highPressure": "Extra pressure at work or study",
+      "routine": "Normal routine, with ups and downs",
+      "transition": "A time of change and transitions"
+    },
+    "fatigue": {
+      "rested": "Slept well and have energy",
+      "midweek": "Typical midweek tiredness",
+      "wornDown": "Feeling run down for a while"
+    },
+    "focus": {
+      "timePressure": "Time pressure and endless lists",
+      "futureWorry": "Worries about the future",
+      "taskPile": "Pile of tasks and obligations",
+      "seekingQuiet": "Looking for a bit of calm and balance"
+    }
+  },
+  "modes": {
+    "quick": "Quick check",
+    "quickMeta": "~10 questions · 2–3 min",
+    "full": "Full check-in",
+    "fullMeta": "30 questions · 7–8 min",
+    "backToSetup": "Back to setup"
+  },
+  "scale": {
+    "1": "Far from this",
+    "2": "Rarely",
+    "3": "Sometimes",
+    "4": "Most of the time",
+    "5": "Almost always"
+  },
+  "actions": {
+    "start": "Start",
+    "next": "Next",
+    "back": "Back",
+    "finish": "Finish and report",
+    "restart": "New check-in",
+    "changeMode": "Change mode",
+    "newInsight": "Another insight",
+    "share": "Share",
+    "copied": "Copied!",
+    "backToTools": "Back to tools",
+    "downloadCard": "Download card",
+    "copyCard": "Copy card",
+    "copyText": "Copy text"
+  },
+  "progress": {
+    "label": "Question {{current}} of {{total}}",
+    "percent": "{{percent}}%"
+  },
+  "result": {
+    "caption": "Balance and resilience snapshot",
+    "overall": "Overall score",
+    "dimensions": "Areas",
+    "insights": "Insights",
+    "tips": "Small steps for today",
+    "cardTitle": "Result card",
+    "cardFooter": "dailylogic.app · resilience and balance check",
+    "shareText": "My balance snapshot: {{profile}} ({{score}}%). {{insight}} | DailyLogic",
+    "resultSummary": "{{profile}} · {{score}}% · {{mode}}",
+    "bands": {
+      "needs-care": "Need more room right now",
+      "developing": "In progress — room to grow",
+      "steady": "Steady most days",
+      "strong": "Strong and grounded"
+    },
+    "dimensionLabels": {
+      "stressBalance": "Handling pressure",
+      "restEnergy": "Rest and energy",
+      "personalSpace": "Personal space and calm"
+    }
+  },
+  "card": {
+    "saved": "Card downloaded",
+    "copied": "Card copied",
+    "copyFailed": "Couldn't copy — try downloading"
+  },
+  "profiles": {
+    "steady-harbor": "Steady harbor — you have an anchor even on busy days",
+    "gentle-strength": "Gentle strength — you look after yourself without drama",
+    "balanced-pace": "Balanced pace — you know when to slow down",
+    "mostly-steady": "Mostly steady — with a few thin days",
+    "learning-rest": "Learning to rest — that's part of the work",
+    "holding-on-well": "Holding up well — even when load is high",
+    "thin-reserves": "Thin reserves — your body is asking for rest",
+    "too-many-plates": "Too many plates in the air",
+    "quiet-needed": "Need more quiet than usual",
+    "ask-for-space": "Time to ask for some space",
+    "rebuild-gently": "Rebuild gently — one step",
+    "one-step-today": "One step today is enough"
+  },
+  "insights": {
+    "dim-stressBalance-high": "You break pressure into small pieces instead of letting it run away. That's real resilience.",
+    "dim-stressBalance-low": "Pressure is taking a big share. One small rule — one task at a time — can turn down the noise.",
+    "dim-restEnergy-high": "You know how to recharge. Keep that, especially on busy days.",
+    "dim-restEnergy-low": "Energy is lower than your head demands. A short, intentional break beats a long to-do list.",
+    "dim-personalSpace-high": "You have a soft but clear boundary. It protects calm without cutting people off.",
+    "dim-personalSpace-low": "It's easy to give up personal space to please others. Half an hour that's yours isn't a luxury.",
+    "overall-strong": "Overall you navigate load like a grown-up: with care, without crashing on every wave.",
+    "overall-steady": "A good human place — clear strengths and a few habits worth strengthening.",
+    "overall-developing": "There's awareness, but load still leads. A small step beats a perfect plan.",
+    "overall-needs-care": "Body and mind are asking for relief. That's not failure — it's a signal to pause a little.",
+    "period-highPressure": "In a high-pressure stretch, boundaries wear down fast. Cut what you can, even if it's just one task.",
+    "period-routine": "In routine it's easy to ignore small tiredness until it grows. Check your energy midweek.",
+    "period-transition": "Transitions drain energy even when they're positive. Give yourself time to adjust without rushing.",
+    "fatigue-rested": "You have a good energy base — use it wisely, not until empty.",
+    "fatigue-midweek": "Midweek tiredness is normal. An earlier lights-out tonight beats another coffee.",
+    "fatigue-wornDown": "Running on empty asks for less push, not more. Ask for help with one thing this week.",
+    "focus-timePressure": "Time pressure feeds hurry. Stop ten minutes to plan — it saves an hour of mess.",
+    "focus-futureWorry": "Future worries steal the present. Write three worries on paper — then return to what you can do today.",
+    "focus-taskPile": "A pile of tasks feels like a mountain. Pick only three for today and let the rest wait.",
+    "focus-seekingQuiet": "Looking for quiet is a healthy sign. Protect it like an important meeting."
+  },
+  "tips": {
+    "tip-ten-minute-box": "Ten-minute box: set a timer, handle one thing only, then stop to breathe.",
+    "tip-write-three-worries": "Write three worries on paper. What you can do today — mark it. The rest waits for tomorrow.",
+    "tip-one-task-rule": "One-task rule: until the current one is done — no new tab or list.",
+    "tip-earlier-lights-out": "Lights out twenty minutes earlier this week — no phone in bed.",
+    "tip-short-walk": "A ten-minute walk without headphones. Moving your body moves your head too.",
+    "tip-water-and-sit": "A glass of water and five minutes sitting without a screen — before you go back to the list.",
+    "tip-protect-half-hour": "Half an hour this week blocked for you in the calendar — like a meeting you can't cancel.",
+    "tip-soft-no-script": "One line for a gentle no: \"My week is full — let's talk next week.\"",
+    "tip-phone-away-meal": "One meal a day with no phone on the table.",
+    "tip-evening-close": "End-of-day ritual: three things you did, one for tomorrow, and phone away from bed.",
+    "tip-ask-one-favor": "Ask for help with one small thing this week — an errand, a task, or a quiet hour at home.",
+    "tip-tiny-joy-today": "Plan a tiny joy for today: good coffee, a favorite song, or five minutes in the sun."
+  },
+  "questions": {
+    "pressure-without-spiral": {
+      "prompt": "When pressure rises — I can pause before everything gets tangled.",
+      "byPeriod": {
+        "highPressure": "In this high-pressure stretch — I stop before pressure turns into a big mess.",
+        "routine": "On a normal busy day — I don't let small pressure become a storm.",
+        "transition": "Between changes — I keep a clear head even when everything is moving."
+      },
+      "options": {
+        "1": "Everything tangles fast and I lose direction",
+        "2": "Most of the time I get swept up in the pressure",
+        "3": "Sometimes I pause, sometimes I get swept up",
+        "4": "Usually I stop and pick one step",
+        "5": "I pause, breathe, and break it into small steps"
+      }
+    },
+    "one-thing-at-a-time": {
+      "prompt": "I work on one thing at a time instead of jumping between everything.",
+      "options": {
+        "1": "Everything open at once — head full",
+        "2": "I try several things together and wear out",
+        "3": "Sometimes focused, sometimes scattered",
+        "4": "Most of the time one thing then the next",
+        "5": "Doors closed — one thing until it's done"
+      }
+    },
+    "worry-about-tomorrow": {
+      "prompt": "Worries about the future don't steal my whole today.",
+      "byFocus": {
+        "timePressure": "Even with time pressure — worries don't eat all my capacity today.",
+        "futureWorry": "When the future bothers me — I can still do something useful today.",
+        "taskPile": "Even facing a pile of tasks — I don't let distant worries silence me.",
+        "seekingQuiet": "When I'm looking for calm — worries don't take over all the space."
+      },
+      "options": {
+        "1": "The future takes most of the day",
+        "2": "Many hours go to worrying",
+        "3": "Sometimes in control, sometimes back in the present",
+        "4": "I notice and bring myself back to a small task",
+        "5": "I worry briefly and return to what I can do now"
+      }
+    },
+    "work-study-cutoff": {
+      "prompt": "I have a time when work or study ends for the day.",
+      "byPeriod": {
+        "highPressure": "Even in a high-pressure stretch — there's a clear end to the day.",
+        "routine": "In routine — I know when the day ends and don't go on forever.",
+        "transition": "Even in transitions — I don't let work swallow the whole evening."
+      },
+      "options": {
+        "1": "No end to the day — always one more thing",
+        "2": "I finish very late most days",
+        "3": "Sometimes I stop, sometimes it drags on",
+        "4": "There's a rough hour and I try for it",
+        "5": "I close on time and switch to home mode"
+      }
+    },
+    "catch-thought-loops": {
+      "prompt": "When a thought goes in circles — I notice and stop it.",
+      "options": {
+        "1": "The loop runs for hours before I notice",
+        "2": "I notice too late",
+        "3": "Sometimes I catch it, sometimes not",
+        "4": "I catch it and turn to something concrete",
+        "5": "I catch it early and choose another thought or action"
+      }
+    },
+    "ask-for-help-early": {
+      "prompt": "When it's heavy — I ask for help before it blows up.",
+      "options": {
+        "1": "I wait until there's no choice",
+        "2": "I only ask in a crisis",
+        "3": "Sometimes early, sometimes late",
+        "4": "I ask when I feel load rising",
+        "5": "I ask early and clearly — without over-apologizing"
+      }
+    },
+    "accept-imperfect-day": {
+      "prompt": "A day that wasn't perfect still counts as a normal day for me.",
+      "options": {
+        "1": "Imperfect day = failure",
+        "2": "Hard to forgive myself for gaps",
+        "3": "Sometimes I accept, sometimes I tighten up",
+        "4": "Most days I accept \"good enough\"",
+        "5": "I end the day with kindness — even if something's missing"
+      }
+    },
+    "name-what-weighs": {
+      "prompt": "I can put words to what's weighing on me right now.",
+      "options": {
+        "1": "Just a heavy feeling with no name",
+        "2": "Hard for me to put into words",
+        "3": "Sometimes I manage to name it",
+        "4": "I can say briefly what's weighing",
+        "5": "I say it clearly — to myself or someone close"
+      }
+    },
+    "pause-before-react": {
+      "prompt": "Before a sharp reply — I take a moment.",
+      "options": {
+        "1": "I react right away then regret it",
+        "2": "Usually no pause",
+        "3": "Sometimes I stop",
+        "4": "Most of the time I breathe before I answer",
+        "5": "I pause on purpose and choose a calmer response"
+      }
+    },
+    "leave-work-at-work": {
+      "prompt": "In the evening — work doesn't run every conversation and every thought.",
+      "byPeriod": {
+        "highPressure": "Even in a high-pressure stretch — the evening isn't all work.",
+        "routine": "After a normal day — I manage to set work aside.",
+        "transition": "Even in transitions — there's room for other things in the evening."
+      },
+      "options": {
+        "1": "Work everywhere — even at the dinner table",
+        "2": "Hard to switch off",
+        "3": "Sometimes I manage to set it down",
+        "4": "Most evenings there's reasonable separation",
+        "5": "I close it and move my head to home"
+      }
+    },
+    "sleep-protect": {
+      "prompt": "I protect sleep hours instead of pushing them back endlessly.",
+      "byFatigue": {
+        "rested": "When I have energy — I still don't trade sleep for more screen time.",
+        "midweek": "Midweek — I try not to cut sleep without reason.",
+        "wornDown": "When I'm run down — I treat sleep as a priority, not a treat."
+      },
+      "options": {
+        "1": "Sleep always gets pushed back",
+        "2": "Most nights I go to bed too late",
+        "3": "Sometimes I protect it, sometimes not",
+        "4": "Most nights I have a reasonable bedtime",
+        "5": "I guard sleep like an important appointment"
+      }
+    },
+    "small-recharge": {
+      "prompt": "I have small ways to recharge energy during the day.",
+      "options": {
+        "1": "I just keep going until I'm empty",
+        "2": "I only remember to rest when I'm crashing",
+        "3": "Sometimes I take a short break",
+        "4": "I have a few short habits that help",
+        "5": "I plan small breaks ahead of time"
+      }
+    },
+    "meals-and-water": {
+      "prompt": "I don't skip food and water when load goes up.",
+      "options": {
+        "1": "I forget to eat and drink for hours",
+        "2": "I skip often",
+        "3": "Sometimes I remember",
+        "4": "Most days I eat and drink enough",
+        "5": "I look after my body even on busy days"
+      }
+    },
+    "move-a-little": {
+      "prompt": "I move a little during the day — even if it's just a short walk.",
+      "options": {
+        "1": "Hardly move at all",
+        "2": "Only when I have to",
+        "3": "Sometimes",
+        "4": "Most days there's some small movement",
+        "5": "Regular movement, even short, is part of my day"
+      }
+    },
+    "screen-wind-down": {
+      "prompt": "Before sleep — I step away from screens instead of staying on them until the last second.",
+      "byFatigue": {
+        "rested": "Even when I feel good — I don't let the screen steal the end of the day.",
+        "midweek": "On a tired midweek — I try not to \"wake up\" in front of a screen at night.",
+        "wornDown": "When I'm run down — I know a late screen makes tiredness worse."
+      },
+      "options": {
+        "1": "Screen until my eyes close",
+        "2": "Usually no wind-down before sleep",
+        "3": "Sometimes I step away",
+        "4": "Most nights there's a no-screen window",
+        "5": "I have a steady habit of stepping away before sleep"
+      }
+    },
+    "weekend-recover": {
+      "prompt": "On the weekend I have at least a little time that brings strength back.",
+      "options": {
+        "1": "Weekend as busy as the week",
+        "2": "Almost no recovery",
+        "3": "There are short moments",
+        "4": "There's a block of time that restores me",
+        "5": "I plan recovery on purpose"
+      }
+    },
+    "say-no-to-extra": {
+      "prompt": "When I'm full — I can say no to extra things.",
+      "options": {
+        "1": "Always say yes then crash",
+        "2": "Very hard for me to refuse",
+        "3": "Sometimes I manage",
+        "4": "Most of the time I know how to choose",
+        "5": "I say no clearly without heavy guilt"
+      }
+    },
+    "energy-honest-check": {
+      "prompt": "I'm honest with myself about how much strength I have today.",
+      "byFatigue": {
+        "rested": "Even on good days — I don't pretend I have more than I do.",
+        "midweek": "Midweek — I admit when there's less strength.",
+        "wornDown": "When I'm run down — I don't pretend everything's fine."
+      },
+      "options": {
+        "1": "I ignore tiredness completely",
+        "2": "I push even when there's no strength",
+        "3": "Sometimes I admit it, sometimes not",
+        "4": "Most days I know where I stand",
+        "5": "I check energy and adjust the day"
+      }
+    },
+    "stop-when-tired": {
+      "prompt": "When my body says enough — I listen instead of pushing a little more.",
+      "options": {
+        "1": "I push until I crash",
+        "2": "Usually I ignore the signal",
+        "3": "Sometimes I stop",
+        "4": "Most of the time I slow when needed",
+        "5": "I stop in time and give rest"
+      }
+    },
+    "keep-morning-gentle": {
+      "prompt": "My morning doesn't start in a rush the moment I open my eyes.",
+      "options": {
+        "1": "Instant rush and lists",
+        "2": "Most mornings feel pressured",
+        "3": "Sometimes calm",
+        "4": "There are a few quiet minutes",
+        "5": "I have a small, calm morning ritual"
+      }
+    },
+    "protect-quiet-time": {
+      "prompt": "I have quiet time set aside — even if it's short.",
+      "byFocus": {
+        "timePressure": "Even under time pressure — I have a short corner of quiet.",
+        "futureWorry": "Even with worries — I set aside a moment for quiet.",
+        "taskPile": "Even with tasks — I don't give up quiet entirely.",
+        "seekingQuiet": "When I'm looking for balance — I really protect quiet time."
+      },
+      "options": {
+        "1": "No quiet at all",
+        "2": "Only by accident",
+        "3": "Sometimes",
+        "4": "There's a short regular window",
+        "5": "Quiet is protected in my calendar"
+      }
+    },
+    "soft-no-without-guilt": {
+      "prompt": "I can say no without feeling guilty for hours afterward.",
+      "options": {
+        "1": "No = heavy guilt",
+        "2": "I refuse then regret a lot",
+        "3": "Sometimes without guilt",
+        "4": "Most of the time I'm okay with refusing",
+        "5": "Clear and calm no — no inner drama"
+      }
+    },
+    "people-energy-guard": {
+      "prompt": "I notice who drains me and who fills me — and adjust accordingly.",
+      "options": {
+        "1": "I stay in every situation even when drained",
+        "2": "I notice too late",
+        "3": "Sometimes I limit contact",
+        "4": "I choose who to spend strength with",
+        "5": "I keep people who fill me and reduce what drains"
+      }
+    },
+    "finish-without-rush": {
+      "prompt": "I finish things without running on the edge all the time.",
+      "options": {
+        "1": "Everything last minute and in a rush",
+        "2": "Most of the time in a hurry",
+        "3": "Sometimes calm",
+        "4": "Most of the time at a reasonable pace",
+        "5": "I plan ahead and finish with relative ease"
+      }
+    },
+    "news-and-noise-limit": {
+      "prompt": "I limit news and digital noise when they feel heavy.",
+      "options": {
+        "1": "Glued to the noise all day",
+        "2": "Hard for me to turn it down",
+        "3": "Sometimes I cut back",
+        "4": "I have clear boundaries",
+        "5": "I choose when and what to take in — on purpose"
+      }
+    },
+    "talk-to-someone-safe": {
+      "prompt": "When it's heavy — I have at least one person I can talk to honestly.",
+      "options": {
+        "1": "No one to talk to",
+        "2": "Hard for me to reach out",
+        "3": "Sometimes I share",
+        "4": "There's one person I can trust",
+        "5": "I reach out early to someone safe"
+      }
+    },
+    "celebrate-small-wins": {
+      "prompt": "I notice small things that went well — not only what's missing.",
+      "options": {
+        "1": "I only see what didn't get done",
+        "2": "Rarely mark a success",
+        "3": "Sometimes",
+        "4": "Most days I find something small",
+        "5": "I close the day with at least one good thing"
+      }
+    },
+    "room-to-breathe": {
+      "prompt": "I have moments in the day when I really breathe — not just run.",
+      "byFocus": {
+        "timePressure": "Even under time pressure — there's a moment for a real breath.",
+        "futureWorry": "Even with worries — I stop to breathe, not only think.",
+        "taskPile": "Between tasks — I leave a small window to breathe.",
+        "seekingQuiet": "When looking for calm — I really breathe instead of keeping on running."
+      },
+      "options": {
+        "1": "No moment like that",
+        "2": "Only at end of day if at all",
+        "3": "Sometimes",
+        "4": "There are a few short stops",
+        "5": "I build breathing moments into the day"
+      }
+    },
+    "plan-tiny-joy": {
+      "prompt": "I plan something small that feels good — not only tasks.",
+      "options": {
+        "1": "Only tasks on the list",
+        "2": "I forget joy completely",
+        "3": "Sometimes I remember",
+        "4": "Most days there's something small",
+        "5": "I slot tiny joy like an important task"
+      }
+    },
+    "evening-close-ritual": {
+      "prompt": "At end of day I have a way to close — not just collapse into bed.",
+      "options": {
+        "1": "Fall into bed with no closing",
+        "2": "Usually no ritual",
+        "3": "Sometimes",
+        "4": "There's a short close most days",
+        "5": "A steady, simple ritual that ends the day"
+      }
+    }
+  }
+}

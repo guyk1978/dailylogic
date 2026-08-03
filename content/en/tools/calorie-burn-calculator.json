@@ -1,0 +1,65 @@
+{
+  "title": "Multi-Activity Calorie Burn Calculator",
+  "subtitle": "Select several activities, enter minutes for each, and get a combined estimate with a breakdown.",
+  "seoTitle": "Calorie Burn Calculator by Activity | DailyLogic",
+  "seoDescription": "Free multi-activity calorie burn calculator: pick running, walking, strength, swimming and more, add minutes for each, and see a combined total with a clear breakdown.",
+  "heroDescription": "Mixed session? Check everything you did, add minutes, and see total calories burned — plus a per-activity split.",
+  "toolSlug": "calorie-burn-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "HealthApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "What this calculator does",
+      "paragraphs": [
+        "Enter weight, age, and sex for a more personal estimate.",
+        "Select several activities and set a duration for each.",
+        "Get an estimated calorie total, a breakdown, and short routine tips."
+      ]
+    },
+    {
+      "heading": "How to use it",
+      "paragraphs": [
+        "Fill in your basics, pick activities, enter minutes, then calculate.",
+        "Save to history or download a result card.",
+        "Treat the numbers as a compass — not a medical reading."
+      ]
+    },
+    {
+      "heading": "Important",
+      "paragraphs": [
+        "This tool is for inspiration only and does not replace medical or nutrition advice.",
+        "Calculations use common MET values — an estimate, not a lab measurement."
+      ]
+    }
+  ],
+  "benefits": [
+    {
+      "title": "Multi-select",
+      "description": "Several activities in one session — no need to calculate each alone."
+    },
+    {
+      "title": "Clear breakdown",
+      "description": "See how much each activity contributed to the total."
+    },
+    {
+      "title": "Practical tips",
+      "description": "Small ideas for smarter weekly mix."
+    }
+  ],
+  "faq": [
+    {
+      "question": "Is this as accurate as a heart-rate monitor?",
+      "answer": "No. It’s a MET-and-weight estimate — useful for planning, not a personal measurement."
+    },
+    {
+      "question": "Can I combine activities?",
+      "answer": "Yes. That’s the point — a combined total with a per-activity split."
+    },
+    {
+      "question": "Is this medical advice?",
+      "answer": "No. Everyday inspiration only."
+    }
+  ]
+}

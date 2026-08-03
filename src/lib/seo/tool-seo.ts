@@ -38,6 +38,9 @@ export const toolToLandingSlug: Record<ToolSlug, string> = {
   "dog-ownership-calculator": "dog-ownership-calculator",
   "parent-respect-calculator": "parent-respect-calculator",
   "stranger-sharing-calculator": "stranger-sharing-calculator",
+  "mental-health-calculator": "mental-health-calculator",
+  "physical-health-calculator": "physical-health-calculator",
+  "calorie-burn-calculator": "calorie-burn-calculator",
 };
 
 export function getLandingSlugForTool(toolSlug: ToolSlug): string {

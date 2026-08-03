@@ -1,0 +1,47 @@
+{
+  "title": "Calculadora de salud física y vitalidad",
+  "subtitle": "Métricas corporales, un chequeo breve de hábitos y consejos cotidianos — en lenguaje sencillo.",
+  "seoTitle": "Calculadora de salud física y vitalidad | DailyLogic",
+  "seoDescription": "Calculadora gratuita de vitalidad física: altura, peso, actividad, sueño y nutrición más un cuestionario breve. IMC, estimación de energía y consejos prácticos.",
+  "heroDescription": "Una foto sencilla de energía, recuperación y actividad — con números claros y consejos pequeños para hoy.",
+  "toolSlug": "physical-health-calculator",
+  "schemaType": "WebApplication",
+  "applicationCategory": "HealthApplication",
+  "relatedArticles": [],
+  "publishedAt": "2026-08-03",
+  "sections": [
+    {
+      "heading": "Qué hace esta calculadora",
+      "paragraphs": [
+        "Introduces altura, peso, edad, sexo, actividad, sueño y nutrición — y obtienes métricas como IMC y estimación de energía.",
+        "Un cuestionario breve cubre energía diaria, agua, fuerza y recuperación.",
+        "El informe muestra una puntuación de vitalidad, un desglose claro y consejos pequeños."
+      ]
+    },
+    {
+      "heading": "Cómo usarla",
+      "paragraphs": [
+        "Completa los datos, responde el cuestionario corto y mira el informe.",
+        "Guarda en el historial (ampliar en la portada) o descarga la tarjeta.",
+        "Usa el resultado como brújula — no como diagnóstico médico."
+      ]
+    },
+    {
+      "heading": "Importante saber",
+      "paragraphs": [
+        "Esta herramienta es solo para inspiración y enriquecimiento y no sustituye el asesoramiento médico certificado.",
+        "Las métricas son estimaciones cotidianas comunes — no un diagnóstico clínico."
+      ]
+    }
+  ],
+  "benefits": [
+    { "title": "Datos sencillos", "description": "Altura, peso y actividad — sin complicaciones innecesarias." },
+    { "title": "Cuestionario breve", "description": "Unas 10 preguntas sobre energía, agua y recuperación." },
+    { "title": "Consejos prácticos", "description": "Pasos pequeños que puedes probar hoy." }
+  ],
+  "faq": [
+    { "question": "¿Es un diagnóstico médico?", "answer": "No. Es apoyo de sentido común diario — no sustituye la atención profesional." },
+    { "question": "¿Qué significa el IMC aquí?", "answer": "Es un número orientativo común. No cuenta toda tu historia de salud." },
+    { "question": "¿Los datos van a un servidor?", "answer": "No. Todo corre y se guarda localmente en el navegador." }
+  ]
+}
